@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Loader Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Loader" class="dashAnchor"></a>
+    <a title="Loader Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Nuke Docs</a> (86% documented)</p>
+        <p class="header-right"><a href="https://github.com/kean/nuke"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Nuke Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Loader Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Cache.html">Cache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CancellationTokenSource.html">CancellationTokenSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DataLoader.html">DataLoader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DataLoader/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Loader.html">Loader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Loader/Options.html">– Options</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Loader/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Manager.html">Manager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Preheater.html">Preheater</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/Result.html">Result</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/ImageView.html">ImageView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4Nuke13cancelRequestyyXl3for_tF">cancelRequest(for:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4Nuke9loadImagey10Foundation3URLV4with_AA6Target_p4intotF">loadImage(with:into:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4Nuke9loadImageyAA7RequestV4with_AA6Target_p4intotF">loadImage(with:into:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4Nuke9loadImagey10Foundation3URLV4with_yXl4intoyAA6ResultOySo7UIImageCG_Sbtc7handlertF">loadImage(with:into:handler:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4Nuke9loadImageyAA7RequestV4with_yXl4intoyAA6ResultOySo7UIImageCG_Sbtc7handlertF">loadImage(with:into:handler:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Caching.html">Caching</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DataDecoding.html">DataDecoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DataLoading.html">DataLoading</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Loading.html">Loading</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Processing.html">Processing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Target.html">Target</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/AnyProcessor.html">AnyProcessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CancellationToken.html">CancellationToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataDecoder.html">DataDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataDecoderComposition.html">DataDecoderComposition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Decompressor.html">Decompressor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Decompressor/ContentMode.html">– ContentMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ProcessorComposition.html">ProcessorComposition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Request.html">Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Request/MemoryCacheOptions.html">– MemoryCacheOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Request/Priority.html">– Priority</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/Image">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Nuke5Imagea">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/ImageView">ImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Nuke9ImageViewa">ImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Nuke15ProgressHandlera">ProgressHandler</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Loader</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Loader</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Loading.html">Loading</a></span></code></pre>
+
+                </div>
+              </div>
+            <p><code>Loader</code> implements an image loading pipeline. It loads image data using
+data loader (<code><a href="../Protocols/DataLoading.html">DataLoading</a></code>), then creates an image using <code><a href="../Protocols/DataDecoding.html">DataDecoding</a></code>
+object, and transforms the image using processors (<code><a href="../Protocols/Processing.html">Processing</a></code>) provided
+in the <code><a href="../Structs/Request.html">Request</a></code>.</p>
+
+<p>Loader combines the requests with the same <code>loadKey</code> into a single request.
+The request only gets cancelled when all the registered handlers are.</p>
+
+<p><code>Loader</code> limits the number of concurrent requests (the default maximum limit
+is 6). It also rate limits the requests to prevent <code>Loader</code> from trashing
+underlying systems (e.g. <code>URLSession</code>). The rate limiter only comes into play
+when the requests are started and cancelled at a high rate (e.g. fast
+scrolling through a collection view).</p>
+
+<p><code>Loader</code> features can be configured using <code><a href="../Classes/Loader/Options.html">Loader.Options</a></code>.</p>
+
+<p><code>Loader</code> is thread-safe.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke6LoaderC6sharedAA7Loading_pvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/shared" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke6LoaderC6sharedAA7Loading_pvpZ">shared</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Shared <code><a href="../Protocols/Loading.html">Loading</a></code> object.</p>
+
+<p>Shared loader is created with <code>DataLoader()</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">shared</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Loading.html">Loading</a></span> <span class="o">=</span> <span class="kt">Loader</span><span class="p">(</span><span class="nv">loader</span><span class="p">:</span> <span class="kt"><a href="../Classes/DataLoader.html">DataLoader</a></span><span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/Loader.swift#L66">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke6LoaderC7OptionsV"></a>
+                    <a name="//apple_ref/swift/Struct/Options" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke6LoaderC7OptionsV">Options</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Some nitty-gritty options which can be used to customize loader.</p>
+
+                        <a href="../Classes/Loader/Options.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Options</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/Loader.swift#L69-L99">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke6LoaderCAcA11DataLoading_p6loader_AA0C8Decoding_p7decoderAC7OptionsV7optionstcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(loader:decoder:options:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke6LoaderCAcA11DataLoading_p6loader_AA0C8Decoding_p7decoderAC7OptionsV7optionstcfc">init(loader:decoder:options:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes <code>Loader</code> instance with the given loader, decoder.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">loader</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DataLoading.html">DataLoading</a></span><span class="p">,</span> <span class="nv">decoder</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DataDecoding.html">DataDecoding</a></span> <span class="o">=</span> <span class="kt"><a href="../Structs/DataDecoder.html">DataDecoder</a></span><span class="p">(),</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Classes/Loader/Options.html">Options</a></span> <span class="o">=</span> <span class="kt"><a href="../Classes/Loader/Options.html">Options</a></span><span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>decoder</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>DataDecoder()</code> by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Options which can be used to customize loader.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/Loader.swift#L104-L110">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Loading"></a>
+                <a name="//apple_ref/swift/Section/Loading" class="dashAnchor"></a>
+                <a href="#/Loading">
+                  <h3 class="section-name">Loading</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke6LoaderC9loadImageyAA7RequestV4with_AA17CancellationTokenVSg5tokenyAA6ResultOySo7UIImageCGc10completiontF"></a>
+                    <a name="//apple_ref/swift/Method/loadImage(with:token:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke6LoaderC9loadImageyAA7RequestV4with_AA17CancellationTokenVSg5tokenyAA6ResultOySo7UIImageCGc10completiontF">loadImage(with:token:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Loads an image for the given request using image loading pipeline.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">loadImage</span><span class="p">(</span><span class="n">with</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Structs/Request.html">Request</a></span><span class="p">,</span> <span class="nv">token</span><span class="p">:</span> <span class="kt"><a href="../Structs/CancellationToken.html">CancellationToken</a></span><span class="p">?,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Enums/Result.html">Result</a></span><span class="o">&lt;</span><span class="kt"><a href="../Typealiases.html#/Image">Image</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/Loader.swift#L115-L120">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Errors"></a>
+                <a name="//apple_ref/swift/Section/Errors" class="dashAnchor"></a>
+                <a href="#/Errors">
+                  <h3 class="section-name">Errors</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke6LoaderC5ErrorO"></a>
+                    <a name="//apple_ref/swift/Enum/Error" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke6LoaderC5ErrorO">Error</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Error returns by <code><a href="../Classes/Loader.html">Loader</a></code> class itself. <code><a href="../Classes/Loader.html">Loader</a></code> might also return
+errors from underlying <code><a href="../Protocols/DataLoading.html">DataLoading</a></code> object.</p>
+
+                        <a href="../Classes/Loader/Error.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Error</span><span class="p">:</span> <span class="kt">Swift</span><span class="o">.</span><span class="kt">Error</span><span class="p">,</span> <span class="kt">CustomDebugStringConvertible</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/Loader.swift#L317-L327">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2018-04-09)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cache Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Cache" class="dashAnchor"></a>
+    <a title="Cache Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Nuke Docs</a> (86% documented)</p>
+        <p class="header-right"><a href="https://github.com/kean/nuke"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Nuke Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Cache Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Cache.html">Cache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CancellationTokenSource.html">CancellationTokenSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DataLoader.html">DataLoader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DataLoader/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Loader.html">Loader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Loader/Options.html">– Options</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Loader/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Manager.html">Manager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Preheater.html">Preheater</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/Result.html">Result</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/ImageView.html">ImageView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4Nuke13cancelRequestyyXl3for_tF">cancelRequest(for:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4Nuke9loadImagey10Foundation3URLV4with_AA6Target_p4intotF">loadImage(with:into:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4Nuke9loadImageyAA7RequestV4with_AA6Target_p4intotF">loadImage(with:into:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4Nuke9loadImagey10Foundation3URLV4with_yXl4intoyAA6ResultOySo7UIImageCG_Sbtc7handlertF">loadImage(with:into:handler:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4Nuke9loadImageyAA7RequestV4with_yXl4intoyAA6ResultOySo7UIImageCG_Sbtc7handlertF">loadImage(with:into:handler:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Caching.html">Caching</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DataDecoding.html">DataDecoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DataLoading.html">DataLoading</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Loading.html">Loading</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Processing.html">Processing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Target.html">Target</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/AnyProcessor.html">AnyProcessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CancellationToken.html">CancellationToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataDecoder.html">DataDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataDecoderComposition.html">DataDecoderComposition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Decompressor.html">Decompressor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Decompressor/ContentMode.html">– ContentMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ProcessorComposition.html">ProcessorComposition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Request.html">Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Request/MemoryCacheOptions.html">– MemoryCacheOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Request/Priority.html">– Priority</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/Image">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Nuke5Imagea">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/ImageView">ImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Nuke9ImageViewa">ImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Nuke15ProgressHandlera">ProgressHandler</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Cache</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Cache</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Caching.html">Caching</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>Memory cache with LRU cleanup policy (least recently used are removed first).</p>
+
+<p>The elements stored in cache are automatically discarded if either <em>cost</em> or
+<em>count</em> limit is reached. The default cost limit represents a number of bytes
+and is calculated based on the amount of physical memory available on the
+device. The default count limit is set to <code>Int.max</code>.</p>
+
+<p><code>Cache</code> automatically removes all stored elements when it received a
+memory warning. It also automatically removes <em>most</em> of cached elements
+when the app enters background.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke5CacheC9costLimitSivp"></a>
+                    <a name="//apple_ref/swift/Property/costLimit" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke5CacheC9costLimitSivp">costLimit</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The maximum total cost that the cache can hold.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">costLimit</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/Cache.swift#L49-L51">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke5CacheC10countLimitSivp"></a>
+                    <a name="//apple_ref/swift/Property/countLimit" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke5CacheC10countLimitSivp">countLimit</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The maximum number of items that the cache can hold.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">countLimit</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/Cache.swift#L54-L56">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke5CacheC9totalCostSivp"></a>
+                    <a name="//apple_ref/swift/Property/totalCost" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke5CacheC9totalCostSivp">totalCost</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The total cost of items in the cache.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">totalCost</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/Cache.swift#L59">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke5CacheC10totalCountSivp"></a>
+                    <a name="//apple_ref/swift/Property/totalCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke5CacheC10totalCountSivp">totalCount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The total number of items in the cache.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">totalCount</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/Cache.swift#L62-L64">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke5CacheC6sharedACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/shared" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke5CacheC6sharedACvpZ">shared</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Shared <code>Cache</code> instance.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">shared</span> <span class="o">=</span> <span class="kt">Cache</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/Cache.swift#L67">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke5CacheCACSi9costLimit_Si05countD0tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(costLimit:countLimit:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke5CacheCACSi9costLimit_Si05countD0tcfc">init(costLimit:countLimit:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes <code>Cache</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">costLimit</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="kt">Cache</span><span class="o">.</span><span class="nf">defaultCostLimit</span><span class="p">(),</span> <span class="nv">countLimit</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="kt">Int</span><span class="o">.</span><span class="n">max</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>costLimit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Default value representes a number of bytes and is
+calculated based on the amount of the phisical memory available on the device.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>countLimit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>Int.max</code> by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/Cache.swift#L73-L80">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke5CacheC16defaultCostLimitSiyFZ"></a>
+                    <a name="//apple_ref/swift/Method/defaultCostLimit()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke5CacheC16defaultCostLimitSiyFZ">defaultCostLimit()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a recommended cost limit which is computed based on the amount
+of the phisical memory available on the device.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">defaultCostLimit</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/Cache.swift#L90-L95">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke5CacheCSo7UIImageCSgs11AnyHashableVcip"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke5CacheCSo7UIImageCSgs11AnyHashableVcip">subscript(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Accesses the image associated with the given key.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">AnyHashable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/Image">Image</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/Cache.swift#L98-L124">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke5CacheC9removeAllyyF"></a>
+                    <a name="//apple_ref/swift/Method/removeAll()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke5CacheC9removeAllyyF">removeAll()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes all cached images.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">dynamic</span> <span class="kd">func</span> <span class="nf">removeAll</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/Cache.swift#L141-L147">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke5CacheC4trimySi6toCost_tF"></a>
+                    <a name="//apple_ref/swift/Method/trim(toCost:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke5CacheC4trimySi6toCost_tF">trim(toCost:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes least recently used items from the cache until the total cost
+of the remaining items is less than the given cost limit.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">trim</span><span class="p">(</span><span class="n">toCost</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/Cache.swift#L167-L169">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke5CacheC4trimySi7toCount_tF"></a>
+                    <a name="//apple_ref/swift/Method/trim(toCount:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke5CacheC4trimySi7toCount_tF">trim(toCount:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes least recently used items from the cache until the total count
+of the remaining items is less than the given count limit.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">trim</span><span class="p">(</span><span class="n">toCount</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/Cache.swift#L177-L179">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke5CacheC4costSiSo7UIImageCcvp"></a>
+                    <a name="//apple_ref/swift/Property/cost" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke5CacheC4costSiSo7UIImageCcvp">cost</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns cost for the given image by approximating its bitmap size in bytes in memory.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">cost</span><span class="p">:</span> <span class="p">(</span><span class="kt"><a href="../Typealiases.html#/Image">Image</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="o">=</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/Cache.swift#L192">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2018-04-09)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

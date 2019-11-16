@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DataLoader Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/DataLoader" class="dashAnchor"></a>
+    <a title="DataLoader Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Nuke Docs</a> (89% documented)</p>
+        <p class="header-right"><a href="https://github.com/kean/nuke"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Nuke Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        DataLoader Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Cache.html">Cache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CancellationTokenSource.html">CancellationTokenSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DataDecoderComposition.html">DataDecoderComposition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DataLoader.html">DataLoader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Deduplicator.html">Deduplicator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DispatchQueueScheduler.html">DispatchQueueScheduler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Loader.html">Loader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Loader/Schedulers.html">– Schedulers</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Loader/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Manager.html">Manager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OperationQueueScheduler.html">OperationQueueScheduler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Preheater.html">Preheater</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RateLimiter.html">RateLimiter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/Result.html">Result</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/ImageView.html">ImageView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Nuke13cancelRequestFT3forPs9AnyObject__T_">cancelRequest(for:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Nuke9loadImageFT4withV10Foundation3URL4intoPS_6Target__T_">loadImage(with:into:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Nuke9loadImageFT4withVS_7Request4intoPS_6Target__T_">loadImage(with:into:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Nuke9loadImageFT4withV10Foundation3URL4intoPs9AnyObject_7handlerFTGOS_6ResultCSo7UIImage_Sb_T__T_">loadImage(with:into:handler:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Nuke9loadImageFT4withVS_7Request4intoPs9AnyObject_7handlerFTGOS_6ResultCSo7UIImage_Sb_T__T_">loadImage(with:into:handler:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/AsyncScheduler.html">AsyncScheduler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Caching.html">Caching</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DataDecoding.html">DataDecoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DataLoading.html">DataLoading</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Loading.html">Loading</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Processing.html">Processing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Scheduler.html">Scheduler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Target.html">Target</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/AnyProcessor.html">AnyProcessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CancellationToken.html">CancellationToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataDecoder.html">DataDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Decompressor.html">Decompressor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Decompressor/ContentMode.html">– ContentMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ProcessorComposition.html">ProcessorComposition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Request.html">Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Request/MemoryCacheOptions.html">– MemoryCacheOptions</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Typealiases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Nuke5Image">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Nuke9ImageView">ImageView</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>DataLoader</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">DataLoader</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DataLoading.html">DataLoading</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>Provides basic networking using <code>URLSession</code>.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC4Nuke10DataLoader7sessionCSo10URLSession"></a>
+                    <a name="//apple_ref/swift/Property/session" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC4Nuke10DataLoader7sessionCSo10URLSession">session</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">DataLoader</span><span class="p">:</span> <span class="kt"><a href="../Protocols/DataLoading.html">DataLoading</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/5.1/Sources/DataLoader.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC4Nuke10DataLoadercFT13configurationCSo23URLSessionConfiguration9schedulerPS_14AsyncScheduler__S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(configuration:scheduler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4Nuke10DataLoadercFT13configurationCSo23URLSessionConfiguration9schedulerPS_14AsyncScheduler__S0_">init(configuration:scheduler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes <code>DataLoader</code> with the given configuration.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="kt">URLSessionConfiguration</span> <span class="o">=</span> <span class="kt">DataLoader</span><span class="o">.</span><span class="n">defaultConf</span><span class="p">,</span>
+                <span class="nv">scheduler</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AsyncScheduler.html">AsyncScheduler</a></span> <span class="o">=</span> <span class="kt">DataLoader</span><span class="o">.</span><span class="n">defaultScheduler</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>configuration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>URLSessionConfiguration.default</code> with
+<code>URLCache</code> with 0 MB memory capacity and 150 MB disk capacity.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>scheduler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>OperationQueueScheduler</code> with
+<code>maxConcurrentOperationCount</code> 6 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/5.1/Sources/DataLoader.swift#L23-L27">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC4Nuke10DataLoader14sharedUrlCacheCSo8URLCache"></a>
+                    <a name="//apple_ref/swift/Variable/sharedUrlCache" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC4Nuke10DataLoader14sharedUrlCacheCSo8URLCache">sharedUrlCache</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Shared url cached used by a default <code>DataLoader</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">sharedUrlCache</span> <span class="o">=</span> <span class="kt">URLCache</span><span class="p">(</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/5.1/Sources/DataLoader.swift#L36">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC4Nuke10DataLoader8loadDataFT4withVS_7Request5tokenGSqVS_17CancellationToken_10completionFGOS_6ResultTV10Foundation4DataCSo11URLResponse__T__T_"></a>
+                    <a name="//apple_ref/swift/Method/loadData(with:token:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4Nuke10DataLoader8loadDataFT4withVS_7Request5tokenGSqVS_17CancellationToken_10completionFGOS_6ResultTV10Foundation4DataCSo11URLResponse__T__T_">loadData(with:token:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Loads data with the given request.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">loadData</span><span class="p">(</span><span class="n">with</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Structs/Request.html">Request</a></span><span class="p">,</span> <span class="nv">token</span><span class="p">:</span> <span class="kt"><a href="../Structs/CancellationToken.html">CancellationToken</a></span><span class="p">?,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Enums/Result.html">Result</a></span><span class="o">&lt;</span><span class="p">(</span><span class="kt">Data</span><span class="p">,</span> <span class="kt">URLResponse</span><span class="p">)</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/5.1/Sources/DataLoader.swift#L47-L63">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2017-06-11)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AnyImageProcessor Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/AnyImageProcessor" class="dashAnchor"></a>
+    <a title="AnyImageProcessor Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Nuke Docs</a> (60% documented)</p>
+        <p class="header-right"><a href="https://github.com/kean/nuke"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Nuke Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        AnyImageProcessor Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/DataLoader.html">DataLoader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DataLoader/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageCache.html">ImageCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageDecoder.html">ImageDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageDecoderRegistry.html">ImageDecoderRegistry</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImagePipeline.html">ImagePipeline</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImagePipeline/Configuration.html">– Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImagePipeline/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImagePreheater.html">ImagePreheater</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageResponse.html">ImageResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageTask.html">ImageTask</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Image.html">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSImageView.html">NSImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImageView.html">UIImageView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4Nuke13cancelRequestyAA15ImageDisplaying_So6UIViewCXc3for_tF">cancelRequest(for:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4Nuke9loadImageAA0C4TaskCSg10Foundation3URLV4with_AA0C14LoadingOptionsV7optionsAA0C10Displaying_So6UIViewCXc4intoyAA0C8ResponseCSg_s5Int64VAUtcSg8progressyAS_s5Error_pSgtcSg10completiontF">loadImage(with:options:into:progress:completion:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4Nuke9loadImageAA0C4TaskCSgAA0C7RequestV4with_AA0C14LoadingOptionsV7optionsAA0C10Displaying_So6UIViewCXc4intoyAA0C8ResponseCSg_s5Int64VATtcSg8progressyAR_s5Error_pSgtcSg10completiontF">loadImage(with:options:into:progress:completion:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Cancellable.html">Cancellable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DataLoading.html">DataLoading</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageCaching.html">ImageCaching</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageDecoding.html">ImageDecoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageDisplaying.html">ImageDisplaying</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageProcessing.html">ImageProcessing</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/AnyImageProcessor.html">AnyImageProcessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageDecodingContext.html">ImageDecodingContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageDecompressor.html">ImageDecompressor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageDecompressor/ContentMode.html">– ContentMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageLoadingOptions.html">ImageLoadingOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageLoadingOptions/ContentModes.html">– ContentModes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageLoadingOptions/Transition.html">– Transition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageProcessingContext.html">ImageProcessingContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageRequest.html">ImageRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageRequest/MemoryCacheOptions.html">– MemoryCacheOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageRequest/Priority.html">– Priority</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageTaskMetrics.html">ImageTaskMetrics</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageTaskMetrics/SessionMetrics.html">– SessionMetrics</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/Image">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Nuke5Imagea">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/ImageDisplayingView">ImageDisplayingView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Nuke19ImageDisplayingViewa">ImageDisplayingView</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>AnyImageProcessor</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AnyImageProcessor</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ImageProcessing.html">ImageProcessing</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>Type-erased image processor.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke17AnyImageProcessorVACxcAA0C10ProcessingRzlufc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke17AnyImageProcessorVACxcAA0C10ProcessingRzlufc">init(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">P</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ImageProcessing.html">ImageProcessing</a></span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">processor</span><span class="p">:</span> <span class="kt">P</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/ImageProcessing.swift#L45-L49">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke15ImageProcessingP7processSo7UIImageCSgAF5image_AA0bC7ContextV7contexttF"></a>
+                    <a name="//apple_ref/swift/Method/process(image:context:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke15ImageProcessingP7processSo7UIImageCSgAF5image_AA0bC7ContextV7contexttF">process(image:context:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">process</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:4Nuke5Imagea">Image</a></span><span class="p">,</span> <span class="nv">context</span><span class="p">:</span> <span class="kt"><a href="../Structs/ImageProcessingContext.html">ImageProcessingContext</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:4Nuke5Imagea">Image</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/ImageProcessing.swift#L51-L53">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s9EquatableP2eeoiSbx_xtFZ"></a>
+                    <a name="//apple_ref/swift/Method/==(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s9EquatableP2eeoiSbx_xtFZ">==(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">==</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">AnyImageProcessor</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">AnyImageProcessor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/ImageProcessing.swift#L55-L57">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2018-05-04)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

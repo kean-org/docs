@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ImagePipeline Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/ImagePipeline" class="dashAnchor"></a>
+    <a title="ImagePipeline Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Nuke Docs</a> (70% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Nuke Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        ImagePipeline Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/DataCache.html">DataCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DataLoader.html">DataLoader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DataLoader/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageCache.html">ImageCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageDecoder.html">ImageDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageDecoderRegistry.html">ImageDecoderRegistry</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImagePipeline.html">ImagePipeline</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImagePipeline/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImagePipeline/Configuration.html">– Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImagePreheater.html">ImagePreheater</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImagePreheater/Destination.html">– Destination</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageResponse.html">ImageResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageTask.html">ImageTask</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/ImageProcessor.html">ImageProcessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ImageProcessor/Unit.html">– Unit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ImageProcessor/Resize.html">– Resize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ImageProcessor/Composition.html">– Composition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ImageProcessor/Anonymous.html">– Anonymous</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/CGSize.html">CGSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Image.html">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ImageProcessor.html">ImageProcessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ImageProcessor/Circle.html">– Circle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ImageProcessor/RoundedCorners.html">– RoundedCorners</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ImageProcessor/CoreImageFilter.html">– CoreImageFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ImageProcessor/GaussianBlur.html">– GaussianBlur</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSImageView.html">NSImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImageView.html">UIImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/WKInterfaceImage.html">WKInterfaceImage</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4Nuke13cancelRequest3foryAA0A16_ImageDisplaying_So6NSViewCXc_tF">cancelRequest(for:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4Nuke9loadImage4with7options4into8progress10completionAA0C4TaskCSg10Foundation3URLV_AA0C14LoadingOptionsVAA0a1_C10Displaying_So6NSViewCXcyAA0C8ResponseCSg_s5Int64VAWtcSgys6ResultOyAtA0C8PipelineC5ErrorOGcSgtF">loadImage(with:options:into:progress:completion:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4Nuke9loadImage4with7options4into8progress10completionAA0C4TaskCSgAA0C7RequestV_AA0C14LoadingOptionsVAA0a1_C10Displaying_So6NSViewCXcyAA0C8ResponseCSg_s5Int64VAVtcSgys6ResultOyAsA0C8PipelineC5ErrorOGcSgtF">loadImage(with:options:into:progress:completion:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Cancellable.html">Cancellable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DataCaching.html">DataCaching</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DataLoading.html">DataLoading</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageCaching.html">ImageCaching</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageDecoding.html">ImageDecoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageEncoding.html">ImageEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageProcessing.html">ImageProcessing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Nuke_ImageDisplaying.html">Nuke_ImageDisplaying</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:4Nuke17AnyImageProcessorV">AnyImageProcessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageDecodingContext.html">ImageDecodingContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageEncoder.html">ImageEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageEncodingContext.html">ImageEncodingContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageLoadingOptions.html">ImageLoadingOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageLoadingOptions/ContentModes.html">– ContentModes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageLoadingOptions/Transition.html">– Transition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageProcessingContext.html">ImageProcessingContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageRequest.html">ImageRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageRequest/Priority.html">– Priority</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageRequestOptions.html">ImageRequestOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageRequestOptions/MemoryCacheOptions.html">– MemoryCacheOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageTaskMetrics.html">ImageTaskMetrics</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageTaskMetrics/SessionMetrics.html">– SessionMetrics</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/Image">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Nuke5Imagea">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/ImageDisplayingView">ImageDisplayingView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Nuke19ImageDisplayingViewa">ImageDisplayingView</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>ImagePipeline</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ImagePipeline</span></code></pre>
+
+                </div>
+              </div>
+            <p><code>ImagePipeline</code> will load and decode image data, process loaded images and
+store them in caches.</p>
+
+<p>See <a href="https://github.com/kean/Nuke">Nuke&rsquo;s README</a> for a detailed overview of
+the image pipeline and all of the related classes.</p>
+
+<p>If you want to build a system that fits your specific needs, see <code><a href="../Classes/ImagePipeline/Configuration.html">ImagePipeline.Configuration</a></code>
+for a list of the available options. You can set custom data loaders and caches, configure
+image encoders and decoders, change the number of concurrent operations for each
+individual stage, disable and enable features like deduplication and rate limiting, and more.</p>
+
+<p><code>ImagePipeline</code> is thread-safe.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke13ImagePipelineC13configurationAC13ConfigurationVvp"></a>
+                    <a name="//apple_ref/swift/Property/configuration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke13ImagePipelineC13configurationAC13ConfigurationVvp">configuration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Classes/ImagePipeline/Configuration.html">Configuration</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke13ImagePipelineC6sharedACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/shared" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke13ImagePipelineC6sharedACvpZ">shared</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Shared image pipeline.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">shared</span><span class="p">:</span> <span class="kt">ImagePipeline</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke13ImagePipelineC13configurationA2C13ConfigurationV_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(configuration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke13ImagePipelineC13configurationA2C13ConfigurationV_tcfc">init(configuration:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes <code>ImagePipeline</code> instance with the given configuration.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Classes/ImagePipeline/Configuration.html">Configuration</a></span> <span class="o">=</span> <span class="kt"><a href="../Classes/ImagePipeline/Configuration.html">Configuration</a></span><span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>configuration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>Configuration()</code> by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke13ImagePipelineCyACyAC13ConfigurationVzXEcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke13ImagePipelineCyACyAC13ConfigurationVzXEcfc">init(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">configure</span><span class="p">:</span> <span class="p">(</span><span class="k">inout</span> <span class="kt">ImagePipeline</span><span class="o">.</span><span class="kt"><a href="../Classes/ImagePipeline/Configuration.html">Configuration</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Loading%20Images"></a>
+                <a name="//apple_ref/swift/Section/Loading Images" class="dashAnchor"></a>
+                <a href="#/Loading%20Images">
+                  <h3 class="section-name">Loading Images</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke13ImagePipelineC04loadB04with8progress10completionAA0B4TaskC10Foundation3URLV_yAA0B8ResponseCSg_s5Int64VAQtcSgys6ResultOyAnC5ErrorOGcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/loadImage(with:progress:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke13ImagePipelineC04loadB04with8progress10completionAA0B4TaskC10Foundation3URLV_yAA0B8ResponseCSg_s5Int64VAQtcSgys6ResultOyAnC5ErrorOGcSgtF">loadImage(with:progress:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Loads an image with the given url.</p>
+
+<p>The pipeline first checks if the image or image data exists in any of its caches.
+It checks if the processed image exists in the memory cache, then if the processed
+image data exists in the custom data cache (disabled by default), then if the data
+cache contains the original image data. Only if there is no cached data, the pipeline
+will start loading the data. When the data is loaded the pipeline decodes it, applies
+the processors, and decompresses the image in the background.</p>
+
+<p>To learn more about the pipeine, see the <a href="https://github.com/kean/Nuke">README</a>.</p>
+<h1 id='deduplication' class='heading'>Deduplication</h1>
+
+<p>The pipeline avoids doing any duplicated work when loading images. For example,
+let&rsquo;s take these two requests:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">url</span> <span class="o">=</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"http://example.com/image"</span><span class="p">)</span>
+<span class="n">pipeline</span><span class="o">.</span><span class="nf">loadImage</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">ImageRequest</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="n">url</span><span class="p">,</span> <span class="nv">processors</span><span class="p">:</span> <span class="p">[</span>
+    <span class="kt">ImageProcessor</span><span class="o">.</span><span class="kt">Resize</span><span class="p">(</span><span class="nv">size</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">44</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">44</span><span class="p">)),</span>
+    <span class="kt">ImageProcessor</span><span class="o">.</span><span class="kt">GaussianBlur</span><span class="p">(</span><span class="nv">radius</span><span class="p">:</span> <span class="mi">8</span><span class="p">)</span>
+<span class="p">]))</span>
+<span class="n">pipeline</span><span class="o">.</span><span class="nf">loadImage</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">ImageRequest</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="n">url</span><span class="p">,</span> <span class="nv">processors</span><span class="p">:</span> <span class="p">[</span>
+    <span class="kt">ImageProcessor</span><span class="o">.</span><span class="kt">Resize</span><span class="p">(</span><span class="nv">size</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">44</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">44</span><span class="p">))</span>
+<span class="p">]))</span>
+</code></pre>
+
+<p>Nuke will load the data only once, resize the image once and blur it also only once.
+There is no duplicated work done. The work only gets canceled when all the registered
+requests are, and the priority is based on the highest priority of the registered requests.</p>
+<h1 id='configuration' class='heading'>Configuration</h1>
+
+<p>See <code><a href="../Classes/ImagePipeline/Configuration.html">ImagePipeline.Configuration</a></code> to learn more about the pipeline features and
+how to enable/disable them.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">loadImage</span><span class="p">(</span><span class="n">with</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span>
+                      <span class="nv">progress</span><span class="p">:</span> <span class="kt"><a href="../Classes/ImageTask.html">ImageTask</a></span><span class="o">.</span><span class="kt">ProgressHandler</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                      <span class="nv">completion</span><span class="p">:</span> <span class="kt"><a href="../Classes/ImageTask.html">ImageTask</a></span><span class="o">.</span><span class="kt">Completion</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/ImageTask.html">ImageTask</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>progress</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure to be called periodically on the main thread
+when the progress is updated. <code>nil</code> by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure to be called on the main thread when the
+request is finished. <code>nil</code> by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke13ImagePipelineC04loadB04with8progress10completionAA0B4TaskCAA0B7RequestV_yAA0B8ResponseCSg_s5Int64VAPtcSgys6ResultOyAmC5ErrorOGcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/loadImage(with:progress:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke13ImagePipelineC04loadB04with8progress10completionAA0B4TaskCAA0B7RequestV_yAA0B8ResponseCSg_s5Int64VAPtcSgys6ResultOyAmC5ErrorOGcSgtF">loadImage(with:progress:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Loads an image for the given request using image loading pipeline.</p>
+
+<p>The pipeline first checks if the image or image data exists in any of its caches.
+It checks if the processed image exists in the memory cache, then if the processed
+image data exists in the custom data cache (disabled by default), then if the data
+cache contains the original image data. Only if there is no cached data, the pipeline
+will start loading the data. When the data is loaded the pipeline decodes it, applies
+the processors, and decompresses the image in the background.</p>
+
+<p>To learn more about the pipeine, see the <a href="https://github.com/kean/Nuke">README</a>.</p>
+<h1 id='deduplication' class='heading'>Deduplication</h1>
+
+<p>The pipeline avoids doing any duplicated work when loading images. For example,
+let&rsquo;s take these two requests:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">url</span> <span class="o">=</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"http://example.com/image"</span><span class="p">)</span>
+<span class="n">pipeline</span><span class="o">.</span><span class="nf">loadImage</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">ImageRequest</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="n">url</span><span class="p">,</span> <span class="nv">processors</span><span class="p">:</span> <span class="p">[</span>
+    <span class="kt">ImageProcessor</span><span class="o">.</span><span class="kt">Resize</span><span class="p">(</span><span class="nv">size</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">44</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">44</span><span class="p">)),</span>
+    <span class="kt">ImageProcessor</span><span class="o">.</span><span class="kt">GaussianBlur</span><span class="p">(</span><span class="nv">radius</span><span class="p">:</span> <span class="mi">8</span><span class="p">)</span>
+<span class="p">]))</span>
+<span class="n">pipeline</span><span class="o">.</span><span class="nf">loadImage</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">ImageRequest</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="n">url</span><span class="p">,</span> <span class="nv">processors</span><span class="p">:</span> <span class="p">[</span>
+    <span class="kt">ImageProcessor</span><span class="o">.</span><span class="kt">Resize</span><span class="p">(</span><span class="nv">size</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">44</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">44</span><span class="p">))</span>
+<span class="p">]))</span>
+</code></pre>
+
+<p>Nuke will load the data only once, resize the image once and blur it also only once.
+There is no duplicated work done. The work only gets canceled when all the registered
+requests are, and the priority is based on the highest priority of the registered requests.</p>
+<h1 id='configuration' class='heading'>Configuration</h1>
+
+<p>See <code><a href="../Classes/ImagePipeline/Configuration.html">ImagePipeline.Configuration</a></code> to learn more about the pipeline features and
+how to enable/disable them.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">loadImage</span><span class="p">(</span><span class="n">with</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Structs/ImageRequest.html">ImageRequest</a></span><span class="p">,</span>
+                      <span class="n">progress</span> <span class="nv">progressHandler</span><span class="p">:</span> <span class="kt"><a href="../Classes/ImageTask.html">ImageTask</a></span><span class="o">.</span><span class="kt">ProgressHandler</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                      <span class="nv">completion</span><span class="p">:</span> <span class="kt"><a href="../Classes/ImageTask.html">ImageTask</a></span><span class="o">.</span><span class="kt">Completion</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/ImageTask.html">ImageTask</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>progress</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure to be called periodically on the main thread
+when the progress is updated. <code>nil</code> by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure to be called on the main thread when the
+request is finished. <code>nil</code> by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Loading%20Image%20Data"></a>
+                <a name="//apple_ref/swift/Section/Loading Image Data" class="dashAnchor"></a>
+                <a href="#/Loading%20Image%20Data">
+                  <h3 class="section-name">Loading Image Data</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke13ImagePipelineC8loadData4with8progress10completionAA0B4TaskCAA0B7RequestV_ys5Int64V_AMtcSgys6ResultOy10Foundation0E0V4data_So13NSURLResponseCSg8responsetAC5ErrorOGctF"></a>
+                    <a name="//apple_ref/swift/Method/loadData(with:progress:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke13ImagePipelineC8loadData4with8progress10completionAA0B4TaskCAA0B7RequestV_ys5Int64V_AMtcSgys6ResultOy10Foundation0E0V4data_So13NSURLResponseCSg8responsetAC5ErrorOGctF">loadData(with:progress:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Loads the image data for the given request. The data doesn&rsquo;t get decoded or processed in any
+other way.</p>
+
+<p>You can call <code>loadImage(:)</code> for the request at any point after calling <code>loadData(:)</code>, the
+pipeline will use the same operation to load the data, no duplicated work will be performed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">loadData</span><span class="p">(</span><span class="n">with</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Structs/ImageRequest.html">ImageRequest</a></span><span class="p">,</span>
+                     <span class="nv">progress</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">completed</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span> <span class="n">_</span> <span class="nv">total</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                     <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Result</span><span class="o">&lt;</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">URLResponse</span><span class="p">?),</span> <span class="kt">ImagePipeline</span><span class="o">.</span><span class="kt"><a href="../Classes/ImagePipeline/Error.html">Error</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/ImageTask.html">ImageTask</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>progress</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure to be called periodically on the main thread
+when the progress is updated. <code>nil</code> by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure to be called on the main thread when the
+request is finished.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Get%20Decompressed%20Image"></a>
+                <a name="//apple_ref/swift/Section/Get Decompressed Image" class="dashAnchor"></a>
+                <a href="#/Get%20Decompressed%20Image">
+                  <h3 class="section-name">Get Decompressed Image</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke13ImagePipelineC14cachedResponse3forAA0bE0CSgAA0B7RequestV_tF"></a>
+                    <a name="//apple_ref/swift/Method/cachedResponse(for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke13ImagePipelineC14cachedResponse3forAA0bE0CSgAA0B7RequestV_tF">cachedResponse(for:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a cached response from the memory cache. Returns <code>nil</code> if the request disables
+memory cache reads.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">cachedResponse</span><span class="p">(</span><span class="k">for</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Structs/ImageRequest.html">ImageRequest</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/ImageResponse.html">ImageResponse</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Errors"></a>
+                <a name="//apple_ref/swift/Section/Errors" class="dashAnchor"></a>
+                <a href="#/Errors">
+                  <h3 class="section-name">Errors</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke13ImagePipelineC5ErrorO"></a>
+                    <a name="//apple_ref/swift/Enum/Error" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke13ImagePipelineC5ErrorO">Error</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Represents all possible image pipeline errors.</p>
+
+                        <a href="../Classes/ImagePipeline/Error.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Error</span> <span class="p">:</span> <span class="kt">Swift</span><span class="o">.</span><span class="kt">Error</span><span class="p">,</span> <span class="kt">CustomDebugStringConvertible</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/ImageTaskMetrics%20(Deprecated)"></a>
+                <a name="//apple_ref/swift/Section/ImageTaskMetrics (Deprecated)" class="dashAnchor"></a>
+                <a href="#/ImageTaskMetrics%20(Deprecated)">
+                  <h3 class="section-name">ImageTaskMetrics (Deprecated)</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke13ImagePipelineC26didFinishCollectingMetricsyAA0B4TaskC_AA0bhG0VtcSgvp"></a>
+                    <a name="//apple_ref/swift/Property/didFinishCollectingMetrics" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke13ImagePipelineC26didFinishCollectingMetricsyAA0B4TaskC_AA0bhG0VtcSgvp">didFinishCollectingMetrics</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">didFinishCollectingMetrics</span><span class="p">:</span> <span class="p">((</span><span class="kt"><a href="../Classes/ImageTask.html">ImageTask</a></span><span class="p">,</span> <span class="kt"><a href="../Structs/ImageTaskMetrics.html">ImageTaskMetrics</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke13ImagePipelineC13ConfigurationV"></a>
+                    <a name="//apple_ref/swift/Struct/Configuration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke13ImagePipelineC13ConfigurationV">Configuration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Classes/ImagePipeline/Configuration.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Configuration</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://github.com/kean/Nuke" target="_blank" rel="external">Alexander Grebenyuk</a>. All rights reserved. (Last updated: 2019-06-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

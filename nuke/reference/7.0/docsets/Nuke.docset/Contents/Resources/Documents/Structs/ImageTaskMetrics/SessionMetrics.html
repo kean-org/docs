@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SessionMetrics Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../../js/jquery.min.js" defer></script>
+    <script src="../../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/SessionMetrics" class="dashAnchor"></a>
+    <a title="SessionMetrics Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../../index.html">Nuke Docs</a> (73% documented)</p>
+        <p class="header-right"><a href="https://github.com/kean/nuke"><img src="../../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../../index.html">Nuke Reference</a>
+        <img id="carat" src="../../img/carat.png" />
+        SessionMetrics Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Classes/DataLoader.html">DataLoader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/DataLoader/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ImageCache.html">ImageCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ImageDecoder.html">ImageDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ImageDecoderRegistry.html">ImageDecoderRegistry</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ImagePipeline.html">ImagePipeline</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ImagePipeline/Configuration.html">– Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ImagePipeline/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ImagePreheater.html">ImagePreheater</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ImageResponse.html">ImageResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ImageTask.html">ImageTask</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Extensions/Image.html">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/NSImageView.html">NSImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/UIImageView.html">UIImageView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:4Nuke13cancelRequestyAA15ImageDisplaying_So6UIViewCXc3for_tF">cancelRequest(for:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:4Nuke9loadImageAA0C4TaskCSg10Foundation3URLV4with_AA0C14LoadingOptionsV7optionsAA0C10Displaying_So6UIViewCXc4intoyAA0C8ResponseCSg_s5Int64VAUtcSg8progressyAS_AA0C8PipelineC5ErrorOSgtcSg10completiontF">loadImage(with:options:into:progress:completion:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:4Nuke9loadImageAA0C4TaskCSgAA0C7RequestV4with_AA0C14LoadingOptionsV7optionsAA0C10Displaying_So6UIViewCXc4intoyAA0C8ResponseCSg_s5Int64VATtcSg8progressyAR_AA0C8PipelineC5ErrorOSgtcSg10completiontF">loadImage(with:options:into:progress:completion:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Protocols/Cancellable.html">Cancellable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Protocols/DataLoading.html">DataLoading</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Protocols/ImageCaching.html">ImageCaching</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Protocols/ImageDecoding.html">ImageDecoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Protocols/ImageDisplaying.html">ImageDisplaying</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Protocols/ImageProcessing.html">ImageProcessing</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Structs/AnyImageProcessor.html">AnyImageProcessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/ImageDecodingContext.html">ImageDecodingContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/ImageDecompressor.html">ImageDecompressor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/ImageDecompressor/ContentMode.html">– ContentMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/ImageLoadingOptions.html">ImageLoadingOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/ImageLoadingOptions/ContentModes.html">– ContentModes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/ImageLoadingOptions/Transition.html">– Transition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/ImageProcessingContext.html">ImageProcessingContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/ImageRequest.html">ImageRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/ImageRequest/MemoryCacheOptions.html">– MemoryCacheOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/ImageRequest/Priority.html">– Priority</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/ImageTaskMetrics.html">ImageTaskMetrics</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/ImageTaskMetrics/SessionMetrics.html">– SessionMetrics</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Typealiases.html#/Image">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Typealiases.html#/s:4Nuke5Imagea">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Typealiases.html#/ImageDisplayingView">ImageDisplayingView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Typealiases.html#/s:4Nuke19ImageDisplayingViewa">ImageDisplayingView</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>SessionMetrics</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">SessionMetrics</span> <span class="p">:</span> <span class="kt">CustomDebugStringConvertible</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke16ImageTaskMetricsV07SessionD0C9sessionIdSivp"></a>
+                    <a name="//apple_ref/swift/Property/sessionId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke16ImageTaskMetricsV07SessionD0C9sessionIdSivp">sessionId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <div class="aside aside-important">
+    <p class="aside-title">Important</p>
+    Data loading might start prior to <code>timeResumed</code> if the task gets
+coalesced with another task.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">sessionId</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/ImagePipeline.swift#L794">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke16ImageTaskMetricsV07SessionD0C12wasCancelledSbvp"></a>
+                    <a name="//apple_ref/swift/Property/wasCancelled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke16ImageTaskMetricsV07SessionD0C12wasCancelledSbvp">wasCancelled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">fileprivate</span><span class="p">(</span><span class="k">set</span><span class="p">)</span> <span class="k">var</span> <span class="nv">wasCancelled</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/ImagePipeline.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Timeline"></a>
+                <a name="//apple_ref/swift/Section/Timeline" class="dashAnchor"></a>
+                <a href="#/Timeline">
+                  <h3 class="section-name">Timeline</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke16ImageTaskMetricsV07SessionD0C9startDate10Foundation0G0Vvp"></a>
+                    <a name="//apple_ref/swift/Property/startDate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke16ImageTaskMetricsV07SessionD0C9startDate10Foundation0G0Vvp">startDate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">startDate</span><span class="p">:</span> <span class="kt">Date</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/ImagePipeline.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke16ImageTaskMetricsV07SessionD0C23checkDiskCacheStartDate10Foundation0J0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/checkDiskCacheStartDate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke16ImageTaskMetricsV07SessionD0C23checkDiskCacheStartDate10Foundation0J0VSgvp">checkDiskCacheStartDate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">fileprivate</span><span class="p">(</span><span class="k">set</span><span class="p">)</span> <span class="k">var</span> <span class="nv">checkDiskCacheStartDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/ImagePipeline.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke16ImageTaskMetricsV07SessionD0C21checkDiskCacheEndDate10Foundation0J0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/checkDiskCacheEndDate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke16ImageTaskMetricsV07SessionD0C21checkDiskCacheEndDate10Foundation0J0VSgvp">checkDiskCacheEndDate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">fileprivate</span><span class="p">(</span><span class="k">set</span><span class="p">)</span> <span class="k">var</span> <span class="nv">checkDiskCacheEndDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/ImagePipeline.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke16ImageTaskMetricsV07SessionD0C17loadDataStartDate10Foundation0I0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/loadDataStartDate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke16ImageTaskMetricsV07SessionD0C17loadDataStartDate10Foundation0I0VSgvp">loadDataStartDate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">fileprivate</span><span class="p">(</span><span class="k">set</span><span class="p">)</span> <span class="k">var</span> <span class="nv">loadDataStartDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/ImagePipeline.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke16ImageTaskMetricsV07SessionD0C15loadDataEndDate10Foundation0I0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/loadDataEndDate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke16ImageTaskMetricsV07SessionD0C15loadDataEndDate10Foundation0I0VSgvp">loadDataEndDate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">fileprivate</span><span class="p">(</span><span class="k">set</span><span class="p">)</span> <span class="k">var</span> <span class="nv">loadDataEndDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/ImagePipeline.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke16ImageTaskMetricsV07SessionD0C15decodeStartDate10Foundation0H0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/decodeStartDate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke16ImageTaskMetricsV07SessionD0C15decodeStartDate10Foundation0H0VSgvp">decodeStartDate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">fileprivate</span><span class="p">(</span><span class="k">set</span><span class="p">)</span> <span class="k">var</span> <span class="nv">decodeStartDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/ImagePipeline.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke16ImageTaskMetricsV07SessionD0C13decodeEndDate10Foundation0H0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/decodeEndDate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke16ImageTaskMetricsV07SessionD0C13decodeEndDate10Foundation0H0VSgvp">decodeEndDate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">fileprivate</span><span class="p">(</span><span class="k">set</span><span class="p">)</span> <span class="k">var</span> <span class="nv">decodeEndDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/ImagePipeline.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke16ImageTaskMetricsV07SessionD0C16processStartDate10Foundation0H0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/processStartDate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke16ImageTaskMetricsV07SessionD0C16processStartDate10Foundation0H0VSgvp">processStartDate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">fileprivate</span><span class="p">(</span><span class="k">set</span><span class="p">)</span> <span class="k">var</span> <span class="nv">processStartDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/ImagePipeline.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke16ImageTaskMetricsV07SessionD0C14processEndDate10Foundation0H0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/processEndDate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke16ImageTaskMetricsV07SessionD0C14processEndDate10Foundation0H0VSgvp">processEndDate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">fileprivate</span><span class="p">(</span><span class="k">set</span><span class="p">)</span> <span class="k">var</span> <span class="nv">processEndDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/ImagePipeline.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke16ImageTaskMetricsV07SessionD0C7endDate10Foundation0G0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/endDate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke16ImageTaskMetricsV07SessionD0C7endDate10Foundation0G0VSgvp">endDate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">fileprivate</span><span class="p">(</span><span class="k">set</span><span class="p">)</span> <span class="k">var</span> <span class="nv">endDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/ImagePipeline.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke16ImageTaskMetricsV07SessionD0C13totalDurationSdSgvp"></a>
+                    <a name="//apple_ref/swift/Property/totalDuration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke16ImageTaskMetricsV07SessionD0C13totalDurationSdSgvp">totalDuration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">totalDuration</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/ImagePipeline.swift#L815-L818">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Resumable%20Data"></a>
+                <a name="//apple_ref/swift/Section/Resumable Data" class="dashAnchor"></a>
+                <a href="#/Resumable%20Data">
+                  <h3 class="section-name">Resumable Data</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke16ImageTaskMetricsV07SessionD0C10wasResumedSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/wasResumed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke16ImageTaskMetricsV07SessionD0C10wasResumedSbSgvp">wasResumed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">fileprivate</span><span class="p">(</span><span class="k">set</span><span class="p">)</span> <span class="k">var</span> <span class="nv">wasResumed</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/ImagePipeline.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke16ImageTaskMetricsV07SessionD0C16resumedDataCountSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/resumedDataCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke16ImageTaskMetricsV07SessionD0C16resumedDataCountSiSgvp">resumedDataCount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">fileprivate</span><span class="p">(</span><span class="k">set</span><span class="p">)</span> <span class="k">var</span> <span class="nv">resumedDataCount</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/ImagePipeline.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke16ImageTaskMetricsV07SessionD0C21serverConfirmedResumeSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/serverConfirmedResume" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke16ImageTaskMetricsV07SessionD0C21serverConfirmedResumeSbSgvp">serverConfirmedResume</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">fileprivate</span><span class="p">(</span><span class="k">set</span><span class="p">)</span> <span class="k">var</span> <span class="nv">serverConfirmedResume</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/ImagePipeline.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke16ImageTaskMetricsV07SessionD0C19downloadedDataCountSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/downloadedDataCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke16ImageTaskMetricsV07SessionD0C19downloadedDataCountSiSgvp">downloadedDataCount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">fileprivate</span><span class="p">(</span><span class="k">set</span><span class="p">)</span> <span class="k">var</span> <span class="nv">downloadedDataCount</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/ImagePipeline.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke16ImageTaskMetricsV07SessionD0C24totalDownloadedDataCountSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/totalDownloadedDataCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke16ImageTaskMetricsV07SessionD0C24totalDownloadedDataCountSiSgvp">totalDownloadedDataCount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">totalDownloadedDataCount</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/ImagePipeline.swift#L827-L830">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s28CustomDebugStringConvertibleP16debugDescriptionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/debugDescription" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s28CustomDebugStringConvertibleP16debugDescriptionSSvp">debugDescription</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">debugDescription</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/6.0/Sources/ImagePipeline.swift#L834-L855">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2018-05-10)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

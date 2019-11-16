@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Request Struct Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/Request" class="dashAnchor"></a>
+    <a title="Request Struct Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Nuke Docs</a> (88% documented)</p>
+        <p class="header-right"><a href="https://github.com/kean/nuke"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Nuke Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Request Struct Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Cache.html">Cache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CancellationTokenSource.html">CancellationTokenSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DataDecoderComposition.html">DataDecoderComposition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DataLoader.html">DataLoader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Deduplicator.html">Deduplicator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DispatchQueueScheduler.html">DispatchQueueScheduler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Loader.html">Loader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Loader/Schedulers.html">– Schedulers</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Loader/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Manager.html">Manager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OperationQueueScheduler.html">OperationQueueScheduler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Preheater.html">Preheater</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RateLimiter.html">RateLimiter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/Result.html">Result</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/ImageView.html">ImageView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Nuke13cancelRequestFT3forPs9AnyObject__T_">cancelRequest(for:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Nuke9loadImageFT4withV10Foundation3URL4intoPS_6Target__T_">loadImage(with:into:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Nuke9loadImageFT4withVS_7Request4intoPS_6Target__T_">loadImage(with:into:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Nuke9loadImageFT4withV10Foundation3URL4intoPs9AnyObject_7handlerFTGOS_6ResultCSo7UIImage_Sb_T__T_">loadImage(with:into:handler:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Nuke9loadImageFT4withVS_7Request4intoPs9AnyObject_7handlerFTGOS_6ResultCSo7UIImage_Sb_T__T_">loadImage(with:into:handler:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/AsyncScheduler.html">AsyncScheduler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Caching.html">Caching</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DataDecoding.html">DataDecoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DataLoading.html">DataLoading</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Loading.html">Loading</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Processing.html">Processing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Scheduler.html">Scheduler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Target.html">Target</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/AnyProcessor.html">AnyProcessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CancellationToken.html">CancellationToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataDecoder.html">DataDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Decompressor.html">Decompressor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Decompressor/ContentMode.html">– ContentMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ProcessorComposition.html">ProcessorComposition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Request.html">Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Request/MemoryCacheOptions.html">– MemoryCacheOptions</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Typealiases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Nuke5Image">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Nuke9ImageView">ImageView</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Request</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Request</span></code></pre>
+
+                </div>
+              </div>
+            <p>Represents an image request.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vV4Nuke7Request10urlRequestV10Foundation10URLRequest"></a>
+                    <a name="//apple_ref/swift/Property/urlRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vV4Nuke7Request10urlRequestV10Foundation10URLRequest">urlRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Request</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/5.1/Sources/Request.swift#L9-L17">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FV4Nuke7RequestcFT3urlV10Foundation3URL_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(url:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FV4Nuke7RequestcFT3urlV10Foundation3URL_S0_">init(url:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Request</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/5.1/Sources/Request.swift#L19-L22">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FV4Nuke7RequestcFT10urlRequestV10Foundation10URLRequest_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(urlRequest:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FV4Nuke7RequestcFT10urlRequestV10Foundation10URLRequest_S0_">init(urlRequest:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Request</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/5.1/Sources/Request.swift#L24-L27">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vV4Nuke7Request9processorGSqVS_12AnyProcessor_"></a>
+                    <a name="//apple_ref/swift/Property/processor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vV4Nuke7Request9processorGSqVS_12AnyProcessor_">processor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Processor to be applied to the image. <code><a href="../Structs/Decompressor.html">Decompressor</a></code> by default.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">processor</span><span class="p">:</span> <span class="kt"><a href="../Structs/AnyProcessor.html">AnyProcessor</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/5.1/Sources/Request.swift#L30-L33">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:VV4Nuke7Request18MemoryCacheOptions"></a>
+                    <a name="//apple_ref/swift/Struct/MemoryCacheOptions" class="dashAnchor"></a>
+                    <a class="token" href="#/s:VV4Nuke7Request18MemoryCacheOptions">MemoryCacheOptions</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The policy to use when dealing with memory cache.</p>
+
+                        <a href="../Structs/Request/MemoryCacheOptions.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MemoryCacheOptions</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/5.1/Sources/Request.swift#L36-L44">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vV4Nuke7Request18memoryCacheOptionsVS0_18MemoryCacheOptions"></a>
+                    <a name="//apple_ref/swift/Property/memoryCacheOptions" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vV4Nuke7Request18memoryCacheOptionsVS0_18MemoryCacheOptions">memoryCacheOptions</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>MemoryCacheOptions()</code> by default.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">memoryCacheOptions</span> <span class="o">=</span> <span class="kt"><a href="../Structs/Request/MemoryCacheOptions.html">MemoryCacheOptions</a></span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/5.1/Sources/Request.swift#L47">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vV4Nuke7Request7loadKeyGSqVs11AnyHashable_"></a>
+                    <a name="//apple_ref/swift/Property/loadKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vV4Nuke7Request7loadKeyGSqVs11AnyHashable_">loadKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a key that compares requests with regards to loading images.</p>
+
+<p>If <code>nil</code> default key is used. See <code><a href="../Structs/Request.html#/s:ZFV4Nuke7Request7loadKeyFT3forS0__Vs11AnyHashable">Request.loadKey(for:)</a></code> for more info.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">loadKey</span><span class="p">:</span> <span class="kt">AnyHashable</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/5.1/Sources/Request.swift#L52">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vV4Nuke7Request8cacheKeyGSqVs11AnyHashable_"></a>
+                    <a name="//apple_ref/swift/Property/cacheKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vV4Nuke7Request8cacheKeyGSqVs11AnyHashable_">cacheKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a key that compares requests with regards to caching images.</p>
+
+<p>If <code>nil</code> default key is used. See <code><a href="../Structs/Request.html#/s:ZFV4Nuke7Request8cacheKeyFT3forS0__Vs11AnyHashable">Request.cacheKey(for:)</a></code> for more info.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">cacheKey</span><span class="p">:</span> <span class="kt">AnyHashable</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/5.1/Sources/Request.swift#L57">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vV4Nuke7Request8userInfoGSqP__"></a>
+                    <a name="//apple_ref/swift/Property/userInfo" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vV4Nuke7Request8userInfoGSqP__">userInfo</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Custom info passed alongside the request.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">userInfo</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/5.1/Sources/Request.swift#L60">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FV4Nuke7Request7processuRxS_10ProcessingrFT4withx_T_"></a>
+                    <a name="//apple_ref/swift/Method/process(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FV4Nuke7Request7processuRxS_10ProcessingrFT4withx_T_">process(with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Appends a processor to the request. You can append arbitrary number of
+processors to the request.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="n">process</span><span class="o">&lt;</span><span class="kt">P</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Processing.html">Processing</a></span><span class="o">&gt;</span><span class="p">(</span><span class="n">with</span> <span class="nv">processor</span><span class="p">:</span> <span class="kt">P</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/5.1/Sources/Request.swift#L125-L132">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FV4Nuke7Request9processeduRxS_10ProcessingrFT4withx_S0_"></a>
+                    <a name="//apple_ref/swift/Method/processed(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FV4Nuke7Request9processeduRxS_10ProcessingrFT4withx_S0_">processed(with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Appends a processor to the request. You can append arbitrary number of
+processors to the request.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">processed</span><span class="o">&lt;</span><span class="kt">P</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Processing.html">Processing</a></span><span class="o">&gt;</span><span class="p">(</span><span class="n">with</span> <span class="nv">processor</span><span class="p">:</span> <span class="kt">P</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/5.1/Sources/Request.swift#L136-L140">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFV4Nuke7Request8cacheKeyFT3forS0__Vs11AnyHashable"></a>
+                    <a name="//apple_ref/swift/Method/cacheKey(for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFV4Nuke7Request8cacheKeyFT3forS0__Vs11AnyHashable">cacheKey(for:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a key which compares requests with regards to caching images.
+Returns <code><a href="../Structs/Request.html#/s:vV4Nuke7Request8cacheKeyGSqVs11AnyHashable_">cacheKey</a></code> if not <code>nil</code>. Returns default key otherwise.</p>
+
+<p>The default key considers two requests equivalent it they have the same
+<code>URLRequests</code> and the same processors. <code>URLRequests</code> are compared
+just by their <code>URLs</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">cacheKey</span><span class="p">(</span><span class="k">for</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">Request</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AnyHashable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/5.1/Sources/Request.swift#L150-L154">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFV4Nuke7Request7loadKeyFT3forS0__Vs11AnyHashable"></a>
+                    <a name="//apple_ref/swift/Method/loadKey(for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFV4Nuke7Request7loadKeyFT3forS0__Vs11AnyHashable">loadKey(for:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a key which compares requests with regards to loading images.
+Returns <code><a href="../Structs/Request.html#/s:vV4Nuke7Request7loadKeyGSqVs11AnyHashable_">loadKey</a></code> if not <code>nil</code>. Returns default key otherwise.</p>
+
+<p>The default key considers two requests equivalent it they have the same
+<code>URLRequests</code> and the same processors. <code>URLRequests</code> are compared by
+their <code>URL</code>, <code>cachePolicy</code>, and <code>allowsCellularAccess</code> properties.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">loadKey</span><span class="p">(</span><span class="k">for</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">Request</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AnyHashable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/5.1/Sources/Request.swift#L162-L171">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2017-03-19)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

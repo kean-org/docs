@@ -1,0 +1,152 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/DataDecoder.swift",
+      "line": 64,
+      "symbol": "DataDecoderComposition.decoders",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/DataLoader.swift",
+      "line": 15,
+      "symbol": "DataLoader.session",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/Loader.swift",
+      "line": 16,
+      "symbol": "ProgressHandler",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/Loader.swift",
+      "line": 318,
+      "symbol": "Loader.Error.decodingFailed",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/Loader.swift",
+      "line": 319,
+      "symbol": "Loader.Error.processingFailed",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/Manager.swift",
+      "line": 9,
+      "symbol": "Manager.loader",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/Manager.swift",
+      "line": 10,
+      "symbol": "Manager.cache",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/Manager.swift",
+      "line": 40,
+      "symbol": "Manager.Handler",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/Nuke.swift",
+      "line": 20,
+      "symbol": "Result.failure",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/Nuke.swift",
+      "line": 20,
+      "symbol": "Result.success",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/Nuke.swift",
+      "line": 37,
+      "symbol": "loadImage(with:into:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/Nuke.swift",
+      "line": 42,
+      "symbol": "loadImage(with:into:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/Nuke.swift",
+      "line": 47,
+      "symbol": "loadImage(with:into:handler:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/Nuke.swift",
+      "line": 52,
+      "symbol": "loadImage(with:into:handler:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/Processor.swift",
+      "line": 43,
+      "symbol": "AnyProcessor.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/Request.swift",
+      "line": 45,
+      "symbol": "Request.MemoryCacheOptions.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/Request.swift",
+      "line": 56,
+      "symbol": "Request.Priority.high",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/Request.swift",
+      "line": 56,
+      "symbol": "Request.Priority.low",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/Request.swift",
+      "line": 56,
+      "symbol": "Request.Priority.normal",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/Request.swift",
+      "line": 56,
+      "symbol": "Request.Priority.veryHigh",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/Request.swift",
+      "line": 56,
+      "symbol": "Request.Priority.veryLow",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/kean/Develop/Source/Nuke"
+}

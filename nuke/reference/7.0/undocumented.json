@@ -1,0 +1,376 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/DataLoader.swift",
+      "line": 7,
+      "symbol": "Cancellable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/DataLoader.swift",
+      "line": 8,
+      "symbol": "Cancellable.cancel()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/DataLoader.swift",
+      "line": 11,
+      "symbol": "DataLoading",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/DataLoader.swift",
+      "line": 25,
+      "symbol": "DataLoader.session",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImageDecoding.swift",
+      "line": 29,
+      "symbol": "ImageDecoder",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImageDecoding.swift",
+      "line": 37,
+      "symbol": "ImageDecoder.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImageDecoding.swift",
+      "line": 214,
+      "symbol": "Image.animatedImageData",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 87,
+      "symbol": "ImageResponse.image",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 88,
+      "symbol": "ImageResponse.urlResponse",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 92,
+      "symbol": "ImageResponse.init(image:urlResponse:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 109,
+      "symbol": "ImagePipeline.configuration",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 131,
+      "symbol": "ImagePipeline.Configuration",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 223,
+      "symbol": "ImagePipeline.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 754,
+      "symbol": "ImageTaskMetrics",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 755,
+      "symbol": "ImageTaskMetrics.taskId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 756,
+      "symbol": "ImageTaskMetrics.wasCancelled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 757,
+      "symbol": "ImageTaskMetrics.session",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 759,
+      "symbol": "ImageTaskMetrics.startDate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 760,
+      "symbol": "ImageTaskMetrics.endDate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 761,
+      "symbol": "ImageTaskMetrics.totalDuration",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 768,
+      "symbol": "ImageTaskMetrics.isMemoryCacheHit",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 791,
+      "symbol": "ImageTaskMetrics.SessionMetrics",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 795,
+      "symbol": "ImageTaskMetrics.SessionMetrics.wasCancelled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 799,
+      "symbol": "ImageTaskMetrics.SessionMetrics.startDate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 801,
+      "symbol": "ImageTaskMetrics.SessionMetrics.checkDiskCacheStartDate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 802,
+      "symbol": "ImageTaskMetrics.SessionMetrics.checkDiskCacheEndDate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 804,
+      "symbol": "ImageTaskMetrics.SessionMetrics.loadDataStartDate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 805,
+      "symbol": "ImageTaskMetrics.SessionMetrics.loadDataEndDate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 807,
+      "symbol": "ImageTaskMetrics.SessionMetrics.decodeStartDate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 808,
+      "symbol": "ImageTaskMetrics.SessionMetrics.decodeEndDate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 810,
+      "symbol": "ImageTaskMetrics.SessionMetrics.processStartDate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 811,
+      "symbol": "ImageTaskMetrics.SessionMetrics.processEndDate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 813,
+      "symbol": "ImageTaskMetrics.SessionMetrics.endDate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 815,
+      "symbol": "ImageTaskMetrics.SessionMetrics.totalDuration",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 822,
+      "symbol": "ImageTaskMetrics.SessionMetrics.wasResumed",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 823,
+      "symbol": "ImageTaskMetrics.SessionMetrics.resumedDataCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 824,
+      "symbol": "ImageTaskMetrics.SessionMetrics.serverConfirmedResume",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 826,
+      "symbol": "ImageTaskMetrics.SessionMetrics.downloadedDataCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 827,
+      "symbol": "ImageTaskMetrics.SessionMetrics.totalDownloadedDataCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 863,
+      "symbol": "ImageDecodingContext.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 865,
+      "symbol": "ImageDecodingContext.data",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 870,
+      "symbol": "ImageProcessingContext.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 871,
+      "symbol": "ImageProcessingContext.isFinal",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImagePipeline.swift",
+      "line": 872,
+      "symbol": "ImageProcessingContext.scanNumber",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImageProcessing.swift",
+      "line": 45,
+      "symbol": "AnyImageProcessor.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImageRequest.swift",
+      "line": 61,
+      "symbol": "ImageRequest.MemoryCacheOptions.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImageRequest.swift",
+      "line": 72,
+      "symbol": "ImageRequest.Priority.high",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImageRequest.swift",
+      "line": 72,
+      "symbol": "ImageRequest.Priority.low",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImageRequest.swift",
+      "line": 72,
+      "symbol": "ImageRequest.Priority.normal",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImageRequest.swift",
+      "line": 72,
+      "symbol": "ImageRequest.Priority.veryHigh",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImageRequest.swift",
+      "line": 72,
+      "symbol": "ImageRequest.Priority.veryLow",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImageView.swift",
+      "line": 25,
+      "symbol": "ImageDisplaying.display(image:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/Source/Nuke/Sources/ImageView.swift",
+      "line": 231,
+      "symbol": "ImageLoadingOptions.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/kean/Develop/Source/Nuke"
+}

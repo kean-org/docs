@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ImageRequest Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/ImageRequest" class="dashAnchor"></a>
+    <a title="ImageRequest Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Nuke Docs</a> (70% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Nuke Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        ImageRequest Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/DataCache.html">DataCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DataLoader.html">DataLoader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DataLoader/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageCache.html">ImageCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageDecoder.html">ImageDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageDecoderRegistry.html">ImageDecoderRegistry</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImagePipeline.html">ImagePipeline</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImagePipeline/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImagePipeline/Configuration.html">– Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImagePreheater.html">ImagePreheater</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImagePreheater/Destination.html">– Destination</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageResponse.html">ImageResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageTask.html">ImageTask</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/ImageProcessor.html">ImageProcessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ImageProcessor/Unit.html">– Unit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ImageProcessor/Resize.html">– Resize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ImageProcessor/Composition.html">– Composition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ImageProcessor/Anonymous.html">– Anonymous</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/CGSize.html">CGSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Image.html">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ImageProcessor.html">ImageProcessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ImageProcessor/Circle.html">– Circle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ImageProcessor/RoundedCorners.html">– RoundedCorners</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ImageProcessor/CoreImageFilter.html">– CoreImageFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ImageProcessor/GaussianBlur.html">– GaussianBlur</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSImageView.html">NSImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImageView.html">UIImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/WKInterfaceImage.html">WKInterfaceImage</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4Nuke13cancelRequest3foryAA0A16_ImageDisplaying_So6NSViewCXc_tF">cancelRequest(for:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4Nuke9loadImage4with7options4into8progress10completionAA0C4TaskCSg10Foundation3URLV_AA0C14LoadingOptionsVAA0a1_C10Displaying_So6NSViewCXcyAA0C8ResponseCSg_s5Int64VAWtcSgys6ResultOyAtA0C8PipelineC5ErrorOGcSgtF">loadImage(with:options:into:progress:completion:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4Nuke9loadImage4with7options4into8progress10completionAA0C4TaskCSgAA0C7RequestV_AA0C14LoadingOptionsVAA0a1_C10Displaying_So6NSViewCXcyAA0C8ResponseCSg_s5Int64VAVtcSgys6ResultOyAsA0C8PipelineC5ErrorOGcSgtF">loadImage(with:options:into:progress:completion:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Cancellable.html">Cancellable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DataCaching.html">DataCaching</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DataLoading.html">DataLoading</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageCaching.html">ImageCaching</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageDecoding.html">ImageDecoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageEncoding.html">ImageEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageProcessing.html">ImageProcessing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Nuke_ImageDisplaying.html">Nuke_ImageDisplaying</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:4Nuke17AnyImageProcessorV">AnyImageProcessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageDecodingContext.html">ImageDecodingContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageEncoder.html">ImageEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageEncodingContext.html">ImageEncodingContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageLoadingOptions.html">ImageLoadingOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageLoadingOptions/ContentModes.html">– ContentModes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageLoadingOptions/Transition.html">– Transition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageProcessingContext.html">ImageProcessingContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageRequest.html">ImageRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageRequest/Priority.html">– Priority</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageRequestOptions.html">ImageRequestOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageRequestOptions/MemoryCacheOptions.html">– MemoryCacheOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageTaskMetrics.html">ImageTaskMetrics</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageTaskMetrics/SessionMetrics.html">– SessionMetrics</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/Image">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Nuke5Imagea">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/ImageDisplayingView">ImageDisplayingView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Nuke19ImageDisplayingViewa">ImageDisplayingView</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>ImageRequest</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ImageRequest</span> <span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
+
+                </div>
+              </div>
+            <p>Represents an image request.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Parameters%20of%20the%20Request"></a>
+                <a name="//apple_ref/swift/Section/Parameters of the Request" class="dashAnchor"></a>
+                <a href="#/Parameters%20of%20the%20Request">
+                  <h3 class="section-name">Parameters of the Request</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke12ImageRequestV03urlC010Foundation10URLRequestVvp"></a>
+                    <a name="//apple_ref/swift/Property/urlRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke12ImageRequestV03urlC010Foundation10URLRequestVvp">urlRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code>URLRequest</code> used for loading an image.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">urlRequest</span><span class="p">:</span> <span class="kt">URLRequest</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke12ImageRequestV8PriorityO"></a>
+                    <a name="//apple_ref/swift/Enum/Priority" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke12ImageRequestV8PriorityO">Priority</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The execution priority of the request. The priority affects the order in which the image
+requests are executed.</p>
+
+                        <a href="../Structs/ImageRequest/Priority.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Priority</span> <span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="kt">Comparable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke12ImageRequestV8priorityAC8PriorityOvp"></a>
+                    <a name="//apple_ref/swift/Property/priority" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke12ImageRequestV8priorityAC8PriorityOvp">priority</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The relative priority of the operation. The priority affects the order in which the image
+requests are executed.<code>.normal</code> by default.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Structs/ImageRequest/Priority.html">Priority</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke12ImageRequestV7optionsAA0bC7OptionsVvp"></a>
+                    <a name="//apple_ref/swift/Property/options" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke12ImageRequestV7optionsAA0bC7OptionsVvp">options</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The request options. See <code><a href="../Structs/ImageRequestOptions.html">ImageRequestOptions</a></code> for more info.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Structs/ImageRequestOptions.html">ImageRequestOptions</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke12ImageRequestV10processorsSayAA0B10Processing_pGvp"></a>
+                    <a name="//apple_ref/swift/Property/processors" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke12ImageRequestV10processorsSayAA0B10Processing_pGvp">processors</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Processor to be applied to the image. <code>nil</code> by default.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">processors</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/ImageProcessing.html">ImageProcessing</a></span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initializers"></a>
+                <a name="//apple_ref/swift/Section/Initializers" class="dashAnchor"></a>
+                <a href="#/Initializers">
+                  <h3 class="section-name">Initializers</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke12ImageRequestV3url10processors8priority7optionsAC10Foundation3URLV_SayAA0B10Processing_pGAC8PriorityOAA0bC7OptionsVtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(url:processors:priority:options:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke12ImageRequestV3url10processors8priority7optionsAC10Foundation3URLV_SayAA0B10Processing_pGAC8PriorityOAA0bC7OptionsVtcfc">init(url:processors:priority:options:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes a request with the given URL.</p>
+
+<p><code>ImageRequest</code> allows you to set image processors, change the request priority and more:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">request</span> <span class="o">=</span> <span class="kt">ImageRequest</span><span class="p">(</span>
+    <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"http://..."</span><span class="p">),</span>
+    <span class="nv">processors</span><span class="p">:</span> <span class="p">[</span><span class="kt">ImageProcessor</span><span class="o">.</span><span class="kt">Resize</span><span class="p">(</span><span class="nv">size</span><span class="p">:</span> <span class="n">imageView</span><span class="o">.</span><span class="n">bounds</span><span class="o">.</span><span class="n">size</span><span class="p">)],</span>
+    <span class="nv">priority</span><span class="p">:</span> <span class="o">.</span><span class="n">high</span>
+<span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span>
+            <span class="nv">processors</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/ImageProcessing.html">ImageProcessing</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span>
+            <span class="nv">priority</span><span class="p">:</span> <span class="kt">ImageRequest</span><span class="o">.</span><span class="kt"><a href="../Structs/ImageRequest/Priority.html">Priority</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">normal</span><span class="p">,</span>
+            <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Structs/ImageRequestOptions.html">ImageRequestOptions</a></span> <span class="o">=</span> <span class="o">.</span><span class="nf">init</span><span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The priority of the request, <code>.normal</code> by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Advanced image loading options.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>processors</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Image processors to be applied after the image is loaded.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke12ImageRequestV03urlC010processors8priority7optionsAC10Foundation10URLRequestV_SayAA0B10Processing_pGAC8PriorityOAA0bC7OptionsVtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(urlRequest:processors:priority:options:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke12ImageRequestV03urlC010processors8priority7optionsAC10Foundation10URLRequestV_SayAA0B10Processing_pGAC8PriorityOAA0bC7OptionsVtcfc">init(urlRequest:processors:priority:options:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes a request with the given request.</p>
+
+<p><code>ImageRequest</code> allows you to set image processors, change the request priority and more:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">request</span> <span class="o">=</span> <span class="kt">ImageRequest</span><span class="p">(</span>
+    <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"http://..."</span><span class="p">),</span>
+    <span class="nv">processors</span><span class="p">:</span> <span class="p">[</span><span class="kt">ImageProcessor</span><span class="o">.</span><span class="kt">Resize</span><span class="p">(</span><span class="nv">size</span><span class="p">:</span> <span class="n">imageView</span><span class="o">.</span><span class="n">bounds</span><span class="o">.</span><span class="n">size</span><span class="p">)],</span>
+    <span class="nv">priority</span><span class="p">:</span> <span class="o">.</span><span class="n">high</span>
+<span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">urlRequest</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">,</span>
+            <span class="nv">processors</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/ImageProcessing.html">ImageProcessing</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span>
+            <span class="nv">priority</span><span class="p">:</span> <span class="kt">ImageRequest</span><span class="o">.</span><span class="kt"><a href="../Structs/ImageRequest/Priority.html">Priority</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">normal</span><span class="p">,</span>
+            <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Structs/ImageRequestOptions.html">ImageRequestOptions</a></span> <span class="o">=</span> <span class="o">.</span><span class="nf">init</span><span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The priority of the request, <code>.normal</code> by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Advanced image loading options.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>processors</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Image processors to be applied after the image is loaded.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s23CustomStringConvertibleP11descriptionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s23CustomStringConvertibleP11descriptionSSvp">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/ImageRequest%20(Deprecated)"></a>
+                <a name="//apple_ref/swift/Section/ImageRequest (Deprecated)" class="dashAnchor"></a>
+                <a href="#/ImageRequest%20(Deprecated)">
+                  <h3 class="section-name">ImageRequest (Deprecated)</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke12ImageRequestV9processorAA0B10Processing_pSgvp"></a>
+                    <a name="//apple_ref/swift/Property/processor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke12ImageRequestV9processorAA0B10Processing_pSgvp">processor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">processor</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ImageProcessing.html">ImageProcessing</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke12ImageRequestV18memoryCacheOptionsAA0bcF0V06MemoryeF0Vvp"></a>
+                    <a name="//apple_ref/swift/Property/memoryCacheOptions" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke12ImageRequestV18memoryCacheOptionsAA0bcF0V06MemoryeF0Vvp">memoryCacheOptions</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">memoryCacheOptions</span><span class="p">:</span> <span class="kt"><a href="../Structs/ImageRequestOptions.html">ImageRequestOptions</a></span><span class="o">.</span><span class="kt">MemoryCacheOptions</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke12ImageRequestV8cacheKeys11AnyHashableVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/cacheKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke12ImageRequestV8cacheKeys11AnyHashableVSgvp">cacheKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">cacheKey</span><span class="p">:</span> <span class="kt">AnyHashable</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke12ImageRequestV7loadKeys11AnyHashableVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/loadKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke12ImageRequestV7loadKeys11AnyHashableVSgvp">loadKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">loadKey</span><span class="p">:</span> <span class="kt">AnyHashable</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke12ImageRequestV8userInfoypSgvp"></a>
+                    <a name="//apple_ref/swift/Property/userInfo" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke12ImageRequestV8userInfoypSgvp">userInfo</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">userInfo</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke12ImageRequestV3url9processorAC10Foundation3URLV_AA0B10Processing_ptcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(url:processor:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke12ImageRequestV3url9processorAC10Foundation3URLV_AA0B10Processing_ptcfc">init(url:processor:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">processor</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ImageProcessing.html">ImageProcessing</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke12ImageRequestV03urlC09processorAC10Foundation10URLRequestV_AA0B10Processing_ptcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(urlRequest:processor:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke12ImageRequestV03urlC09processorAC10Foundation10URLRequestV_AA0B10Processing_ptcfc">init(urlRequest:processor:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">urlRequest</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">,</span> <span class="nv">processor</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ImageProcessing.html">ImageProcessing</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/ImageRequest%20(Deprecated)2"></a>
+                <a name="//apple_ref/swift/Section/ImageRequest (Deprecated)" class="dashAnchor"></a>
+                <a href="#/ImageRequest%20(Deprecated)2">
+                  <h3 class="section-name">ImageRequest (Deprecated)</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke12ImageRequestV7process4withyAA0B10Processing_p_tF"></a>
+                    <a name="//apple_ref/swift/Method/process(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke12ImageRequestV7process4withyAA0B10Processing_p_tF">process(with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">process</span><span class="p">(</span><span class="n">with</span> <span class="nv">processor</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ImageProcessing.html">ImageProcessing</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke12ImageRequestV9processed4withAcA0B10Processing_p_tF"></a>
+                    <a name="//apple_ref/swift/Method/processed(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke12ImageRequestV9processed4withAcA0B10Processing_p_tF">processed(with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">processed</span><span class="p">(</span><span class="n">with</span> <span class="nv">processor</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ImageProcessing.html">ImageProcessing</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ImageRequest</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke12ImageRequestV7process3key_ySS_So7NSImageCSgAGctF"></a>
+                    <a name="//apple_ref/swift/Method/process(key:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke12ImageRequestV7process3key_ySS_So7NSImageCSgAGctF">process(key:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">process</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Image</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Image</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Nuke12ImageRequestV9processed3key_ACSS_So7NSImageCSgAGctF"></a>
+                    <a name="//apple_ref/swift/Method/processed(key:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Nuke12ImageRequestV9processed3key_ACSS_So7NSImageCSgAGctF">processed(key:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">processed</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Image</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Image</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">ImageRequest</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://github.com/kean/Nuke" target="_blank" rel="external">Alexander Grebenyuk</a>. All rights reserved. (Last updated: 2019-06-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
