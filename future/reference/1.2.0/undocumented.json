@@ -1,0 +1,96 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/kean/Develop/FutureX/Sources/Future.swift",
+      "line": 26,
+      "symbol": "Future.Result",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/FutureX/Sources/Future.swift",
+      "line": 242,
+      "symbol": "Future.flatMap(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/FutureX/Sources/Future.swift",
+      "line": 256,
+      "symbol": "Future.flatMap(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/FutureX/Sources/Future.swift",
+      "line": 262,
+      "symbol": "Future.flatMap(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/FutureX/Sources/Future.swift",
+      "line": 429,
+      "symbol": "ScheduleWork",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/FutureX/Sources/Future.swift",
+      "line": 431,
+      "symbol": "Scheduler",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/FutureX/Sources/FutureCompatible.swift",
+      "line": 21,
+      "symbol": "FutureCompatible.CompatibleType",
+      "symbol_kind": "source.lang.swift.decl.associatedtype",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/FutureX/Sources/FutureCompatible.swift",
+      "line": 22,
+      "symbol": "FutureCompatible.fx",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/FutureX/Sources/FutureCompatible.swift",
+      "line": 23,
+      "symbol": "FutureCompatible.fx",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/FutureX/Sources/FutureExtensions.swift",
+      "line": 63,
+      "symbol": "Future.Delay",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/FutureX/Sources/FutureExtensions.swift",
+      "line": 64,
+      "symbol": "Future.Delay.seconds(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/FutureX/Sources/FutureExtensions.swift",
+      "line": 65,
+      "symbol": "Future.Delay.exponential(initial:multiplier:maxDelay:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/FutureX/Sources/FutureExtensions.swift",
+      "line": 66,
+      "symbol": "Future.Delay.custom(closure:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/kean/Develop/FutureX"
+}
