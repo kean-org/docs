@@ -30,14 +30,14 @@
     },
     {
       "file": "/Users/kean/Develop/FutureX/Sources/Future.swift",
-      "line": 429,
+      "line": 426,
       "symbol": "ScheduleWork",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/kean/Develop/FutureX/Sources/Future.swift",
-      "line": 431,
+      "line": 428,
       "symbol": "Scheduler",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
