@@ -1,0 +1,75 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/kean/Develop/NukeExtensions/ImageTaskBuilder/Source/ImageTaskBuilder.swift",
+      "line": 21,
+      "symbol": "ImagePipeline.image(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/NukeExtensions/ImageTaskBuilder/Source/ImageTaskBuilder.swift",
+      "line": 25,
+      "symbol": "ImagePipeline.image(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/NukeExtensions/ImageTaskBuilder/Source/ImageTaskBuilder.swift",
+      "line": 29,
+      "symbol": "ImagePipeline.image(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/NukeExtensions/ImageTaskBuilder/Source/ImageViewExtensionsTaskBuilder.swift",
+      "line": 20,
+      "symbol": "ImageViewExtensionsTaskBuilder",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/NukeExtensions/ImageTaskBuilder/Source/ImageViewExtensionsTaskBuilder.swift",
+      "line": 32,
+      "symbol": "ImageViewExtensionsTaskBuilder.load(progress:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/NukeExtensions/ImageTaskBuilder/Source/ImageViewExtensionsTaskBuilder.swift",
+      "line": 40,
+      "symbol": "ImageLoadingOptions.ImageType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/NukeExtensions/ImageTaskBuilder/Source/ImageViewExtensionsTaskBuilder.swift",
+      "line": 41,
+      "symbol": "ImageLoadingOptions.ImageType.failure",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/NukeExtensions/ImageTaskBuilder/Source/ImageViewExtensionsTaskBuilder.swift",
+      "line": 41,
+      "symbol": "ImageLoadingOptions.ImageType.placeholder",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/NukeExtensions/ImageTaskBuilder/Source/ImageViewExtensionsTaskBuilder.swift",
+      "line": 41,
+      "symbol": "ImageLoadingOptions.ImageType.success",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kean/Develop/NukeExtensions/ImageTaskBuilder/Source/ImageViewExtensionsTaskBuilder.swift",
+      "line": 45,
+      "symbol": "ImageViewExtensionsTaskBuilder",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/kean/Develop/NukeExtensions/ImageTaskBuilder"
+}

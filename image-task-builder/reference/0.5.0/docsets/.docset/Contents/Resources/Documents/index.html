@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html"> Docs</a> (67% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html"> Reference</a>
+        <img id="carat" src="img/carat.png" />
+          Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/ImageLoadingOptions.html">ImageLoadingOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/ImageLoadingOptions/ImageType.html">– ImageType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/ImagePipeline.html">ImagePipeline</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/ImageTaskBuilder.html">ImageTaskBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ImageViewExtensionsTaskBuilder.html">ImageViewExtensionsTaskBuilder</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <p><br/></p>
+
+<p><p align="left"><img src="https://cloud.githubusercontent.com/assets/1567433/13918338/f8670eea-ef7f-11e5-814d-f15bdfd6b2c0.png" height="180"/></p>
+<h1 id='imagetaskbuilder' class='heading'>ImageTaskBuilder</h1>
+
+<p>A fun and convenient way to use <a href="https://github.com/kean/Nuke">Nuke</a> inspired by SwiftUI.</p>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>Downloading an image and applying processors.</p>
+<pre class="highlight swift"><code><span class="kt">ImagePipeline</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">image</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://"</span><span class="p">)</span><span class="o">!</span><span class="p">)</span>
+    <span class="o">.</span><span class="nf">resize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">320</span><span class="p">)</span>
+    <span class="o">.</span><span class="nf">blur</span><span class="p">(</span><span class="nv">radius</span><span class="p">:</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="o">.</span><span class="nf">priority</span><span class="p">(</span><span class="o">.</span><span class="n">high</span><span class="p">)</span>
+    <span class="o">.</span><span class="nf">schedule</span><span class="p">(</span><span class="nv">on</span><span class="p">:</span> <span class="o">.</span><span class="nf">global</span><span class="p">())</span>
+    <span class="o">.</span><span class="n">load</span> <span class="p">{</span> <span class="n">result</span> <span class="k">in</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="c1">// Called on a global queue instead of the default main queue</span>
+    <span class="p">}</span>
+
+<span class="c1">// Returns a discardable `ImageTask`.</span>
+</code></pre>
+
+<p>You can take the same image that you described previously and automatically display in a view.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="kt">ImagePipeline</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">image</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://"</span><span class="p">)</span><span class="o">!</span><span class="p">)</span>
+    <span class="o">.</span><span class="nf">resize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">320</span><span class="p">)</span>
+    <span class="o">.</span><span class="nf">blur</span><span class="p">(</span><span class="nv">radius</span><span class="p">:</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="o">.</span><span class="nf">priority</span><span class="p">(</span><span class="o">.</span><span class="n">high</span><span class="p">)</span>
+
+<span class="k">let</span> <span class="nv">imageView</span><span class="p">:</span> <span class="kt">UIImageView</span>
+
+<span class="n">image</span><span class="o">.</span><span class="nf">display</span><span class="p">(</span><span class="nv">in</span><span class="p">:</span> <span class="n">imageView</span><span class="p">)</span>
+    <span class="o">.</span><span class="nf">transition</span><span class="p">(</span><span class="o">.</span><span class="nf">fadeIn</span><span class="p">(</span><span class="nv">duration</span><span class="p">:</span> <span class="mf">0.33</span><span class="p">))</span>
+    <span class="o">.</span><span class="nf">placeholder</span><span class="p">(</span><span class="kt">UIImage</span><span class="o">.</span><span class="n">placeholder</span><span class="p">)</span>
+    <span class="o">.</span><span class="nf">contentMode</span><span class="p">(</span><span class="o">.</span><span class="n">center</span><span class="p">,</span> <span class="nv">for</span><span class="p">:</span> <span class="o">.</span><span class="n">placeholder</span><span class="p">)</span>
+    <span class="o">.</span><span class="nf">load</span><span class="p">()</span>
+</code></pre>
+
+<p>When you call <code>display(in:)</code> method you get access to a variety of new options specific to the image view.</p>
+<h1 id='requirements' class='heading'>Requirements</h1>
+
+<table><thead>
+<tr>
+<th>Nuke</th>
+<th>Swift</th>
+<th>Xcode</th>
+<th>Platforms</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Nuke 8.0</td>
+<td>Swift 5.0</td>
+<td>Xcode 10.2</td>
+<td>iOS 10.0 / watchOS 3.0 / macOS 10.12 / tvOS 10.0</td>
+</tr>
+</tbody></table>
+<h1 id='license' class='heading'>License</h1>
+
+<p>ImageTaskBuilder is available under the MIT license. See the LICENSE file for more info.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-03-28)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

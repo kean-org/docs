@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ImageTaskBuilder Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/ImageTaskBuilder" class="dashAnchor"></a>
+    <a title="ImageTaskBuilder Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (67% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        ImageTaskBuilder Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/ImageLoadingOptions.html">ImageLoadingOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ImageLoadingOptions/ImageType.html">– ImageType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ImagePipeline.html">ImagePipeline</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/ImageTaskBuilder.html">ImageTaskBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageViewExtensionsTaskBuilder.html">ImageViewExtensionsTaskBuilder</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>ImageTaskBuilder</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ImageTaskBuilder</span></code></pre>
+
+                </div>
+              </div>
+            <p>A convenience API for loading images.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16ImageTaskBuilderAAV7request4Nuke0A7RequestVvp"></a>
+                    <a name="//apple_ref/swift/Property/request" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16ImageTaskBuilderAAV7request4Nuke0A7RequestVvp">request</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The current request.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">ImageRequest</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Options"></a>
+                <a name="//apple_ref/swift/Section/Options" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Options"></a>
+                  <h3 class="section-name"><p>Options</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16ImageTaskBuilderAAV8priorityyAB4Nuke0A7RequestV8PriorityOF"></a>
+                    <a name="//apple_ref/swift/Method/priority(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16ImageTaskBuilderAAV8priorityyAB4Nuke0A7RequestV8PriorityOF">priority(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set the relative priority of the image task. The priority affects the order
+in which the image requests are executed.<code>.normal</code> by default.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">priority</span><span class="p">(</span><span class="n">_</span> <span class="nv">priority</span><span class="p">:</span> <span class="kt">ImageRequest</span><span class="o">.</span><span class="kt">Priority</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ImageTaskBuilder</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16ImageTaskBuilderAAV7optionsyAB4Nuke0A14RequestOptionsVF"></a>
+                    <a name="//apple_ref/swift/Method/options(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16ImageTaskBuilderAAV7optionsyAB4Nuke0A14RequestOptionsVF">options(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set the advanced request options. See <code>ImageRequestOptions</code> for more info.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">options</span><span class="p">(</span><span class="n">_</span> <span class="nv">options</span><span class="p">:</span> <span class="kt">ImageRequestOptions</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ImageTaskBuilder</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16ImageTaskBuilderAAV7processyAB4Nuke0A10Processing_pF"></a>
+                    <a name="//apple_ref/swift/Method/process(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16ImageTaskBuilderAAV7processyAB4Nuke0A10Processing_pF">process(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Append the given processor to the request. The processor is going to be
+applied after all of the previously added procesors.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">process</span><span class="p">(</span><span class="n">_</span> <span class="nv">processor</span><span class="p">:</span> <span class="kt">ImageProcessing</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ImageTaskBuilder</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16ImageTaskBuilderAAV8schedule2onABSo17OS_dispatch_queueC_tF"></a>
+                    <a name="//apple_ref/swift/Method/schedule(on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16ImageTaskBuilderAAV8schedule2onABSo17OS_dispatch_queueC_tF">schedule(on:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Change the queue on which to deliver progress and completion callbacks.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">schedule</span><span class="p">(</span><span class="n">on</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ImageTaskBuilder</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Starter"></a>
+                <a name="//apple_ref/swift/Section/Starter" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Starter"></a>
+                  <h3 class="section-name"><p>Starter</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16ImageTaskBuilderAAV4loady4Nuke0aB0CyAD0A8ResponseCSg_s5Int64VAKtcSg_ys6ResultOyAhD0A8PipelineC5ErrorOGcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/load(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16ImageTaskBuilderAAV4loady4Nuke0aB0CyAD0A8ResponseCSg_s5Int64VAKtcSg_ys6ResultOyAhD0A8PipelineC5ErrorOGcSgtF">load(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Starts an image task and returns it.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">load</span><span class="p">(</span><span class="n">_</span> <span class="nv">progress</span><span class="p">:</span> <span class="kt">ImageTask</span><span class="o">.</span><span class="kt">ProgressHandler</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">ImageTask</span><span class="o">.</span><span class="kt">Completion</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ImageTask</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16ImageTaskBuilderAAV7display2inAA0a14ViewExtensionsbC0V4Nuke0h1_A10Displaying_So6NSViewCXc_tF"></a>
+                    <a name="//apple_ref/swift/Method/display(in:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16ImageTaskBuilderAAV7display2inAA0a14ViewExtensionsbC0V4Nuke0h1_A10Displaying_So6NSViewCXc_tF">display(in:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a builder with a variety of options for loading and dispaying the
+image in the given view.s</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">display</span><span class="p">(</span><span class="k">in</span> <span class="nv">view</span><span class="p">:</span> <span class="kt">ImageDisplayingView</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/ImageViewExtensionsTaskBuilder.html">ImageViewExtensionsTaskBuilder</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Processing"></a>
+                <a name="//apple_ref/swift/Section/Processing" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Processing"></a>
+                  <h3 class="section-name"><p>Processing</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16ImageTaskBuilderAAV6resize4size4unit11contentMode4crop7upscaleABSo6CGSizeV_4Nuke0A9ProcessorO4UnitOAM6ResizeV07ContentH0OS2btF"></a>
+                    <a name="//apple_ref/swift/Method/resize(size:unit:contentMode:crop:upscale:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16ImageTaskBuilderAAV6resize4size4unit11contentMode4crop7upscaleABSo6CGSizeV_4Nuke0A9ProcessorO4UnitOAM6ResizeV07ContentH0OS2btF">resize(size:unit:contentMode:crop:upscale:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Resizes the image to a specified size.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">resize</span><span class="p">(</span><span class="nv">size</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">,</span> <span class="nv">unit</span><span class="p">:</span> <span class="kt">ImageProcessor</span><span class="o">.</span><span class="kt">Unit</span> <span class="o">=</span> <span class="o">.</span><span class="n">points</span><span class="p">,</span> <span class="nv">contentMode</span><span class="p">:</span> <span class="kt">ImageProcessor</span><span class="o">.</span><span class="kt">Resize</span><span class="o">.</span><span class="kt">ContentMode</span> <span class="o">=</span> <span class="o">.</span><span class="n">aspectFill</span><span class="p">,</span> <span class="nv">crop</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">upscale</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ImageTaskBuilder</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>size</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The target size.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>unit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Unit of the target size, <code>.points</code> by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>contentMode</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>.aspectFill</code> by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>crop</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If <code>true</code> will crop the image to match the target size. <code>false</code> by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>upscale</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>false</code> by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16ImageTaskBuilderAAV6resize5width4unit4crop7upscaleAB12CoreGraphics7CGFloatV_4Nuke0A9ProcessorO4UnitOS2btF"></a>
+                    <a name="//apple_ref/swift/Method/resize(width:unit:crop:upscale:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16ImageTaskBuilderAAV6resize5width4unit4crop7upscaleAB12CoreGraphics7CGFloatV_4Nuke0A9ProcessorO4UnitOS2btF">resize(width:unit:crop:upscale:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Resizes the image to the given width maintaining aspect ratio.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">resize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">unit</span><span class="p">:</span> <span class="kt">ImageProcessor</span><span class="o">.</span><span class="kt">Unit</span> <span class="o">=</span> <span class="o">.</span><span class="n">points</span><span class="p">,</span> <span class="nv">crop</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">upscale</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ImageTaskBuilder</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>width</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The target width.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>unit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Unit of the target size, <code>.points</code> by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>contentMode</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>.aspectFill</code> by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>crop</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If <code>true</code> will crop the image to match the target size. <code>false</code> by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>upscale</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>false</code> by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16ImageTaskBuilderAAV6resize6height4unit4crop7upscaleAB12CoreGraphics7CGFloatV_4Nuke0A9ProcessorO4UnitOS2btF"></a>
+                    <a name="//apple_ref/swift/Method/resize(height:unit:crop:upscale:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16ImageTaskBuilderAAV6resize6height4unit4crop7upscaleAB12CoreGraphics7CGFloatV_4Nuke0A9ProcessorO4UnitOS2btF">resize(height:unit:crop:upscale:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Resizes the image to the given height maintaining aspect ratio.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">resize</span><span class="p">(</span><span class="nv">height</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">unit</span><span class="p">:</span> <span class="kt">ImageProcessor</span><span class="o">.</span><span class="kt">Unit</span> <span class="o">=</span> <span class="o">.</span><span class="n">points</span><span class="p">,</span> <span class="nv">crop</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">upscale</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ImageTaskBuilder</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>height</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The target height.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>unit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Unit of the target size, <code>.points</code> by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>contentMode</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>.aspectFill</code> by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>crop</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If <code>true</code> will crop the image to match the target size. <code>false</code> by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>upscale</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>false</code> by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/circle(border:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">circle(border:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Rounds the corners of an image into a circle.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/roundedCorners(radius:unit:border:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">roundedCorners(radius:unit:border:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Rounds the corners of an image to the specified radius.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/filter(name:parameters:identifier:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">filter(name:parameters:identifier:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Applies CoreImage filter with the given name.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/filter(name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">filter(name:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Applies Core Image filter (<code>CIFilter</code>) to the image.</p>
+<h1 id='performance-considerations' class='heading'>Performance Considerations.</h1>
+
+<p>Prefer chaining multiple <code>CIFilter</code> objects using <code>Core Image</code> facilities
+instead of using multiple instances of <code>ImageProcessor.CoreImageFilter</code>.</p>
+<h1 id='references' class='heading'>References</h1>
+
+<ul>
+<li><a href="https://developer.apple.com/library/ios/documentation/GraphicsImaging/Conceptual/CoreImaging/ci_intro/ci_intro.html">Core Image Programming Guide</a></li>
+<li><a href="https://developer.apple.com/library/prerelease/ios/documentation/GraphicsImaging/Reference/CoreImageFilterReference/index.html">Core Image Filter Reference</a></li>
+</ul>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/blur(radius:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">blur(radius:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Blurs an image using <code>CIGaussianBlur</code> filter.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16ImageTaskBuilderAAV7process2id_ABSS_So7NSImageCSgAFctF"></a>
+                    <a name="//apple_ref/swift/Method/process(id:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16ImageTaskBuilderAAV7process2id_ABSS_So7NSImageCSgAFctF">process(id:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Processed an image using a specified closure.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">process</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">PlatformImage</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PlatformImage</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">ImageTaskBuilder</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>id</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Identifier that uniquely identifies the transformation.s</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-03-28)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
