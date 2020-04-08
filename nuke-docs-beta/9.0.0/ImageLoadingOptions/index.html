@@ -1197,7 +1197,7 @@ nav li[class] {
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#imageloadingoptions.init(placeholder:transition:failureimage:failureimagetransition:contentmodes:)">init(placeholder:​transition:​failure​Image:​failure​Image​Transition:​content​Modes:​)</a></li><li class="initializer"><a href="#imageloadingoptions.init(placeholder:transition:failureimage:failureimagetransition:)">init(placeholder:​transition:​failure​Image:​failure​Image​Transition:​)</a></li><li class="initializer"><a href="#imageloadingoptions.init(placeholder:failureimage:)">init(placeholder:​failure​Image:​)</a></li><li class="initializer"><a href="#imageloadingoptions.init()">init()</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="property"><a href="#imageloadingoptions.shared">shared</a></li><li class="property"><a href="#imageloadingoptions.placeholder">placeholder</a></li><li class="property"><a href="#imageloadingoptions.failureimage">failure​Image</a></li><li class="property"><a href="#imageloadingoptions.transition">transition</a></li><li class="property"><a href="#imageloadingoptions.failureimagetransition">failure​Image​Transition</a></li><li class="property"><a href="#imageloadingoptions.alwaystransition">always​Transition</a></li><li class="property"><a href="#imageloadingoptions.isprepareforreuseenabled">is​Prepare​For​Reuse​Enabled</a></li><li class="property"><a href="#imageloadingoptions.isprogressiverenderingenabled">is​Progressive​Rendering​Enabled</a></li><li class="property"><a href="#imageloadingoptions.pipeline">pipeline</a></li><li class="property"><a href="#imageloadingoptions.contentmodes">content​Modes</a></li></ul></li></ol>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Nested Types</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#imageloadingoptions.init(placeholder:transition:failureimage:failureimagetransition:contentmodes:)">init(placeholder:​transition:​failure​Image:​failure​Image​Transition:​content​Modes:​)</a></li><li class="initializer"><a href="#imageloadingoptions.init(placeholder:transition:failureimage:failureimagetransition:)">init(placeholder:​transition:​failure​Image:​failure​Image​Transition:​)</a></li><li class="initializer"><a href="#imageloadingoptions.init(placeholder:failureimage:)">init(placeholder:​failure​Image:​)</a></li><li class="initializer"><a href="#imageloadingoptions.init()">init()</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="property"><a href="#imageloadingoptions.shared">shared</a></li><li class="property"><a href="#imageloadingoptions.placeholder">placeholder</a></li><li class="property"><a href="#imageloadingoptions.failureimage">failure​Image</a></li><li class="property"><a href="#imageloadingoptions.transition">transition</a></li><li class="property"><a href="#imageloadingoptions.failureimagetransition">failure​Image​Transition</a></li><li class="property"><a href="#imageloadingoptions.alwaystransition">always​Transition</a></li><li class="property"><a href="#imageloadingoptions.isprepareforreuseenabled">is​Prepare​For​Reuse​Enabled</a></li><li class="property"><a href="#imageloadingoptions.isprogressiverenderingenabled">is​Progressive​Rendering​Enabled</a></li><li class="property"><a href="#imageloadingoptions.pipeline">pipeline</a></li><li class="property"><a href="#imageloadingoptions.contentmodes">content​Modes</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -1213,7 +1213,23 @@ nav li[class] {
     <p>A range of options that control how the image is loaded and displayed.</p>
 
 </div>
-
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Nested Types</h3>
+<dl>
+    <dt class="structure"><code><a href="/ImageLoadingOptions_ContentModes">ImageLoadingOptions.ContentModes</a></code></dt>
+<dd><p>Custom content modes to be used for each image type (placeholder, success,
+failure).</p>
+</dd>
+<dt class="structure"><code><a href="/ImageLoadingOptions_Transition">ImageLoadingOptions.Transition</a></code></dt>
+<dd><p>An animated image transition.</p>
+</dd>
+<dt class="structure"><code><a href="/ImageLoadingOptions_Transition">ImageLoadingOptions.Transition</a></code></dt>
+<dd><p>An animated image transition.</p>
+</dd>
+</dl>
+</section>
     <section id="initializers">
         <h2>Initializers</h2>
 
@@ -1292,7 +1308,7 @@ nav li[class] {
     <h3>
         <code>shared</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">shared</span> = <span class="variable">ImageLoadingOptions</span>()</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">shared</span></code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Shared options.</p>
 
@@ -1344,7 +1360,7 @@ Only runs when the image was not found in memory cache. <code>.nil</code> by def
     <h3>
         <code>always​Transition</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">alwaysTransition</span> = <span class="keyword">false</span></code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">alwaysTransition</span></code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>If true, the requested image will always appear with transition, even
 when loaded from cache</p>
@@ -1355,7 +1371,7 @@ when loaded from cache</p>
     <h3>
         <code>is​Prepare​For​Reuse​Enabled</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">isPrepareForReuseEnabled</span> = <span class="keyword">true</span></code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">isPrepareForReuseEnabled</span></code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>If true, every time you request a new image for a view, the view will be
 automatically prepared for reuse: image will be set to <code>nil</code>, and animations
@@ -1367,7 +1383,7 @@ will be removed. <code>true</code> by default.</p>
     <h3>
         <code>is​Progressive​Rendering​Enabled</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">isProgressiveRenderingEnabled</span> = <span class="keyword">true</span></code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">isProgressiveRenderingEnabled</span></code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>If <code>true</code>, every progressively generated preview produced by the pipeline
 is going to be displayed. <code>true</code> by default.</p>
@@ -1410,7 +1426,7 @@ failure). <code>nil</code>  by default (don't change content mode).</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2020-04-05T11:36:33-0400">5 April 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a>.
+    Generated on <time datetime="2020-04-08T17:10:41-0400">8 April 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a>.
 </p>
     </footer>
 </body>

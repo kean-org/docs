@@ -1243,11 +1243,7 @@ area which stores changes until they are flushed to disk:</p>
 </div>
 <section id="relationships">
     <h2 hidden>Relationships</h2>
-    <figure>
         
-
-        <figcaption hidden>Inheritance graph for DataCache.</figcaption>
-    </figure>
         <h3>Conforms To</h3>
 <dl>
     <dt class="protocol"><code><a href="/DataCaching">DataCaching</a></code></dt>
@@ -1356,7 +1352,7 @@ with the given <code>name</code> in a <code>.cachesDirectory</code> in <code>.us
     <h3>
         <code>count​Limit</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">countLimit</span>: <span class="type">Int</span> = <span class="number literal">1000</span></code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">countLimit</span>: <span class="type">Int</span></code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>The maximum number of items. <code>1000</code> by default.</p>
 
@@ -1370,7 +1366,7 @@ with the given <code>name</code> in a <code>.cachesDirectory</code> in <code>.us
     <h3>
         <code>size​Limit</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">sizeLimit</span>: <span class="type">Int</span> = <span class="number literal">1024</span> * <span class="number literal">1024</span> * <span class="number literal">100</span></code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">sizeLimit</span>: <span class="type">Int</span></code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Size limit in bytes. <code>100 Mb</code> by default.</p>
 
@@ -1394,7 +1390,7 @@ with the given <code>name</code> in a <code>.cachesDirectory</code> in <code>.us
     <h3>
         <code>sweep​Interval</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">sweepInterval</span>: <span class="type">TimeInterval</span> = <span class="number literal">30</span></code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">sweepInterval</span>: <span class="type">TimeInterval</span></code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>The number of seconds between each LRU sweep. 30 by default.
 The first sweep is performed right after the cache is initialized.</p>
@@ -1410,7 +1406,7 @@ with reading.</p>
     <h3>
         <code>queue</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">queue</span> = <span class="variable">DispatchQueue</span>(<span class="variable">label</span>: <span class="string literal">"</span><span class="string literal">com.github.kean.Nuke.DataCache.WriteQueue</span><span class="string literal">"</span>, <span class="variable">target</span>: .<span class="variable">global</span>(<span class="variable">qos</span>: .<span class="variable">utility</span>))</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">queue</span></code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>A queue which is used for disk I/O.</p>
 
@@ -1592,7 +1588,7 @@ which no longer fit in cache.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2020-04-05T11:36:34-0400">5 April 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a>.
+    Generated on <time datetime="2020-04-08T17:10:41-0400">8 April 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a>.
 </p>
     </footer>
 </body>

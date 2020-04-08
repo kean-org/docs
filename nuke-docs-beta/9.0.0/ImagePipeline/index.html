@@ -1197,7 +1197,7 @@ nav li[class] {
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#enumeration cases">Enumeration Cases</a><ul><li class="case"><a href="#imagepipeline.error.dataloadingfailed">data​Loading​Failed</a></li><li class="case"><a href="#imagepipeline.error.decodingfailed">decoding​Failed</a></li><li class="case"><a href="#imagepipeline.error.processingfailed">processing​Failed</a></li><li class="case"><a href="#imagepipeline.datacacheitem.originalimagedata">original​Image​Data</a></li><li class="case"><a href="#imagepipeline.datacacheitem.finalimage">final​Image</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#imagepipeline.init(configuration:)">init(configuration:​)</a></li><li class="initializer"><a href="#imagepipeline.init(_:)">init(_:​)</a></li><li class="initializer"><a href="#imagepipeline.configuration.init(dataloader:imagecache:)">init(data​Loader:​image​Cache:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="property"><a href="#imagepipeline.configuration">configuration</a></li><li class="property"><a href="#imagepipeline.observer">observer</a></li><li class="property"><a href="#imagepipeline.shared">shared</a></li><li class="property"><a href="#imagepipeline.error.debugdescription">debug​Description</a></li><li class="property"><a href="#imagepipeline.configuration.imagecache">image​Cache</a></li><li class="property"><a href="#imagepipeline.configuration.dataloader">data​Loader</a></li><li class="property"><a href="#imagepipeline.configuration.datacache">data​Cache</a></li><li class="property"><a href="#imagepipeline.configuration.makeimagedecoder">make​Image​Decoder</a></li><li class="property"><a href="#imagepipeline.configuration.makeimageencoder">make​Image​Encoder</a></li><li class="property"><a href="#imagepipeline.configuration.dataloadingqueue">data​Loading​Queue</a></li><li class="property"><a href="#imagepipeline.configuration.datacachingqueue">data​Caching​Queue</a></li><li class="property"><a href="#imagepipeline.configuration.imagedecodingqueue">image​Decoding​Queue</a></li><li class="property"><a href="#imagepipeline.configuration.imageencodingqueue">image​Encoding​Queue</a></li><li class="property"><a href="#imagepipeline.configuration.imageprocessingqueue">image​Processing​Queue</a></li><li class="property"><a href="#imagepipeline.configuration.imagedecompressingqueue">image​Decompressing​Queue</a></li><li class="property"><a href="#imagepipeline.configuration.processors">processors</a></li><li class="property"><a href="#imagepipeline.configuration.callbackqueue">callback​Queue</a></li><li class="property"><a href="#imagepipeline.configuration.isdecompressionenabled">is​Decompression​Enabled</a></li><li class="property"><a href="#imagepipeline.configuration.datacacheoptions">data​Cache​Options</a></li><li class="property"><a href="#imagepipeline.configuration.datacacheoptions.storeditems">stored​Items</a></li><li class="property"><a href="#imagepipeline.configuration.isdeduplicationenabled">is​Deduplication​Enabled</a></li><li class="property"><a href="#imagepipeline.configuration.isratelimiterenabled">is​Rate​Limiter​Enabled</a></li><li class="property"><a href="#imagepipeline.configuration.isprogressivedecodingenabled">is​Progressive​Decoding​Enabled</a></li><li class="property"><a href="#imagepipeline.configuration.isstoringpreviewsinmemorycache">is​Storing​Previews​InMemory​Cache</a></li><li class="property"><a href="#imagepipeline.configuration.isresumabledataenabled">is​Resumable​Data​Enabled</a></li><li class="property"><a href="#imagepipeline.configuration.issignpostloggingenabled">is​Signpost​Logging​Enabled</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="method"><a href="#imagepipeline.loadimage(with:queue:progress:completion:)">load​Image(with:​queue:​progress:​completion:​)</a></li><li class="method"><a href="#imagepipeline.loadimage(with:queue:progress:completion:)">load​Image(with:​queue:​progress:​completion:​)</a></li><li class="method"><a href="#imagepipeline.loaddata(with:queue:progress:completion:)">load​Data(with:​queue:​progress:​completion:​)</a></li><li class="method"><a href="#imagepipeline.cachedimage(for:)">cached​Image(for:​)</a></li><li class="method"><a href="#imagepipeline.cachedimage(for:)">cached​Image(for:​)</a></li><li class="method"><a href="#imagepipeline.storeresponse(_:for:iscompleted:)">store​Response(_:​for:​is​Completed:​)</a></li><li class="method"><a href="#imagepipeline.cachekey(for:item:)">cache​Key(for:​item:​)</a></li></ul></li></ol>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Nested Types</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#imagepipeline.init(configuration:)">init(configuration:​)</a></li><li class="initializer"><a href="#imagepipeline.init(_:)">init(_:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="property"><a href="#imagepipeline.configuration">configuration</a></li><li class="property"><a href="#imagepipeline.observer">observer</a></li><li class="property"><a href="#imagepipeline.shared">shared</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="method"><a href="#imagepipeline.loadimage(with:queue:progress:completion:)">load​Image(with:​queue:​progress:​completion:​)</a></li><li class="method"><a href="#imagepipeline.loadimage(with:queue:progress:completion:)">load​Image(with:​queue:​progress:​completion:​)</a></li><li class="method"><a href="#imagepipeline.loaddata(with:queue:progress:completion:)">load​Data(with:​queue:​progress:​completion:​)</a></li><li class="method"><a href="#imagepipeline.cachedimage(for:)">cached​Image(for:​)</a></li><li class="method"><a href="#imagepipeline.cachedimage(for:)">cached​Image(for:​)</a></li><li class="method"><a href="#imagepipeline.storeresponse(_:for:iscompleted:)">store​Response(_:​for:​is​Completed:​)</a></li><li class="method"><a href="#imagepipeline.cachekey(for:item:)">cache​Key(for:​item:​)</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -1226,61 +1226,20 @@ individual stage, disable and enable features like deduplication and rate limiti
 <html><body><p><code>ImagePipeline</code> is fully thread-safe.</p>
  </body></html>
 </div>
-
-    <section id="enumeration cases">
-        <h2>Enumeration Cases</h2>
-
-        <div role="article" class="class" id="imagepipeline.error.dataloadingfailed">
-    <h3>
-        <code>data​Loading​Failed</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">dataLoadingFailed</span>(: <span class="type">Swift</span>.<span class="type">Error</span>)</code></pre></body></html>
-<div class="summary" role="doc-abstract">
-    <p>Data loader failed to load image data with a wrapped error.</p>
-
-</div>
-</div>
-<div role="article" class="class" id="imagepipeline.error.decodingfailed">
-    <h3>
-        <code>decoding​Failed</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">decodingFailed</span></code></pre></body></html>
-<div class="summary" role="doc-abstract">
-    <p>Decoder failed to produce a final image.</p>
-
-</div>
-</div>
-<div role="article" class="class" id="imagepipeline.error.processingfailed">
-    <h3>
-        <code>processing​Failed</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">processingFailed</span></code></pre></body></html>
-<div class="summary" role="doc-abstract">
-    <p>Processor failed to produce a final image.</p>
-
-</div>
-</div>
-<div role="article" class="class" id="imagepipeline.datacacheitem.originalimagedata">
-    <h3>
-        <code>original​Image​Data</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">originalImageData</span></code></pre></body></html>
-<div class="summary" role="doc-abstract">
-    <p>Originl image data.</p>
-
-</div>
-</div>
-<div role="article" class="class" id="imagepipeline.datacacheitem.finalimage">
-    <h3>
-        <code>final​Image</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">finalImage</span></code></pre></body></html>
-<div class="summary" role="doc-abstract">
-    <p>Final image with all processors applied.</p>
-
-</div>
-</div>
-    </section>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Nested Types</h3>
+<dl>
+    <dt class="enumeration"><code><a href="/ImagePipeline_Error">ImagePipeline.Error</a></code></dt>
+<dd><p>Represents all possible image pipeline errors.</p>
+</dd>
+<dt class="structure"><code><a href="/ImagePipeline_Configuration">ImagePipeline.Configuration</a></code></dt>
+<dd></dd>
+<dt class="enumeration"><code><a href="/ImagePipeline_DataCacheItem">ImagePipeline.DataCacheItem</a></code></dt>
+<dd></dd>
+</dl>
+</section>
     <section id="initializers">
         <h2>Initializers</h2>
 
@@ -1319,41 +1278,6 @@ individual stage, disable and enable features like deduplication and rate limiti
     </h3>
     <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">convenience</span> <span class="keyword">init</span>(<span class="keyword">_</span> <span class="variable">configure</span>: (<span class="keyword">inout</span> <a href="/ImagePipeline"><span class="type">ImagePipeline</span></a>.<span class="type">Configuration</span>) -&gt; <span class="type">Void</span>)</code></pre></body></html>
 </div>
-<div role="article" class="class" id="imagepipeline.configuration.init(dataloader:imagecache:)">
-    <h3>
-        <code>init(data​Loader:​image​Cache:​)</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">dataLoader</span>: <a href="/DataLoading"><span class="type">DataLoading</span></a> = <span class="variable">DataLoader</span>(), <span class="variable">imageCache</span>: <a href="/ImageCaching"><span class="type">ImageCaching</span></a>? = <span class="variable">ImageCache</span>.<span class="type">shared</span>)</code></pre></body></html>
-<div class="summary" role="doc-abstract">
-    <p>Creates a default configuration.</p>
-
-</div>
-<h4>Parameters</h4>
-
-<table class="parameters">
-  <thead hidden>
-  <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-  </tr>
-  </thead>
-  <tbody>
-    <tr>
-    <th>data​Loader</th>
-    <td><code class="type">Data​Loading</code></td></td>
-    <td><p><code>DataLoader()</code> by default.</p>
-</td>
-</tr>
-<tr>
-    <th>image​Cache</th>
-    <td><code class="type">Image​Caching?</code></td></td>
-    <td><p><code>Cache.shared</code> by default.</p>
-</td>
-</tr>
-  </tbody>
-</table>
-</div>
     </section>
     <section id="properties">
         <h2>Properties</h2>
@@ -1374,293 +1298,9 @@ individual stage, disable and enable features like deduplication and rate limiti
     <h3>
         <code>shared</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">shared</span> = <span class="variable">ImagePipeline</span>()</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">shared</span></code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Shared image pipeline.</p>
-
-</div>
-</div>
-<div role="article" class="class" id="imagepipeline.error.debugdescription">
-    <h3>
-        <code>debug​Description</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">debugDescription</span>: <span class="type">String</span></code></pre></body></html>
-</div>
-<div role="article" class="class" id="imagepipeline.configuration.imagecache">
-    <h3>
-        <code>image​Cache</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">imageCache</span>: <a href="/ImageCaching"><span class="type">ImageCaching</span></a>?</code></pre></body></html>
-<div class="summary" role="doc-abstract">
-    <p>Image cache used by the pipeline.</p>
-
-</div>
-</div>
-<div role="article" class="class" id="imagepipeline.configuration.dataloader">
-    <h3>
-        <code>data​Loader</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">dataLoader</span>: <a href="/DataLoading"><span class="type">DataLoading</span></a></code></pre></body></html>
-<div class="summary" role="doc-abstract">
-    <p>Data loader used by the pipeline.</p>
-
-</div>
-</div>
-<div role="article" class="class" id="imagepipeline.configuration.datacache">
-    <h3>
-        <code>data​Cache</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">dataCache</span>: <a href="/DataCaching"><span class="type">DataCaching</span></a>?</code></pre></body></html>
-<div class="summary" role="doc-abstract">
-    <p>Data cache used by the pipeline.</p>
-
-</div>
-</div>
-<div role="article" class="class" id="imagepipeline.configuration.makeimagedecoder">
-    <h3>
-        <code>make​Image​Decoder</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">makeImageDecoder</span>: (<a href="/ImageDecodingContext"><span class="type">ImageDecodingContext</span></a>) -&gt; <a href="/ImageDecoding"><span class="type">ImageDecoding</span></a>? = <span class="variable">ImageDecoderRegistry</span>.<span class="type">shared</span>.<span class="type">decoder</span>(<span class="variable">for</span>:)</code></pre></body></html>
-<div class="summary" role="doc-abstract">
-    <p>Default implementation uses shared <code>ImageDecoderRegistry</code> to create
-a decoder that matches the context.</p>
-
-</div>
-</div>
-<div role="article" class="class" id="imagepipeline.configuration.makeimageencoder">
-    <h3>
-        <code>make​Image​Encoder</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">makeImageEncoder</span>: (<a href="/ImageEncodingContext"><span class="type">ImageEncodingContext</span></a>) -&gt; <a href="/ImageEncoding"><span class="type">ImageEncoding</span></a> = { <span class="keyword">_</span> <span class="keyword">in</span>
-            <span class="variable">ImageEncoders</span>.<span class="type">Default</span>()
-        }</code></pre></body></html>
-<div class="summary" role="doc-abstract">
-    <p>Returns <code>ImageEncoders.Default()</code> by default.</p>
-
-</div>
-</div>
-<div role="article" class="class" id="imagepipeline.configuration.dataloadingqueue">
-    <h3>
-        <code>data​Loading​Queue</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">dataLoadingQueue</span> = <span class="variable">OperationQueue</span>()</code></pre></body></html>
-<div class="summary" role="doc-abstract">
-    <p>Data loading queue. Default maximum concurrent task count is 6.</p>
-
-</div>
-</div>
-<div role="article" class="class" id="imagepipeline.configuration.datacachingqueue">
-    <h3>
-        <code>data​Caching​Queue</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">dataCachingQueue</span> = <span class="variable">OperationQueue</span>()</code></pre></body></html>
-<div class="summary" role="doc-abstract">
-    <p>Data caching queue. Default maximum concurrent task count is 2.</p>
-
-</div>
-</div>
-<div role="article" class="class" id="imagepipeline.configuration.imagedecodingqueue">
-    <h3>
-        <code>image​Decoding​Queue</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">imageDecodingQueue</span> = <span class="variable">OperationQueue</span>()</code></pre></body></html>
-<div class="summary" role="doc-abstract">
-    <p>Image decoding queue. Default maximum concurrent task count is 1.</p>
-
-</div>
-</div>
-<div role="article" class="class" id="imagepipeline.configuration.imageencodingqueue">
-    <h3>
-        <code>image​Encoding​Queue</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">imageEncodingQueue</span> = <span class="variable">OperationQueue</span>()</code></pre></body></html>
-<div class="summary" role="doc-abstract">
-    <p>Image encodign queue. Default maximum concurrent task count is 1.</p>
-
-</div>
-</div>
-<div role="article" class="class" id="imagepipeline.configuration.imageprocessingqueue">
-    <h3>
-        <code>image​Processing​Queue</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">imageProcessingQueue</span> = <span class="variable">OperationQueue</span>()</code></pre></body></html>
-<div class="summary" role="doc-abstract">
-    <p>Image processing queue. Default maximum concurrent task count is 2.</p>
-
-</div>
-</div>
-<div role="article" class="class" id="imagepipeline.configuration.imagedecompressingqueue">
-    <h3>
-        <code>image​Decompressing​Queue</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">imageDecompressingQueue</span> = <span class="variable">OperationQueue</span>()</code></pre></body></html>
-<div class="summary" role="doc-abstract">
-    <p>Image decompressing queue. Default maximum concurrent task count is 2.</p>
-
-</div>
-</div>
-<div role="article" class="class" id="imagepipeline.configuration.processors">
-    <h3>
-        <code>processors</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">processors</span>: [<a href="/ImageProcessing"><span class="type">ImageProcessing</span></a>] = []</code></pre></body></html>
-<div class="summary" role="doc-abstract">
-    <p>Processors to be applied by default to all images loaded by the
-pipeline.
-If a request has a non-empty processors list, the pipeline won't
-apply its own processors, leaving the request as is.
-This lets clients have an override point on request basis.</p>
-
-</div>
-</div>
-<div role="article" class="class" id="imagepipeline.configuration.callbackqueue">
-    <h3>
-        <code>callback​Queue</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">callbackQueue</span> = <span class="variable">DispatchQueue</span>.<span class="type">main</span></code></pre></body></html>
-<div class="summary" role="doc-abstract">
-    <p>A queue on which all callbacks, like <code>progress</code> and <code>completion</code>
-callbacks are called. <code>.main</code> by default.</p>
-
-</div>
-</div>
-<div role="article" class="class" id="imagepipeline.configuration.isdecompressionenabled">
-    <h3>
-        <code>is​Decompression​Enabled</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">isDecompressionEnabled</span> = <span class="keyword">true</span></code></pre></body></html>
-<div class="summary" role="doc-abstract">
-    <p>Decompresses the loaded images. <code>true</code> by default.</p>
-
-</div>
-<div class="discussion">
-    <html><body><p>Decompressing compressed image formats (such as JPEG) can significantly
-improve drawing performance as it allows a bitmap representation to be
-created in a background rather than on the main thread.</p>
- </body></html>
-</div>
-</div>
-<div role="article" class="class" id="imagepipeline.configuration.datacacheoptions">
-    <h3>
-        <code>data​Cache​Options</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">dataCacheOptions</span> = <span class="variable">DataCacheOptions</span>()</code></pre></body></html>
-</div>
-<div role="article" class="class" id="imagepipeline.configuration.datacacheoptions.storeditems">
-    <h3>
-        <code>stored​Items</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">storedItems</span>: <span class="type">Set</span>&lt;<span class="type">DataCacheItem</span>&gt; = [.<span class="variable">originalImageData</span>]</code></pre></body></html>
-<div class="summary" role="doc-abstract">
-    <p>Specifies which content to store in the <code>dataCache</code>. By default, the
-pipeline only stores the original image data downloaded using <code>dataLoader</code>.
-It can be configured to encode and store processed images instead.</p>
-
-</div>
-<div class="discussion">
-    <aside class="note">
-    <p>If you are creating multiple versions of the same image using different processors, it might be worse enabling both <code>.originalData</code> and <code>.encodedImages</code> cache to reuse the same downloaded data.</p>
-
-</aside>
-<aside class="note">
-    <p>It might be worth enabling <code>.encodedImages</code> if you want to transcode downloaded images into a more efficient format, like HEIF.</p>
-
-</aside>
-</div>
-</div>
-<div role="article" class="class" id="imagepipeline.configuration.isdeduplicationenabled">
-    <h3>
-        <code>is​Deduplication​Enabled</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">isDeduplicationEnabled</span> = <span class="keyword">true</span></code></pre></body></html>
-<div class="summary" role="doc-abstract">
-    <p><code>true</code> by default. If <code>true</code> the pipeline avoids duplicated work when
-loading images. The work only gets cancelled when all the registered
-requests are. The pipeline also automatically manages the priority of the
-deduplicated work.</p>
-
-</div>
-<div class="discussion">
-    <html><body><p>Let't take this two requests for example:</p>
- </body></html>
-<html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">url</span> = <span class="variable">URL</span>(<span class="variable">string</span>: <span class="string literal">"</span><span class="string literal">http://example.com/image</span><span class="string literal">"</span>)
-<span class="variable">pipeline</span>.<span class="type">loadImage</span>(<span class="variable">with</span>: <a href="/ImageRequest"><span class="type">ImageRequest</span></a>(<span class="variable">url</span>: <span class="type">url</span>, <span class="variable">processors</span>: [
-    <span class="variable">ImageProcessors</span>.<span class="type">Resize</span>(<span class="variable">size</span>: <span class="type">CGSize</span>(<span class="variable">width</span>: <span class="number literal">44</span>, <span class="variable">height</span>: <span class="number literal">44</span>)),
-    <span class="variable">ImageProcessors</span>.<span class="type">GaussianBlur</span>(<span class="variable">radius</span>: <span class="number literal">8</span>)
-]))
-<span class="variable">pipeline</span>.<span class="type">loadImage</span>(<span class="variable">with</span>: <a href="/ImageRequest"><span class="type">ImageRequest</span></a>(<span class="variable">url</span>: <span class="type">url</span>, <span class="variable">processors</span>: [
-    <span class="variable">ImageProcessors</span>.<span class="type">Resize</span>(<span class="variable">size</span>: <span class="type">CGSize</span>(<span class="variable">width</span>: <span class="number literal">44</span>, <span class="variable">height</span>: <span class="number literal">44</span>))
-]))
-</code></pre></body></html>
-<html><body><p>Nuke will load the image data only once, resize the image once and
-apply the blur also only once. There is no duplicated work done at
-any stage.</p>
- </body></html>
-</div>
-</div>
-<div role="article" class="class" id="imagepipeline.configuration.isratelimiterenabled">
-    <h3>
-        <code>is​Rate​Limiter​Enabled</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">isRateLimiterEnabled</span> = <span class="keyword">true</span></code></pre></body></html>
-<div class="summary" role="doc-abstract">
-    <p><code>true</code> by default. It <code>true</code> the pipeline will rate limits the requests
-to prevent trashing of the underlying systems (e.g. <code>URLSession</code>).
-The rate limiter only comes into play when the requests are started
-and cancelled at a high rate (e.g. scrolling through a collection view).</p>
-
-</div>
-</div>
-<div role="article" class="class" id="imagepipeline.configuration.isprogressivedecodingenabled">
-    <h3>
-        <code>is​Progressive​Decoding​Enabled</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">isProgressiveDecodingEnabled</span> = <span class="keyword">false</span></code></pre></body></html>
-<div class="summary" role="doc-abstract">
-    <p><code>false</code> by default. If <code>true</code> the pipeline will try to produce a new
-image each time it receives a new portion of data from data loader.
-The decoder used by the image loading session determines whether
-to produce a partial image or not. The default image decoder
-(<code>ImageDecoder</code>) supports progressive JPEG decoding.</p>
-
-</div>
-</div>
-<div role="article" class="class" id="imagepipeline.configuration.isstoringpreviewsinmemorycache">
-    <h3>
-        <code>is​Storing​Previews​InMemory​Cache</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">isStoringPreviewsInMemoryCache</span> = <span class="keyword">false</span></code></pre></body></html>
-<div class="summary" role="doc-abstract">
-    <p><code>false</code> by default. If <code>true</code>, the pipeline will store all of the
-progressively generated previews in the memory cache. All of the
-previews have <code>isPreview</code> flag set to <code>true</code>.</p>
-
-</div>
-</div>
-<div role="article" class="class" id="imagepipeline.configuration.isresumabledataenabled">
-    <h3>
-        <code>is​Resumable​Data​Enabled</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">isResumableDataEnabled</span> = <span class="keyword">true</span></code></pre></body></html>
-<div class="summary" role="doc-abstract">
-    <p>If the data task is terminated (either because of a failure or a
-cancellation) and the image was partially loaded, the next load will
-resume where it was left off. Supports both validators (<code>ETag</code>,
-<code>Last-Modified</code>). The resumable downloads are enabled by default.</p>
-
-</div>
-</div>
-<div role="article" class="class" id="imagepipeline.configuration.issignpostloggingenabled">
-    <h3>
-        <code>is​Signpost​Logging​Enabled</code>
-    </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">isSignpostLoggingEnabled</span> = <span class="keyword">false</span></code></pre></body></html>
-<div class="summary" role="doc-abstract">
-    <p><code>false</code> by default. If <code>true</code>, enables <code>os_signpost</code> logging for
-measuring performance. You can visually see all the performance
-metrics in <code>os_signpost</code> Instrument. For more information see
-https://developer.apple.com/documentation/os/logging and
-https://developer.apple.com/videos/play/wwdc2018/405/.</p>
 
 </div>
 </div>
@@ -1911,7 +1551,7 @@ memory cache reads.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2020-04-05T11:36:34-0400">5 April 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a>.
+    Generated on <time datetime="2020-04-08T17:10:41-0400">8 April 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a>.
 </p>
     </footer>
 </body>
