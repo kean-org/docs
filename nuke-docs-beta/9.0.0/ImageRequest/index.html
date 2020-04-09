@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuke - ImageRequest</title>
+    <base href="https://kean-org.github.io/docs/nuke-docs-beta/9.0.0/"/>
     <style type="text/css">
     :root {
     --system-red: rgb(255, 59, 48);
@@ -1179,7 +1180,7 @@ nav li[class] {
 </head>
 <body>
     <header>
-        <a href="/">
+        <a href="https://kean-org.github.io/docs/nuke-docs-beta/9.0.0/">
             <strong>
                 Nuke
             </strong>
@@ -1218,7 +1219,7 @@ nav li[class] {
         
         <h3>Nested Types</h3>
 <dl>
-    <dt class="enumeration"><code><a href="/ImageRequest_Priority">ImageRequest.Priority</a></code></dt>
+    <dt class="enumeration"><code><a href="ImageRequest_Priority">ImageRequest.Priority</a></code></dt>
 <dd><p>The execution priority of the request. The priority affects the order in which the image
 requests are executed.</p>
 </dd>
@@ -1235,16 +1236,16 @@ requests are executed.</p>
     <h3>
         <code>init(url:​processors:​priority:​options:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">url</span>: <span class="type">URL</span>, <span class="variable">processors</span>: [<a href="/ImageProcessing"><span class="type">ImageProcessing</span></a>] = [], <span class="variable">priority</span>: <a href="/ImageRequest"><span class="type">ImageRequest</span></a>.<span class="type">Priority</span> = .<span class="variable">normal</span>, <span class="variable">options</span>: <a href="/ImageRequestOptions"><span class="type">ImageRequestOptions</span></a> = .<span class="variable">init</span>())</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">url</span>: <span class="type">URL</span>, <span class="variable">processors</span>: [<a href="ImageProcessing"><span class="type">ImageProcessing</span></a>] = [], <span class="variable">priority</span>: <a href="ImageRequest"><span class="type">ImageRequest</span></a>.<span class="type">Priority</span> = .<span class="variable">normal</span>, <span class="variable">options</span>: <a href="ImageRequestOptions"><span class="type">ImageRequestOptions</span></a> = .<span class="variable">init</span>())</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Initializes a request with the given URL.</p>
 
 </div>
 <div class="discussion">
-    <html><body><p><a href="/ImageRequest"><code>ImageRequest</code></a> allows you to set image processors, change the request priority and more:</p>
+    <html><body><p><a href="ImageRequest"><code>ImageRequest</code></a> allows you to set image processors, change the request priority and more:</p>
  </body></html>
 <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">request</span> = <span class="variable">ImageRequest</span>(
-    <span class="variable">url</span>: <span class="type">URL</span>(<span class="variable">string</span>: <span class="string literal">"</span><span class="string literal">http://...</span><span class="string literal">"</span>),
+    <span class="variable">url</span>: <span class="type">URL</span>(<span class="variable">string</span>: <span class="string literal">"</span><span class="string literal">http://...</span><span class="string literal">"</span>)!,
     <span class="variable">processors</span>: [<span class="variable">ImageProcessors</span>.<span class="type">Resize</span>(<span class="variable">size</span>: <span class="type">imageView</span>.<span class="type">bounds</span>.<span class="type">size</span>)],
     <span class="variable">priority</span>: .<span class="variable">high</span>
 )
@@ -1286,16 +1287,16 @@ requests are executed.</p>
     <h3>
         <code>init(url​Request:​processors:​priority:​options:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">urlRequest</span>: <span class="type">URLRequest</span>, <span class="variable">processors</span>: [<a href="/ImageProcessing"><span class="type">ImageProcessing</span></a>] = [], <span class="variable">priority</span>: <a href="/ImageRequest"><span class="type">ImageRequest</span></a>.<span class="type">Priority</span> = .<span class="variable">normal</span>, <span class="variable">options</span>: <a href="/ImageRequestOptions"><span class="type">ImageRequestOptions</span></a> = .<span class="variable">init</span>())</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">urlRequest</span>: <span class="type">URLRequest</span>, <span class="variable">processors</span>: [<a href="ImageProcessing"><span class="type">ImageProcessing</span></a>] = [], <span class="variable">priority</span>: <a href="ImageRequest"><span class="type">ImageRequest</span></a>.<span class="type">Priority</span> = .<span class="variable">normal</span>, <span class="variable">options</span>: <a href="ImageRequestOptions"><span class="type">ImageRequestOptions</span></a> = .<span class="variable">init</span>())</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Initializes a request with the given request.</p>
 
 </div>
 <div class="discussion">
-    <html><body><p><a href="/ImageRequest"><code>ImageRequest</code></a> allows you to set image processors, change the request priority and more:</p>
+    <html><body><p><a href="ImageRequest"><code>ImageRequest</code></a> allows you to set image processors, change the request priority and more:</p>
  </body></html>
 <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">request</span> = <span class="variable">ImageRequest</span>(
-    <span class="variable">url</span>: <span class="type">URL</span>(<span class="variable">string</span>: <span class="string literal">"</span><span class="string literal">http://...</span><span class="string literal">"</span>),
+    <span class="variable">url</span>: <span class="type">URLRequest</span>(<span class="variable">url</span>: <span class="type">URL</span>(<span class="variable">string</span>: <span class="string literal">"</span><span class="string literal">http://...</span><span class="string literal">"</span>)!),
     <span class="variable">processors</span>: [<span class="variable">ImageProcessors</span>.<span class="type">Resize</span>(<span class="variable">size</span>: <span class="type">imageView</span>.<span class="type">bounds</span>.<span class="type">size</span>)],
     <span class="variable">priority</span>: .<span class="variable">high</span>
 )
@@ -1362,7 +1363,7 @@ requests are executed.<code>.normal</code> by default.</p>
     <h3>
         <code>options</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">options</span>: <a href="/ImageRequestOptions"><span class="type">ImageRequestOptions</span></a></code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">options</span>: <a href="ImageRequestOptions"><span class="type">ImageRequestOptions</span></a></code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>The request options. See <code>ImageRequestOptions</code> for more info.</p>
 
@@ -1372,7 +1373,7 @@ requests are executed.<code>.normal</code> by default.</p>
     <h3>
         <code>processors</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">processors</span>: [<a href="/ImageProcessing"><span class="type">ImageProcessing</span></a>]</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">processors</span>: [<a href="ImageProcessing"><span class="type">ImageProcessing</span></a>]</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Processor to be applied to the image. <code>nil</code> by default.</p>
 
@@ -1393,7 +1394,7 @@ requests are executed.<code>.normal</code> by default.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2020-04-08T17:10:41-0400">8 April 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a>.
+    Generated on <time datetime="2020-04-10T17:37:38-0400">10 April 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a>.
 </p>
     </footer>
 </body>

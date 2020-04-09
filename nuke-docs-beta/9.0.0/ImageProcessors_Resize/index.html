@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuke - ImageProcessors.Resize</title>
+    <base href="https://kean-org.github.io/docs/nuke-docs-beta/9.0.0/"/>
     <style type="text/css">
     :root {
     --system-red: rgb(255, 59, 48);
@@ -1179,7 +1180,7 @@ nav li[class] {
 </head>
 <body>
     <header>
-        <a href="/">
+        <a href="https://kean-org.github.io/docs/nuke-docs-beta/9.0.0/">
             <strong>
                 Nuke
             </strong>
@@ -1208,7 +1209,7 @@ nav li[class] {
     <code class="name">Image​Processors.​Resize</code>
 </h1>
 
-<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">Resize</span>: <a href="/ImageProcessing"><span class="type">ImageProcessing</span></a>, <span class="type">Hashable</span>, <span class="type">CustomStringConvertible</span></code></pre></body></html>
+<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">Resize</span>: <a href="ImageProcessing"><span class="type">ImageProcessing</span></a>, <span class="type">Hashable</span>, <span class="type">CustomStringConvertible</span></code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Scales an image to a specified size.</p>
 
@@ -1218,19 +1219,19 @@ nav li[class] {
         
         <h3>Member Of</h3>
 <dl>
-    <dt class="enumeration"><code><a href="/ImageProcessors">ImageProcessors</a></code></dt>
+    <dt class="enumeration"><code><a href="ImageProcessors">ImageProcessors</a></code></dt>
 <dd><p>A namespace for all processors that implement <code>ImageProcessing</code> protocol.</p>
 </dd>
 </dl>
 <h3>Nested Types</h3>
 <dl>
-    <dt class="enumeration"><code><a href="/ImageProcessors_Resize_ContentMode">ImageProcessors.Resize.ContentMode</a></code></dt>
+    <dt class="enumeration"><code><a href="ImageProcessors_Resize_ContentMode">ImageProcessors.Resize.ContentMode</a></code></dt>
 <dd><p>An option for how to resize the image.</p>
 </dd>
 </dl>
 <h3>Conforms To</h3>
 <dl>
-    <dt class="protocol"><code><a href="/ImageProcessing">ImageProcessing</a></code></dt>
+    <dt class="protocol"><code><a href="ImageProcessing">ImageProcessing</a></code></dt>
 <dd><p>Performs image processing.</p>
 </dd>
 <dt class="unknown"><code>CustomStringConvertible</code></dt>
@@ -1244,7 +1245,7 @@ nav li[class] {
     <h3>
         <code>init(size:​unit:​content​Mode:​crop:​upscale:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">size</span>: <span class="type">CGSize</span>, <span class="variable">unit</span>: <a href="/ImageProcessingOptions"><span class="type">ImageProcessingOptions</span></a>.<span class="type">Unit</span> = .<span class="variable">points</span>, <span class="variable">contentMode</span>: <span class="type">ContentMode</span> = .<span class="variable">aspectFill</span>, <span class="variable">crop</span>: <span class="type">Bool</span> = <span class="keyword">false</span>, <span class="variable">upscale</span>: <span class="type">Bool</span> = <span class="keyword">false</span>)</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">size</span>: <span class="type">CGSize</span>, <span class="variable">unit</span>: <a href="ImageProcessingOptions"><span class="type">ImageProcessingOptions</span></a>.<span class="type">Unit</span> = .<span class="variable">points</span>, <span class="variable">contentMode</span>: <span class="type">ContentMode</span> = .<span class="variable">aspectFill</span>, <span class="variable">crop</span>: <span class="type">Bool</span> = <span class="keyword">false</span>, <span class="variable">upscale</span>: <span class="type">Bool</span> = <span class="keyword">false</span>)</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Initializes the processor with the given size.</p>
 
@@ -1297,7 +1298,7 @@ nav li[class] {
     <h3>
         <code>init(width:​unit:​crop:​upscale:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">width</span>: <span class="type">CGFloat</span>, <span class="variable">unit</span>: <a href="/ImageProcessingOptions"><span class="type">ImageProcessingOptions</span></a>.<span class="type">Unit</span> = .<span class="variable">points</span>, <span class="variable">crop</span>: <span class="type">Bool</span> = <span class="keyword">false</span>, <span class="variable">upscale</span>: <span class="type">Bool</span> = <span class="keyword">false</span>)</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">width</span>: <span class="type">CGFloat</span>, <span class="variable">unit</span>: <a href="ImageProcessingOptions"><span class="type">ImageProcessingOptions</span></a>.<span class="type">Unit</span> = .<span class="variable">points</span>, <span class="variable">crop</span>: <span class="type">Bool</span> = <span class="keyword">false</span>, <span class="variable">upscale</span>: <span class="type">Bool</span> = <span class="keyword">false</span>)</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Resizes the image to the given width preserving aspect ratio.</p>
 
@@ -1326,7 +1327,7 @@ nav li[class] {
     <h3>
         <code>init(height:​unit:​crop:​upscale:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">height</span>: <span class="type">CGFloat</span>, <span class="variable">unit</span>: <a href="/ImageProcessingOptions"><span class="type">ImageProcessingOptions</span></a>.<span class="type">Unit</span> = .<span class="variable">points</span>, <span class="variable">crop</span>: <span class="type">Bool</span> = <span class="keyword">false</span>, <span class="variable">upscale</span>: <span class="type">Bool</span> = <span class="keyword">false</span>)</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">height</span>: <span class="type">CGFloat</span>, <span class="variable">unit</span>: <a href="ImageProcessingOptions"><span class="type">ImageProcessingOptions</span></a>.<span class="type">Unit</span> = .<span class="variable">points</span>, <span class="variable">crop</span>: <span class="type">Bool</span> = <span class="keyword">false</span>, <span class="variable">upscale</span>: <span class="type">Bool</span> = <span class="keyword">false</span>)</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Resizes the image to the given height preserving aspect ratio.</p>
 
@@ -1392,7 +1393,7 @@ nav li[class] {
 
     <footer>
         <p>
-    Generated on <time datetime="2020-04-08T17:10:41-0400">8 April 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a>.
+    Generated on <time datetime="2020-04-10T17:37:38-0400">10 April 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a>.
 </p>
     </footer>
 </body>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuke - ImageTask</title>
+    <base href="https://kean-org.github.io/docs/nuke-docs-beta/9.0.0/"/>
     <style type="text/css">
     :root {
     --system-red: rgb(255, 59, 48);
@@ -1179,7 +1180,7 @@ nav li[class] {
 </head>
 <body>
     <header>
-        <a href="/">
+        <a href="https://kean-org.github.io/docs/nuke-docs-beta/9.0.0/">
             <strong>
                 Nuke
             </strong>
@@ -1232,7 +1233,7 @@ app’s internal bookkeeping purposes.</p>
     <h3>
         <code>Completion</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">typealias</span> <span class="variable">Completion</span> = (<span class="keyword">_</span> <span class="variable">result</span>: <span class="type">Result</span>&lt;<a href="/ImageResponse"><span class="type">ImageResponse</span></a>, <a href="/ImagePipeline"><span class="type">ImagePipeline</span></a>.<span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span></code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">typealias</span> <span class="variable">Completion</span> = (<span class="keyword">_</span> <span class="variable">result</span>: <span class="type">Result</span>&lt;<a href="ImageResponse"><span class="type">ImageResponse</span></a>, <a href="ImagePipeline"><span class="type">ImagePipeline</span></a>.<span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span></code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>A completion handler to be called when task finishes or fails.</p>
 
@@ -1242,7 +1243,7 @@ app’s internal bookkeeping purposes.</p>
     <h3>
         <code>Progress​Handler</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">typealias</span> <span class="variable">ProgressHandler</span> = (<span class="keyword">_</span> <span class="variable">intermediateResponse</span>: <a href="/ImageResponse"><span class="type">ImageResponse</span></a>?, <span class="keyword">_</span> <span class="variable">completedUnitCount</span>: <span class="type">Int64</span>, <span class="keyword">_</span> <span class="variable">totalUnitCount</span>: <span class="type">Int64</span>) -&gt; <span class="type">Void</span></code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">typealias</span> <span class="variable">ProgressHandler</span> = (<span class="keyword">_</span> <span class="variable">intermediateResponse</span>: <a href="ImageResponse"><span class="type">ImageResponse</span></a>?, <span class="keyword">_</span> <span class="variable">completedUnitCount</span>: <span class="type">Int64</span>, <span class="keyword">_</span> <span class="variable">totalUnitCount</span>: <span class="type">Int64</span>) -&gt; <span class="type">Void</span></code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>A progress handler to be called periodically during the lifetime of a task.</p>
 
@@ -1258,8 +1259,8 @@ app’s internal bookkeeping purposes.</p>
     </h3>
     <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">taskId</span>: <span class="type">Int</span></code></pre></body></html>
 <div class="summary" role="doc-abstract">
-    <p>An identifier uniquely identifies the task within a given pipeline. Only
-unique within this pipeline.</p>
+    <p>An identifier that uniquely identifies the task within a given pipeline. Only
+unique within that pipeline.</p>
 
 </div>
 </div>
@@ -1267,7 +1268,7 @@ unique within this pipeline.</p>
     <h3>
         <code>request</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">request</span>: <a href="/ImageRequest"><span class="type">ImageRequest</span></a></code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">request</span>: <a href="ImageRequest"><span class="type">ImageRequest</span></a></code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>The original request with which the task was created.</p>
 
@@ -1277,7 +1278,7 @@ unique within this pipeline.</p>
     <h3>
         <code>priority</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">priority</span>: <a href="/ImageRequest"><span class="type">ImageRequest</span></a>.<span class="type">Priority</span></code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">priority</span>: <a href="ImageRequest"><span class="type">ImageRequest</span></a>.<span class="type">Priority</span></code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Updates the priority of the task, even if the task is already running.</p>
 
@@ -1335,7 +1336,7 @@ unique within this pipeline.</p>
 <div class="discussion">
     <html><body><p>The pipeline will immediately cancel any work associated with a task
 unless there is an equivalent outstanding task running (see
-<a href="/ImagePipeline_Configuration_isDeduplicationEnabled"><code>ImagePipeline.Configuration.isDeduplicationEnabled</code></a> for more info).</p>
+<a href="ImagePipeline_Configuration_isDeduplicationEnabled"><code>ImagePipeline.Configuration.isDeduplicationEnabled</code></a> for more info).</p>
  </body></html>
 </div>
 </div>
@@ -1349,7 +1350,7 @@ unless there is an equivalent outstanding task running (see
     <h3>
         <code>==(lhs:​rhs:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> ==(<span class="variable">lhs</span>: <a href="/ImageTask"><span class="type">ImageTask</span></a>, <span class="variable">rhs</span>: <a href="/ImageTask"><span class="type">ImageTask</span></a>) -&gt; <span class="type">Bool</span></code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> ==(<span class="variable">lhs</span>: <a href="ImageTask"><span class="type">ImageTask</span></a>, <span class="variable">rhs</span>: <a href="ImageTask"><span class="type">ImageTask</span></a>) -&gt; <span class="type">Bool</span></code></pre></body></html>
 </div>
     </section>
 
@@ -1360,7 +1361,7 @@ unless there is an equivalent outstanding task running (see
 
     <footer>
         <p>
-    Generated on <time datetime="2020-04-08T17:10:41-0400">8 April 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a>.
+    Generated on <time datetime="2020-04-10T17:37:38-0400">10 April 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a>.
 </p>
     </footer>
 </body>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuke - ImagePipeline.Configuration</title>
+    <base href="https://kean-org.github.io/docs/nuke-docs-beta/9.0.0/"/>
     <style type="text/css">
     :root {
     --system-red: rgb(255, 59, 48);
@@ -1179,7 +1180,7 @@ nav li[class] {
 </head>
 <body>
     <header>
-        <a href="/">
+        <a href="https://kean-org.github.io/docs/nuke-docs-beta/9.0.0/">
             <strong>
                 Nuke
             </strong>
@@ -1214,14 +1215,14 @@ nav li[class] {
         
         <h3>Member Of</h3>
 <dl>
-    <dt class="class"><code><a href="/ImagePipeline">ImagePipeline</a></code></dt>
+    <dt class="class"><code><a href="ImagePipeline">ImagePipeline</a></code></dt>
 <dd><p><code>ImagePipeline</code> loads and decodes image data, processes loaded images and
 stores them in caches.</p>
 </dd>
 </dl>
 <h3>Nested Types</h3>
 <dl>
-    <dt class="structure"><code><a href="/ImagePipeline_Configuration_DataCacheOptions">ImagePipeline.Configuration.DataCacheOptions</a></code></dt>
+    <dt class="structure"><code><a href="ImagePipeline_Configuration_DataCacheOptions">ImagePipeline.Configuration.DataCacheOptions</a></code></dt>
 <dd></dd>
 </dl>
 </section>
@@ -1232,7 +1233,7 @@ stores them in caches.</p>
     <h3>
         <code>init(data​Loader:​image​Cache:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">dataLoader</span>: <a href="/DataLoading"><span class="type">DataLoading</span></a> = <span class="variable">DataLoader</span>(), <span class="variable">imageCache</span>: <a href="/ImageCaching"><span class="type">ImageCaching</span></a>? = <span class="variable">ImageCache</span>.<span class="type">shared</span>)</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">dataLoader</span>: <a href="DataLoading"><span class="type">DataLoading</span></a> = <span class="variable">DataLoader</span>(), <span class="variable">imageCache</span>: <a href="ImageCaching"><span class="type">ImageCaching</span></a>? = <span class="variable">ImageCache</span>.<span class="type">shared</span>)</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Creates a default configuration.</p>
 
@@ -1257,7 +1258,7 @@ stores them in caches.</p>
 <tr>
     <th>image​Cache</th>
     <td><code class="type">Image​Caching?</code></td></td>
-    <td><p><code>Cache.shared</code> by default.</p>
+    <td><p><code>ImageCache.shared</code> by default.</p>
 </td>
 </tr>
   </tbody>
@@ -1284,12 +1285,18 @@ stores them in caches.</p>
         <code>is​Animated​Image​Data​Enabled</code>
     </h3>
     <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">isAnimatedImageDataEnabled</span>: <span class="type">Bool</span></code></pre></body></html>
+<div class="discussion">
+    <aside class="warning">
+    <p>Soft-deprecated in 9.0. The default image decoder now automatically attaches image data to the newly added ImageContainer type. To learn how to implement animated image support using this new type, see the new Image Formats guide https://github.com/kean/Nuke/blob/9.0.0-beta.2/Documentation/Guides/image-formats.md&quot;</p>
+
+</aside>
+</div>
 </div>
 <div role="article" class="structure" id="imagepipeline.configuration.imagecache">
     <h3>
         <code>image​Cache</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">imageCache</span>: <a href="/ImageCaching"><span class="type">ImageCaching</span></a>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">imageCache</span>: <a href="ImageCaching"><span class="type">ImageCaching</span></a>?</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Image cache used by the pipeline.</p>
 
@@ -1299,7 +1306,7 @@ stores them in caches.</p>
     <h3>
         <code>data​Loader</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">dataLoader</span>: <a href="/DataLoading"><span class="type">DataLoading</span></a></code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">dataLoader</span>: <a href="DataLoading"><span class="type">DataLoading</span></a></code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Data loader used by the pipeline.</p>
 
@@ -1309,7 +1316,7 @@ stores them in caches.</p>
     <h3>
         <code>data​Cache</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">dataCache</span>: <a href="/DataCaching"><span class="type">DataCaching</span></a>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">dataCache</span>: <a href="DataCaching"><span class="type">DataCaching</span></a>?</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Data cache used by the pipeline.</p>
 
@@ -1319,7 +1326,7 @@ stores them in caches.</p>
     <h3>
         <code>make​Image​Decoder</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">makeImageDecoder</span>: (<a href="/ImageDecodingContext"><span class="type">ImageDecodingContext</span></a>) -&gt; <a href="/ImageDecoding"><span class="type">ImageDecoding</span></a>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">makeImageDecoder</span>: (<a href="ImageDecodingContext"><span class="type">ImageDecodingContext</span></a>) -&gt; <a href="ImageDecoding"><span class="type">ImageDecoding</span></a>?</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Default implementation uses shared <code>ImageDecoderRegistry</code> to create
 a decoder that matches the context.</p>
@@ -1330,7 +1337,7 @@ a decoder that matches the context.</p>
     <h3>
         <code>make​Image​Encoder</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">makeImageEncoder</span>: (<a href="/ImageEncodingContext"><span class="type">ImageEncodingContext</span></a>) -&gt; <a href="/ImageEncoding"><span class="type">ImageEncoding</span></a></code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">makeImageEncoder</span>: (<a href="ImageEncodingContext"><span class="type">ImageEncodingContext</span></a>) -&gt; <a href="ImageEncoding"><span class="type">ImageEncoding</span></a></code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Returns <code>ImageEncoders.Default()</code> by default.</p>
 
@@ -1400,7 +1407,7 @@ a decoder that matches the context.</p>
     <h3>
         <code>processors</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">processors</span>: [<a href="/ImageProcessing"><span class="type">ImageProcessing</span></a>]</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">processors</span>: [<a href="ImageProcessing"><span class="type">ImageProcessing</span></a>]</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Processors to be applied by default to all images loaded by the
 pipeline.
@@ -1456,14 +1463,14 @@ deduplicated work.</p>
 
 </div>
 <div class="discussion">
-    <html><body><p>Let't take this two requests for example:</p>
+    <html><body><p>Let's take these two requests for example:</p>
  </body></html>
 <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">url</span> = <span class="variable">URL</span>(<span class="variable">string</span>: <span class="string literal">"</span><span class="string literal">http://example.com/image</span><span class="string literal">"</span>)
-<span class="variable">pipeline</span>.<span class="type">loadImage</span>(<span class="variable">with</span>: <a href="/ImageRequest"><span class="type">ImageRequest</span></a>(<span class="variable">url</span>: <span class="type">url</span>, <span class="variable">processors</span>: [
+<span class="variable">pipeline</span>.<span class="type">loadImage</span>(<span class="variable">with</span>: <a href="ImageRequest"><span class="type">ImageRequest</span></a>(<span class="variable">url</span>: <span class="type">url</span>, <span class="variable">processors</span>: [
     <span class="variable">ImageProcessors</span>.<span class="type">Resize</span>(<span class="variable">size</span>: <span class="type">CGSize</span>(<span class="variable">width</span>: <span class="number literal">44</span>, <span class="variable">height</span>: <span class="number literal">44</span>)),
     <span class="variable">ImageProcessors</span>.<span class="type">GaussianBlur</span>(<span class="variable">radius</span>: <span class="number literal">8</span>)
 ]))
-<span class="variable">pipeline</span>.<span class="type">loadImage</span>(<span class="variable">with</span>: <a href="/ImageRequest"><span class="type">ImageRequest</span></a>(<span class="variable">url</span>: <span class="type">url</span>, <span class="variable">processors</span>: [
+<span class="variable">pipeline</span>.<span class="type">loadImage</span>(<span class="variable">with</span>: <a href="ImageRequest"><span class="type">ImageRequest</span></a>(<span class="variable">url</span>: <span class="type">url</span>, <span class="variable">processors</span>: [
     <span class="variable">ImageProcessors</span>.<span class="type">Resize</span>(<span class="variable">size</span>: <span class="type">CGSize</span>(<span class="variable">width</span>: <span class="number literal">44</span>, <span class="variable">height</span>: <span class="number literal">44</span>))
 ]))
 </code></pre></body></html>
@@ -1479,7 +1486,7 @@ any stage.</p>
     </h3>
     <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">isRateLimiterEnabled</span></code></pre></body></html>
 <div class="summary" role="doc-abstract">
-    <p><code>true</code> by default. It <code>true</code> the pipeline will rate limits the requests
+    <p><code>true</code> by default. If <code>true</code> the pipeline will rate limit requests
 to prevent trashing of the underlying systems (e.g. <code>URLSession</code>).
 The rate limiter only comes into play when the requests are started
 and cancelled at a high rate (e.g. scrolling through a collection view).</p>
@@ -1520,8 +1527,8 @@ previews have <code>isPreview</code> flag set to <code>true</code>.</p>
 <div class="summary" role="doc-abstract">
     <p>If the data task is terminated (either because of a failure or a
 cancellation) and the image was partially loaded, the next load will
-resume where it was left off. Supports both validators (<code>ETag</code>,
-<code>Last-Modified</code>). The resumable downloads are enabled by default.</p>
+resume where it left off. Supports both validators (<code>ETag</code>,
+<code>Last-Modified</code>). Resumable downloads are enabled by default.</p>
 
 </div>
 </div>
@@ -1548,7 +1555,7 @@ https://developer.apple.com/videos/play/wwdc2018/405/.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2020-04-08T17:10:41-0400">8 April 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a>.
+    Generated on <time datetime="2020-04-10T17:37:38-0400">10 April 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a>.
 </p>
     </footer>
 </body>

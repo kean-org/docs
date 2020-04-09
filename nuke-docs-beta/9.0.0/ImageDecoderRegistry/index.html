@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuke - ImageDecoderRegistry</title>
+    <base href="https://kean-org.github.io/docs/nuke-docs-beta/9.0.0/"/>
     <style type="text/css">
     :root {
     --system-red: rgb(255, 59, 48);
@@ -1179,7 +1180,7 @@ nav li[class] {
 </head>
 <body>
     <header>
-        <a href="/">
+        <a href="https://kean-org.github.io/docs/nuke-docs-beta/9.0.0/">
             <strong>
                 Nuke
             </strong>
@@ -1245,7 +1246,7 @@ nav li[class] {
     <h3>
         <code>decoder(for:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">decoder</span>(<span class="variable">for</span> <span class="variable">context</span>: <a href="/ImageDecodingContext"><span class="type">ImageDecodingContext</span></a>) -&gt; <a href="/ImageDecoding"><span class="type">ImageDecoding</span></a>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">decoder</span>(<span class="variable">for</span> <span class="variable">context</span>: <a href="ImageDecodingContext"><span class="type">ImageDecodingContext</span></a>) -&gt; <a href="ImageDecoding"><span class="type">ImageDecoding</span></a>?</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Returns a decoder which matches the given context.</p>
 
@@ -1255,7 +1256,7 @@ nav li[class] {
     <h3>
         <code>register(_:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">register</span>&lt;<span class="variable">Decoder</span>: <a href="/ImageDecoderRegistering"><span class="type">ImageDecoderRegistering</span></a>&gt;(<span class="keyword">_</span> <span class="variable">decoder</span>: <span class="type">Decoder</span>.<span class="type">Type</span>)</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">register</span>&lt;<span class="variable">Decoder</span>: <a href="ImageDecoderRegistering"><span class="type">ImageDecoderRegistering</span></a>&gt;(<span class="keyword">_</span> <span class="variable">decoder</span>: <span class="type">Decoder</span>.<span class="type">Type</span>)</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Registers the given decoder.</p>
 
@@ -1265,7 +1266,7 @@ nav li[class] {
     <h3>
         <code>register(_:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">register</span>(<span class="keyword">_</span> <span class="variable">match</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<a href="/ImageDecodingContext"><span class="type">ImageDecodingContext</span></a>) -&gt; <a href="/ImageDecoding"><span class="type">ImageDecoding</span></a>?)</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">register</span>(<span class="keyword">_</span> <span class="variable">match</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<a href="ImageDecodingContext"><span class="type">ImageDecodingContext</span></a>) -&gt; <a href="ImageDecoding"><span class="type">ImageDecoding</span></a>?)</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Registers a decoder to be used in a given decoding context. The closure
 is going to be executed before all other already registered closures.</p>
@@ -1291,7 +1292,7 @@ is going to be executed before all other already registered closures.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2020-04-08T17:10:41-0400">8 April 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a>.
+    Generated on <time datetime="2020-04-10T17:37:38-0400">10 April 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a>.
 </p>
     </footer>
 </body>

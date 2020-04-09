@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuke - ImageDecoders.Default</title>
+    <base href="https://kean-org.github.io/docs/nuke-docs-beta/9.0.0/"/>
     <style type="text/css">
     :root {
     --system-red: rgb(255, 59, 48);
@@ -1179,7 +1180,7 @@ nav li[class] {
 </head>
 <body>
     <header>
-        <a href="/">
+        <a href="https://kean-org.github.io/docs/nuke-docs-beta/9.0.0/">
             <strong>
                 Nuke
             </strong>
@@ -1208,7 +1209,7 @@ nav li[class] {
     <code class="name">Image​Decoders.​Default</code>
 </h1>
 
-<html><body><pre class="highlight"><code><span class="attribute">final</span> <span class="keyword">class</span> <span class="type">Default</span>: <a href="/ImageDecoding"><span class="type">ImageDecoding</span></a>, <a href="/ImageDecoderRegistering"><span class="type">ImageDecoderRegistering</span></a></code></pre></body></html>
+<html><body><pre class="highlight"><code><span class="attribute">final</span> <span class="keyword">class</span> <span class="type">Default</span>: <a href="ImageDecoding"><span class="type">ImageDecoding</span></a>, <a href="ImageDecoderRegistering"><span class="type">ImageDecoderRegistering</span></a></code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>The default decoder which supports all of the formats natively supported
 by the system.</p>
@@ -1229,15 +1230,15 @@ by the system.</p>
         
         <h3>Member Of</h3>
 <dl>
-    <dt class="enumeration"><code><a href="/ImageDecoders">ImageDecoders</a></code></dt>
+    <dt class="enumeration"><code><a href="ImageDecoders">ImageDecoders</a></code></dt>
 <dd></dd>
 </dl>
 <h3>Conforms To</h3>
 <dl>
-    <dt class="protocol"><code><a href="/ImageDecoding">ImageDecoding</a></code></dt>
+    <dt class="protocol"><code><a href="ImageDecoding">ImageDecoding</a></code></dt>
 <dd><p>An image decoder.</p>
 </dd>
-<dt class="protocol"><code><a href="/ImageDecoderRegistering">ImageDecoderRegistering</a></code></dt>
+<dt class="protocol"><code><a href="ImageDecoderRegistering">ImageDecoderRegistering</a></code></dt>
 <dd><p>An image decoder which supports automatically registering in the decoder register.</p>
 </dd>
 </dl>
@@ -1255,13 +1256,13 @@ by the system.</p>
     <h3>
         <code>init?(data:​context:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>?(<span class="variable">data</span>: <span class="type">Data</span>, <span class="variable">context</span>: <a href="/ImageDecodingContext"><span class="type">ImageDecodingContext</span></a>)</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>?(<span class="variable">data</span>: <span class="type">Data</span>, <span class="variable">context</span>: <a href="ImageDecodingContext"><span class="type">ImageDecodingContext</span></a>)</code></pre></body></html>
 </div>
 <div role="article" class="class" id="imagedecoders.default.init?(partiallydownloadeddata:context:)">
     <h3>
         <code>init?(partially​Downloaded​Data:​context:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>?(<span class="variable">partiallyDownloadedData</span> <span class="variable">data</span>: <span class="type">Data</span>, <span class="variable">context</span>: <a href="/ImageDecodingContext"><span class="type">ImageDecodingContext</span></a>)</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>?(<span class="variable">partiallyDownloadedData</span> <span class="variable">data</span>: <span class="type">Data</span>, <span class="variable">context</span>: <a href="ImageDecodingContext"><span class="type">ImageDecodingContext</span></a>)</code></pre></body></html>
 </div>
     </section>
     <section id="properties">
@@ -1293,7 +1294,7 @@ by the system.</p>
     <h3>
         <code>container</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">container</span>: <a href="/ImageContainer"><span class="type">ImageContainer</span></a>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">container</span>: <a href="ImageContainer"><span class="type">ImageContainer</span></a>?</code></pre></body></html>
 </div>
     </section>
     <section id="methods">
@@ -1303,19 +1304,19 @@ by the system.</p>
     <h3>
         <code>decode(_:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">decode</span>(<span class="keyword">_</span> <span class="variable">data</span>: <span class="type">Data</span>) -&gt; <a href="/ImageContainer"><span class="type">ImageContainer</span></a>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">decode</span>(<span class="keyword">_</span> <span class="variable">data</span>: <span class="type">Data</span>) -&gt; <a href="ImageContainer"><span class="type">ImageContainer</span></a>?</code></pre></body></html>
 </div>
 <div role="article" class="class" id="imagedecoders.default._decode(_:)">
     <h3>
         <code>_decode(_:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">private</span> <span class="keyword">func</span> <span class="function">_decode</span>(<span class="keyword">_</span> <span class="variable">data</span>: <span class="type">Data</span>) -&gt; <a href="/ImageContainer"><span class="type">ImageContainer</span></a>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">private</span> <span class="keyword">func</span> <span class="function">_decode</span>(<span class="keyword">_</span> <span class="variable">data</span>: <span class="type">Data</span>) -&gt; <a href="ImageContainer"><span class="type">ImageContainer</span></a>?</code></pre></body></html>
 </div>
 <div role="article" class="class" id="imagedecoders.default.decodepartiallydownloadeddata(_:)">
     <h3>
         <code>decode​Partially​Downloaded​Data(_:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">decodePartiallyDownloadedData</span>(<span class="keyword">_</span> <span class="variable">data</span>: <span class="type">Data</span>) -&gt; <a href="/ImageContainer"><span class="type">ImageContainer</span></a>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">decodePartiallyDownloadedData</span>(<span class="keyword">_</span> <span class="variable">data</span>: <span class="type">Data</span>) -&gt; <a href="ImageContainer"><span class="type">ImageContainer</span></a>?</code></pre></body></html>
 </div>
     </section>
 
@@ -1326,7 +1327,7 @@ by the system.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2020-04-08T17:10:41-0400">8 April 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a>.
+    Generated on <time datetime="2020-04-10T17:37:38-0400">10 April 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a>.
 </p>
     </footer>
 </body>

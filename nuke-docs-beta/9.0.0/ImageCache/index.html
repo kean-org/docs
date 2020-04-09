@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuke - ImageCache</title>
+    <base href="https://kean-org.github.io/docs/nuke-docs-beta/9.0.0/"/>
     <style type="text/css">
     :root {
     --system-red: rgb(255, 59, 48);
@@ -1179,7 +1180,7 @@ nav li[class] {
 </head>
 <body>
     <header>
-        <a href="/">
+        <a href="https://kean-org.github.io/docs/nuke-docs-beta/9.0.0/">
             <strong>
                 Nuke
             </strong>
@@ -1208,7 +1209,7 @@ nav li[class] {
     <code class="name">Image​Cache</code>
 </h1>
 
-<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">final</span> <span class="keyword">class</span> <span class="type">ImageCache</span>: <a href="/ImageCaching"><span class="type">ImageCaching</span></a></code></pre></body></html>
+<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">final</span> <span class="keyword">class</span> <span class="type">ImageCache</span>: <a href="ImageCaching"><span class="type">ImageCaching</span></a></code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Memory cache with LRU cleanup policy (least recently used are removed first).</p>
 
@@ -1217,11 +1218,11 @@ nav li[class] {
     <html><body><p>The elements stored in cache are automatically discarded if either <em>cost</em> or
 <em>count</em> limit is reached. The default cost limit represents a number of bytes
 and is calculated based on the amount of physical memory available on the
-device. The default cmount limit is set to <code>Int.max</code>.</p>
+device. The default count limit is set to <code>Int.max</code>.</p>
  </body></html>
-<html><body><p><code>Cache</code> automatically removes all stored elements when it received a
-memory warning. It also automatically removes <em>most</em> of cached elements
-when the app enters background.</p>
+<html><body><p><code>ImageCache</code> automatically removes all stored elements when it receives a
+memory warning. It also automatically removes <em>most</em> stored elements
+when the app enters the background.</p>
  </body></html>
 </div>
 <section id="relationships">
@@ -1229,7 +1230,7 @@ when the app enters background.</p>
         
         <h3>Conforms To</h3>
 <dl>
-    <dt class="protocol"><code><a href="/ImageCaching">ImageCaching</a></code></dt>
+    <dt class="protocol"><code><a href="ImageCaching">ImageCaching</a></code></dt>
 <dd><p>In-memory image cache.</p>
 </dd>
 </dl>
@@ -1393,7 +1394,7 @@ of the remaining items is less than the given count limit.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2020-04-08T17:10:41-0400">8 April 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a>.
+    Generated on <time datetime="2020-04-10T17:37:38-0400">10 April 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a>.
 </p>
     </footer>
 </body>

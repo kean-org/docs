@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuke - ImageProcessors.Composition</title>
+    <base href="https://kean-org.github.io/docs/nuke-docs-beta/9.0.0/"/>
     <style type="text/css">
     :root {
     --system-red: rgb(255, 59, 48);
@@ -1179,7 +1180,7 @@ nav li[class] {
 </head>
 <body>
     <header>
-        <a href="/">
+        <a href="https://kean-org.github.io/docs/nuke-docs-beta/9.0.0/">
             <strong>
                 Nuke
             </strong>
@@ -1208,7 +1209,7 @@ nav li[class] {
     <code class="name">Image​Processors.​Composition</code>
 </h1>
 
-<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">Composition</span>: <a href="/ImageProcessing"><span class="type">ImageProcessing</span></a>, <span class="type">Hashable</span>, <span class="type">CustomStringConvertible</span></code></pre></body></html>
+<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">Composition</span>: <a href="ImageProcessing"><span class="type">ImageProcessing</span></a>, <span class="type">Hashable</span>, <span class="type">CustomStringConvertible</span></code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Composes multiple processors.</p>
 
@@ -1218,13 +1219,13 @@ nav li[class] {
         
         <h3>Member Of</h3>
 <dl>
-    <dt class="enumeration"><code><a href="/ImageProcessors">ImageProcessors</a></code></dt>
+    <dt class="enumeration"><code><a href="ImageProcessors">ImageProcessors</a></code></dt>
 <dd><p>A namespace for all processors that implement <code>ImageProcessing</code> protocol.</p>
 </dd>
 </dl>
 <h3>Conforms To</h3>
 <dl>
-    <dt class="protocol"><code><a href="/ImageProcessing">ImageProcessing</a></code></dt>
+    <dt class="protocol"><code><a href="ImageProcessing">ImageProcessing</a></code></dt>
 <dd><p>Performs image processing.</p>
 </dd>
 <dt class="unknown"><code>CustomStringConvertible</code></dt>
@@ -1238,7 +1239,7 @@ nav li[class] {
     <h3>
         <code>init(_:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="keyword">_</span> <span class="variable">processors</span>: [<a href="/ImageProcessing"><span class="type">ImageProcessing</span></a>])</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="keyword">_</span> <span class="variable">processors</span>: [<a href="ImageProcessing"><span class="type">ImageProcessing</span></a>])</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Composes multiple processors.</p>
 
@@ -1280,7 +1281,7 @@ nav li[class] {
     <h3>
         <code>process(_:​context:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">process</span>(<span class="keyword">_</span> <span class="variable">container</span>: <a href="/ImageContainer"><span class="type">ImageContainer</span></a>, <span class="variable">context</span>: <a href="/ImageProcessingContext"><span class="type">ImageProcessingContext</span></a>) -&gt; <a href="/ImageContainer"><span class="type">ImageContainer</span></a>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">process</span>(<span class="keyword">_</span> <span class="variable">container</span>: <a href="ImageContainer"><span class="type">ImageContainer</span></a>, <span class="variable">context</span>: <a href="ImageProcessingContext"><span class="type">ImageProcessingContext</span></a>) -&gt; <a href="ImageContainer"><span class="type">ImageContainer</span></a>?</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Processes the given image by applying each processor in an order in
 which they were added. If one of the processors fails to produce
@@ -1309,7 +1310,7 @@ an image the processing stops and <code>nil</code> is returned.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2020-04-08T17:10:41-0400">8 April 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a>.
+    Generated on <time datetime="2020-04-10T17:37:38-0400">10 April 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a>.
 </p>
     </footer>
 </body>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuke - ImageRequestOptions</title>
+    <base href="https://kean-org.github.io/docs/nuke-docs-beta/9.0.0/"/>
     <style type="text/css">
     :root {
     --system-red: rgb(255, 59, 48);
@@ -1179,7 +1180,7 @@ nav li[class] {
 </head>
 <body>
     <header>
-        <a href="/">
+        <a href="https://kean-org.github.io/docs/nuke-docs-beta/9.0.0/">
             <strong>
                 Nuke
             </strong>
@@ -1214,7 +1215,7 @@ nav li[class] {
         
         <h3>Nested Types</h3>
 <dl>
-    <dt class="structure"><code><a href="/ImageRequestOptions_MemoryCacheOptions">ImageRequestOptions.MemoryCacheOptions</a></code></dt>
+    <dt class="structure"><code><a href="ImageRequestOptions_MemoryCacheOptions">ImageRequestOptions.MemoryCacheOptions</a></code></dt>
 <dd><p>The policy to use when reading or writing images to the memory cache.</p>
 </dd>
 </dl>
@@ -1255,7 +1256,7 @@ contains transient query parameters.</p>
 <div class="discussion">
     <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">request</span> = <span class="variable">ImageRequest</span>(
     <span class="variable">url</span>: <span class="type">URL</span>(<span class="variable">string</span>: <span class="string literal">"</span><span class="string literal">http://example.com/image.jpeg?token=123</span><span class="string literal">"</span>)!,
-    <span class="variable">options</span>: <a href="/ImageRequestOptions"><span class="type">ImageRequestOptions</span></a>(
+    <span class="variable">options</span>: <a href="ImageRequestOptions"><span class="type">ImageRequestOptions</span></a>(
         <span class="variable">filteredURL</span>: <span class="string literal">"</span><span class="string literal">http://example.com/image.jpeg</span><span class="string literal">"</span>
     )
 )
@@ -1288,7 +1289,7 @@ URLs and the same processors.</p>
 
 </div>
 <div class="discussion">
-    <html><body><p>The default key considers two requests equivalent it they have the same
+    <html><body><p>The default key considers two requests equivalent if they have the same
 <code>URLRequests</code> and the same processors. <code>URLRequests</code> are compared by
 their <code>URL</code>, <code>cachePolicy</code>, and <code>allowsCellularAccess</code> properties.</p>
  </body></html>
@@ -1313,7 +1314,7 @@ their <code>URL</code>, <code>cachePolicy</code>, and <code>allowsCellularAccess
 
     <footer>
         <p>
-    Generated on <time datetime="2020-04-08T17:10:41-0400">8 April 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a>.
+    Generated on <time datetime="2020-04-10T17:37:38-0400">10 April 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a>.
 </p>
     </footer>
 </body>

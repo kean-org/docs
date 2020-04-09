@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuke - loadImage(with:options:into:progress:completion:)</title>
+    <base href="https://kean-org.github.io/docs/nuke-docs-beta/9.0.0/"/>
     <style type="text/css">
     :root {
     --system-red: rgb(255, 59, 48);
@@ -1179,7 +1180,7 @@ nav li[class] {
 </head>
 <body>
     <header>
-        <a href="/">
+        <a href="https://kean-org.github.io/docs/nuke-docs-beta/9.0.0/">
             <strong>
                 Nuke
             </strong>
@@ -1208,7 +1209,7 @@ nav li[class] {
 <span class="name">load​Image(with:​options:​into:​progress:​completion:​)</span>
 </h1>
 
-<html><body><pre class="highlight"><code><span class="attribute">@</span><span class="attribute">discardableResult</span> <span class="keyword">public</span> <span class="keyword">func</span> <span class="function">loadImage</span>(<span class="variable">with</span> <span class="variable">url</span>: <span class="type">URL</span>, <span class="variable">options</span>: <a href="/ImageLoadingOptions"><span class="type">ImageLoadingOptions</span></a> = <span class="variable">ImageLoadingOptions</span>.<span class="type">shared</span>, <span class="variable">into</span> <span class="variable">view</span>: <span class="type">ImageDisplayingView</span>, <span class="variable">progress</span>: <a href="/ImageTask"><span class="type">ImageTask</span></a>.<span class="type">ProgressHandler</span>? = <span class="keyword">nil</span>, <span class="variable">completion</span>: <a href="/ImageTask"><span class="type">ImageTask</span></a>.<span class="type">Completion</span>? = <span class="keyword">nil</span>) -&gt; <a href="/ImageTask"><span class="type">ImageTask</span></a>?</code></pre></body></html>
+<html><body><pre class="highlight"><code><span class="attribute">@</span><span class="attribute">discardableResult</span> <span class="keyword">public</span> <span class="keyword">func</span> <span class="function">loadImage</span>(<span class="variable">with</span> <span class="variable">url</span>: <span class="type">URL</span>, <span class="variable">options</span>: <a href="ImageLoadingOptions"><span class="type">ImageLoadingOptions</span></a> = <span class="variable">ImageLoadingOptions</span>.<span class="type">shared</span>, <span class="variable">into</span> <span class="variable">view</span>: <span class="type">ImageDisplayingView</span>, <span class="variable">progress</span>: <a href="ImageTask"><span class="type">ImageTask</span></a>.<span class="type">ProgressHandler</span>? = <span class="keyword">nil</span>, <span class="variable">completion</span>: <a href="ImageTask"><span class="type">ImageTask</span></a>.<span class="type">Completion</span>? = <span class="keyword">nil</span>) -&gt; <a href="ImageTask"><span class="type">ImageTask</span></a>?</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Loads an image with the given URL and displays it in the view.</p>
 
@@ -1264,13 +1265,13 @@ with the selected animation.</p>
   <h4>Returns</h4>
   <p>An image task or <code>nil</code> if the image was found in the memory cache.</p>
 
-<html><body><pre class="highlight"><code><span class="attribute">@</span><span class="attribute">discardableResult</span> <span class="keyword">public</span> <span class="keyword">func</span> <span class="function">loadImage</span>(<span class="variable">with</span> <span class="variable">request</span>: <a href="/ImageRequest"><span class="type">ImageRequest</span></a>, <span class="variable">options</span>: <a href="/ImageLoadingOptions"><span class="type">ImageLoadingOptions</span></a> = <span class="variable">ImageLoadingOptions</span>.<span class="type">shared</span>, <span class="variable">into</span> <span class="variable">view</span>: <span class="type">ImageDisplayingView</span>, <span class="variable">progress</span>: <a href="/ImageTask"><span class="type">ImageTask</span></a>.<span class="type">ProgressHandler</span>? = <span class="keyword">nil</span>, <span class="variable">completion</span>: <a href="/ImageTask"><span class="type">ImageTask</span></a>.<span class="type">Completion</span>? = <span class="keyword">nil</span>) -&gt; <a href="/ImageTask"><span class="type">ImageTask</span></a>?</code></pre></body></html>
+<html><body><pre class="highlight"><code><span class="attribute">@</span><span class="attribute">discardableResult</span> <span class="keyword">public</span> <span class="keyword">func</span> <span class="function">loadImage</span>(<span class="variable">with</span> <span class="variable">request</span>: <a href="ImageRequest"><span class="type">ImageRequest</span></a>, <span class="variable">options</span>: <a href="ImageLoadingOptions"><span class="type">ImageLoadingOptions</span></a> = <span class="variable">ImageLoadingOptions</span>.<span class="type">shared</span>, <span class="variable">into</span> <span class="variable">view</span>: <span class="type">ImageDisplayingView</span>, <span class="variable">progress</span>: <a href="ImageTask"><span class="type">ImageTask</span></a>.<span class="type">ProgressHandler</span>? = <span class="keyword">nil</span>, <span class="variable">completion</span>: <a href="ImageTask"><span class="type">ImageTask</span></a>.<span class="type">Completion</span>? = <span class="keyword">nil</span>) -&gt; <a href="ImageTask"><span class="type">ImageTask</span></a>?</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Loads an image with the given request and displays it in the view.</p>
 
 </div>
 <div class="discussion">
-    <html><body><p>Before loading a new image, the view is prepared for reuse by cancelling any
+    <html><body><p>Before loading a new image, the view is prepared for reuse by canceling any
 outstanding requests and removing a previously displayed image.</p>
  </body></html>
 <html><body><p>If the image is stored in the memory cache, it is displayed immediately with
@@ -1325,7 +1326,7 @@ with the selected animation.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2020-04-08T17:10:41-0400">8 April 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a>.
+    Generated on <time datetime="2020-04-10T17:37:38-0400">10 April 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a>.
 </p>
     </footer>
 </body>
