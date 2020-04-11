@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuke - Nuke</title>
+    <title>Image Pipeline Guide</title>
     <base href="https://kean-org.github.io/docs/nuke-docs-beta/9.0.0/"/>
-    <style type="text/css">
+<style type="text/css">
     :root {
     --system-red: rgb(255, 59, 48);
     --system-orange: rgb(255, 149, 0);
@@ -861,7 +862,7 @@ body > footer {
 
 main {
     padding: 0 2em;
-    /* max-width: 66ch; */
+     max-width: 66ch; 
 }
 
 nav {
@@ -1178,8 +1179,7 @@ nav li[class] {
 
     </style>
 </head>
-<body>
-    <header>
+<header>
         <a href="https://kean-org.github.io/docs/nuke-docs-beta/9.0.0/">
             <strong>
                 Nuke
@@ -1189,687 +1189,203 @@ nav li[class] {
         <sup>Beta</sup>
     </header>
 
-    <!--
-    <form class="search">
-        <input type="search" placeholder="Search" />
-    </form>
-    -->
-
     <nav>
         <div class="wrapper">
-            <h2>On This Page</h2>
-            <ol><li><a href="#classes">Classes</a></li><li><a href="#structures">Structures</a></li><li><a href="#enumerations">Enumerations</a></li><li><a href="#protocols">Protocols</a></li><li><a href="#globals">Globals</a></li></ol>
+        <h4>Contents</h4>
+        <ul class="TableOfContents">
+          <li class="TOCItem2"><a href="#nukeloadimagewithinto"><code>Nuke.loadImage(with:into)</code></a></li>
+          <li class="TOCItem2"><a href="#imagepipelineloadimagewithcompletion"><code>ImagePipeline.loadImage(with:completion:)</code></a></li>
+              <li class="TOCItem2"><a href="#under-the-hood">Under the Hood</a>
+                <ul>
+                  <li class="TOCItem3"><a href="#data-loading-and-caching">Data Loading and Caching</a></li>
+                  <li class="TOCItem3"><a href="#aggressive-lru-disk-cache">Aggressive LRU Disk Cache</a></li>
+                  <li class="TOCItem3"><a href="#resumable-downloads">Resumable Downloads</a></li>
+                  <li class="TOCItem3"><a href="#memory-cache">Memory Cache</a></li>
+                  <li class="TOCItem3"><a href="#deduplication">Deduplication</a></li>
+                  <li class="TOCItem3"><a href="#decompression">Decompression</a></li>
+                  <li class="TOCItem3"><a href="#progressive-decoding">Progressive Decoding</a></li>
+                  <li class="TOCItem3"><a href="#performance">Performance</a></li>
+                </ul>
+              </li>
+            </li>
+        </ul>
         </div>
     </nav>
 
-    <main>
+
+
+  <body>
+        <main>
         <article>
-                <section id="classes">
-        <h2>Classes</h2>
-        <dl>
-    <dt class="class">
-    <a href="DataCache" title="class - DataCache">
-        Data​Cache
-    </a>
-</dt>
-<dd>
-    <p>Data cache backed by a local storage.</p>
+            <h1 id="image-pipeline-guide">Image Pipeline Guide</h1>
 
-</dd>
-<dt class="class">
-    <a href="DataLoader" title="class - DataLoader">
-        Data​Loader
-    </a>
-</dt>
-<dd>
-    <p>Provides basic networking using <code>URLSession</code>.</p>
+<p>This guide describes in detail what happens when you call <code>Nuke.loadImage(with: url, into: view)</code> and how the underlying image pipeline delivers the images to the view.</p>
 
-</dd>
-<dt class="class">
-    <a href="ImageCache" title="class - ImageCache">
-        Image​Cache
-    </a>
-</dt>
-<dd>
-    <p>Memory cache with LRU cleanup policy (least recently used are removed first).</p>
+<ul>
+  <li><a href="#-nukeloadimage-with-into--"><code>Nuke.loadImage(with:into)</code></a></li>
+  <li><a href="#-imagepipelineloadimage-with-completion---"><code>ImagePipeline.loadImage(with:completion:)</code></a></li>
+  <li><a href="#under-the-hood">Under the Hood</a>
+    <ul>
+      <li><a href="#data-loading-and-caching">Data Loading and Caching</a></li>
+      <li><a href="#aggressive-lru-disk-cache">Aggressive LRU Disk Cache</a></li>
+      <li><a href="#resumable-downloads">Resumable Downloads</a></li>
+      <li><a href="#memory-cache">Memory Cache</a></li>
+      <li><a href="#deduplication">Deduplication</a></li>
+      <li><a href="#decompression">Decompression</a></li>
+      <li><a href="#progressive-decoding">Progressive Decoding</a></li>
+      <li><a href="#performance">Performance</a></li>
+    </ul>
+  </li>
+</ul>
 
-</dd>
-<dt class="class">
-    <a href="ImageDecoders_Default" title="class - ImageDecoders.Default">
-        Image​Decoders.​Default
-    </a>
-</dt>
-<dd>
-    <p>The default decoder which supports all of the formats natively supported
-by the system.</p>
+<h2 id="nukeloadimagewithinto"><code>Nuke.loadImage(with:into)</code></h2>
 
-</dd>
-<dt class="class">
-    <a href="ImageDecoderRegistry" title="class - ImageDecoderRegistry">
-        Image​Decoder​Registry
-    </a>
-</dt>
-<dd>
-    <p>A register of image codecs (only decoding).</p>
+<p>This methods loads an image with the given request and displays it in the view.</p>
 
-</dd>
-<dt class="class">
-    <a href="ImagePipeline" title="class - ImagePipeline">
-        Image​Pipeline
-    </a>
-</dt>
-<dd>
-    <p><code>ImagePipeline</code> loads and decodes image data, processes loaded images and
-stores them in caches.</p>
+<p>Before loading a new image, the view is prepared for reuse by cancelling any outstanding requests and removing a previously displayed image.</p>
 
-</dd>
-<dt class="class">
-    <a href="ImagePreheater" title="class - ImagePreheater">
-        Image​Preheater
-    </a>
-</dt>
-<dd>
-    <p>Prefetches and caches image to eliminate delays when requesting the same
-images later.</p>
+<p>If the image is stored in the <a href="#memory-cache">memory cache</a>, it is displayed immediately with no animations. If not, the image is loaded using an <a href="#pipeline-fetch-image">image pipeline</a>. When the image is loading, the <code>placeholder</code> is displayed. When the request completes the loaded image is displayed (or <code>failureImage</code> in case of an error) with the selected animation.</p>
 
-</dd>
-<dt class="class">
-    <a href="ImageTask" title="class - ImageTask">
-        Image​Task
-    </a>
-</dt>
-<dd>
-    <p>A task performed by the <code>ImagePipeline</code>. The pipeline maintains a strong
-reference to the task until the request finishes or fails; you do not need
-to maintain a reference to the task unless it is useful to do so for your
-app’s internal bookkeeping purposes.</p>
+<blockquote>
+  <p>Don’t get caught in thinking that <code>Nuke.loadImage(with:into)</code> is the only way to use Nuke. This method is designed to get you up and running as quickly as possible. It is powerful and has a lot of configuration options, but if you need more control, please consider using <a href="#pipeline-fetch-image"><code>ImagePipeline</code></a> directly.</p>
+</blockquote>
 
-</dd>
-<dt class="class">
-    <a href="ImageResponse" title="class - ImageResponse">
-        Image​Response
-    </a>
-</dt>
-<dd>
-    <p>Represents a response of a particular image task.</p>
+<p><a name="pipeline-fetch-image"></a>&lt;/a&gt;</p>
+<h2 id="imagepipelineloadimagewithcompletion"><code>ImagePipeline.loadImage(with:completion:)</code></h2>
 
-</dd>
-</dl>
-    </section>
-    <section id="structures">
-        <h2>Structures</h2>
-        <dl>
-    <dt class="structure">
-    <a href="ImageDecoders_Empty" title="structure - ImageDecoders.Empty">
-        Image​Decoders.​Empty
-    </a>
-</dt>
-<dd>
-    <p>A decoder which returns an empty placeholder image and attaches image
-data to the image container.</p>
+<p>This section describes the basic steps that pipeline performs when delivering an image.</p>
 
-</dd>
-<dt class="structure">
-    <a href="ImageDecodingContext" title="structure - ImageDecodingContext">
-        Image​Decoding​Context
-    </a>
-</dt>
-<dd>
-    <p>Image decoding context used when selecting which decoder to use.</p>
+<blockquote>
+  <p>As a visual aid, use this <a href="https://github.com/kean/Nuke/blob/8.0/Documentation/Assets/image-pipeline.svg">Block Diagram</a>.</p>
+</blockquote>
 
-</dd>
-<dt class="structure">
-    <a href="ImageType" title="structure - ImageType">
-        Image​Type
-    </a>
-</dt>
-<dd>
-    <p>A uniform type identifier (UTI).</p>
+<ol>
+  <li>Check if the requested image is already stored in the <a href="#memory-cache">memory cache</a>. If it is, deliver it to the client.</li>
+  <li>Check if the encoded requested image is stored in the disk cache (this feature is disabled by default). If yes, the image is
+    <ul>
+      <li>Decoded</li>
+      <li><a href="#decompression">Decompressed</a></li>
+      <li>Stored in the memory cache</li>
+      <li>And is finally delivered to the client</li>
+    </ul>
+  </li>
+  <li>Check if the original image data is stored in the disk cache. If it is, decode it, apply image processors, store the image in the memory cache, and deliver it to the client.</li>
+</ol>
 
-</dd>
-<dt class="structure">
-    <a href="ImageEncodingContext" title="structure - ImageEncodingContext">
-        Image​Encoding​Context
-    </a>
-</dt>
-<dd>
-    <p>Image encoding context used when selecting which encoder to use.</p>
+<blockquote>
+  <p>The disk cache described in steps 2 and 3 is disabled by default. The pipeline relies on the HTTP-compliant disk cache on <code>URLSession</code> level. To learn how to enable the disk cache, see <a href="#aggressive-lru-disk-cache">Aggressive LRU Disk Cache</a>.</p>
+</blockquote>
 
-</dd>
-<dt class="structure">
-    <a href="ImageEncoders_Default" title="structure - ImageEncoders.Default">
-        Image​Encoders.​Default
-    </a>
-</dt>
-<dd>
-    <p>A default adaptive encoder which uses best encoder available depending
-on the input image and its configuration.</p>
+<ol>
+  <li>If all caches are empty, <a href="#data-loading-and-caching">load the image data</a>. If any <a href="#resumable-data">resumable data</a> was left from a previous equivalent request, use it. Otherwise start fresh. When the data is loaded, perform all of the steps outlined in step 3.</li>
+</ol>
 
-</dd>
-<dt class="structure">
-    <a href="ImageEncoders_ImageIO" title="structure - ImageEncoders.ImageIO">
-        Image​Encoders.​Image​IO
-    </a>
-</dt>
-<dd>
-    <p>An Image I/O based encoder.</p>
+<blockquote>
+  <p>If <a href="#progerssive-decoding">progressive decoding</a> is enabled, the pipeline attemps to produce a preview of any image every time a new chunk of data is loaded.</p>
+</blockquote>
 
-</dd>
-<dt class="structure">
-    <a href="ImagePipeline_Configuration" title="structure - ImagePipeline.Configuration">
-        Image​Pipeline.​Configuration
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="structure">
-    <a href="ImagePipeline_Configuration_DataCacheOptions" title="structure - ImagePipeline.Configuration.DataCacheOptions">
-        Image​Pipeline.​Configuration.​Data​Cache​Options
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="structure">
-    <a href="ImageProcessingContext" title="structure - ImageProcessingContext">
-        Image​Processing​Context
-    </a>
-</dt>
-<dd>
-    <p>Image processing context used when selecting which processor to use.</p>
+<p>During each of these steps, the pipeline creates and performs operations, each of which is performed on its own operation queue with its own configuration. The operations respect the priority of the requests. The priority can be updated dynamically.</p>
 
-</dd>
-<dt class="structure">
-    <a href="ImageProcessors_Resize" title="structure - ImageProcessors.Resize">
-        Image​Processors.​Resize
-    </a>
-</dt>
-<dd>
-    <p>Scales an image to a specified size.</p>
+<h2 id="under-the-hood">Under the Hood</h2>
 
-</dd>
-<dt class="structure">
-    <a href="ImageProcessors_Circle" title="structure - ImageProcessors.Circle">
-        Image​Processors.​Circle
-    </a>
-</dt>
-<dd>
-    <p>Rounds the corners of an image into a circle. If the image is not a square,
-crops it to a square first.</p>
+<h3 id="data-loading-and-caching">Data Loading and Caching</h3>
 
-</dd>
-<dt class="structure">
-    <a href="ImageProcessors_RoundedCorners" title="structure - ImageProcessors.RoundedCorners">
-        Image​Processors.​Rounded​Corners
-    </a>
-</dt>
-<dd>
-    <p>Rounds the corners of an image to the specified radius.</p>
+<p>A <code>DataLoader</code> class uses <a href="https://developer.apple.com/reference/foundation/nsurlsession"><code>URLSession</code></a> to load image data. The data is cached on disk using <a href="https://developer.apple.com/reference/foundation/urlcache"><code>URLCache</code></a>, which by default is initialized with memory capacity of 0 MB (only stores processed images in memory) and disk capacity of 150 MB.</p>
 
-</dd>
-<dt class="structure">
-    <a href="ImageProcessors_CoreImageFilter" title="structure - ImageProcessors.CoreImageFilter">
-        Image​Processors.​Core​Image​Filter
-    </a>
-</dt>
-<dd>
-    <p>Applies Core Image filter (<code>CIFilter</code>) to the image.</p>
+<blockquote>
+  <p>See <a href="https://kean.github.io/post/image-caching">Image Caching Guide</a> to learn more about HTTP cache.</p>
+</blockquote>
 
-</dd>
-<dt class="structure">
-    <a href="ImageProcessors_GaussianBlur" title="structure - ImageProcessors.GaussianBlur">
-        Image​Processors.​Gaussian​Blur
-    </a>
-</dt>
-<dd>
-    <p>Blurs an image using <code>CIGaussianBlur</code> filter.</p>
+<p>The <code>URLSession</code> class natively supports the following URL schemes: <code>data</code>, <code>file</code>, <code>ftp</code>, <code>http</code>, and <code>https</code>.</p>
 
-</dd>
-<dt class="structure">
-    <a href="ImageProcessors_Composition" title="structure - ImageProcessors.Composition">
-        Image​Processors.​Composition
-    </a>
-</dt>
-<dd>
-    <p>Composes multiple processors.</p>
+<p>Most developers either implement their own networking layer or use a third-party framework. Nuke supports both of these workflows. You can integrate your custom networking layer by implementing <code>DataLoading</code> protocol.</p>
 
-</dd>
-<dt class="structure">
-    <a href="ImageProcessors_Anonymous" title="structure - ImageProcessors.Anonymous">
-        Image​Processors.​Anonymous
-    </a>
-</dt>
-<dd>
-    <p>Processed an image using a specified closure.</p>
+<blockquote>
+  <p>See <a href="https://github.com/kean/Nuke/blob/8.0/Documentation/Guides/Third%20Party%20Libraries.md#using-other-caching-libraries">Third Party Libraries</a> guide to learn more. See also <a href="https://github.com/kean/Nuke-Alamofire-Plugin">Alamofire Plugin</a>.</p>
+</blockquote>
 
-</dd>
-<dt class="structure">
-    <a href="ImageProcessingOptions_Border" title="structure - ImageProcessingOptions.Border">
-        Image​Processing​Options.​Border
-    </a>
-</dt>
-<dd>
-    <p>Draws a border.</p>
+<h3 id="aggressive-lru-disk-cache">Aggressive LRU Disk Cache</h3>
 
-</dd>
-<dt class="structure">
-    <a href="ImageRequest" title="structure - ImageRequest">
-        Image​Request
-    </a>
-</dt>
-<dd>
-    <p>Represents an image request.</p>
+<p>If HTTP caching is not your cup of tea, you can try using a custom LRU disk cache for fast and reliable <em>aggressive</em> data caching (ignores <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control">HTTP cache control</a>). You can enable it using the pipeline configuration.</p>
 
-</dd>
-<dt class="structure">
-    <a href="ImageRequestOptions" title="structure - ImageRequestOptions">
-        Image​Request​Options
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="structure">
-    <a href="ImageRequestOptions_MemoryCacheOptions" title="structure - ImageRequestOptions.MemoryCacheOptions">
-        Image​Request​Options.​Memory​Cache​Options
-    </a>
-</dt>
-<dd>
-    <p>The policy to use when reading or writing images to the memory cache.</p>
+<pre class="highlight"><code>
+<a href="ImagePipeline"><span class="variable">ImagePipeline</span></a> {
+    <span class="variable">$0</span>.<span class="type">dataCache</span> = <span class="keyword">try</span>? <a href="DataCache"><span class="variable">DataCache</span></a>(<span class="variable">name</span>: <span class="string literal">"</span><span class="string literal">com.myapp.datacache</span><span class="string literal">"</span>)
 
-</dd>
-<dt class="structure">
-    <a href="ImageContainer" title="structure - ImageContainer">
-        Image​Container
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="structure">
-    <a href="ImageLoadingOptions" title="structure - ImageLoadingOptions">
-        Image​Loading​Options
-    </a>
-</dt>
-<dd>
-    <p>A range of options that control how the image is loaded and displayed.</p>
+    <span class="comment">// Also consider disabling the native HTTP cache, see <code>DataLoader</code>.</span>
+}
+</code></pre>
 
-</dd>
-<dt class="structure">
-    <a href="ImageLoadingOptions_ContentModes" title="structure - ImageLoadingOptions.ContentModes">
-        Image​Loading​Options.​Content​Modes
-    </a>
-</dt>
-<dd>
-    <p>Custom content modes to be used for each image type (placeholder, success,
-failure).</p>
+<p>By default, the pipeline stores only the original image data. To store downloaded and processed images instead, set <code>dataCacheOptions.storedItems</code> to <code>[.finalImage]</code>. This option is useful if you want to store processed, e.g. downsampled images, or if you want to transcode images to a more efficient format, like HEIF.</p>
 
-</dd>
-<dt class="structure">
-    <a href="ImageLoadingOptions_Transition" title="structure - ImageLoadingOptions.Transition">
-        Image​Loading​Options.​Transition
-    </a>
-</dt>
-<dd>
-    <p>An animated image transition.</p>
+<blockquote>
+  <p>To save disk space see <code>ImageEncoders.ImageIO</code> and  <code>ImageEncoder.isHEIFPreferred</code> option for HEIF support.</p>
+</blockquote>
 
-</dd>
-<dt class="structure">
-    <a href="ImageLoadingOptions_Transition" title="structure - ImageLoadingOptions.Transition">
-        Image​Loading​Options.​Transition
-    </a>
-</dt>
-<dd>
-    <p>An animated image transition.</p>
+<h3 id="resumable-downloads">Resumable Downloads</h3>
 
-</dd>
-</dl>
-    </section>
-    <section id="enumerations">
-        <h2>Enumerations</h2>
-        <dl>
-    <dt class="enumeration">
-    <a href="DataLoader_Error" title="enumeration - DataLoader.Error">
-        Data​Loader.​Error
-    </a>
-</dt>
-<dd>
-    <p>Errors produced by <code>DataLoader</code>.</p>
+<p>If the data task is terminated (either because of a failure or a cancellation) and the image was partially loaded, the next load will resume where it was left off. Resumable downloads require the server to support <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests">HTTP Range Requests</a>. Nuke supports both validators (<code>ETag</code> and <code>Last-Modified</code>). Resumable downloads are enabled by default.</p>
 
-</dd>
-<dt class="enumeration">
-    <a href="DataTaskEvent" title="enumeration - DataTaskEvent">
-        Data​Task​Event
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="enumeration">
-    <a href="ImageDecoders" title="enumeration - ImageDecoders">
-        Image​Decoders
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="enumeration">
-    <a href="ImageEncoders" title="enumeration - ImageEncoders">
-        Image​Encoders
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="enumeration">
-    <a href="ImagePipeline_Error" title="enumeration - ImagePipeline.Error">
-        Image​Pipeline.​Error
-    </a>
-</dt>
-<dd>
-    <p>Represents all possible image pipeline errors.</p>
+<h3 id="memory-cache">Memory Cache</h3>
 
-</dd>
-<dt class="enumeration">
-    <a href="ImagePipeline_DataCacheItem" title="enumeration - ImagePipeline.DataCacheItem">
-        Image​Pipeline.​Data​Cache​Item
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="enumeration">
-    <a href="ImageTaskEvent" title="enumeration - ImageTaskEvent">
-        Image​Task​Event
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="enumeration">
-    <a href="ImagePreheater_Destination" title="enumeration - ImagePreheater.Destination">
-        Image​Preheater.​Destination
-    </a>
-</dt>
-<dd>
-    <p>Prefetching destination.</p>
+<p>The processed images are stored in a fast in-memory cache (<code>ImageCache</code>). It uses <a href="https://en.wikipedia.org/wiki/Cache_algorithms#Examples">LRU (least recently used)</a> replacement algorithm and has a limit of ~20% of available RAM. <code>ImageCache</code> automatically evicts images on memory warnings and removes a portion of its contents when the application enters background mode.</p>
 
-</dd>
-<dt class="enumeration">
-    <a href="ImageProcessors" title="enumeration - ImageProcessors">
-        Image​Processors
-    </a>
-</dt>
-<dd>
-    <p>A namespace for all processors that implement <code>ImageProcessing</code> protocol.</p>
+<h3 id="deduplication">Deduplication</h3>
 
-</dd>
-<dt class="enumeration">
-    <a href="ImageProcessors_Resize_ContentMode" title="enumeration - ImageProcessors.Resize.ContentMode">
-        Image​Processors.​Resize.​Content​Mode
-    </a>
-</dt>
-<dd>
-    <p>An option for how to resize the image.</p>
+<p>The pipeline avoids doing any duplicated work when loading images. For example, let’s take these two requests:</p>
 
-</dd>
-<dt class="enumeration">
-    <a href="ImageProcessingOptions" title="enumeration - ImageProcessingOptions">
-        Image​Processing​Options
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="enumeration">
-    <a href="ImageProcessingOptions_Unit" title="enumeration - ImageProcessingOptions.Unit">
-        Image​Processing​Options.​Unit
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="enumeration">
-    <a href="ImageRequest_Priority" title="enumeration - ImageRequest.Priority">
-        Image​Request.​Priority
-    </a>
-</dt>
-<dd>
-    <p>The execution priority of the request. The priority affects the order in which the image
-requests are executed.</p>
+<pre class="highlight"><code>
+<span class="keyword">let</span> <span class="variable">url</span> = <span class="variable">URL</span>(<span class="variable">string</span>: <span class="string literal">"</span><span class="string literal">http://example.com/image</span><span class="string literal">"</span>)
+<span class="variable">pipeline</span>.<span class="type">loadImage</span>(<span class="variable">with</span>: <a href="ImageRequest"><span class="type">ImageRequest</span></a>(<span class="variable">url</span>: <span class="type">url</span>, <span class="variable">processors</span>: [
+    <a href="ImageProcessor"><span class="variable">ImageProcessor</span></a>.<span class="type">Resize</span>(<span class="variable">size</span>: <span class="type">CGSize</span>(<span class="variable">width</span>: <span class="number literal">44</span>, <span class="variable">height</span>: <span class="number literal">44</span>)),
+    <a href="ImageProcessor"><span class="variable">ImageProcessor</span></a>.<span class="type">GaussianBlur</span>(<span class="variable">radius</span>: <span class="number literal">8</span>)
+]))
+<span class="variable">pipeline</span>.<span class="type">loadImage</span>(<span class="variable">with</span>: <a href="ImageRequest"><span class="type">ImageRequest</span></a>(<span class="variable">url</span>: <span class="type">url</span>, <span class="variable">processors</span>: [
+    <a href="ImageProcessor"><span class="variable">ImageProcessor</span></a>.<span class="type">Resize</span>(<span class="variable">size</span>: <span class="type">CGSize</span>(<span class="variable">width</span>: <span class="number literal">44</span>, <span class="variable">height</span>: <span class="number literal">44</span>))
+]))
+</code></pre>
 
-</dd>
-</dl>
-    </section>
-    <section id="protocols">
-        <h2>Protocols</h2>
-        <dl>
-    <dt class="protocol">
-    <a href="DataCaching" title="protocol - DataCaching">
-        Data​Caching
-    </a>
-</dt>
-<dd>
-    <p>Data cache.</p>
+<p>Nuke will load the data only once, resize the image once and blur it also only once. There is no duplicated work done. The work only gets cancelled when all the registered requests are, and the priority is based on the highest priority of the registered requests.</p>
 
-</dd>
-<dt class="protocol">
-    <a href="Cancellable" title="protocol - Cancellable">
-        Cancellable
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="protocol">
-    <a href="DataLoading" title="protocol - DataLoading">
-        Data​Loading
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="protocol">
-    <a href="DataLoaderObserving" title="protocol - DataLoaderObserving">
-        Data​Loader​Observing
-    </a>
-</dt>
-<dd>
-    <p>Allows you to tap into internal events of the data loader. Events are
-delivered on the internal serial operation queue.</p>
+<blockquote>
+  <p>Deduplication can be disabled using <code>isDeduplicationEnabled</code> configuration option.</p>
+</blockquote>
 
-</dd>
-<dt class="protocol">
-    <a href="ImageCaching" title="protocol - ImageCaching">
-        Image​Caching
-    </a>
-</dt>
-<dd>
-    <p>In-memory image cache.</p>
+<h3 id="decompression">Decompression</h3>
 
-</dd>
-<dt class="protocol">
-    <a href="ImageDecoding" title="protocol - ImageDecoding">
-        Image​Decoding
-    </a>
-</dt>
-<dd>
-    <p>An image decoder.</p>
+<p>When you instantiate <code>UIImage</code> with <code>Data</code>, the data can be in a compressed format like <code>JPEG</code>. <code>UIImage</code> does <em>not</em> eagerly decompress this data until you display it. This leads to performance issues like scroll view stuttering. To avoid these it, Nuke automatically decompresses the data in the background. Decompression only runs if needed, it won’t run for already processed images.</p>
 
-</dd>
-<dt class="protocol">
-    <a href="ImageDecoderRegistering" title="protocol - ImageDecoderRegistering">
-        Image​Decoder​Registering
-    </a>
-</dt>
-<dd>
-    <p>An image decoder which supports automatically registering in the decoder register.</p>
+<blockquote>
+  <p>See <a href="https://developer.apple.com/videos/play/wwdc2018/219">Image and Graphics Best Practices</a> to learn more about image decoding and downsampling.</p>
+</blockquote>
 
-</dd>
-<dt class="protocol">
-    <a href="ImageEncoding" title="protocol - ImageEncoding">
-        Image​Encoding
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="protocol">
-    <a href="ImagePipelineObserving" title="protocol - ImagePipelineObserving">
-        Image​Pipeline​Observing
-    </a>
-</dt>
-<dd>
-    <p>Allows you to tap into internal events of the image pipeline. Events are
-delivered on the internal serial dispatch queue.</p>
+<h3 id="progressive-decoding">Progressive Decoding</h3>
 
-</dd>
-<dt class="protocol">
-    <a href="ImageProcessing" title="protocol - ImageProcessing">
-        Image​Processing
-    </a>
-</dt>
-<dd>
-    <p>Performs image processing.</p>
+<p>If progressive decoding is enabled, the pipeline attemps to produce a preview of any image every time a new chunk of data is loaded.</p>
 
-</dd>
-<dt class="protocol">
-    <a href="Nuke_ImageDisplaying" title="protocol - Nuke_ImageDisplaying">
-        Nuke_Image​Displaying
-    </a>
-</dt>
-<dd>
-    <p>Displays images. Add the conformance to this protocol to your views to make
-them compatible with Nuke image loading extensions.</p>
+<p>When the first chunk of data is downloaded, the pipeline creates an instance of a decoder which it is going to be using for the entire image loading session. When the new chunks of data are loaded, the pipleine passes these chunks to the decoder. The decoder can either produce a preview, or return <code>nil</code> if not enough data is downloaded yet.</p>
 
-</dd>
-</dl>
-    </section>
-<section id="globals">
-    <h2>Globals</h2>
-        <section id="typealiases">
-        <h3>Typealiases</h3>
-        <dl>
-    <dt class="typealias">
-    <a href="Image" title="typealias - Image">
-        Image
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="typealias">
-    <a href="ImageProcessor" title="typealias - ImageProcessor">
-        Image​Processor
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="typealias">
-    <a href="ImageDecoder" title="typealias - ImageDecoder">
-        Image​Decoder
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="typealias">
-    <a href="ImageEncoder" title="typealias - ImageEncoder">
-        Image​Encoder
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="typealias">
-    <a href="PlatformImage" title="typealias - PlatformImage">
-        Platform​Image
-    </a>
-</dt>
-<dd>
-    <p>Alias for <code>UIImage</code>.</p>
+<p>Every image preview goes through the same processing and decompression phases that the final images do. The main difference here is the introduction of back pressure. If one of the stages of the pipeline can’t process the input fast enough, the pipeline waits until the current operation is finished, and then starts the next one with the latest input. When the data is downloaded fully, all of the progressive operations are cancelled to save processing time.</p>
 
-</dd>
-<dt class="typealias">
-    <a href="PlatformImage" title="typealias - PlatformImage">
-        Platform​Image
-    </a>
-</dt>
-<dd>
-    <p>Alias for <code>NSImage</code>.</p>
+<h3 id="performance">Performance</h3>
 
-</dd>
-<dt class="typealias">
-    <a href="ImageDisplayingView" title="typealias - ImageDisplayingView">
-        Image​Displaying​View
-    </a>
-</dt>
-<dd>
-    <p>A <code>UIView</code> that implements <code>ImageDisplaying</code> protocol.</p>
+<p><img align="right" src="https://user-images.githubusercontent.com/1567433/59372512-f7bc0680-8d47-11e9-865e-f739f013ad49.png" width="360" /></p>
 
-</dd>
-<dt class="typealias">
-    <a href="ImageDisplayingView" title="typealias - ImageDisplayingView">
-        Image​Displaying​View
-    </a>
-</dt>
-<dd>
-    <p>An <code>NSView</code> that implements <code>ImageDisplaying</code> protocol.</p>
+<p>Nuke is tuned to do as little work on the main thread as possible. It uses multiple optimization techniques to achieve that: reducing the number of allocations, reducing dynamic dispatch, CoW, etc.</p>
 
-</dd>
-<dt class="typealias">
-    <a href="ImageDisplayingView" title="typealias - ImageDisplayingView">
-        Image​Displaying​View
-    </a>
-</dt>
-<dd>
-    <p>An <code>NSView</code> that implements <code>ImageDisplaying</code> protocol.</p>
+<p>Nuke is fully asynchronous and performs well under stress. <code>ImagePipeline</code> schedules its operations on dedicated queues. Each queue limits the number of concurrent tasks, respects the request priorities, and cancels the work as soon as possible. Under extreme load, <code>ImagePipeline</code> will also rate limit requests to prevent saturation of the underlying systems.</p>
 
-</dd>
-</dl>
-    </section>
-    <section id="functions">
-        <h3>Functions</h3>
-        <dl>
-    <dt class="function">
-    <a href="loadImage(with:options:into:progress:completion:)" title="function - loadImage(with:options:into:progress:completion:)">
-        load​Image(with:​options:​into:​progress:​completion:​)
-    </a>
-</dt>
-<dd>
-    <p>Loads an image with the given URL and displays it in the view.</p>
+<p>If you want to see how the system behaves, how long each operation takes, and how many are performed in parallel, enable the <code>isSignpostLoggingEnabled</code> option and use the <code>os_signpost</code> Instrument. For more information see <a href="https://developer.apple.com/documentation/os/logging">Apple Documentation: Logging</a> and <a href="https://developer.apple.com/videos/play/wwdc2018/405/">WWDC 2018: Measuring Performance Using Logging</a>.</p>
 
-</dd>
-<dt class="function">
-    <a href="loadImage(with:options:into:progress:completion:)" title="function - loadImage(with:options:into:progress:completion:)">
-        load​Image(with:​options:​into:​progress:​completion:​)
-    </a>
-</dt>
-<dd>
-    <p>Loads an image with the given request and displays it in the view.</p>
-
-</dd>
-<dt class="function">
-    <a href="cancelRequest(for:)" title="function - cancelRequest(for:)">
-        cancel​Request(for:​)
-    </a>
-</dt>
-<dd>
-    <p>Cancels an outstanding request associated with the view.</p>
-
-</dd>
-</dl>
-    </section>
-</section>
         </article>
-    </main>
+        </main>        
 
-    <footer>
+  </body>
+
+  <footer>
         <p>
-    Generated on <time datetime="2020-04-11T16:24:48-0400">11 April 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a>.
+    Generated on <time datetime="2020-04-10T17:37:38-0400">10 April 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a>.
 </p>
     </footer>
-</body>
+
 </html>
