@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future - Future.Delay</title>
+    <link rel="stylesheet" type="text/css" href="https://kean-org.github.io/docs/future/reference/1.4.0/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://kean-org.github.io/docs/future/reference/1.4.0/">
+            <strong>
+                Future
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li></ul></li><li><a href="#enumeration cases">Enumeration Cases</a><ul><li class="case"><a href="#future.delay.seconds">seconds</a></li><li class="case"><a href="#future.delay.exponential">exponential</a></li><li class="case"><a href="#future.delay.custom">custom</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Enumeration</small>
+    <code class="name">Future.​Delay</code>
+</h1>
+
+<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">enum</span> <span class="type">Delay</span></code></pre></body></html>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Member Of</h3>
+<dl>
+    <dt class="structure"><code><a href="https://kean-org.github.io/docs/future/reference/1.4.0/Future">Future</a></code></dt>
+<dd><p>A future represents a result of a task which may be available now, or
+in the future, or never. Once the future receives the result, its state can
+never be changed, either a value or an error is broadcasted to all observers.</p>
+</dd>
+</dl>
+</section>
+    <section id="enumeration cases">
+        <h2>Enumeration Cases</h2>
+
+        <div role="article" class="enumeration" id="future.delay.seconds">
+    <h3>
+        <code>seconds</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">seconds</span>(: <span class="type">TimeInterval</span>)</code></pre></body></html>
+</div>
+<div role="article" class="enumeration" id="future.delay.exponential">
+    <h3>
+        <code>exponential</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">exponential</span>(<span class="variable">initial</span>: <span class="type">TimeInterval</span>, <span class="variable">multiplier</span>: <span class="type">Double</span>, <span class="variable">maxDelay</span>: <span class="type">TimeInterval</span>)</code></pre></body></html>
+</div>
+<div role="article" class="enumeration" id="future.delay.custom">
+    <h3>
+        <code>custom</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">custom</span>(<span class="variable">closure</span>: (<span class="type">Int</span>) -&gt; <span class="type">TimeInterval</span>)</code></pre></body></html>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-04-27T17:53:04-0400">27 April 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.2</span>.
+</p>
+    </footer>
+</body>
+</html>

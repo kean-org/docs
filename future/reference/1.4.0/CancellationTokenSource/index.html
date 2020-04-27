@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future - CancellationTokenSource</title>
+    <link rel="stylesheet" type="text/css" href="https://kean-org.github.io/docs/future/reference/1.4.0/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://kean-org.github.io/docs/future/reference/1.4.0/">
+            <strong>
+                Future
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#cancellationtokensource.init()">init()</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="property"><a href="#cancellationtokensource.iscancelling">is​Cancelling</a></li><li class="property"><a href="#cancellationtokensource.token">token</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="method"><a href="#cancellationtokensource.cancel()">cancel()</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">Cancellation​Token​Source</code>
+</h1>
+
+<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">CancellationTokenSource</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Manages cancellation tokens and signals them when cancellation is requested.</p>
+
+</div>
+<div class="discussion">
+    <html><body><p>All <code>CancellationTokenSource</code> methods are thread safe.</p>
+ </body></html>
+</div>
+
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="structure" id="cancellationtokensource.init()">
+    <h3>
+        <code>init()</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>()</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Initializes the <code>CancellationTokenSource</code> instance.</p>
+
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="structure" id="cancellationtokensource.iscancelling">
+    <h3>
+        <code>is​Cancelling</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">isCancelling</span>: <span class="type">Bool</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Returns <code>true</code> if cancellation has been requested.</p>
+
+</div>
+</div>
+<div role="article" class="structure" id="cancellationtokensource.token">
+    <h3>
+        <code>token</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">token</span>: <a href="https://kean-org.github.io/docs/future/reference/1.4.0/CancellationToken"><span class="type">CancellationToken</span></a></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Creates a new token associated with the source.</p>
+
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="structure" id="cancellationtokensource.cancel()">
+    <h3>
+        <code>cancel()</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">cancel</span>()</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Communicates a request for cancellation to the managed tokens.</p>
+
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-04-27T17:53:04-0400">27 April 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.2</span>.
+</p>
+    </footer>
+</body>
+</html>
