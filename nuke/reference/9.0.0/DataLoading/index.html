@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuke - DataLoading</title>
+    <link rel="stylesheet" type="text/css" href="https://kean-org.github.io/docs/nuke/reference/9.0.0/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://kean-org.github.io/docs/nuke/reference/9.0.0">
+            <strong>
+                Nuke
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Types Conforming to Data​Loading</a></li></ul></li><li><a href="#requirements">Requirements</a><ul><li><a href="#dataloading.loaddata(with:didreceivedata:completion:)">load​Data(with:​did​Receive​Data:​completion:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Protocol</small>
+    <code class="name">Data​Loading</code>
+</h1>
+
+<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">protocol</span> <span class="type">DataLoading</span></code></pre></body></html>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Types Conforming to <code>Data​Loading</code></h3>
+<dl>
+    <dt class="class"><code><a href="https://kean-org.github.io/docs/nuke/reference/9.0.0/DataLoader">DataLoader</a></code></dt>
+<dd><p>Provides basic networking using <code>URLSession</code>.</p>
+</dd>
+</dl>
+</section>
+
+
+
+    <section id="requirements">
+        <h2>Requirements</h2>
+
+        <div role="article" class="protocol" id="dataloading.loaddata(with:didreceivedata:completion:)">
+    <h3>
+        <code>load​Data(with:​did​Receive​Data:​completion:​)</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">loadData</span>(<span class="variable">with</span> <span class="variable">request</span>: <span class="type">URLRequest</span>, <span class="variable">didReceiveData</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Data</span>, <span class="type">URLResponse</span>) -&gt; <span class="type">Void</span>, <span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Error</span>?) -&gt; <span class="type">Void</span>) -&gt; <a href="https://kean-org.github.io/docs/nuke/reference/9.0.0/Cancellable"><span class="type">Cancellable</span></a></code></pre></body></html>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>did​Receive​Data</th>
+    <td><code class="type">@escaping (Data, URLResponse) -&gt; Void</code></td></td>
+    <td><ul>
+<li>didReceiveData: Can be called multiple times if streaming is supported.</li>
+</ul>
+</td>
+</tr>
+<tr>
+    <th>completion</th>
+    <td><code class="type">@escaping (Error?) -&gt; Void</code></td></td>
+    <td><ul>
+<li>completion: Must be called once after all (or none in case of an error) <code>didReceiveData</code> closures have been called.</li>
+</ul>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+    </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-05-19T12:21:40-0400">19 May 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.3</span>.
+</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuke - ImageRequest</title>
+    <link rel="stylesheet" type="text/css" href="https://kean-org.github.io/docs/nuke/reference/9.0.0/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://kean-org.github.io/docs/nuke/reference/9.0.0">
+            <strong>
+                Nuke
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Nested Types</a></li><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#imagerequest.init(url:processors:priority:options:)">init(url:​processors:​priority:​options:​)</a></li><li class="initializer"><a href="#imagerequest.init(urlrequest:processors:priority:options:)">init(url​Request:​processors:​priority:​options:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="property"><a href="#imagerequest.urlrequest">url​Request</a></li><li class="property"><a href="#imagerequest.priority">priority</a></li><li class="property"><a href="#imagerequest.options">options</a></li><li class="property"><a href="#imagerequest.processors">processors</a></li><li class="property"><a href="#imagerequest.description">description</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">Image​Request</code>
+</h1>
+
+<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">ImageRequest</span>: <span class="type">CustomStringConvertible</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Represents an image request.</p>
+
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Nested Types</h3>
+<dl>
+    <dt class="enumeration"><code><a href="https://kean-org.github.io/docs/nuke/reference/9.0.0/ImageRequest_Priority">ImageRequest.Priority</a></code></dt>
+<dd><p>The execution priority of the request. The priority affects the order in which the image
+requests are executed.</p>
+</dd>
+</dl>
+<h3>Conforms To</h3>
+<dl>
+    <dt class="unknown"><code>CustomStringConvertible</code></dt>
+</dl>
+</section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="imagerequest.init(url:processors:priority:options:)">
+    <h3>
+        <code>init(url:​processors:​priority:​options:​)</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">url</span>: <span class="type">URL</span>, <span class="variable">processors</span>: [<a href="https://kean-org.github.io/docs/nuke/reference/9.0.0/ImageProcessing"><span class="type">ImageProcessing</span></a>] = [], <span class="variable">priority</span>: <a href="https://kean-org.github.io/docs/nuke/reference/9.0.0/ImageRequest"><span class="type">ImageRequest</span></a>.<span class="type">Priority</span> = .<span class="variable">normal</span>, <span class="variable">options</span>: <a href="https://kean-org.github.io/docs/nuke/reference/9.0.0/ImageRequestOptions"><span class="type">ImageRequestOptions</span></a> = .<span class="variable">init</span>())</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Initializes a request with the given URL.</p>
+
+</div>
+<div class="discussion">
+    <p><code>ImageRequest</code> allows you to set image processors, change the request priority and more:</p>
+
+<html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">request</span> = <span class="variable">ImageRequest</span>(
+    <span class="variable">url</span>: <span class="type">URL</span>(<span class="variable">string</span>: <span class="string literal">"</span><span class="string literal">http://...</span><span class="string literal">"</span>)!,
+    <span class="variable">processors</span>: [<span class="variable">ImageProcessors</span>.<span class="type">Resize</span>(<span class="variable">size</span>: <span class="type">imageView</span>.<span class="type">bounds</span>.<span class="type">size</span>)],
+    <span class="variable">priority</span>: .<span class="variable">high</span>
+)
+</code></pre></body></html>
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>priority</th>
+    <td><code class="type">Image​Request.​Priority</code></td></td>
+    <td><ul>
+<li>priority: The priority of the request, <code>.normal</code> by default.</li>
+</ul>
+</td>
+</tr>
+<tr>
+    <th>options</th>
+    <td><code class="type">Image​Request​Options</code></td></td>
+    <td><ul>
+<li>options: Advanced image loading options.</li>
+</ul>
+</td>
+</tr>
+<tr>
+    <th>processors</th>
+    <td><code class="type">[Image​Processing]</code></td></td>
+    <td><ul>
+<li>processors: Image processors to be applied after the image is loaded.</li>
+</ul>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="initializer" id="imagerequest.init(urlrequest:processors:priority:options:)">
+    <h3>
+        <code>init(url​Request:​processors:​priority:​options:​)</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">urlRequest</span>: <span class="type">URLRequest</span>, <span class="variable">processors</span>: [<a href="https://kean-org.github.io/docs/nuke/reference/9.0.0/ImageProcessing"><span class="type">ImageProcessing</span></a>] = [], <span class="variable">priority</span>: <a href="https://kean-org.github.io/docs/nuke/reference/9.0.0/ImageRequest"><span class="type">ImageRequest</span></a>.<span class="type">Priority</span> = .<span class="variable">normal</span>, <span class="variable">options</span>: <a href="https://kean-org.github.io/docs/nuke/reference/9.0.0/ImageRequestOptions"><span class="type">ImageRequestOptions</span></a> = .<span class="variable">init</span>())</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Initializes a request with the given request.</p>
+
+</div>
+<div class="discussion">
+    <p><code>ImageRequest</code> allows you to set image processors, change the request priority and more:</p>
+
+<html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">request</span> = <span class="variable">ImageRequest</span>(
+    <span class="variable">url</span>: <span class="type">URLRequest</span>(<span class="variable">url</span>: <span class="type">URL</span>(<span class="variable">string</span>: <span class="string literal">"</span><span class="string literal">http://...</span><span class="string literal">"</span>)!),
+    <span class="variable">processors</span>: [<span class="variable">ImageProcessors</span>.<span class="type">Resize</span>(<span class="variable">size</span>: <span class="type">imageView</span>.<span class="type">bounds</span>.<span class="type">size</span>)],
+    <span class="variable">priority</span>: .<span class="variable">high</span>
+)
+</code></pre></body></html>
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>priority</th>
+    <td><code class="type">Image​Request.​Priority</code></td></td>
+    <td><ul>
+<li>priority: The priority of the request, <code>.normal</code> by default.</li>
+</ul>
+</td>
+</tr>
+<tr>
+    <th>options</th>
+    <td><code class="type">Image​Request​Options</code></td></td>
+    <td><ul>
+<li>options: Advanced image loading options.</li>
+</ul>
+</td>
+</tr>
+<tr>
+    <th>processors</th>
+    <td><code class="type">[Image​Processing]</code></td></td>
+    <td><ul>
+<li>processors: Image processors to be applied after the image is loaded.</li>
+</ul>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="imagerequest.urlrequest">
+    <h3>
+        <code>url​Request</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">urlRequest</span>: <span class="type">URLRequest</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>The <code>URLRequest</code> used for loading an image.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imagerequest.priority">
+    <h3>
+        <code>priority</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">priority</span>: <span class="type">Priority</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>The relative priority of the operation. The priority affects the order in which the image
+requests are executed.<code>.normal</code> by default.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imagerequest.options">
+    <h3>
+        <code>options</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">options</span>: <a href="https://kean-org.github.io/docs/nuke/reference/9.0.0/ImageRequestOptions"><span class="type">ImageRequestOptions</span></a></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>The request options. See <code>ImageRequestOptions</code> for more info.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imagerequest.processors">
+    <h3>
+        <code>processors</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">processors</span>: [<a href="https://kean-org.github.io/docs/nuke/reference/9.0.0/ImageProcessing"><span class="type">ImageProcessing</span></a>]</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Processor to be applied to the image. <code>nil</code> by default.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imagerequest.description">
+    <h3>
+        <code>description</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">description</span>: <span class="type">String</span></code></pre></body></html>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-05-19T12:21:40-0400">19 May 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.3</span>.
+</p>
+    </footer>
+</body>
+</html>
