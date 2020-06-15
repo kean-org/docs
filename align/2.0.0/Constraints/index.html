@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align - Constraints</title>
+    <link rel="stylesheet" type="text/css" href="https://kean-org.github.io/docs/align/reference/2.0.0/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://kean-org.github.io/docs/align/reference/2.0.0">
+            <strong>
+                Align
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#constraints.init(_:)">init(_:​)</a></li><li class="initializer"><a href="#constraints.init(for:_:)">init(for:​_:​)</a></li><li class="initializer"><a href="#constraints.init(for:_:_:)">init(for:​_:​_:​)</a></li><li class="initializer"><a href="#constraints.init(for:_:_:_:)">init(for:​_:​_:​_:​)</a></li><li class="initializer"><a href="#constraints.init(for:_:_:_:_:)">init(for:​_:​_:​_:​_:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">Constraints</code>
+</h1>
+
+<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">final</span> <span class="keyword">class</span> <span class="type">Constraints</span></code></pre></body></html>
+
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="constraints.init(_:)">
+    <h3>
+        <code>init(_:​)</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="attribute">@</span><span class="attribute">discardableResult</span> <span class="keyword">public</span> <span class="keyword">init</span>(<span class="keyword">_</span> <span class="variable">closure</span>: () -&gt; <span class="type">Void</span>)</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>All of the constraints created in the given closure are automatically
+activated at the same time. This is more efficient then installing them
+one-be-one. More importantly, it allows to make changes to the constraints
+before they are installed (e.g. change <code>priority</code>).</p>
+
+</div>
+</div>
+<div role="article" class="initializer" id="constraints.init(for:_:)">
+    <h3>
+        <code>init(for:​_:​)</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="attribute">@</span><span class="attribute">discardableResult</span> <span class="keyword">public</span> <span class="attribute">convenience</span> <span class="keyword">init</span>&lt;<span class="variable">A</span>: <a href="https://kean-org.github.io/docs/align/reference/2.0.0/LayoutItem"><span class="type">LayoutItem</span></a>&gt;(<span class="variable">for</span> <span class="variable">a</span>: <span class="type">A</span>, <span class="keyword">_</span> <span class="variable">closure</span>: (<a href="https://kean-org.github.io/docs/align/reference/2.0.0/LayoutProxy"><span class="type">LayoutProxy</span></a>&lt;<span class="type">A</span>&gt;) -&gt; <span class="type">Void</span>)</code></pre></body></html>
+</div>
+<div role="article" class="initializer" id="constraints.init(for:_:_:)">
+    <h3>
+        <code>init(for:​_:​_:​)</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="attribute">@</span><span class="attribute">discardableResult</span> <span class="keyword">public</span> <span class="attribute">convenience</span> <span class="keyword">init</span>&lt;<span class="variable">A</span>: <a href="https://kean-org.github.io/docs/align/reference/2.0.0/LayoutItem"><span class="type">LayoutItem</span></a>, <span class="variable">B</span>: <a href="https://kean-org.github.io/docs/align/reference/2.0.0/LayoutItem"><span class="type">LayoutItem</span></a>&gt;(<span class="variable">for</span> <span class="variable">a</span>: <span class="type">A</span>, <span class="keyword">_</span> <span class="variable">b</span>: <span class="type">B</span>, <span class="keyword">_</span> <span class="variable">closure</span>: (<a href="https://kean-org.github.io/docs/align/reference/2.0.0/LayoutProxy"><span class="type">LayoutProxy</span></a>&lt;<span class="type">A</span>&gt;, <a href="https://kean-org.github.io/docs/align/reference/2.0.0/LayoutProxy"><span class="type">LayoutProxy</span></a>&lt;<span class="type">B</span>&gt;) -&gt; <span class="type">Void</span>)</code></pre></body></html>
+</div>
+<div role="article" class="initializer" id="constraints.init(for:_:_:_:)">
+    <h3>
+        <code>init(for:​_:​_:​_:​)</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="attribute">@</span><span class="attribute">discardableResult</span> <span class="keyword">public</span> <span class="attribute">convenience</span> <span class="keyword">init</span>&lt;<span class="variable">A</span>: <a href="https://kean-org.github.io/docs/align/reference/2.0.0/LayoutItem"><span class="type">LayoutItem</span></a>, <span class="variable">B</span>: <a href="https://kean-org.github.io/docs/align/reference/2.0.0/LayoutItem"><span class="type">LayoutItem</span></a>, <span class="variable">C</span>: <a href="https://kean-org.github.io/docs/align/reference/2.0.0/LayoutItem"><span class="type">LayoutItem</span></a>&gt;(<span class="variable">for</span> <span class="variable">a</span>: <span class="type">A</span>, <span class="keyword">_</span> <span class="variable">b</span>: <span class="type">B</span>, <span class="keyword">_</span> <span class="variable">c</span>: <span class="type">C</span>, <span class="keyword">_</span> <span class="variable">closure</span>: (<a href="https://kean-org.github.io/docs/align/reference/2.0.0/LayoutProxy"><span class="type">LayoutProxy</span></a>&lt;<span class="type">A</span>&gt;, <a href="https://kean-org.github.io/docs/align/reference/2.0.0/LayoutProxy"><span class="type">LayoutProxy</span></a>&lt;<span class="type">B</span>&gt;, <a href="https://kean-org.github.io/docs/align/reference/2.0.0/LayoutProxy"><span class="type">LayoutProxy</span></a>&lt;<span class="type">C</span>&gt;) -&gt; <span class="type">Void</span>)</code></pre></body></html>
+</div>
+<div role="article" class="initializer" id="constraints.init(for:_:_:_:_:)">
+    <h3>
+        <code>init(for:​_:​_:​_:​_:​)</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="attribute">@</span><span class="attribute">discardableResult</span> <span class="keyword">public</span> <span class="attribute">convenience</span> <span class="keyword">init</span>&lt;<span class="variable">A</span>: <a href="https://kean-org.github.io/docs/align/reference/2.0.0/LayoutItem"><span class="type">LayoutItem</span></a>, <span class="variable">B</span>: <a href="https://kean-org.github.io/docs/align/reference/2.0.0/LayoutItem"><span class="type">LayoutItem</span></a>, <span class="variable">C</span>: <a href="https://kean-org.github.io/docs/align/reference/2.0.0/LayoutItem"><span class="type">LayoutItem</span></a>, <span class="variable">D</span>: <a href="https://kean-org.github.io/docs/align/reference/2.0.0/LayoutItem"><span class="type">LayoutItem</span></a>&gt;(<span class="variable">for</span> <span class="variable">a</span>: <span class="type">A</span>, <span class="keyword">_</span> <span class="variable">b</span>: <span class="type">B</span>, <span class="keyword">_</span> <span class="variable">c</span>: <span class="type">C</span>, <span class="keyword">_</span> <span class="variable">d</span>: <span class="type">D</span>, <span class="keyword">_</span> <span class="variable">closure</span>: (<a href="https://kean-org.github.io/docs/align/reference/2.0.0/LayoutProxy"><span class="type">LayoutProxy</span></a>&lt;<span class="type">A</span>&gt;, <a href="https://kean-org.github.io/docs/align/reference/2.0.0/LayoutProxy"><span class="type">LayoutProxy</span></a>&lt;<span class="type">B</span>&gt;, <a href="https://kean-org.github.io/docs/align/reference/2.0.0/LayoutProxy"><span class="type">LayoutProxy</span></a>&lt;<span class="type">C</span>&gt;, <a href="https://kean-org.github.io/docs/align/reference/2.0.0/LayoutProxy"><span class="type">LayoutProxy</span></a>&lt;<span class="type">D</span>&gt;) -&gt; <span class="type">Void</span>)</code></pre></body></html>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-06-15T10:31:32-0400">15 June 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.3</span>.
+</p>
+    </footer>
+</body>
+</html>
