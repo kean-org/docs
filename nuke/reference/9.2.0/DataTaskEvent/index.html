@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuke - DataTaskEvent</title>
+    <link rel="stylesheet" type="text/css" href="https://kean-org.github.io/docs/nuke/reference/9.2.0/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://kean-org.github.io/docs/nuke/reference/9.2.0">
+            <strong>
+                Nuke
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#enumeration cases">Enumeration Cases</a><ul><li class="case"><a href="#datataskevent.resumed">resumed</a></li><li class="case"><a href="#datataskevent.receivedresponse">received​Response</a></li><li class="case"><a href="#datataskevent.receiveddata">received​Data</a></li><li class="case"><a href="#datataskevent.completed">completed</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Enumeration</small>
+    <code class="name">Data​Task​Event</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">enum</span> <span class="type">DataTaskEvent</span> </code></pre>
+</div>
+
+    <section id="enumeration cases">
+        <h2>Enumeration Cases</h2>
+
+        <div role="article" class="case" id="datataskevent.resumed">
+    <h3>
+        <code>resumed</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">case</span> <span class="variable">resumed</span></code></pre>
+</div>
+</div>
+<div role="article" class="case" id="datataskevent.receivedresponse">
+    <h3>
+        <code>received​Response</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">case</span> <span class="variable">receivedResponse</span>(<span class="variable">response</span>: <span class="type">URLResponse</span>)</code></pre>
+</div>
+</div>
+<div role="article" class="case" id="datataskevent.receiveddata">
+    <h3>
+        <code>received​Data</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">case</span> <span class="variable">receivedData</span>(<span class="variable">data</span>: <span class="type">Data</span>)</code></pre>
+</div>
+</div>
+<div role="article" class="case" id="datataskevent.completed">
+    <h3>
+        <code>completed</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">case</span> <span class="variable">completed</span>(<span class="variable">error</span>: <span class="type">Error</span>?)</code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-11-28T15:39:05-0500">28 November 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

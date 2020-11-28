@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuke - ImageType</title>
+    <link rel="stylesheet" type="text/css" href="https://kean-org.github.io/docs/nuke/reference/9.2.0/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://kean-org.github.io/docs/nuke/reference/9.2.0">
+            <strong>
+                Nuke
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#imagetype.init(rawvalue:)">init(raw​Value:​)</a></li><li class="initializer"><a href="#imagetype.init(stringliteral:)">init(string​Literal:​)</a></li><li class="initializer"><a href="#imagetype.init?(_:)">init?(_:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#imagetype.rawvalue">raw​Value</a></li><li class="variable"><a href="#imagetype.png">png</a></li><li class="variable"><a href="#imagetype.jpeg">jpeg</a></li><li class="variable"><a href="#imagetype.gif">gif</a></li><li class="variable"><a href="#imagetype.heic">heic</a></li><li class="variable"><a href="#imagetype.webp">webp</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">Image​Type</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">ImageType</span>: <span class="type">ExpressibleByStringLiteral</span>, <span class="type">Hashable</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>A uniform type identifier (UTI).</p>
+
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Conforms To</h3>
+<dl>
+    <dt class="unknown"><code>ExpressibleByStringLiteral</code></dt>
+<dt class="unknown"><code>Hashable</code></dt>
+</dl>
+</section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="imagetype.init(rawvalue:)">
+    <h3>
+        <code>init(raw​Value:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">rawValue</span>: <span class="type">String</span>) </code></pre>
+</div>
+</div>
+<div role="article" class="initializer" id="imagetype.init(stringliteral:)">
+    <h3>
+        <code>init(string​Literal:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">stringLiteral</span> <span class="variable">value</span>: <span class="type">String</span>) </code></pre>
+</div>
+</div>
+<div role="article" class="initializer" id="imagetype.init?(_:)">
+    <h3>
+        <code>init?(_:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">init</span>?(<span class="keyword">_</span> <span class="variable">data</span>: <span class="type">Data</span>) </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Determines a type of the image based on the given data.</p>
+
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="imagetype.rawvalue">
+    <h3>
+        <code>raw​Value</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">rawValue</span>: <span class="type">String</span></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="imagetype.png">
+    <h3>
+        <code>png</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">png</span>: <span class="type">ImageType</span> = <span class="string literal">&quot;</span><span class="string literal">public.png</span><span class="string literal">&quot;</span></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="imagetype.jpeg">
+    <h3>
+        <code>jpeg</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">jpeg</span>: <span class="type">ImageType</span> = <span class="string literal">&quot;</span><span class="string literal">public.jpeg</span><span class="string literal">&quot;</span></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="imagetype.gif">
+    <h3>
+        <code>gif</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">gif</span>: <span class="type">ImageType</span> = <span class="string literal">&quot;</span><span class="string literal">com.compuserve.gif</span><span class="string literal">&quot;</span></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="imagetype.heic">
+    <h3>
+        <code>heic</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">heic</span>: <span class="type">ImageType</span> = <span class="string literal">&quot;</span><span class="string literal">public.heic</span><span class="string literal">&quot;</span></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>HEIF (High Effeciency Image Format) by Apple.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imagetype.webp">
+    <h3>
+        <code>webp</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">webp</span>: <span class="type">ImageType</span> = <span class="string literal">&quot;</span><span class="string literal">public.webp</span><span class="string literal">&quot;</span></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>WebP</p>
+
+</div>
+<div class="discussion">
+    <p>Native decoding support only available on the following platforms: macOS 11,
+iOS 14, watchOS 7, tvOS 14.</p>
+
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-11-28T15:39:05-0500">28 November 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

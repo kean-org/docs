@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuke - ImagePipelineObserving</title>
+    <link rel="stylesheet" type="text/css" href="https://kean-org.github.io/docs/nuke/reference/9.2.0/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://kean-org.github.io/docs/nuke/reference/9.2.0">
+            <strong>
+                Nuke
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#requirements">Requirements</a><ul><li class="function"><a href="#imagepipelineobserving.pipeline(_:imagetask:didreceiveevent:)">pipeline(_:​image​Task:​did​Receive​Event:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Protocol</small>
+    <code class="name">Image​Pipeline​Observing</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">protocol</span> <span class="type">ImagePipelineObserving</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Allows you to tap into internal events of the image pipeline. Events are
+delivered on the internal serial dispatch queue.</p>
+
+</div>
+
+
+
+
+    <section id="requirements">
+        <h2>Requirements</h2>
+
+        <div role="article" class="function" id="imagepipelineobserving.pipeline(_:imagetask:didreceiveevent:)">
+    <h3>
+        <code>pipeline(_:​image​Task:​did​Receive​Event:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">func</span> <span class="function">pipeline</span>(<span class="keyword">_</span> <span class="variable">pipeline</span>: <span class="type">ImagePipeline</span>, <span class="variable">imageTask</span>: <span class="type">ImageTask</span>, <span class="variable">didReceiveEvent</span> <span class="variable">event</span>: <span class="type">ImageTaskEvent</span>)</code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Delivers the events produced by the image tasks started via <code>loadImage</code> method.</p>
+
+</div>
+</div>
+    </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-11-28T15:39:05-0500">28 November 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

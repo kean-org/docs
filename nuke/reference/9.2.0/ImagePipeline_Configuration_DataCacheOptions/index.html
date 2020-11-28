@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuke - ImagePipeline.Configuration.DataCacheOptions</title>
+    <link rel="stylesheet" type="text/css" href="https://kean-org.github.io/docs/nuke/reference/9.2.0/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://kean-org.github.io/docs/nuke/reference/9.2.0">
+            <strong>
+                Nuke
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#imagepipeline.configuration.datacacheoptions.storeditems">stored​Items</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">Image​Pipeline.​Configuration.​Data​Cache​Options</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">DataCacheOptions</span> </code></pre>
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Member Of</h3>
+<dl>
+    <dt class="structure"><code><a href="https://kean-org.github.io/docs/nuke/reference/9.2.0/ImagePipeline_Configuration">ImagePipeline.Configuration</a></code></dt>
+<dd></dd>
+</dl>
+</section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="imagepipeline.configuration.datacacheoptions.storeditems">
+    <h3>
+        <code>stored​Items</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">storedItems</span>: <span class="type">Set</span>&lt;<span class="type">DataCacheItem</span>&gt; = [.<span class="variable">originalImageData</span>]</code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Specifies which content to store in the <code>dataCache</code>. By default, the
+pipeline only stores the original image data downloaded using <code>dataLoader</code>.
+It can be configured to encode and store processed images instead.</p>
+
+</div>
+<div class="discussion">
+    <aside class="note">
+    <p>If you are creating multiple versions of the same image using different processors, it might be worth enabling both <code>.originalData</code> and <code>.encodedImages</code> cache to reuse the same downloaded data.</p>
+
+</aside>
+<aside class="note">
+    <p>It might be worth enabling <code>.encodedImages</code> if you want to transcode downloaded images into a more efficient format, like HEIF.</p>
+
+</aside>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-11-28T15:39:05-0500">28 November 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

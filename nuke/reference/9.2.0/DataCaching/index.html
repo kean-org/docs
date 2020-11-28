@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuke - DataCaching</title>
+    <link rel="stylesheet" type="text/css" href="https://kean-org.github.io/docs/nuke/reference/9.2.0/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://kean-org.github.io/docs/nuke/reference/9.2.0">
+            <strong>
+                Nuke
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Types Conforming to Data​Caching</a></li></ul></li><li><a href="#requirements">Requirements</a><ul><li class="function"><a href="#datacaching.cacheddata(for:)">cached​Data(for:​)</a></li><li class="function"><a href="#datacaching.storedata(_:for:)">store​Data(_:​for:​)</a></li><li class="function"><a href="#datacaching.removedata(for:)">remove​Data(for:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Protocol</small>
+    <code class="name">Data​Caching</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">protocol</span> <span class="type">DataCaching</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Data cache.</p>
+
+</div>
+<div class="discussion">
+    <aside class="warning">
+    <p>The implementation must be thread safe.</p>
+
+</aside>
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Types Conforming to <code>Data​Caching</code></h3>
+<dl>
+    <dt class="class"><code><a href="https://kean-org.github.io/docs/nuke/reference/9.2.0/DataCache">DataCache</a></code></dt>
+<dd><p>Data cache backed by a local storage.</p>
+</dd>
+</dl>
+</section>
+
+
+
+    <section id="requirements">
+        <h2>Requirements</h2>
+
+        <div role="article" class="function" id="datacaching.cacheddata(for:)">
+    <h3>
+        <code>cached​Data(for:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">func</span> <span class="function">cachedData</span>(<span class="variable">for</span> <span class="variable">key</span>: <span class="type">String</span>) -&gt; <span class="type">Data</span>?</code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Retrieves data from cache for the given key.</p>
+
+</div>
+</div>
+<div role="article" class="function" id="datacaching.storedata(_:for:)">
+    <h3>
+        <code>store​Data(_:​for:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">func</span> <span class="function">storeData</span>(<span class="keyword">_</span> <span class="variable">data</span>: <span class="type">Data</span>, <span class="variable">for</span> <span class="variable">key</span>: <span class="type">String</span>)</code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Stores data for the given key.</p>
+
+</div>
+<div class="discussion">
+    <aside class="note">
+    <p>The implementation must return immediately and store data asynchronously.</p>
+
+</aside>
+</div>
+</div>
+<div role="article" class="function" id="datacaching.removedata(for:)">
+    <h3>
+        <code>remove​Data(for:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">func</span> <span class="function">removeData</span>(<span class="variable">for</span> <span class="variable">key</span>: <span class="type">String</span>)</code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Removes data for the given key.</p>
+
+</div>
+</div>
+    </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-11-28T15:39:05-0500">28 November 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>
