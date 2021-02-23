@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuke - ImageProcessingOptions.Border</title>
+    <link rel="stylesheet" type="text/css" href="https://kean-org.github.io/docs/nuke/reference/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://kean-org.github.io/docs/nuke/reference/">
+            <strong>
+                Nuke
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#imageprocessingoptions.border.init(color:width:unit:)">init(color:​width:​unit:​)</a></li><li class="initializer"><a href="#imageprocessingoptions.border.init(color:width:unit:)">init(color:​width:​unit:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#imageprocessingoptions.border.color">color</a></li><li class="variable"><a href="#imageprocessingoptions.border.width">width</a></li><li class="variable"><a href="#imageprocessingoptions.border.description">description</a></li><li class="variable"><a href="#imageprocessingoptions.border.color">color</a></li><li class="variable"><a href="#imageprocessingoptions.border.width">width</a></li><li class="variable"><a href="#imageprocessingoptions.border.description">description</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">Image​Processing​Options.​Border</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">Border</span>: <span class="type">Hashable</span>, <span class="type">CustomStringConvertible</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Draws a border.</p>
+
+</div>
+<div class="discussion">
+    <aside class="warning">
+    <p>To make sure that the border looks the way you expect, make sure that the images you display exactly match the size of the views in which they get displayed. If you can't guarantee that, pleasee consider adding border to a view layer. This should be your primary option regardless.</p>
+
+</aside>
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Member Of</h3>
+<dl>
+    <dt class="enumeration"><code><a href="https://kean-org.github.io/docs/nuke/reference/ImageProcessingOptions">ImageProcessingOptions</a></code></dt>
+<dd></dd>
+</dl>
+<h3>Conforms To</h3>
+<dl>
+    <dt class="unknown"><code>CustomStringConvertible</code></dt>
+<dt class="unknown"><code>CustomStringConvertible</code></dt>
+<dt class="unknown"><code>Hashable</code></dt>
+<dt class="unknown"><code>Hashable</code></dt>
+</dl>
+</section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="imageprocessingoptions.border.init(color:width:unit:)">
+    <h3>
+        <code>init(color:​width:​unit:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">color</span>: <span class="type">UIColor</span>, <span class="variable">width</span>: <span class="type">CGFloat</span> = <span class="number literal">1</span>, <span class="variable">unit</span>: <span class="type">Unit</span> = .<span class="variable">points</span>) </code></pre>
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>color</th>
+    <td><code class="type">UIColor</code></td>
+    <td><p>Border color.</p>
+</td>
+</tr>
+<tr>
+    <th>width</th>
+    <td><code class="type">CGFloat</code></td>
+    <td><p>Border width. 1 points by default.</p>
+</td>
+</tr>
+<tr>
+    <th>unit</th>
+    <td><code class="type">Unit</code></td>
+    <td><p>Unit of the width, <code>.points</code> by default.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="initializer" id="imageprocessingoptions.border.init(color:width:unit:)">
+    <h3>
+        <code>init(color:​width:​unit:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">color</span>: <span class="type">NSColor</span>, <span class="variable">width</span>: <span class="type">CGFloat</span> = <span class="number literal">1</span>, <span class="variable">unit</span>: <span class="type">Unit</span> = .<span class="variable">points</span>) </code></pre>
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>color</th>
+    <td><code class="type">NSColor</code></td>
+    <td><p>Border color.</p>
+</td>
+</tr>
+<tr>
+    <th>width</th>
+    <td><code class="type">CGFloat</code></td>
+    <td><p>Border width. 1 points by default.</p>
+</td>
+</tr>
+<tr>
+    <th>unit</th>
+    <td><code class="type">Unit</code></td>
+    <td><p>Unit of the width, <code>.points</code> by default.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="imageprocessingoptions.border.color">
+    <h3>
+        <code>color</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">color</span>: <span class="type">UIColor</span></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="imageprocessingoptions.border.width">
+    <h3>
+        <code>width</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">width</span>: <span class="type">CGFloat</span></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="imageprocessingoptions.border.description">
+    <h3>
+        <code>description</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">description</span>: <span class="type">String</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="imageprocessingoptions.border.color">
+    <h3>
+        <code>color</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">color</span>: <span class="type">NSColor</span></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="imageprocessingoptions.border.width">
+    <h3>
+        <code>width</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">width</span>: <span class="type">CGFloat</span></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="imageprocessingoptions.border.description">
+    <h3>
+        <code>description</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">description</span>: <span class="type">String</span> </code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-02-22T20:47:06-0500">22 February 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

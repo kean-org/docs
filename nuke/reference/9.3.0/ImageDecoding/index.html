@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuke - ImageDecoding</title>
+    <link rel="stylesheet" type="text/css" href="https://kean-org.github.io/docs/nuke/reference/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://kean-org.github.io/docs/nuke/reference/">
+            <strong>
+                Nuke
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Types Conforming to Image​Decoding</a></li></ul></li><li><a href="#requirements">Requirements</a><ul><li class="function"><a href="#imagedecoding.decode(_:)">decode(_:​)</a></li><li class="function"><a href="#imagedecoding.decodepartiallydownloadeddata(_:)">decode​Partially​Downloaded​Data(_:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Protocol</small>
+    <code class="name">Image​Decoding</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">protocol</span> <span class="type">ImageDecoding</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>An image decoder.</p>
+
+</div>
+<div class="discussion">
+    <p>A decoder is a one-shot object created for a single image decoding session.</p>
+
+<aside class="note">
+    <p>If you need additional information in the decoder, you can pass anything that you might need from the <code>ImageDecodingContext</code>.</p>
+
+</aside>
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Types Conforming to <code>Image​Decoding</code></h3>
+<dl>
+    <dt class="class"><code><a href="https://kean-org.github.io/docs/nuke/reference/ImageDecoders_Default">ImageDecoders.Default</a></code></dt>
+<dd><p>The default decoder which supports all of the formats natively supported
+by the system.</p>
+</dd>
+<dt class="structure"><code><a href="https://kean-org.github.io/docs/nuke/reference/ImageDecoders_Empty">ImageDecoders.Empty</a></code></dt>
+<dd><p>A decoder which returns an empty placeholder image and attaches image
+data to the image container.</p>
+</dd>
+<dt class="protocol"><code><a href="https://kean-org.github.io/docs/nuke/reference/ImageDecoderRegistering">ImageDecoderRegistering</a></code></dt>
+<dd><p>An image decoder which supports automatically registering in the decoder register.</p>
+</dd>
+</dl>
+</section>
+
+
+
+    <section id="requirements">
+        <h2>Requirements</h2>
+
+        <div role="article" class="function" id="imagedecoding.decode(_:)">
+    <h3>
+        <code>decode(_:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">func</span> <span class="function">decode</span>(<span class="keyword">_</span> <span class="variable">data</span>: <span class="type">Data</span>) -&gt; <span class="type">ImageContainer</span>?</code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Produces an image from the given image data.</p>
+
+</div>
+</div>
+<div role="article" class="function" id="imagedecoding.decodepartiallydownloadeddata(_:)">
+    <h3>
+        <code>decode​Partially​Downloaded​Data(_:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">func</span> <span class="function">decodePartiallyDownloadedData</span>(<span class="keyword">_</span> <span class="variable">data</span>: <span class="type">Data</span>) -&gt; <span class="type">ImageContainer</span>?</code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Produces an image from the given partially dowloaded image data.
+This method might be called multiple times during a single decoding
+session. When the image download is complete, <code>decode(data:)</code> method is called.</p>
+
+</div>
+  <h4>Returns</h4>
+  <p>nil by default.</p>
+
+</div>
+    </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-02-22T20:47:06-0500">22 February 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuke - loadImage(with:options:into:progress:completion:)</title>
+    <link rel="stylesheet" type="text/css" href="https://kean-org.github.io/docs/nuke/reference/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://kean-org.github.io/docs/nuke/reference/">
+            <strong>
+                Nuke
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol/>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+<small>Function</small>
+<span class="name">load​Image(with:​options:​into:​progress:​completion:​)</span>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="attribute">@</span><span class="attribute">discardableResult</span>
+<span class="keyword">public</span> <span class="keyword">func</span> <span class="function">loadImage</span>(<span class="variable">with</span> <span class="variable">request</span>: <span class="type">ImageRequestConvertible</span>,
+                      <span class="variable">options</span>: <span class="type">ImageLoadingOptions</span> = <span class="variable">ImageLoadingOptions</span>.<span class="type">shared</span>,
+                      <span class="variable">into</span> <span class="variable">view</span>: <span class="type">ImageDisplayingView</span>,
+                      <span class="variable">progress</span>: <span class="type">ImageTask</span>.<span class="type">ProgressHandler</span>? = <span class="keyword">nil</span>,
+                      <span class="variable">completion</span>: <span class="type">ImageTask</span>.<span class="type">Completion</span>? = <span class="keyword">nil</span>) -&gt; <span class="type">ImageTask</span>? </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Loads an image with the given request and displays it in the view.</p>
+
+</div>
+<div class="discussion">
+    <p>Before loading a new image, the view is prepared for reuse by canceling any
+outstanding requests and removing a previously displayed image.</p>
+
+<p>If the image is stored in the memory cache, it is displayed immediately with
+no animations. If not, the image is loaded using an image pipeline. When the
+image is loading, the <code>placeholder</code> is displayed. When the request
+completes the loaded image is displayed (or <code>failureImage</code> in case of an error)
+with the selected animation.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>options</th>
+    <td><code class="type">Image​Loading​Options</code></td>
+    <td><p><code>ImageLoadingOptions.shared</code> by default.</p>
+</td>
+</tr>
+<tr>
+    <th>view</th>
+    <td><code class="type">Image​Displaying​View</code></td>
+    <td><p>Nuke keeps a weak reference to the view. If the view is deallocated the associated request automatically gets canceled.</p>
+</td>
+</tr>
+<tr>
+    <th>progress</th>
+    <td><code class="type">Image​Task.​Progress​Handler?</code></td>
+    <td><p>A closure to be called periodically on the main thread when the progress is updated. <code>nil</code> by default.</p>
+</td>
+</tr>
+<tr>
+    <th>completion</th>
+    <td><code class="type">Image​Task.​Completion?</code></td>
+    <td><p>A closure to be called on the main thread when the request is finished. Gets called synchronously if the response was found in the memory cache. <code>nil</code> by default.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>An image task or <code>nil</code> if the image was found in the memory cache.</p>
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-02-22T20:47:06-0500">22 February 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

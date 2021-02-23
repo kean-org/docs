@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuke - ImageProcessors.Resize</title>
+    <link rel="stylesheet" type="text/css" href="https://kean-org.github.io/docs/nuke/reference/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://kean-org.github.io/docs/nuke/reference/">
+            <strong>
+                Nuke
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li><li><a href="#relationships">Nested Types</a></li><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#imageprocessors.resize.init(width:unit:crop:upscale:)">init(width:​unit:​crop:​upscale:​)</a></li><li class="initializer"><a href="#imageprocessors.resize.init(height:unit:crop:upscale:)">init(height:​unit:​crop:​upscale:​)</a></li><li class="initializer"><a href="#imageprocessors.resize.init(size:unit:contentmode:crop:upscale:)">init(size:​unit:​content​Mode:​crop:​upscale:​)</a></li><li class="initializer"><a href="#imageprocessors.resize.init(width:unit:upscale:)">init(width:​unit:​upscale:​)</a></li><li class="initializer"><a href="#imageprocessors.resize.init(height:unit:upscale:)">init(height:​unit:​upscale:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#imageprocessors.resize.identifier">identifier</a></li><li class="variable"><a href="#imageprocessors.resize.hashableidentifier">hashable​Identifier</a></li><li class="variable"><a href="#imageprocessors.resize.description">description</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#imageprocessors.resize.process(_:)">process(_:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">Image​Processors.​Resize</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">Resize</span>: <span class="type">ImageProcessing</span>, <span class="type">Hashable</span>, <span class="type">CustomStringConvertible</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Scales an image to a specified size.</p>
+
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Member Of</h3>
+<dl>
+    <dt class="enumeration"><code><a href="https://kean-org.github.io/docs/nuke/reference/ImageProcessors">ImageProcessors</a></code></dt>
+<dd><p>A namespace for all processors that implement <code>ImageProcessing</code> protocol.</p>
+</dd>
+</dl>
+<h3>Nested Types</h3>
+<dl>
+    <dt class="enumeration"><code><a href="https://kean-org.github.io/docs/nuke/reference/ImageProcessors_Resize_ContentMode">ImageProcessors.Resize.ContentMode</a></code></dt>
+<dd><p>An option for how to resize the image.</p>
+</dd>
+</dl>
+<h3>Conforms To</h3>
+<dl>
+    <dt class="protocol"><code><a href="https://kean-org.github.io/docs/nuke/reference/ImageProcessing">ImageProcessing</a></code></dt>
+<dd><p>Performs image processing.</p>
+</dd>
+<dt class="unknown"><code>CustomStringConvertible</code></dt>
+<dt class="unknown"><code>Hashable</code></dt>
+</dl>
+</section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="imageprocessors.resize.init(width:unit:crop:upscale:)">
+    <h3>
+        <code>init(width:​unit:​crop:​upscale:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">@</span><span class="attribute">available</span>(*, <span class="variable">deprecated</span>, <span class="variable">message</span>: <span class="string literal">&quot;Please use an initialzier without `crop` parameter.&quot;</span>)
+    <span class="keyword">init</span>(<span class="variable">width</span>: <span class="type">CGFloat</span>, <span class="variable">unit</span>: <span class="type">ImageProcessingOptions</span>.<span class="type">Unit</span> = .<span class="variable">points</span>, <span class="variable">crop</span>: <span class="type">Bool</span>, <span class="variable">upscale</span>: <span class="type">Bool</span> = <span class="keyword">false</span>) </code></pre>
+</div>
+</div>
+<div role="article" class="initializer" id="imageprocessors.resize.init(height:unit:crop:upscale:)">
+    <h3>
+        <code>init(height:​unit:​crop:​upscale:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">@</span><span class="attribute">available</span>(*, <span class="variable">deprecated</span>, <span class="variable">message</span>: <span class="string literal">&quot;Please use an initialzier without `crop` parameter.&quot;</span>)
+    <span class="keyword">init</span>(<span class="variable">height</span>: <span class="type">CGFloat</span>, <span class="variable">unit</span>: <span class="type">ImageProcessingOptions</span>.<span class="type">Unit</span> = .<span class="variable">points</span>, <span class="variable">crop</span>: <span class="type">Bool</span>, <span class="variable">upscale</span>: <span class="type">Bool</span> = <span class="keyword">false</span>) </code></pre>
+</div>
+</div>
+<div role="article" class="initializer" id="imageprocessors.resize.init(size:unit:contentmode:crop:upscale:)">
+    <h3>
+        <code>init(size:​unit:​content​Mode:​crop:​upscale:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">size</span>: <span class="type">CGSize</span>, <span class="variable">unit</span>: <span class="type">ImageProcessingOptions</span>.<span class="type">Unit</span> = .<span class="variable">points</span>, <span class="variable">contentMode</span>: <span class="type">ContentMode</span> = .<span class="variable">aspectFill</span>, <span class="variable">crop</span>: <span class="type">Bool</span> = <span class="keyword">false</span>, <span class="variable">upscale</span>: <span class="type">Bool</span> = <span class="keyword">false</span>) </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Initializes the processor with the given size.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>size</th>
+    <td><code class="type">CGSize</code></td>
+    <td><p>The target size.</p>
+</td>
+</tr>
+<tr>
+    <th>unit</th>
+    <td><code class="type">Image​Processing​Options.​Unit</code></td>
+    <td><p>Unit of the target size, <code>.points</code> by default.</p>
+</td>
+</tr>
+<tr>
+    <th>content​Mode</th>
+    <td><code class="type">Content​Mode</code></td>
+    <td><p><code>.aspectFill</code> by default.</p>
+</td>
+</tr>
+<tr>
+    <th>crop</th>
+    <td><code class="type">Bool</code></td>
+    <td><p>If <code>true</code> will crop the image to match the target size. Does nothing with content mode .aspectFill. <code>false</code> by default.</p>
+</td>
+</tr>
+<tr>
+    <th>upscale</th>
+    <td><code class="type">Bool</code></td>
+    <td><p><code>false</code> by default.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="initializer" id="imageprocessors.resize.init(width:unit:upscale:)">
+    <h3>
+        <code>init(width:​unit:​upscale:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">width</span>: <span class="type">CGFloat</span>, <span class="variable">unit</span>: <span class="type">ImageProcessingOptions</span>.<span class="type">Unit</span> = .<span class="variable">points</span>, <span class="variable">upscale</span>: <span class="type">Bool</span> = <span class="keyword">false</span>) </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Resizes the image to the given width preserving aspect ratio.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>unit</th>
+    <td><code class="type">Image​Processing​Options.​Unit</code></td>
+    <td><p>Unit of the target size, <code>.points</code> by default.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="initializer" id="imageprocessors.resize.init(height:unit:upscale:)">
+    <h3>
+        <code>init(height:​unit:​upscale:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">height</span>: <span class="type">CGFloat</span>, <span class="variable">unit</span>: <span class="type">ImageProcessingOptions</span>.<span class="type">Unit</span> = .<span class="variable">points</span>, <span class="variable">upscale</span>: <span class="type">Bool</span> = <span class="keyword">false</span>) </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Resizes the image to the given height preserving aspect ratio.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>unit</th>
+    <td><code class="type">Image​Processing​Options.​Unit</code></td>
+    <td><p>Unit of the target size, <code>.points</code> by default.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="imageprocessors.resize.identifier">
+    <h3>
+        <code>identifier</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">identifier</span>: <span class="type">String</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="imageprocessors.resize.hashableidentifier">
+    <h3>
+        <code>hashable​Identifier</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">hashableIdentifier</span>: <span class="type">AnyHashable</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="imageprocessors.resize.description">
+    <h3>
+        <code>description</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">description</span>: <span class="type">String</span> </code></pre>
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="imageprocessors.resize.process(_:)">
+    <h3>
+        <code>process(_:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">process</span>(<span class="keyword">_</span> <span class="variable">image</span>: <span class="type">PlatformImage</span>) -&gt; <span class="type">PlatformImage</span>? </code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-02-22T20:47:06-0500">22 February 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>
