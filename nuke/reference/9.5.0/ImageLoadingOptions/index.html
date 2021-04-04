@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuke - ImageLoadingOptions</title>
+    <link rel="stylesheet" type="text/css" href="https://kean-org.github.io/docs/nuke/reference/9.5.0/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://kean-org.github.io/docs/nuke/reference/9.5.0">
+            <strong>
+                Nuke
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Nested Types</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#imageloadingoptions.init(placeholder:transition:failureimage:failureimagetransition:contentmodes:tintcolors:)">init(placeholder:​transition:​failure​Image:​failure​Image​Transition:​content​Modes:​tint​Colors:​)</a></li><li class="initializer"><a href="#imageloadingoptions.init(placeholder:transition:failureimage:failureimagetransition:)">init(placeholder:​transition:​failure​Image:​failure​Image​Transition:​)</a></li><li class="initializer"><a href="#imageloadingoptions.init(placeholder:failureimage:)">init(placeholder:​failure​Image:​)</a></li><li class="initializer"><a href="#imageloadingoptions.init()">init()</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#imageloadingoptions.shared">shared</a></li><li class="variable"><a href="#imageloadingoptions.placeholder">placeholder</a></li><li class="variable"><a href="#imageloadingoptions.failureimage">failure​Image</a></li><li class="variable"><a href="#imageloadingoptions.transition">transition</a></li><li class="variable"><a href="#imageloadingoptions.failureimagetransition">failure​Image​Transition</a></li><li class="variable"><a href="#imageloadingoptions.alwaystransition">always​Transition</a></li><li class="variable"><a href="#imageloadingoptions.isprepareforreuseenabled">is​Prepare​For​Reuse​Enabled</a></li><li class="variable"><a href="#imageloadingoptions.isprogressiverenderingenabled">is​Progressive​Rendering​Enabled</a></li><li class="variable"><a href="#imageloadingoptions.pipeline">pipeline</a></li><li class="variable"><a href="#imageloadingoptions.contentmodes">content​Modes</a></li><li class="variable"><a href="#imageloadingoptions.tintcolors">tint​Colors</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">Image​Loading​Options</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">ImageLoadingOptions</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>A range of options that control how the image is loaded and displayed.</p>
+
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Nested Types</h3>
+<dl>
+    <dt class="structure"><code><a href="https://kean-org.github.io/docs/nuke/reference/9.5.0/ImageLoadingOptions_ContentModes">ImageLoadingOptions.ContentModes</a></code></dt>
+<dd><p>Custom content modes to be used for each image type (placeholder, success,
+failure).</p>
+</dd>
+<dt class="structure"><code><a href="https://kean-org.github.io/docs/nuke/reference/9.5.0/ImageLoadingOptions_TintColors">ImageLoadingOptions.TintColors</a></code></dt>
+<dd><p>Custom tint color to be used for each image type (placeholder, success,
+failure).</p>
+</dd>
+<dt class="structure"><code><a href="https://kean-org.github.io/docs/nuke/reference/9.5.0/ImageLoadingOptions_Transition">ImageLoadingOptions.Transition</a></code></dt>
+<dd><p>An animated image transition.</p>
+</dd>
+<dt class="structure"><code><a href="https://kean-org.github.io/docs/nuke/reference/9.5.0/ImageLoadingOptions_Transition">ImageLoadingOptions.Transition</a></code></dt>
+<dd><p>An animated image transition.</p>
+</dd>
+</dl>
+</section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="imageloadingoptions.init(placeholder:transition:failureimage:failureimagetransition:contentmodes:tintcolors:)">
+    <h3>
+        <code>init(placeholder:​transition:​failure​Image:​failure​Image​Transition:​content​Modes:​tint​Colors:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">placeholder</span>: <span class="type">UIImage</span>? = <span class="keyword">nil</span>, <span class="variable">transition</span>: <span class="type">Transition</span>? = <span class="keyword">nil</span>, <span class="variable">failureImage</span>: <span class="type">UIImage</span>? = <span class="keyword">nil</span>, <span class="variable">failureImageTransition</span>: <span class="type">Transition</span>? = <span class="keyword">nil</span>, <span class="variable">contentModes</span>: <span class="type">ContentModes</span>? = <span class="keyword">nil</span>, <span class="variable">tintColors</span>: <span class="type">TintColors</span>? = <span class="keyword">nil</span>) </code></pre>
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>placeholder</th>
+    <td><code class="type">UIImage?</code></td>
+    <td><p>Placeholder to be displayed when the image is loading . <code>nil</code> by default.</p>
+</td>
+</tr>
+<tr>
+    <th>transition</th>
+    <td><code class="type">Transition?</code></td>
+    <td><p>The image transition animation performed when displaying a loaded image. Only runs when the image was not found in memory cache. <code>nil</code> by default (no animations).</p>
+</td>
+</tr>
+<tr>
+    <th>failure​Image</th>
+    <td><code class="type">UIImage?</code></td>
+    <td><p>Image to be displayd when request fails. <code>nil</code> by default.</p>
+</td>
+</tr>
+<tr>
+    <th>failure​Image​Transition</th>
+    <td><code class="type">Transition?</code></td>
+    <td><p>The image transition animation performed when displaying a failure image. <code>nil</code> by default.</p>
+</td>
+</tr>
+<tr>
+    <th>content​Modes</th>
+    <td><code class="type">Content​Modes?</code></td>
+    <td><p>Content modes to be used for each image type (placeholder, success, failure). <code>nil</code> by default (don't change content mode).</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="initializer" id="imageloadingoptions.init(placeholder:transition:failureimage:failureimagetransition:)">
+    <h3>
+        <code>init(placeholder:​transition:​failure​Image:​failure​Image​Transition:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">placeholder</span>: <span class="type">NSImage</span>? = <span class="keyword">nil</span>, <span class="variable">transition</span>: <span class="type">Transition</span>? = <span class="keyword">nil</span>, <span class="variable">failureImage</span>: <span class="type">NSImage</span>? = <span class="keyword">nil</span>, <span class="variable">failureImageTransition</span>: <span class="type">Transition</span>? = <span class="keyword">nil</span>) </code></pre>
+</div>
+</div>
+<div role="article" class="initializer" id="imageloadingoptions.init(placeholder:failureimage:)">
+    <h3>
+        <code>init(placeholder:​failure​Image:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">placeholder</span>: <span class="type">UIImage</span>? = <span class="keyword">nil</span>, <span class="variable">failureImage</span>: <span class="type">UIImage</span>? = <span class="keyword">nil</span>) </code></pre>
+</div>
+</div>
+<div role="article" class="initializer" id="imageloadingoptions.init()">
+    <h3>
+        <code>init()</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>() </code></pre>
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="imageloadingoptions.shared">
+    <h3>
+        <code>shared</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">shared</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Shared options.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imageloadingoptions.placeholder">
+    <h3>
+        <code>placeholder</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">placeholder</span>: <span class="type">PlatformImage</span>?</code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Placeholder to be displayed when the image is loading. <code>nil</code> by default.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imageloadingoptions.failureimage">
+    <h3>
+        <code>failure​Image</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">failureImage</span>: <span class="type">PlatformImage</span>?</code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Image to be displayed when the request fails. <code>nil</code> by default.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imageloadingoptions.transition">
+    <h3>
+        <code>transition</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">transition</span>: <span class="type">Transition</span>?</code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>The image transition animation performed when displaying a loaded image.
+Only runs when the image was not found in memory cache. <code>nil</code> by default.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imageloadingoptions.failureimagetransition">
+    <h3>
+        <code>failure​Image​Transition</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">failureImageTransition</span>: <span class="type">Transition</span>?</code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>The image transition animation performed when displaying a failure image.
+<code>nil</code> by default.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imageloadingoptions.alwaystransition">
+    <h3>
+        <code>always​Transition</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">alwaysTransition</span> = <span class="keyword">false</span></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>If true, the requested image will always appear with transition, even
+when loaded from cache.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imageloadingoptions.isprepareforreuseenabled">
+    <h3>
+        <code>is​Prepare​For​Reuse​Enabled</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">isPrepareForReuseEnabled</span> = <span class="keyword">true</span></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>If true, every time you request a new image for a view, the view will be
+automatically prepared for reuse: image will be set to <code>nil</code>, and animations
+will be removed. <code>true</code> by default.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imageloadingoptions.isprogressiverenderingenabled">
+    <h3>
+        <code>is​Progressive​Rendering​Enabled</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">isProgressiveRenderingEnabled</span> = <span class="keyword">true</span></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>If <code>true</code>, every progressively generated preview produced by the pipeline
+is going to be displayed. <code>true</code> by default.</p>
+
+</div>
+<div class="discussion">
+    <aside class="note">
+    <p>To enable progressive decoding, see <code>ImagePipeline.Configuration</code>, <code>isProgressiveDecodingEnabled</code> option.</p>
+
+</aside>
+</div>
+</div>
+<div role="article" class="variable" id="imageloadingoptions.pipeline">
+    <h3>
+        <code>pipeline</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">pipeline</span>: <span class="type">ImagePipeline</span>?</code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Custom pipeline to be used. <code>nil</code> by default.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imageloadingoptions.contentmodes">
+    <h3>
+        <code>content​Modes</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">contentModes</span>: <span class="type">ContentModes</span>?</code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Content modes to be used for each image type (placeholder, success,
+failure). <code>nil</code>  by default (don't change content mode).</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imageloadingoptions.tintcolors">
+    <h3>
+        <code>tint​Colors</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">tintColors</span>: <span class="type">TintColors</span>?</code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Tint colors to be used for each image type (placeholder, success,
+failure). <code>nil</code>  by default (don't change tint color or rendering mode).</p>
+
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-04-04T09:53:56-0400">4 April 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

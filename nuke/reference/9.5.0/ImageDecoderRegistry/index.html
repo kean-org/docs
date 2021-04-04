@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuke - ImageDecoderRegistry</title>
+    <link rel="stylesheet" type="text/css" href="https://kean-org.github.io/docs/nuke/reference/9.5.0/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://kean-org.github.io/docs/nuke/reference/9.5.0">
+            <strong>
+                Nuke
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#imagedecoderregistry.init()">init()</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#imagedecoderregistry.shared">shared</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#imagedecoderregistry.decoder(for:)">decoder(for:​)</a></li><li class="function"><a href="#imagedecoderregistry.register(_:)">register(_:​)</a></li><li class="function"><a href="#imagedecoderregistry.register(_:)">register(_:​)</a></li><li class="function"><a href="#imagedecoderregistry.clear()">clear()</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">Image​Decoder​Registry</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">final</span> <span class="keyword">class</span> <span class="type">ImageDecoderRegistry</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>A register of image codecs (only decoding).</p>
+
+</div>
+
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="imagedecoderregistry.init()">
+    <h3>
+        <code>init()</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>() </code></pre>
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="imagedecoderregistry.shared">
+    <h3>
+        <code>shared</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">shared</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>A shared registry.</p>
+
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="imagedecoderregistry.decoder(for:)">
+    <h3>
+        <code>decoder(for:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">decoder</span>(<span class="variable">for</span> <span class="variable">context</span>: <span class="type">ImageDecodingContext</span>) -&gt; <span class="type">ImageDecoding</span>? </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Returns a decoder which matches the given context.</p>
+
+</div>
+</div>
+<div role="article" class="function" id="imagedecoderregistry.register(_:)">
+    <h3>
+        <code>register(_:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">register</span>&lt;<span class="variable">Decoder</span>: <span class="type">ImageDecoderRegistering</span>&gt;(<span class="keyword">_</span> <span class="variable">decoder</span>: <span class="type">Decoder</span>.<span class="type">Type</span>) </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Registers the given decoder.</p>
+
+</div>
+</div>
+<div role="article" class="function" id="imagedecoderregistry.register(_:)">
+    <h3>
+        <code>register(_:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">register</span>(<span class="keyword">_</span> <span class="variable">match</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">ImageDecodingContext</span>) -&gt; <span class="type">ImageDecoding</span>?) </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Registers a decoder to be used in a given decoding context. The closure
+is going to be executed before all other already registered closures.</p>
+
+</div>
+</div>
+<div role="article" class="function" id="imagedecoderregistry.clear()">
+    <h3>
+        <code>clear()</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">clear</span>() </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Removes all registered decoders.</p>
+
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-04-04T09:53:56-0400">4 April 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuke - ImageRequestOptions</title>
+    <link rel="stylesheet" type="text/css" href="https://kean-org.github.io/docs/nuke/reference/9.5.0/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://kean-org.github.io/docs/nuke/reference/9.5.0">
+            <strong>
+                Nuke
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Nested Types</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#imagerequestoptions.init(memorycacheoptions:filteredurl:cachekey:loadkey:userinfo:)">init(memory​Cache​Options:​filtered​URL:​cache​Key:​load​Key:​user​Info:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#imagerequestoptions.memorycacheoptions">memory​Cache​Options</a></li><li class="variable"><a href="#imagerequestoptions.filteredurl">filtered​URL</a></li><li class="variable"><a href="#imagerequestoptions.cachekey">cache​Key</a></li><li class="variable"><a href="#imagerequestoptions.loadkey">load​Key</a></li><li class="variable"><a href="#imagerequestoptions.userinfo">user​Info</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">Image​Request​Options</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">ImageRequestOptions</span> </code></pre>
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Nested Types</h3>
+<dl>
+    <dt class="structure"><code><a href="https://kean-org.github.io/docs/nuke/reference/9.5.0/ImageRequestOptions_MemoryCacheOptions">ImageRequestOptions.MemoryCacheOptions</a></code></dt>
+<dd><p>The policy to use when reading or writing images to the memory cache.</p>
+</dd>
+</dl>
+</section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="imagerequestoptions.init(memorycacheoptions:filteredurl:cachekey:loadkey:userinfo:)">
+    <h3>
+        <code>init(memory​Cache​Options:​filtered​URL:​cache​Key:​load​Key:​user​Info:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">memoryCacheOptions</span>: <span class="type">MemoryCacheOptions</span> = .<span class="variable">init</span>(),
+                <span class="variable">filteredURL</span>: <span class="type">String</span>? = <span class="keyword">nil</span>,
+                <span class="variable">cacheKey</span>: <span class="type">AnyHashable</span>? = <span class="keyword">nil</span>,
+                <span class="variable">loadKey</span>: <span class="type">AnyHashable</span>? = <span class="keyword">nil</span>,
+                <span class="variable">userInfo</span>: [<span class="type">AnyHashable</span>: <span class="keyword">Any</span>] = [:]) </code></pre>
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="imagerequestoptions.memorycacheoptions">
+    <h3>
+        <code>memory​Cache​Options</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">memoryCacheOptions</span>: <span class="type">MemoryCacheOptions</span></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p><code>MemoryCacheOptions()</code> (read allowed, write allowed) by default.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imagerequestoptions.filteredurl">
+    <h3>
+        <code>filtered​URL</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">filteredURL</span>: <span class="type">String</span>?</code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Provide a <code>filteredURL</code> to be used as a key for caching in case the original URL
+contains transient query parameters.</p>
+
+</div>
+<div class="discussion">
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">request</span> = <span class="variable">ImageRequest</span>(
+    <span class="variable">url</span>: <span class="type">URL</span>(<span class="variable">string</span>: <span class="string literal">"</span><span class="string literal">http://example.com/image.jpeg?token=123</span><span class="string literal">"</span>)!,
+    <span class="variable">options</span>: <a href="https://kean-org.github.io/docs/nuke/reference/9.5.0/ImageRequestOptions"><span class="type">ImageRequestOptions</span></a>(
+        <span class="variable">filteredURL</span>: <span class="string literal">"</span><span class="string literal">http://example.com/image.jpeg</span><span class="string literal">"</span>
+    )
+)
+</code></pre></body></html>
+</div>
+</div>
+<div role="article" class="variable" id="imagerequestoptions.cachekey">
+    <h3>
+        <code>cache​Key</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">cacheKey</span>: <span class="type">AnyHashable</span>?</code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>The <strong>memory</strong> cache key for final processed images. Set if you are not
+happy with the default behavior.</p>
+
+</div>
+<div class="discussion">
+    <p>By default, two requests are considered equivalent if they have the same
+URLs and the same processors.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imagerequestoptions.loadkey">
+    <h3>
+        <code>load​Key</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">loadKey</span>: <span class="type">AnyHashable</span>?</code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Returns a key that compares requests with regards to loading images.</p>
+
+</div>
+<div class="discussion">
+    <p>The default key considers two requests equivalent if they have the same
+<code>URLRequests</code> and the same processors. <code>URLRequests</code> are compared by
+their <code>URL</code>, <code>cachePolicy</code>, and <code>allowsCellularAccess</code> properties.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imagerequestoptions.userinfo">
+    <h3>
+        <code>user​Info</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">userInfo</span>: [<span class="type">AnyHashable</span>: <span class="keyword">Any</span>]</code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Custom info passed alongside the request.</p>
+
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-04-04T09:53:56-0400">4 April 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>
