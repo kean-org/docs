@@ -41,7 +41,7 @@
 <pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">final</span> <span class="keyword">class</span> <span class="type">LoggerStore</span> </code></pre>
 </div>
 <div class="summary" role="doc-abstract">
-    <p><code>LoggerStore</code> persistently stores all of the logged Pulse messages, network
+    <p><code>LoggerStore</code> persistently stores all of the logged messages, network
 requests, and blobs. Use <code>.default</code> store to log messages.</p>
 
 </div>
@@ -151,6 +151,10 @@ amount of space possible.</p>
     <div class="declaration">
 <pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">storeURL</span>: <span class="type">URL</span></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>The URL the store was initialized with.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="loggerstore.isreadonly">
     <h3>
@@ -161,7 +165,7 @@ amount of space possible.</p>
 </div>
 <div class="summary" role="doc-abstract">
     <p>Returns <code>true</code> if the store was opened with a Pulse archive (a document
-with <code>.pulse</code> extension. The archives are readonly.</p>
+with <code>.pulse</code> extension). The archives are readonly.</p>
 
 </div>
 </div>
@@ -172,6 +176,10 @@ with <code>.pulse</code> extension. The archives are readonly.</p>
     <div class="declaration">
 <pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">private</span>(<span class="variable">set</span>) <span class="keyword">var</span> <span class="variable">info</span>: <span class="type">LoggerStoreInfo</span>?</code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Returns the store info (only available for archives).</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="loggerstore.container">
     <h3>
@@ -180,6 +188,10 @@ with <code>.pulse</code> extension. The archives are readonly.</p>
     <div class="declaration">
 <pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">container</span>: <span class="type">NSPersistentContainer</span></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Returns the Core Data container associated with the store.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="loggerstore.backgroundcontext">
     <h3>
@@ -187,6 +199,10 @@ with <code>.pulse</code> extension. The archives are readonly.</p>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">backgroundContext</span>: <span class="type">NSManagedObjectContext</span></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Returns the background managed object context used for all write operations.</p>
+
 </div>
 </div>
 <div role="article" class="variable" id="loggerstore.databasesizelimit">
@@ -261,6 +277,10 @@ are in &quot;./archive&quot;.</p>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">storeMessage</span>(<span class="variable">date</span>: <span class="type">Date</span>? = <span class="keyword">nil</span>, <span class="variable">label</span>: <span class="type">String</span>, <span class="variable">level</span>: <span class="type">Level</span>, <span class="variable">message</span>: <span class="type">String</span>, <span class="variable">metadata</span>: [<span class="type">String</span>: <span class="type">MetadataValue</span>]?, <span class="variable">file</span>: <span class="type">String</span>, <span class="variable">function</span>: <span class="type">String</span>, <span class="variable">line</span>: <span class="type">UInt</span>) </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Stores the given message.</p>
+
 </div>
 </div>
 <div role="article" class="function" id="loggerstore.getdata(forkey:)">
@@ -349,7 +369,7 @@ destination URL already exists, throws an error.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2021-04-18T12:11:02-0400">18 April 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+    Generated on <time datetime="2021-04-18T13:16:02-0400">18 April 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
 </p>
     </footer>
 </body>
