@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulse - NetworkLogger</title>
+    <link rel="stylesheet" type="text/css" href="https://kean-org.github.io/docs/pulse/reference/0.14.2/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://kean-org.github.io/docs/pulse/reference/0.14.2">
+            <strong>
+                Pulse
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#networklogger.init(store:)">init(store:​)</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#networklogger.logtaskcreated(_:)">log​Task​Created(_:​)</a></li><li class="function"><a href="#networklogger.logdatatask(_:didreceive:)">log​Data​Task(_:​did​Receive:​)</a></li><li class="function"><a href="#networklogger.logdatatask(_:didreceive:)">log​Data​Task(_:​did​Receive:​)</a></li><li class="function"><a href="#networklogger.logtask(_:didcompletewitherror:)">log​Task(_:​did​Complete​With​Error:​)</a></li><li class="function"><a href="#networklogger.logtask(_:didfinishcollecting:)">log​Task(_:​did​Finish​Collecting:​)</a></li><li class="function"><a href="#networklogger.logtask(_:didfinishcollecting:)">log​Task(_:​did​Finish​Collecting:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">Network​Logger</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">final</span> <span class="keyword">class</span> <span class="type">NetworkLogger</span> </code></pre>
+</div>
+
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="networklogger.init(store:)">
+    <h3>
+        <code>init(store:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">store</span>: <span class="type">LoggerStore</span> = .<span class="variable">default</span>) </code></pre>
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="networklogger.logtaskcreated(_:)">
+    <h3>
+        <code>log​Task​Created(_:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">logTaskCreated</span>(<span class="keyword">_</span> <span class="variable">task</span>: <span class="type">URLSessionTask</span>) </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="networklogger.logdatatask(_:didreceive:)">
+    <h3>
+        <code>log​Data​Task(_:​did​Receive:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">logDataTask</span>(<span class="keyword">_</span> <span class="variable">dataTask</span>: <span class="type">URLSessionDataTask</span>, <span class="variable">didReceive</span> <span class="variable">response</span>: <span class="type">URLResponse</span>) </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="networklogger.logdatatask(_:didreceive:)">
+    <h3>
+        <code>log​Data​Task(_:​did​Receive:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">logDataTask</span>(<span class="keyword">_</span> <span class="variable">dataTask</span>: <span class="type">URLSessionDataTask</span>, <span class="variable">didReceive</span> <span class="variable">data</span>: <span class="type">Data</span>) </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="networklogger.logtask(_:didcompletewitherror:)">
+    <h3>
+        <code>log​Task(_:​did​Complete​With​Error:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">logTask</span>(<span class="keyword">_</span> <span class="variable">task</span>: <span class="type">URLSessionTask</span>, <span class="variable">didCompleteWithError</span> <span class="variable">error</span>: <span class="type">Error</span>?) </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="networklogger.logtask(_:didfinishcollecting:)">
+    <h3>
+        <code>log​Task(_:​did​Finish​Collecting:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">logTask</span>(<span class="keyword">_</span> <span class="variable">task</span>: <span class="type">URLSessionTask</span>, <span class="variable">didFinishCollecting</span> <span class="variable">metrics</span>: <span class="type">URLSessionTaskMetrics</span>) </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="networklogger.logtask(_:didfinishcollecting:)">
+    <h3>
+        <code>log​Task(_:​did​Finish​Collecting:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">logTask</span>(<span class="keyword">_</span> <span class="variable">task</span>: <span class="type">URLSessionTask</span>, <span class="variable">didFinishCollecting</span> <span class="variable">metrics</span>: <span class="type">NetworkLoggerMetrics</span>) </code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-04-18T12:07:20-0400">18 April 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>
