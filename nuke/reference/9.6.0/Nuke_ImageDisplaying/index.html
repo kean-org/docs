@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuke - Nuke_ImageDisplaying</title>
+    <link rel="stylesheet" type="text/css" href="https://kean-org.github.io/docs/nuke/reference/9.6.0/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://kean-org.github.io/docs/nuke/reference/9.6.0">
+            <strong>
+                Nuke
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#default implementations">Default Implementations</a><ul><li class="variable"><a href="#nuke_imagedisplaying.layer">layer</a></li></ul></li><li><a href="#requirements">Requirements</a><ul><li class="function"><a href="#nuke_imagedisplaying.nuke_display(image:)">nuke_display(image:​)</a></li><li class="variable"><a href="#nuke_imagedisplaying.layer">layer</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Protocol</small>
+    <code class="name">Nuke_Image​Displaying</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="attribute">@</span><span class="attribute">objc</span> <span class="keyword">public</span> <span class="keyword">protocol</span> <span class="type">Nuke_ImageDisplaying</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Displays images. Add the conformance to this protocol to your views to make
+them compatible with Nuke image loading extensions.</p>
+
+</div>
+<div class="discussion">
+    <p>The protocol is defined as <code>@objc</code> to make it possible to override its
+methods in extensions (e.g. you can override <code>nuke_display(image:)</code> in
+<code>UIImageView</code> subclass like `Gifu.ImageView).</p>
+
+<p>The protocol and its methods have prefixes to make sure they don't clash
+with other similar methods and protocol in Objective-C runtime.</p>
+
+</div>
+
+    <section id="default implementations">
+        <h2>Default Implementations</h2>
+
+        <div role="article" class="variable" id="nuke_imagedisplaying.layer">
+    <h3>
+        <code>layer</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">var</span> <span class="variable">layer</span>: <span class="type">CALayer</span>? </code></pre>
+</div>
+</div>
+    </section>
+
+
+    <section id="requirements">
+        <h2>Requirements</h2>
+
+        <div role="article" class="function" id="nuke_imagedisplaying.nuke_display(image:)">
+    <h3>
+        <code>nuke_display(image:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">@</span><span class="attribute">objc</span> <span class="keyword">func</span> <span class="function">nuke_display</span>(<span class="variable">image</span>: <span class="type">PlatformImage</span>?)</code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Display a given image.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="nuke_imagedisplaying.layer">
+    <h3>
+        <code>layer</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">@</span><span class="attribute">objc</span> <span class="keyword">var</span> <span class="variable">layer</span>: <span class="type">CALayer</span>? </code></pre>
+</div>
+</div>
+    </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-05-02T13:34:56-0400">2 May 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
+</p>
+    </footer>
+</body>
+</html>
