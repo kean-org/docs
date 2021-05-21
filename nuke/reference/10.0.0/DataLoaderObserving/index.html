@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuke - DataLoaderObserving</title>
+    <link rel="stylesheet" type="text/css" href="https://kean-org.github.io/docs/nuke/reference/10.0.0/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0">
+            <strong>
+                Nuke
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#requirements">Requirements</a><ul><li class="function"><a href="#dataloaderobserving.dataloader(_:urlsession:datatask:didreceiveevent:)">data​Loader(_:​url​Session:​data​Task:​did​Receive​Event:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Protocol</small>
+    <code class="name">Data​Loader​Observing</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">protocol</span> <span class="type">DataLoaderObserving</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Allows you to tap into internal events of the data loader. Events are
+delivered on the internal serial operation queue.</p>
+
+</div>
+
+
+
+
+    <section id="requirements">
+        <h2>Requirements</h2>
+
+        <div role="article" class="function" id="dataloaderobserving.dataloader(_:urlsession:datatask:didreceiveevent:)">
+    <h3>
+        <code>data​Loader(_:​url​Session:​data​Task:​did​Receive​Event:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">func</span> <span class="function">dataLoader</span>(<span class="keyword">_</span> <span class="variable">loader</span>: <span class="type">DataLoader</span>, <span class="variable">urlSession</span>: <span class="type">URLSession</span>, <span class="variable">dataTask</span>: <span class="type">URLSessionDataTask</span>, <span class="variable">didReceiveEvent</span> <span class="variable">event</span>: <span class="type">DataTaskEvent</span>)</code></pre>
+</div>
+</div>
+    </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-05-21T13:23:35-0400">21 May 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
+</p>
+    </footer>
+</body>
+</html>
