@@ -26,7 +26,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Nested Types</a></li></ul></li><li><a href="#nested type aliases">Nested Type Aliases</a><ul><li class="typealias"><a href="#imagepipeline.delegate">Delegate</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#imagepipeline.init(configuration:delegate:)">init(configuration:​delegate:​)</a></li><li class="initializer"><a href="#imagepipeline.init(delegate:_:)">init(delegate:​_:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#imagepipeline.configuration">configuration</a></li><li class="variable"><a href="#imagepipeline.cache">cache</a></li><li class="variable"><a href="#imagepipeline.observer">observer</a></li><li class="variable"><a href="#imagepipeline.shared">shared</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#imagepipeline.imagepublisher(with:)">image​Publisher(with:​)</a></li><li class="function"><a href="#imagepipeline.imagepublisher(with:)">image​Publisher(with:​)</a></li><li class="function"><a href="#imagepipeline.loadimage(with:completion:)">load​Image(with:​completion:​)</a></li><li class="function"><a href="#imagepipeline.loadimage(with:queue:progress:completion:)">load​Image(with:​queue:​progress:​completion:​)</a></li><li class="function"><a href="#imagepipeline.loaddata(with:completion:)">load​Data(with:​completion:​)</a></li><li class="function"><a href="#imagepipeline.loaddata(with:queue:progress:completion:)">load​Data(with:​queue:​progress:​completion:​)</a></li><li class="function"><a href="#imagepipeline.cachedimage(for:)">cached​Image(for:​)</a></li><li class="function"><a href="#imagepipeline.cachedimage(for:)">cached​Image(for:​)</a></li><li class="function"><a href="#imagepipeline.cachekey(for:item:)">cache​Key(for:​item:​)</a></li></ul></li></ol>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Nested Types</a></li></ul></li><li><a href="#nested type aliases">Nested Type Aliases</a><ul><li class="typealias"><a href="#imagepipeline.delegate">Delegate</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#imagepipeline.init(configuration:delegate:)">init(configuration:​delegate:​)</a></li><li class="initializer"><a href="#imagepipeline.init(delegate:_:)">init(delegate:​_:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#imagepipeline.configuration">configuration</a></li><li class="variable"><a href="#imagepipeline.cache">cache</a></li><li class="variable"><a href="#imagepipeline.observer">observer</a></li><li class="variable"><a href="#imagepipeline.shared">shared</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#imagepipeline.imagepublisher(with:)">image​Publisher(with:​)</a></li><li class="function"><a href="#imagepipeline.loadimage(with:completion:)">load​Image(with:​completion:​)</a></li><li class="function"><a href="#imagepipeline.loadimage(with:queue:progress:completion:)">load​Image(with:​queue:​progress:​completion:​)</a></li><li class="function"><a href="#imagepipeline.loaddata(with:completion:)">load​Data(with:​completion:​)</a></li><li class="function"><a href="#imagepipeline.loaddata(with:queue:progress:completion:)">load​Data(with:​queue:​progress:​completion:​)</a></li><li class="function"><a href="#imagepipeline.cachedimage(for:)">cached​Image(for:​)</a></li><li class="function"><a href="#imagepipeline.cachedimage(for:)">cached​Image(for:​)</a></li><li class="function"><a href="#imagepipeline.cachekey(for:item:)">cache​Key(for:​item:​)</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -38,7 +38,7 @@
 </h1>
 
 <div class="declaration">
-<pre class="highlight"><code><span class="keyword">public</span> <span class="comment">/* final */</span> <span class="keyword">class</span> <span class="type">ImagePipeline</span> </code></pre>
+<pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">final</span> <span class="keyword">class</span> <span class="type">ImagePipeline</span> </code></pre>
 </div>
 <div class="summary" role="doc-abstract">
     <p><code>ImagePipeline</code> loads and caches images.</p>
@@ -222,25 +222,7 @@ including <code>ImageCaching</code> (memory cache) and <code>DataCaching</code> 
         <code>image​Publisher(with:​)</code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><span class="keyword">func</span> <span class="function">imagePublisher</span>(<span class="variable">with</span> <span class="variable">url</span>: <span class="type">URL</span>) -&gt; <span class="type">ImagePublisher</span> </code></pre>
-</div>
-<div class="summary" role="doc-abstract">
-    <p>Returns a publisher which starts a new <code>ImageTask</code> when a subscriber is added.</p>
-
-</div>
-<div class="discussion">
-    <aside class="Note">
-    <p>For more information, see <code>ImagePublisher</code>.</p>
-
-</aside>
-</div>
-</div>
-<div role="article" class="function" id="imagepipeline.imagepublisher(with:)">
-    <h3>
-        <code>image​Publisher(with:​)</code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><span class="keyword">func</span> <span class="function">imagePublisher</span>(<span class="variable">with</span> <span class="variable">request</span>: <span class="type">ImageRequest</span>) -&gt; <span class="type">ImagePublisher</span> </code></pre>
+<pre class="highlight"><code><span class="keyword">func</span> <span class="function">imagePublisher</span>(<span class="variable">with</span> <span class="variable">request</span>: <span class="type">ImageRequestConvertible</span>) -&gt; <span class="type">ImagePublisher</span> </code></pre>
 </div>
 <div class="summary" role="doc-abstract">
     <p>Returns a publisher which starts a new <code>ImageTask</code> when a subscriber is added.</p>
@@ -417,7 +399,7 @@ pipeline will use the same operation to load the data, no duplicated work will b
 
     <footer>
         <p>
-    Generated on <time datetime="2021-05-21T13:23:35-0400">21 May 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
+    Generated on <time datetime="2021-05-28T09:02:42-0400">28 May 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
 </p>
     </footer>
 </body>

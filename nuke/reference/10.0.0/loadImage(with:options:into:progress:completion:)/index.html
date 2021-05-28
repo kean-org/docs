@@ -39,11 +39,13 @@
 
 <div class="declaration">
 <pre class="highlight"><code><span class="attribute">@</span><span class="attribute">discardableResult</span>
-<span class="keyword">public</span> <span class="keyword">func</span> <span class="function">loadImage</span>(<span class="variable">with</span> <span class="variable">request</span>: <span class="type">ImageRequestConvertible</span>,
-                      <span class="variable">options</span>: <span class="type">ImageLoadingOptions</span> = <span class="variable">ImageLoadingOptions</span>.<span class="variable">shared</span>,
-                      <span class="variable">into</span> <span class="variable">view</span>: <span class="type">ImageDisplayingView</span>,
-                      <span class="variable">progress</span>: ((<span class="keyword">_</span> <span class="variable">intermediateResponse</span>: <span class="type">ImageResponse</span>?, <span class="keyword">_</span> <span class="variable">completedUnitCount</span>: <span class="type">Int64</span>, <span class="keyword">_</span> <span class="variable">totalUnitCount</span>: <span class="type">Int64</span>) -&gt; <span class="type">Void</span>)? = <span class="keyword">nil</span>,
-                      <span class="variable">completion</span>: ((<span class="keyword">_</span> <span class="variable">result</span>: <span class="type">Result</span>&lt;<span class="type">ImageResponse</span>, <span class="type">ImagePipeline</span>.<span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>)? = <span class="keyword">nil</span>) -&gt; <span class="type">ImageTask</span>? </code></pre>
+<span class="keyword">public</span> <span class="keyword">func</span> <span class="function">loadImage</span>(
+    <span class="variable">with</span> <span class="variable">request</span>: <span class="type">ImageRequestConvertible</span>?,
+    <span class="variable">options</span>: <span class="type">ImageLoadingOptions</span> = <span class="variable">ImageLoadingOptions</span>.<span class="variable">shared</span>,
+    <span class="variable">into</span> <span class="variable">view</span>: <span class="type">ImageDisplayingView</span>,
+    <span class="variable">progress</span>: ((<span class="keyword">_</span> <span class="variable">response</span>: <span class="type">ImageResponse</span>?, <span class="keyword">_</span> <span class="variable">completed</span>: <span class="type">Int64</span>, <span class="keyword">_</span> <span class="variable">total</span>: <span class="type">Int64</span>) -&gt; <span class="type">Void</span>)? = <span class="keyword">nil</span>,
+    <span class="variable">completion</span>: ((<span class="keyword">_</span> <span class="variable">result</span>: <span class="type">Result</span>&lt;<span class="type">ImageResponse</span>, <span class="type">ImagePipeline</span>.<span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>)? = <span class="keyword">nil</span>
+) -&gt; <span class="type">ImageTask</span>? </code></pre>
 </div>
 <div class="summary" role="doc-abstract">
     <p>Loads an image with the given request and displays it in the view.</p>
@@ -72,6 +74,12 @@ with the selected animation.</p>
   </thead>
   <tbody>
     <tr>
+    <th>request</th>
+    <td><code class="type">Image​Request​Convertible?</code></td>
+    <td><p>The image request. If <code>nil</code>, it's handled as a failure scenario.</p>
+</td>
+</tr>
+<tr>
     <th>options</th>
     <td><code class="type">Image​Loading​Options</code></td>
     <td><p><code>ImageLoadingOptions.shared</code> by default.</p>
@@ -85,7 +93,7 @@ with the selected animation.</p>
 </tr>
 <tr>
     <th>progress</th>
-    <td><code class="type">((_ intermediate​Response:​ Image​Response?, _ completed​Unit​Count:​ Int64, _ total​Unit​Count:​ Int64) -&gt; Void)?</code></td>
+    <td><code class="type">((_ response:​ Image​Response?, _ completed:​ Int64, _ total:​ Int64) -&gt; Void)?</code></td>
     <td><p>A closure to be called periodically on the main thread when the progress is updated. <code>nil</code> by default.</p>
 </td>
 </tr>
@@ -105,7 +113,7 @@ with the selected animation.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2021-05-21T13:23:35-0400">21 May 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
+    Generated on <time datetime="2021-05-28T09:02:42-0400">28 May 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
 </p>
     </footer>
 </body>

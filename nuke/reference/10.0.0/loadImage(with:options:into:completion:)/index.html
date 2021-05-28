@@ -39,17 +39,27 @@
 
 <div class="declaration">
 <pre class="highlight"><code><span class="attribute">@</span><span class="attribute">discardableResult</span>
-<span class="keyword">public</span> <span class="keyword">func</span> <span class="function">loadImage</span>(<span class="variable">with</span> <span class="variable">request</span>: <span class="type">ImageRequestConvertible</span>,
-                      <span class="variable">options</span>: <span class="type">ImageLoadingOptions</span> = <span class="variable">ImageLoadingOptions</span>.<span class="variable">shared</span>,
-                      <span class="variable">into</span> <span class="variable">view</span>: <span class="type">ImageDisplayingView</span>,
-                      <span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="keyword">_</span> <span class="variable">result</span>: <span class="type">Result</span>&lt;<span class="type">ImageResponse</span>, <span class="type">ImagePipeline</span>.<span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>) -&gt; <span class="type">ImageTask</span>? </code></pre>
+<span class="keyword">public</span> <span class="keyword">func</span> <span class="function">loadImage</span>(
+    <span class="variable">with</span> <span class="variable">request</span>: <span class="type">ImageRequestConvertible</span>?,
+    <span class="variable">options</span>: <span class="type">ImageLoadingOptions</span> = <span class="variable">ImageLoadingOptions</span>.<span class="variable">shared</span>,
+    <span class="variable">into</span> <span class="variable">view</span>: <span class="type">ImageDisplayingView</span>,
+    <span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="keyword">_</span> <span class="variable">result</span>: <span class="type">Result</span>&lt;<span class="type">ImageResponse</span>, <span class="type">ImagePipeline</span>.<span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>
+) -&gt; <span class="type">ImageTask</span>? </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Loads an image with the given request and displays it in the view.</p>
+
+</div>
+<div class="discussion">
+    <p>See the complete method signature for more information.</p>
+
 </div>
         </article>
     </main>
 
     <footer>
         <p>
-    Generated on <time datetime="2021-05-21T13:23:35-0400">21 May 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
+    Generated on <time datetime="2021-05-28T09:02:42-0400">28 May 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
 </p>
     </footer>
 </body>
