@@ -26,7 +26,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#enumeration cases">Enumeration Cases</a><ul><li class="case"><a href="#imagerequest.priority.normal">normal</a></li><li class="case"><a href="#imagerequest.priority.veryhigh">very​High</a></li><li class="case"><a href="#imagerequest.priority.low">low</a></li><li class="case"><a href="#imagerequest.priority.verylow">very​Low</a></li><li class="case"><a href="#imagerequest.priority.high">high</a></li></ul></li><li><a href="#operators">Operators</a><ul><li class="function"><a href="#imagerequest.priority.&lt;">&lt;</a></li></ul></li></ol>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#enumeration cases">Enumeration Cases</a><ul><li class="case"><a href="#imagerequest.priority.verylow">very​Low</a></li><li class="case"><a href="#imagerequest.priority.normal">normal</a></li><li class="case"><a href="#imagerequest.priority.high">high</a></li><li class="case"><a href="#imagerequest.priority.veryhigh">very​High</a></li><li class="case"><a href="#imagerequest.priority.low">low</a></li></ul></li><li><a href="#operators">Operators</a><ul><li class="function"><a href="#imagerequest.priority.&lt;">&lt;</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -112,9 +112,25 @@ requests are performed.</p>
     <section id="enumeration cases">
         <h2>Enumeration Cases</h2>
 
-        <div role="article" class="case" id="imagerequest.priority.normal">
+        <div role="article" class="case" id="imagerequest.priority.verylow">
+    <h3>
+        <code>very​Low</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">case</span> <span class="variable">veryLow</span> = <span class="number literal">0</span>, <span class="variable">low</span>, <span class="variable">normal</span>, <span class="variable">high</span>, <span class="variable">veryHigh</span></code></pre>
+</div>
+</div>
+<div role="article" class="case" id="imagerequest.priority.normal">
     <h3>
         <code>normal</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">case</span> <span class="variable">veryLow</span> = <span class="number literal">0</span>, <span class="variable">low</span>, <span class="variable">normal</span>, <span class="variable">high</span>, <span class="variable">veryHigh</span></code></pre>
+</div>
+</div>
+<div role="article" class="case" id="imagerequest.priority.high">
+    <h3>
+        <code>high</code>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><span class="keyword">case</span> <span class="variable">veryLow</span> = <span class="number literal">0</span>, <span class="variable">low</span>, <span class="variable">normal</span>, <span class="variable">high</span>, <span class="variable">veryHigh</span></code></pre>
@@ -131,22 +147,6 @@ requests are performed.</p>
 <div role="article" class="case" id="imagerequest.priority.low">
     <h3>
         <code>low</code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><span class="keyword">case</span> <span class="variable">veryLow</span> = <span class="number literal">0</span>, <span class="variable">low</span>, <span class="variable">normal</span>, <span class="variable">high</span>, <span class="variable">veryHigh</span></code></pre>
-</div>
-</div>
-<div role="article" class="case" id="imagerequest.priority.verylow">
-    <h3>
-        <code>very​Low</code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><span class="keyword">case</span> <span class="variable">veryLow</span> = <span class="number literal">0</span>, <span class="variable">low</span>, <span class="variable">normal</span>, <span class="variable">high</span>, <span class="variable">veryHigh</span></code></pre>
-</div>
-</div>
-<div role="article" class="case" id="imagerequest.priority.high">
-    <h3>
-        <code>high</code>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><span class="keyword">case</span> <span class="variable">veryLow</span> = <span class="number literal">0</span>, <span class="variable">low</span>, <span class="variable">normal</span>, <span class="variable">high</span>, <span class="variable">veryHigh</span></code></pre>
@@ -173,7 +173,7 @@ requests are performed.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2021-05-28T09:02:42-0400">28 May 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
+    Generated on <time datetime="2021-05-29T15:01:24-0400">29 May 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
 </p>
     </footer>
 </body>

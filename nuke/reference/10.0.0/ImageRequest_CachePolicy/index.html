@@ -38,7 +38,7 @@
 </h1>
 
 <div class="declaration">
-<pre class="highlight"><code><span class="attribute">@</span><span class="attribute">available</span>(*, <span class="variable">deprecated</span>, <span class="variable">message</span>: <span class="string literal">&quot;Please use `ImageRequest.Options` instead, it offers the same options under the same names. .reloadIgnoringCachedData no longer affects URLCache!&quot;</span>)
+<pre class="highlight"><code><span class="attribute">@</span><span class="attribute">available</span>(*, <span class="variable">deprecated</span>, <span class="variable">message</span>: <span class="string literal">&quot;Please use `ImageRequest.Options` instead, it offers the same options under the same names. And .reloadIgnoringCachedData no longer affects URLCache!&quot;</span>)
     <span class="keyword">enum</span> <span class="type">CachePolicy</span> </code></pre>
 </div>
 <section id="relationships">
@@ -67,7 +67,7 @@
         <code>reload​Ignoring​Cached​Data</code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><span class="attribute">@</span><span class="attribute">available</span>(*, <span class="variable">deprecated</span>, <span class="variable">message</span>: <span class="string literal">&quot;Please use `ImageRequest.Options` instead, it offers the same options under the same names. .reloadIgnoringCachedData no longer affects URLCache!&quot;</span>)
+<pre class="highlight"><code><span class="attribute">@</span><span class="attribute">available</span>(*, <span class="variable">deprecated</span>, <span class="variable">message</span>: <span class="string literal">&quot;Please use `ImageRequest.Options` instead. This option is available under the same name: .reloadIgnoringCachedData. This option is also no longer affects URLCache!&quot;</span>)
         <span class="keyword">case</span> <span class="variable">reloadIgnoringCachedData</span></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
@@ -85,7 +85,8 @@ the correct policy in the request too.</p>
         <code>return​Cache​Data​Dont​Load</code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><span class="keyword">case</span> <span class="variable">returnCacheDataDontLoad</span></code></pre>
+<pre class="highlight"><code><span class="attribute">@</span><span class="attribute">available</span>(*, <span class="variable">deprecated</span>, <span class="variable">message</span>: <span class="string literal">&quot;Please use `ImageRequest.Options` instead. This option is available under the same name: .returnCacheDataDontLoad.&quot;</span>)
+        <span class="keyword">case</span> <span class="variable">returnCacheDataDontLoad</span></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
     <p>Use existing cache data and fail if no cached data is available.</p>
@@ -101,7 +102,7 @@ the correct policy in the request too.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2021-05-28T09:02:42-0400">28 May 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
+    Generated on <time datetime="2021-05-29T15:01:24-0400">29 May 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
 </p>
     </footer>
 </body>
