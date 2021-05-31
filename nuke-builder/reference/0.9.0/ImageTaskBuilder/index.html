@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NukeBuilder - ImageTaskBuilder</title>
+    <link rel="stylesheet" type="text/css" href="https://kean-org.github.io/docs/nuke-builder/reference/0.9.0/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://kean-org.github.io/docs/nuke-builder/reference/0.9.0">
+            <strong>
+                NukeBuilder
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#imagetaskbuilder.request">request</a></li><li class="variable"><a href="#imagetaskbuilder.publisher">publisher</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#imagetaskbuilder.priority(_:)">priority(_:​)</a></li><li class="function"><a href="#imagetaskbuilder.options(_:)">options(_:​)</a></li><li class="function"><a href="#imagetaskbuilder.process(_:)">process(_:​)</a></li><li class="function"><a href="#imagetaskbuilder.processors(_:)">processors(_:​)</a></li><li class="function"><a href="#imagetaskbuilder.userinfo(_:)">user​Info(_:​)</a></li><li class="function"><a href="#imagetaskbuilder.schedule(on:)">schedule(on:​)</a></li><li class="function"><a href="#imagetaskbuilder.load(_:_:)">load(_:​_:​)</a></li><li class="function"><a href="#imagetaskbuilder.display(in:)">display(in:​)</a></li><li class="function"><a href="#imagetaskbuilder.resize(size:unit:contentmode:crop:upscale:)">resize(size:​unit:​content​Mode:​crop:​upscale:​)</a></li><li class="function"><a href="#imagetaskbuilder.resize(width:unit:crop:upscale:)">resize(width:​unit:​crop:​upscale:​)</a></li><li class="function"><a href="#imagetaskbuilder.resize(height:unit:crop:upscale:)">resize(height:​unit:​crop:​upscale:​)</a></li><li class="function"><a href="#imagetaskbuilder.circle(border:)">circle(border:​)</a></li><li class="function"><a href="#imagetaskbuilder.roundedcorners(radius:unit:border:)">rounded​Corners(radius:​unit:​border:​)</a></li><li class="function"><a href="#imagetaskbuilder.filter(name:parameters:identifier:)">filter(name:​parameters:​identifier:​)</a></li><li class="function"><a href="#imagetaskbuilder.filter(name:)">filter(name:​)</a></li><li class="function"><a href="#imagetaskbuilder.blur(radius:)">blur(radius:​)</a></li><li class="function"><a href="#imagetaskbuilder.process(id:_:)">process(id:​_:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">Image​Task​Builder</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">ImageTaskBuilder</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>A convenience API for loading images.</p>
+
+</div>
+
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="imagetaskbuilder.request">
+    <h3>
+        <code>request</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">private</span>(<span class="variable">set</span>) <span class="keyword">var</span> <span class="variable">request</span>: <span class="type">ImageRequest</span></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>The current request.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imagetaskbuilder.publisher">
+    <h3>
+        <code>publisher</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">var</span> <span class="variable">publisher</span>: <span class="type">ImagePublisher</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Returns publisher for the given request.</p>
+
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="imagetaskbuilder.priority(_:)">
+    <h3>
+        <code>priority(_:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">func</span> <span class="function">priority</span>(<span class="keyword">_</span> <span class="variable">priority</span>: <span class="type">ImageRequest</span>.<span class="type">Priority</span>) -&gt; <span class="type">ImageTaskBuilder</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Set the relative priority of the image task. The priority affects the order
+in which the image requests are executed.<code>.normal</code> by default.</p>
+
+</div>
+</div>
+<div role="article" class="function" id="imagetaskbuilder.options(_:)">
+    <h3>
+        <code>options(_:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">func</span> <span class="function">options</span>(<span class="keyword">_</span> <span class="variable">options</span>: <span class="type">ImageRequest</span>.<span class="type">Options</span>) -&gt; <span class="type">ImageTaskBuilder</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Set the advanced request options. See <code>ImageRequest.Options</code> for more info.</p>
+
+</div>
+</div>
+<div role="article" class="function" id="imagetaskbuilder.process(_:)">
+    <h3>
+        <code>process(_:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">func</span> <span class="function">process</span>(<span class="keyword">_</span> <span class="variable">processor</span>: <span class="type">ImageProcessing</span>) -&gt; <span class="type">ImageTaskBuilder</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Append the given processor to the request. The processor is going to be
+applied after all of the previously added procesors.</p>
+
+</div>
+</div>
+<div role="article" class="function" id="imagetaskbuilder.processors(_:)">
+    <h3>
+        <code>processors(_:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">func</span> <span class="function">processors</span>(<span class="keyword">_</span> <span class="variable">processors</span>: [<span class="type">ImageProcessing</span>]) -&gt; <span class="type">ImageTaskBuilder</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Sets processors for the request.</p>
+
+</div>
+</div>
+<div role="article" class="function" id="imagetaskbuilder.userinfo(_:)">
+    <h3>
+        <code>user​Info(_:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">func</span> <span class="function">userInfo</span>(<span class="keyword">_</span> <span class="variable">userInfo</span>: [<span class="type">ImageRequest</span>.<span class="type">UserInfoKey</span>: <span class="keyword">Any</span>]) -&gt; <span class="type">ImageTaskBuilder</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Sets user info for the request.</p>
+
+</div>
+</div>
+<div role="article" class="function" id="imagetaskbuilder.schedule(on:)">
+    <h3>
+        <code>schedule(on:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">func</span> <span class="function">schedule</span>(<span class="variable">on</span> <span class="variable">queue</span>: <span class="type">DispatchQueue</span>) -&gt; <span class="type">ImageTaskBuilder</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Change the queue on which to deliver progress and completion callbacks.</p>
+
+</div>
+</div>
+<div role="article" class="function" id="imagetaskbuilder.load(_:_:)">
+    <h3>
+        <code>load(_:​_:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">@</span><span class="attribute">discardableResult</span>
+    <span class="keyword">func</span> <span class="function">load</span>(<span class="keyword">_</span> <span class="variable">progress</span>: ((<span class="keyword">_</span> <span class="variable">response</span>: <span class="type">ImageResponse</span>?, <span class="keyword">_</span> <span class="variable">completed</span>: <span class="type">Int64</span>, <span class="keyword">_</span> <span class="variable">total</span>: <span class="type">Int64</span>) -&gt; <span class="type">Void</span>)? = <span class="keyword">nil</span>,
+              <span class="keyword">_</span> <span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="keyword">_</span> <span class="variable">result</span>: <span class="type">Result</span>&lt;<span class="type">ImageResponse</span>, <span class="type">ImagePipeline</span>.<span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>) -&gt; <span class="type">ImageTask</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Starts an image task and returns it.</p>
+
+</div>
+</div>
+<div role="article" class="function" id="imagetaskbuilder.display(in:)">
+    <h3>
+        <code>display(in:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">func</span> <span class="function">display</span>(<span class="variable">in</span> <span class="variable">view</span>: <span class="type">ImageDisplayingView</span>) -&gt; <span class="type">ImageViewExtensionsTaskBuilder</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Returns a builder with a variety of options for loading and dispaying the
+image in the given view.s</p>
+
+</div>
+</div>
+<div role="article" class="function" id="imagetaskbuilder.resize(size:unit:contentmode:crop:upscale:)">
+    <h3>
+        <code>resize(size:​unit:​content​Mode:​crop:​upscale:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">func</span> <span class="function">resize</span>(<span class="variable">size</span>: <span class="type">CGSize</span>, <span class="variable">unit</span>: <span class="type">ImageProcessingOptions</span>.<span class="type">Unit</span> = .<span class="variable">points</span>, <span class="variable">contentMode</span>: <span class="type">ImageProcessors</span>.<span class="type">Resize</span>.<span class="type">ContentMode</span> = .<span class="variable">aspectFill</span>, <span class="variable">crop</span>: <span class="type">Bool</span> = <span class="keyword">false</span>, <span class="variable">upscale</span>: <span class="type">Bool</span> = <span class="keyword">false</span>) -&gt; <span class="type">ImageTaskBuilder</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Resizes the image to a specified size.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>size</th>
+    <td><code class="type">CGSize</code></td>
+    <td><p>The target size.</p>
+</td>
+</tr>
+<tr>
+    <th>unit</th>
+    <td><code class="type">Image​Processing​Options.​Unit</code></td>
+    <td><p>Unit of the target size, <code>.points</code> by default.</p>
+</td>
+</tr>
+<tr>
+    <th>content​Mode</th>
+    <td><code class="type">Image​Processors.​Resize.​Content​Mode</code></td>
+    <td><p><code>.aspectFill</code> by default.</p>
+</td>
+</tr>
+<tr>
+    <th>crop</th>
+    <td><code class="type">Bool</code></td>
+    <td><p>If <code>true</code> will crop the image to match the target size. <code>false</code> by default.</p>
+</td>
+</tr>
+<tr>
+    <th>upscale</th>
+    <td><code class="type">Bool</code></td>
+    <td><p><code>false</code> by default.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="imagetaskbuilder.resize(width:unit:crop:upscale:)">
+    <h3>
+        <code>resize(width:​unit:​crop:​upscale:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">func</span> <span class="function">resize</span>(<span class="variable">width</span>: <span class="type">CGFloat</span>, <span class="variable">unit</span>: <span class="type">ImageProcessingOptions</span>.<span class="type">Unit</span> = .<span class="variable">points</span>, <span class="variable">crop</span>: <span class="type">Bool</span> = <span class="keyword">false</span>, <span class="variable">upscale</span>: <span class="type">Bool</span> = <span class="keyword">false</span>) -&gt; <span class="type">ImageTaskBuilder</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Resizes the image to the given width maintaining aspect ratio.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>width</th>
+    <td><code class="type">CGFloat</code></td>
+    <td><p>The target width.</p>
+</td>
+</tr>
+<tr>
+    <th>unit</th>
+    <td><code class="type">Image​Processing​Options.​Unit</code></td>
+    <td><p>Unit of the target size, <code>.points</code> by default.</p>
+</td>
+</tr>
+<tr>
+    <th>content​Mode</th>
+    <td></td>
+    <td><p><code>.aspectFill</code> by default.</p>
+</td>
+</tr>
+<tr>
+    <th>crop</th>
+    <td><code class="type">Bool</code></td>
+    <td><p>If <code>true</code> will crop the image to match the target size. <code>false</code> by default.</p>
+</td>
+</tr>
+<tr>
+    <th>upscale</th>
+    <td><code class="type">Bool</code></td>
+    <td><p><code>false</code> by default.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="imagetaskbuilder.resize(height:unit:crop:upscale:)">
+    <h3>
+        <code>resize(height:​unit:​crop:​upscale:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">func</span> <span class="function">resize</span>(<span class="variable">height</span>: <span class="type">CGFloat</span>, <span class="variable">unit</span>: <span class="type">ImageProcessingOptions</span>.<span class="type">Unit</span> = .<span class="variable">points</span>, <span class="variable">crop</span>: <span class="type">Bool</span> = <span class="keyword">false</span>, <span class="variable">upscale</span>: <span class="type">Bool</span> = <span class="keyword">false</span>) -&gt; <span class="type">ImageTaskBuilder</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Resizes the image to the given height maintaining aspect ratio.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>height</th>
+    <td><code class="type">CGFloat</code></td>
+    <td><p>The target height.</p>
+</td>
+</tr>
+<tr>
+    <th>unit</th>
+    <td><code class="type">Image​Processing​Options.​Unit</code></td>
+    <td><p>Unit of the target size, <code>.points</code> by default.</p>
+</td>
+</tr>
+<tr>
+    <th>content​Mode</th>
+    <td></td>
+    <td><p><code>.aspectFill</code> by default.</p>
+</td>
+</tr>
+<tr>
+    <th>crop</th>
+    <td><code class="type">Bool</code></td>
+    <td><p>If <code>true</code> will crop the image to match the target size. <code>false</code> by default.</p>
+</td>
+</tr>
+<tr>
+    <th>upscale</th>
+    <td><code class="type">Bool</code></td>
+    <td><p><code>false</code> by default.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="imagetaskbuilder.circle(border:)">
+    <h3>
+        <code>circle(border:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">func</span> <span class="function">circle</span>(<span class="variable">border</span>: <span class="type">ImageProcessingOptions</span>.<span class="type">Border</span>? = <span class="keyword">nil</span>) -&gt; <span class="type">ImageTaskBuilder</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Rounds the corners of an image into a circle.</p>
+
+</div>
+</div>
+<div role="article" class="function" id="imagetaskbuilder.roundedcorners(radius:unit:border:)">
+    <h3>
+        <code>rounded​Corners(radius:​unit:​border:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">func</span> <span class="function">roundedCorners</span>(<span class="variable">radius</span>: <span class="type">CGFloat</span>, <span class="variable">unit</span>: <span class="type">ImageProcessingOptions</span>.<span class="type">Unit</span> = .<span class="variable">points</span>, <span class="variable">border</span>: <span class="type">ImageProcessingOptions</span>.<span class="type">Border</span>? = <span class="keyword">nil</span>) -&gt; <span class="type">ImageTaskBuilder</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Rounds the corners of an image to the specified radius.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>radius</th>
+    <td><code class="type">CGFloat</code></td>
+    <td><p>The radius of the corners.</p>
+</td>
+</tr>
+<tr>
+    <th>unit</th>
+    <td><code class="type">Image​Processing​Options.​Unit</code></td>
+    <td><p>Unit of the radius, <code>.points</code> by default.</p>
+</td>
+</tr>
+<tr>
+    <th>border</th>
+    <td><code class="type">Image​Processing​Options.​Border?</code></td>
+    <td><p>An optional border drawn around the image.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="imagetaskbuilder.filter(name:parameters:identifier:)">
+    <h3>
+        <code>filter(name:​parameters:​identifier:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">func</span> <span class="function">filter</span>(<span class="variable">name</span>: <span class="type">String</span>, <span class="variable">parameters</span>: [<span class="type">String</span>: <span class="keyword">Any</span>], <span class="variable">identifier</span>: <span class="type">String</span>) -&gt; <span class="type">ImageTaskBuilder</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Applies CoreImage filter with the given name.</p>
+
+</div>
+</div>
+<div role="article" class="function" id="imagetaskbuilder.filter(name:)">
+    <h3>
+        <code>filter(name:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">func</span> <span class="function">filter</span>(<span class="variable">name</span>: <span class="type">String</span>) -&gt; <span class="type">ImageTaskBuilder</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Applies Core Image filter (<code>CIFilter</code>) to the image.</p>
+
+</div>
+<div class="discussion">
+    <h1>Performance Considerations.</h1>
+
+<p>Prefer chaining multiple <code>CIFilter</code> objects using <code>Core Image</code> facilities
+instead of using multiple instances of <code>ImageProcessors.CoreImageFilter</code>.</p>
+
+<h1>References</h1>
+
+<ul>
+<li>
+<p><a href="https://developer.apple.com/library/ios/documentation/GraphicsImaging/Conceptual/CoreImaging/ci_intro/ci_intro.html">Core Image Programming Guide</a></p>
+</li>
+<li>
+<p><a href="https://developer.apple.com/library/prerelease/ios/documentation/GraphicsImaging/Reference/CoreImageFilterReference/index.html">Core Image Filter Reference</a></p>
+</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="imagetaskbuilder.blur(radius:)">
+    <h3>
+        <code>blur(radius:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">func</span> <span class="function">blur</span>(<span class="variable">radius</span>: <span class="type">Int</span> = <span class="number literal">8</span>) -&gt; <span class="type">ImageTaskBuilder</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Blurs an image using <code>CIGaussianBlur</code> filter.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>radius</th>
+    <td><code class="type">Int</code></td>
+    <td><p>Blur radius, 8 by default.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="imagetaskbuilder.process(id:_:)">
+    <h3>
+        <code>process(id:​_:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">func</span> <span class="function">process</span>(<span class="variable">id</span>: <span class="type">String</span>, <span class="keyword">_</span> <span class="variable">closure</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">PlatformImage</span>) -&gt; <span class="type">PlatformImage</span>?) -&gt; <span class="type">ImageTaskBuilder</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Processed an image using a specified closure.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>id</th>
+    <td><code class="type">String</code></td>
+    <td><p>Identifier that uniquely identifies the transformation.s</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-05-31T14:28:58-0400">31 May 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
+</p>
+    </footer>
+</body>
+</html>
