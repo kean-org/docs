@@ -26,7 +26,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li><li><a href="#relationships">Nested Types</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#imagepipeline.configuration.init(dataloader:)">init(data​Loader:​)</a></li><li class="initializer"><a href="#imagepipeline.configuration.init(dataloader:imagecache:)">init(data​Loader:​image​Cache:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#imagepipeline.configuration.imagecache">image​Cache</a></li><li class="variable"><a href="#imagepipeline.configuration.dataloader">data​Loader</a></li><li class="variable"><a href="#imagepipeline.configuration.datacache">data​Cache</a></li><li class="variable"><a href="#imagepipeline.configuration.makeimagedecoder">make​Image​Decoder</a></li><li class="variable"><a href="#imagepipeline.configuration.makeimageencoder">make​Image​Encoder</a></li><li class="variable"><a href="#imagepipeline.configuration.dataloadingqueue">data​Loading​Queue</a></li><li class="variable"><a href="#imagepipeline.configuration.datacachingqueue">data​Caching​Queue</a></li><li class="variable"><a href="#imagepipeline.configuration.imagedecodingqueue">image​Decoding​Queue</a></li><li class="variable"><a href="#imagepipeline.configuration.imageencodingqueue">image​Encoding​Queue</a></li><li class="variable"><a href="#imagepipeline.configuration.imageprocessingqueue">image​Processing​Queue</a></li><li class="variable"><a href="#imagepipeline.configuration.imagedecompressingqueue">image​Decompressing​Queue</a></li><li class="variable"><a href="#imagepipeline.configuration.processors">processors</a></li><li class="variable"><a href="#imagepipeline.configuration.callbackqueue">callback​Queue</a></li><li class="variable"><a href="#imagepipeline.configuration.isdecompressionenabled">is​Decompression​Enabled</a></li><li class="variable"><a href="#imagepipeline.configuration.datacachepolicy">data​Cache​Policy</a></li><li class="variable"><a href="#imagepipeline.configuration.datacacheoptions">data​Cache​Options</a></li><li class="variable"><a href="#imagepipeline.configuration.istaskcoalescingenabled">is​Task​Coalescing​Enabled</a></li><li class="variable"><a href="#imagepipeline.configuration.isratelimiterenabled">is​Rate​Limiter​Enabled</a></li><li class="variable"><a href="#imagepipeline.configuration.isprogressivedecodingenabled">is​Progressive​Decoding​Enabled</a></li><li class="variable"><a href="#imagepipeline.configuration.isstoringpreviewsinmemorycache">is​Storing​Previews​InMemory​Cache</a></li><li class="variable"><a href="#imagepipeline.configuration.isresumabledataenabled">is​Resumable​Data​Enabled</a></li><li class="variable"><a href="#imagepipeline.configuration.issignpostloggingenabled">is​Signpost​Logging​Enabled</a></li><li class="variable"><a href="#imagepipeline.configuration.withurlcache">with​URLCache</a></li><li class="variable"><a href="#imagepipeline.configuration.withdatacache">with​Data​Cache</a></li><li class="variable"><a href="#imagepipeline.configuration.isdeduplicationenabled">is​Deduplication​Enabled</a></li><li class="variable"><a href="#imagepipeline.configuration.isanimatedimagedataenabled">is​Animated​Image​Data​Enabled</a></li></ul></li></ol>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li><li><a href="#relationships">Nested Types</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#imagepipeline.configuration.init(dataloader:)">init(data​Loader:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#imagepipeline.configuration.imagecache">image​Cache</a></li><li class="variable"><a href="#imagepipeline.configuration.dataloader">data​Loader</a></li><li class="variable"><a href="#imagepipeline.configuration.datacache">data​Cache</a></li><li class="variable"><a href="#imagepipeline.configuration.makeimagedecoder">make​Image​Decoder</a></li><li class="variable"><a href="#imagepipeline.configuration.makeimageencoder">make​Image​Encoder</a></li><li class="variable"><a href="#imagepipeline.configuration.dataloadingqueue">data​Loading​Queue</a></li><li class="variable"><a href="#imagepipeline.configuration.datacachingqueue">data​Caching​Queue</a></li><li class="variable"><a href="#imagepipeline.configuration.imagedecodingqueue">image​Decoding​Queue</a></li><li class="variable"><a href="#imagepipeline.configuration.imageencodingqueue">image​Encoding​Queue</a></li><li class="variable"><a href="#imagepipeline.configuration.imageprocessingqueue">image​Processing​Queue</a></li><li class="variable"><a href="#imagepipeline.configuration.imagedecompressingqueue">image​Decompressing​Queue</a></li><li class="variable"><a href="#imagepipeline.configuration.callbackqueue">callback​Queue</a></li><li class="variable"><a href="#imagepipeline.configuration.isdecompressionenabled">is​Decompression​Enabled</a></li><li class="variable"><a href="#imagepipeline.configuration.datacachepolicy">data​Cache​Policy</a></li><li class="variable"><a href="#imagepipeline.configuration.istaskcoalescingenabled">is​Task​Coalescing​Enabled</a></li><li class="variable"><a href="#imagepipeline.configuration.isratelimiterenabled">is​Rate​Limiter​Enabled</a></li><li class="variable"><a href="#imagepipeline.configuration.isprogressivedecodingenabled">is​Progressive​Decoding​Enabled</a></li><li class="variable"><a href="#imagepipeline.configuration.isstoringpreviewsinmemorycache">is​Storing​Previews​InMemory​Cache</a></li><li class="variable"><a href="#imagepipeline.configuration.isresumabledataenabled">is​Resumable​Data​Enabled</a></li><li class="variable"><a href="#imagepipeline.configuration.issignpostloggingenabled">is​Signpost​Logging​Enabled</a></li><li class="variable"><a href="#imagepipeline.configuration.withurlcache">with​URLCache</a></li><li class="variable"><a href="#imagepipeline.configuration.withdatacache">with​Data​Cache</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -40,13 +40,17 @@
 <div class="declaration">
 <pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">Configuration</span> </code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>The pipeline configuration.</p>
+
+</div>
 <section id="relationships">
     <h2 hidden>Relationships</h2>
         
         <h3>Member Of</h3>
 <dl>
     <dt class="class"><code><a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImagePipeline">ImagePipeline</a></code></dt>
-<dd><p><code>ImagePipeline</code> loads and caches images.</p>
+<dd><p><code>ImagePipeline</code> is the primary way to load images directly (without a UI).</p>
 </dd>
 </dl>
 <h3>Nested Types</h3>
@@ -54,8 +58,6 @@
     <dt class="enumeration"><code><a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImagePipeline_Configuration_DataCachePolicy">ImagePipeline.Configuration.DataCachePolicy</a></code></dt>
 <dd><p>Determines what images are stored in the disk cache.</p>
 </dd>
-<dt class="structure"><code><a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImagePipeline_Configuration_DataCacheOptions">ImagePipeline.Configuration.DataCacheOptions</a></code></dt>
-<dd></dd>
 </dl>
 </section>
     <section id="initializers">
@@ -91,15 +93,6 @@
 </tr>
   </tbody>
 </table>
-</div>
-<div role="article" class="initializer" id="imagepipeline.configuration.init(dataloader:imagecache:)">
-    <h3>
-        <code>init(data​Loader:​image​Cache:​)</code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><span class="attribute">@</span><span class="attribute">available</span>(*, <span class="variable">deprecated</span>, <span class="variable">message</span>: <span class="string literal">&quot;Please use `ImageConfiguration.default` and provide a `dataLoader` afterwards or use a closure-based ImagePipeline initializer.&quot;</span>)
-    <span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">dataLoader</span>: <span class="type">DataLoading</span> = <span class="variable">DataLoader</span>(), <span class="variable">imageCache</span>: <span class="type">ImageCaching</span>?) </code></pre>
-</div>
 </div>
     </section>
     <section id="properties">
@@ -238,26 +231,6 @@ a decoder that matches the context.</p>
 
 </div>
 </div>
-<div role="article" class="variable" id="imagepipeline.configuration.processors">
-    <h3>
-        <code>processors</code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">processors</span>: [<span class="type">ImageProcessing</span>] = []</code></pre>
-</div>
-<div class="summary" role="doc-abstract">
-    <p>Processors to be applied by default to all images loaded by the
-pipeline, unless the request overrides the list of processors.</p>
-
-</div>
-<div class="discussion">
-    <p>If you pass <code>nil</code> to the list of processors when creating a request,
-the default processors are applied. If you pass any non-nill value,
-including an empty list, your processors will be applied (or none
-in case of an empty list).</p>
-
-</div>
-</div>
 <div role="article" class="variable" id="imagepipeline.configuration.callbackqueue">
     <h3>
         <code>callback​Queue</code>
@@ -299,15 +272,6 @@ created in a background rather than on the main thread.</p>
 <div class="summary" role="doc-abstract">
     <p><code>.storeOriginalData</code> by default.</p>
 
-</div>
-</div>
-<div role="article" class="variable" id="imagepipeline.configuration.datacacheoptions">
-    <h3>
-        <code>data​Cache​Options</code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><span class="attribute">@</span><span class="attribute">available</span>(*, <span class="variable">deprecated</span>, <span class="variable">message</span>: <span class="string literal">&quot;Please use `dataCachePolicy` instead.&quot;</span>)
-        <span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">dataCacheOptions</span>: <span class="type">DataCacheOptions</span> </code></pre>
 </div>
 </div>
 <div role="article" class="variable" id="imagepipeline.configuration.istaskcoalescingenabled">
@@ -444,24 +408,6 @@ size limit of 150 MB. An HTTP cache (<code>URLCache</code>) is disabled.</p>
 
 </div>
 </div>
-<div role="article" class="variable" id="imagepipeline.configuration.isdeduplicationenabled">
-    <h3>
-        <code>is​Deduplication​Enabled</code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><span class="attribute">@</span><span class="attribute">available</span>(*, <span class="variable">deprecated</span>, <span class="variable">message</span>: <span class="string literal">&quot;Renamed to isTaskCoalescingEnabled&quot;</span>)
-    <span class="keyword">var</span> <span class="variable">isDeduplicationEnabled</span>: <span class="type">Bool</span> </code></pre>
-</div>
-</div>
-<div role="article" class="variable" id="imagepipeline.configuration.isanimatedimagedataenabled">
-    <h3>
-        <code>is​Animated​Image​Data​Enabled</code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><span class="attribute">@</span><span class="attribute">available</span>(*, <span class="variable">deprecated</span>, <span class="variable">message</span>: <span class="string literal">&quot;Please use `ImageConatainer` `data` instead. The default image decoder now automatically attaches image data to the ImageContainer type. To learn how to implement animated image support using this new type, see the new Image Formats guide https://github.com/kean/Nuke/blob/9.6.0/Documentation/Guides/image-formats.md. Also see Nuke 10 migration guide https://github.com/kean/Nuke/blob/master/Documentation/Migrations/Nuke%2010%20Migration%20Guide.md.&quot;</span>)
-    <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">isAnimatedImageDataEnabled</span>: <span class="type">Bool</span> </code></pre>
-</div>
-</div>
     </section>
 
 
@@ -471,7 +417,7 @@ size limit of 150 MB. An HTTP cache (<code>URLCache</code>) is disabled.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2021-05-30T15:40:56-0400">30 May 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
+    Generated on <time datetime="2021-05-31T11:01:53-0400">31 May 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
 </p>
     </footer>
 </body>

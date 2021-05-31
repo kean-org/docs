@@ -26,7 +26,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Nested Types</a></li></ul></li><li><a href="#nested type aliases">Nested Type Aliases</a><ul><li class="typealias"><a href="#imagepipeline.delegate">Delegate</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#imagepipeline.init(configuration:delegate:)">init(configuration:​delegate:​)</a></li><li class="initializer"><a href="#imagepipeline.init(delegate:_:)">init(delegate:​_:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#imagepipeline.configuration">configuration</a></li><li class="variable"><a href="#imagepipeline.cache">cache</a></li><li class="variable"><a href="#imagepipeline.observer">observer</a></li><li class="variable"><a href="#imagepipeline.shared">shared</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#imagepipeline.imagepublisher(with:)">image​Publisher(with:​)</a></li><li class="function"><a href="#imagepipeline.loadimage(with:completion:)">load​Image(with:​completion:​)</a></li><li class="function"><a href="#imagepipeline.loadimage(with:queue:progress:completion:)">load​Image(with:​queue:​progress:​completion:​)</a></li><li class="function"><a href="#imagepipeline.loaddata(with:completion:)">load​Data(with:​completion:​)</a></li><li class="function"><a href="#imagepipeline.loaddata(with:queue:progress:completion:)">load​Data(with:​queue:​progress:​completion:​)</a></li><li class="function"><a href="#imagepipeline.cachedimage(for:)">cached​Image(for:​)</a></li><li class="function"><a href="#imagepipeline.cachedimage(for:)">cached​Image(for:​)</a></li><li class="function"><a href="#imagepipeline.cachekey(for:item:)">cache​Key(for:​item:​)</a></li></ul></li></ol>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Nested Types</a></li></ul></li><li><a href="#nested type aliases">Nested Type Aliases</a><ul><li class="typealias"><a href="#imagepipeline.delegate">Delegate</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#imagepipeline.init(configuration:delegate:)">init(configuration:​delegate:​)</a></li><li class="initializer"><a href="#imagepipeline.init(delegate:_:)">init(delegate:​_:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#imagepipeline.shared">shared</a></li><li class="variable"><a href="#imagepipeline.configuration">configuration</a></li><li class="variable"><a href="#imagepipeline.cache">cache</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#imagepipeline.imagepublisher(with:)">image​Publisher(with:​)</a></li><li class="function"><a href="#imagepipeline.invalidate()">invalidate()</a></li><li class="function"><a href="#imagepipeline.loadimage(with:completion:)">load​Image(with:​completion:​)</a></li><li class="function"><a href="#imagepipeline.loadimage(with:queue:progress:completion:)">load​Image(with:​queue:​progress:​completion:​)</a></li><li class="function"><a href="#imagepipeline.loaddata(with:completion:)">load​Data(with:​completion:​)</a></li><li class="function"><a href="#imagepipeline.loaddata(with:queue:progress:completion:)">load​Data(with:​queue:​progress:​completion:​)</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -41,60 +41,28 @@
 <pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">final</span> <span class="keyword">class</span> <span class="type">ImagePipeline</span> </code></pre>
 </div>
 <div class="summary" role="doc-abstract">
-    <p><code>ImagePipeline</code> loads and caches images.</p>
+    <p><code>ImagePipeline</code> is the primary way to load images directly (without a UI).</p>
 
 </div>
 <div class="discussion">
-    <p>See <a href="https://kean.blog/nuke/guides/image-pipeline">Nuke Docs</a> to learn more.</p>
+    <p>The pipeline is fully customizable. You can change its configuration using
+<code>ImagePipeline.Configuration</code> type: set custom data loader and cache, configure
+image encoders and decoders, etc. You can also set an <code>ImagePipeline.Delegate</code>
+to get even more granular control on a per-request basis.</p>
 
-<p>If you want to build a system that fits your specific needs, see <code>ImagePipeline.Configuration</code>
-for a list of the available options. You can set custom data loaders and caches, configure
-image encoders and decoders, change the number of concurrent operations for each
-individual stage, disable and enable features like deduplication and rate limiting, and more.</p>
+<p>See <a href="https://kean.blog/nuke/guides/image-pipeline">&quot;Image Pipeline&quot;</a> to learn
+more about how to use the pipeline. You can also learn about they way it
+works internally in a <a href="https://kean.blog/nuke/guides/image-pipeline-guide">dedicated guide</a>.</p>
+
+<p><code>ImagePipeline</code> also suppors Combine. You can learn more in a dedicated
+<a href="https://kean.blog/nuke/guides/combine">guide</a> with some common use-cases.</p>
 
 <p><code>ImagePipeline</code> is fully thread-safe.</p>
 
 </div>
 <section id="relationships">
     <h2 hidden>Relationships</h2>
-        <figure>
-    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
- "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Generated by graphviz version 2.47.0 (20210316.0004)
- -->
-<!-- Pages: 1 -->
-<svg width="872pt" height="116pt"
- viewBox="0.00 0.00 872.00 116.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 112)">
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-112 868,-112 868,4 -4,4"/>
-<!-- ImagePipeline -->
-<g id="node1" class="node class current">
-<title>ImagePipeline</title>
-<g id="a_node1"><a xlink:href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImagePipeline" xlink:title="ImagePipeline">
-<path fill="none" stroke="black" stroke-width="3" d="M528,-108C528,-108 336,-108 336,-108 330,-108 324,-102 324,-96 324,-96 324,-84 324,-84 324,-78 330,-72 336,-72 336,-72 528,-72 528,-72 534,-72 540,-78 540,-84 540,-84 540,-96 540,-96 540,-102 534,-108 528,-108"/>
-<text text-anchor="middle" x="432" y="-86.3" font-family="Menlo" font-size="14.00">ImagePipeline</text>
-</a>
-</g>
-</g>
-<!-- SendEventProtocol -->
-<g id="node2" class="node protocol">
-<title>SendEventProtocol</title>
-<path fill="none" stroke="black" d="M528,-36C528,-36 336,-36 336,-36 330,-36 324,-30 324,-24 324,-24 324,-12 324,-12 324,-6 330,0 336,0 336,0 528,0 528,0 534,0 540,-6 540,-12 540,-12 540,-24 540,-24 540,-30 534,-36 528,-36"/>
-<text text-anchor="middle" x="432" y="-14.3" font-family="Menlo" font-size="14.00">SendEventProtocol</text>
-</g>
-<!-- ImagePipeline&#45;&gt;SendEventProtocol -->
-<g id="edge1" class="edge conformsTo">
-<title>ImagePipeline&#45;&gt;SendEventProtocol</title>
-<path fill="none" stroke="black" d="M432,-71.7C432,-63.98 432,-54.71 432,-46.11"/>
-<polygon fill="black" stroke="black" points="435.5,-46.1 432,-36.1 428.5,-46.1 435.5,-46.1"/>
-</g>
-</g>
-</svg>
-
-
-    <figcaption hidden>Inheritance graph for ImagePipeline.</figcaption>
-</figure>
+        
         <h3>Nested Types</h3>
 <dl>
     <dt class="enumeration"><code><a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImagePipeline_Error">ImagePipeline.Error</a></code></dt>
@@ -105,10 +73,9 @@ individual stage, disable and enable features like deduplication and rate limiti
 including <code>ImageCaching</code> (memory cache) and <code>DataCaching</code> (disk cache).</p>
 </dd>
 <dt class="structure"><code><a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImagePipeline_Configuration">ImagePipeline.Configuration</a></code></dt>
-<dd></dd>
+<dd><p>The pipeline configuration.</p>
+</dd>
 <dt class="enumeration"><code><a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImagePipeline_CacheKey">ImagePipeline.CacheKey</a></code></dt>
-<dd></dd>
-<dt class="enumeration"><code><a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImagePipeline_DataCacheItem">ImagePipeline.DataCacheItem</a></code></dt>
 <dd></dd>
 </dl>
 </section>
@@ -176,12 +143,28 @@ including <code>ImageCaching</code> (memory cache) and <code>DataCaching</code> 
     <section id="properties">
         <h2>Properties</h2>
 
-        <div role="article" class="variable" id="imagepipeline.configuration">
+        <div role="article" class="variable" id="imagepipeline.shared">
+    <h3>
+        <code>shared</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">shared</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Shared image pipeline.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imagepipeline.configuration">
     <h3>
         <code>configuration</code>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">configuration</span>: <span class="type">Configuration</span></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>The pipeline configuration.</p>
+
 </div>
 </div>
 <div role="article" class="variable" id="imagepipeline.cache">
@@ -191,25 +174,8 @@ including <code>ImageCaching</code> (memory cache) and <code>DataCaching</code> 
     <div class="declaration">
 <pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">cache</span>: <span class="type">ImagePipeline</span>.<span class="type">Cache</span> </code></pre>
 </div>
-</div>
-<div role="article" class="variable" id="imagepipeline.observer">
-    <h3>
-        <code>observer</code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><span class="attribute">@</span><span class="attribute">available</span>(*, <span class="variable">deprecated</span>, <span class="variable">message</span>: <span class="string literal">&quot;Please use ImagePipelineDelegate&quot;</span>)
-    <span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">observer</span>: <span class="type">ImagePipelineObserving</span>?</code></pre>
-</div>
-</div>
-<div role="article" class="variable" id="imagepipeline.shared">
-    <h3>
-        <code>shared</code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">shared</span> </code></pre>
-</div>
 <div class="summary" role="doc-abstract">
-    <p>Shared image pipeline.</p>
+    <p>Provides access to the underlying caching subsystems.</p>
 
 </div>
 </div>
@@ -235,6 +201,19 @@ including <code>ImageCaching</code> (memory cache) and <code>DataCaching</code> 
 </aside>
 </div>
 </div>
+<div role="article" class="function" id="imagepipeline.invalidate()">
+    <h3>
+        <code>invalidate()</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">invalidate</span>() </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Invalidates the pipeline and cancels all outstanding tasks. No new
+requests can be started.</p>
+
+</div>
+</div>
 <div role="article" class="function" id="imagepipeline.loadimage(with:completion:)">
     <h3>
         <code>load​Image(with:​completion:​)</code>
@@ -244,6 +223,10 @@ including <code>ImageCaching</code> (memory cache) and <code>DataCaching</code> 
         <span class="variable">with</span> <span class="variable">request</span>: <span class="type">ImageRequestConvertible</span>,
         <span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="keyword">_</span> <span class="variable">result</span>: <span class="type">Result</span>&lt;<span class="type">ImageResponse</span>, <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>
     ) -&gt; <span class="type">ImageTask</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Loads an image for the given request.</p>
+
 </div>
 </div>
 <div role="article" class="function" id="imagepipeline.loadimage(with:queue:progress:completion:)">
@@ -263,7 +246,7 @@ including <code>ImageCaching</code> (memory cache) and <code>DataCaching</code> 
 
 </div>
 <div class="discussion">
-    <p>See <a href="https://kean.blog/nuke/guides/image-pipeline-guide">Nuke Docs</a> to learn more.</p>
+    <p>See <a href="https://kean.blog/nuke/guides/image-pipeline">Nuke Docs</a> to learn more.</p>
 
 </div>
 <h4>Parameters</h4>
@@ -278,6 +261,12 @@ including <code>ImageCaching</code> (memory cache) and <code>DataCaching</code> 
   </thead>
   <tbody>
     <tr>
+    <th>request</th>
+    <td><code class="type">Image​Request​Convertible</code></td>
+    <td><p>An image request.</p>
+</td>
+</tr>
+<tr>
     <th>queue</th>
     <td><code class="type">Dispatch​Queue?</code></td>
     <td><p>A queue on which to execute <code>progress</code> and <code>completion</code> callbacks. By default, the pipeline uses <code>.main</code> queue.</p>
@@ -308,6 +297,11 @@ including <code>ImageCaching</code> (memory cache) and <code>DataCaching</code> 
         <span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;(<span class="variable">data</span>: <span class="type">Data</span>, <span class="variable">response</span>: <span class="type">URLResponse</span>?), <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>
     ) -&gt; <span class="type">ImageTask</span> </code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Loads the image data for the given request. The data doesn't get decoded
+or processed in any other way.</p>
+
+</div>
 </div>
 <div role="article" class="function" id="imagepipeline.loaddata(with:queue:progress:completion:)">
     <h3>
@@ -322,13 +316,14 @@ including <code>ImageCaching</code> (memory cache) and <code>DataCaching</code> 
     ) -&gt; <span class="type">ImageTask</span> </code></pre>
 </div>
 <div class="summary" role="doc-abstract">
-    <p>Loads the image data for the given request. The data doesn't get decoded or processed in any
-other way.</p>
+    <p>Loads the image data for the given request. The data doesn't get decoded
+or processed in any other way.</p>
 
 </div>
 <div class="discussion">
-    <p>You can call <code>loadImage(:)</code> for the request at any point after calling <code>loadData(:)</code>, the
-pipeline will use the same operation to load the data, no duplicated work will be performed.</p>
+    <p>You can call <code>loadImage(:)</code> for the request at any point after calling
+<code>loadData(:)</code>, the pipeline will use the same operation to load the data,
+no duplicated work will be performed.</p>
 
 </div>
 <h4>Parameters</h4>
@@ -343,6 +338,12 @@ pipeline will use the same operation to load the data, no duplicated work will b
   </thead>
   <tbody>
     <tr>
+    <th>request</th>
+    <td><code class="type">Image​Request​Convertible</code></td>
+    <td><p>An image request.</p>
+</td>
+</tr>
+<tr>
     <th>queue</th>
     <td><code class="type">Dispatch​Queue?</code></td>
     <td><p>A queue on which to execute <code>progress</code> and <code>completion</code> callbacks. By default, the pipeline uses <code>.main</code> queue.</p>
@@ -363,33 +364,6 @@ pipeline will use the same operation to load the data, no duplicated work will b
   </tbody>
 </table>
 </div>
-<div role="article" class="function" id="imagepipeline.cachedimage(for:)">
-    <h3>
-        <code>cached​Image(for:​)</code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><span class="attribute">@</span><span class="attribute">available</span>(*, <span class="variable">deprecated</span>, <span class="variable">message</span>: <span class="string literal">&quot;Use pipeline.cache[url] instead&quot;</span>)
-    <span class="keyword">func</span> <span class="function">cachedImage</span>(<span class="variable">for</span> <span class="variable">url</span>: <span class="type">URL</span>) -&gt; <span class="type">ImageContainer</span>? </code></pre>
-</div>
-</div>
-<div role="article" class="function" id="imagepipeline.cachedimage(for:)">
-    <h3>
-        <code>cached​Image(for:​)</code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><span class="attribute">@</span><span class="attribute">available</span>(*, <span class="variable">deprecated</span>, <span class="variable">message</span>: <span class="string literal">&quot;Use pipeline.cache[request] instead&quot;</span>)
-    <span class="keyword">func</span> <span class="function">cachedImage</span>(<span class="variable">for</span> <span class="variable">request</span>: <span class="type">ImageRequest</span>) -&gt; <span class="type">ImageContainer</span>? </code></pre>
-</div>
-</div>
-<div role="article" class="function" id="imagepipeline.cachekey(for:item:)">
-    <h3>
-        <code>cache​Key(for:​item:​)</code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><span class="attribute">@</span><span class="attribute">available</span>(*, <span class="variable">deprecated</span>, <span class="variable">message</span>: <span class="string literal">&quot;If needed, use pipeline.cache.makeDataCacheKey(for:) instead. For original image data, remove the processors from the request. In general, there should be no need to create the keys manually anymore.&quot;</span>)
-    <span class="keyword">func</span> <span class="function">cacheKey</span>(<span class="variable">for</span> <span class="variable">request</span>: <span class="type">ImageRequest</span>, <span class="variable">item</span>: <span class="type">DataCacheItem</span>) -&gt; <span class="type">String</span> </code></pre>
-</div>
-</div>
     </section>
 
 
@@ -399,7 +373,7 @@ pipeline will use the same operation to load the data, no duplicated work will b
 
     <footer>
         <p>
-    Generated on <time datetime="2021-05-30T15:40:56-0400">30 May 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
+    Generated on <time datetime="2021-05-31T11:01:52-0400">31 May 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
 </p>
     </footer>
 </body>

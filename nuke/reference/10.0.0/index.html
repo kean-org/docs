@@ -87,7 +87,7 @@ by the system.</p>
     </a>
 </dt>
 <dd>
-    <p><code>ImagePipeline</code> loads and caches images.</p>
+    <p><code>ImagePipeline</code> is the primary way to load images directly (without a UI).</p>
 
 </dd>
 <dt class="class">
@@ -106,10 +106,7 @@ images later.</p>
     </a>
 </dt>
 <dd>
-    <p>A task performed by the <code>ImagePipeline</code>. The pipeline maintains a strong
-reference to the task until the request finishes or fails; you do not need
-to maintain a reference to the task unless it is useful to do so for your
-app’s internal bookkeeping purposes.</p>
+    <p>A task performed by the <code>ImagePipeline</code>.</p>
 
 </dd>
 <dt class="class">
@@ -226,15 +223,8 @@ including <code>ImageCaching</code> (memory cache) and <code>DataCaching</code> 
     </a>
 </dt>
 <dd>
-    
-</dd>
-<dt class="structure">
-    <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImagePipeline_Configuration_DataCacheOptions" title="structure - ImagePipeline.Configuration.DataCacheOptions">
-        Image​Pipeline.​Configuration.​Data​Cache​Options
-    </a>
-</dt>
-<dd>
-    
+    <p>The pipeline configuration.</p>
+
 </dd>
 <dt class="structure">
     <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImageProcessingContext" title="structure - ImageProcessingContext">
@@ -355,12 +345,22 @@ crops it to a square first.</p>
 
 </dd>
 <dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImageResponse" title="structure - ImageResponse">
+        Image​Response
+    </a>
+</dt>
+<dd>
+    <p>An image response that contains a fetched image and some metadata.</p>
+
+</dd>
+<dt class="structure">
     <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImageContainer" title="structure - ImageContainer">
         Image​Container
     </a>
 </dt>
 <dd>
-    
+    <p>An image container with an image and associated metadata.</p>
+
 </dd>
 <dt class="structure">
     <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImageContainer_UserInfoKey" title="structure - ImageContainer.UserInfoKey">
@@ -370,31 +370,6 @@ crops it to a square first.</p>
 <dd>
     <p>A key use in <code>userInfo</code>.</p>
 
-</dd>
-<dt class="structure">
-    <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImageResponse" title="structure - ImageResponse">
-        Image​Response
-    </a>
-</dt>
-<dd>
-    <p>Represents a response of a particular image task.</p>
-
-</dd>
-<dt class="structure">
-    <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImageRequestOptions" title="structure - ImageRequestOptions">
-        Image​Request​Options
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="structure">
-    <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImageRequestOptions_MemoryCacheOptions" title="structure - ImageRequestOptions.MemoryCacheOptions">
-        Image​Request​Options.​Memory​Cache​Options
-    </a>
-</dt>
-<dd>
-    
 </dd>
 <dt class="structure">
     <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/FetchImage_Progress" title="structure - FetchImage.Progress">
@@ -582,23 +557,8 @@ requests are performed.</p>
     </a>
 </dt>
 <dd>
-    
-</dd>
-<dt class="enumeration">
-    <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImagePipeline_DataCacheItem" title="enumeration - ImagePipeline.DataCacheItem">
-        Image​Pipeline.​Data​Cache​Item
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="enumeration">
-    <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImageRequest_CachePolicy" title="enumeration - ImageRequest.CachePolicy">
-        Image​Request.​Cache​Policy
-    </a>
-</dt>
-<dd>
-    
+    <p>A cache type.</p>
+
 </dd>
         </dl>
     </section>
@@ -703,14 +663,6 @@ per-request level.</p>
     
 </dd>
 <dt class="protocol">
-    <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImagePipelineObserving" title="protocol - ImagePipelineObserving">
-        Image​Pipeline​Observing
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="protocol">
     <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/Nuke_ImageDisplaying" title="protocol - Nuke_ImageDisplaying">
         Nuke_Image​Displaying
     </a>
@@ -726,30 +678,6 @@ them compatible with Nuke image loading extensions.</p>
         <h2>Typealiases</h2>
         <dl>
             <dt class="typealias">
-    <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImageDecoder" title="typealias - ImageDecoder">
-        Image​Decoder
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="typealias">
-    <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImageEncoder" title="typealias - ImageEncoder">
-        Image​Encoder
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="typealias">
-    <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImagePreheater" title="typealias - ImagePreheater">
-        Image​Preheater
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="typealias">
     <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/PlatformImage" title="typealias - PlatformImage">
         Platform​Image
     </a>
@@ -837,10 +765,6 @@ Can support <code>NSView</code> and <code>NSCell</code>. The latter can return n
 </dt>
 <dd></dd>
 <dt class="extension">
-    <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/PlatformImage">PlatformImage</a>
-</dt>
-<dd></dd>
-<dt class="extension">
     <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/String">String</a>
 </dt>
 <dd></dd>
@@ -859,7 +783,7 @@ Can support <code>NSView</code> and <code>NSCell</code>. The latter can return n
 
     <footer>
         <p>
-    Generated on <time datetime="2021-05-30T15:40:55-0400">30 May 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
+    Generated on <time datetime="2021-05-31T11:01:53-0400">31 May 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
 </p>
     </footer>
 </body>
