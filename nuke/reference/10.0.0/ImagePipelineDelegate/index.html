@@ -41,8 +41,7 @@
 <pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">protocol</span> <span class="type">ImagePipelineDelegate</span>: <span class="type">AnyObject</span> </code></pre>
 </div>
 <div class="summary" role="doc-abstract">
-    <p>The pipeline delegate that allows you to customize the pipleine on the
-per-request level.</p>
+    <p>A delegate that allows you to customize the pipleine on a per-request basis.</p>
 
 </div>
 <div class="discussion">
@@ -80,7 +79,7 @@ per-request level.</p>
 <text text-anchor="middle" x="720" y="-14.3" font-family="Menlo" font-size="14.00">AnyObject</text>
 </g>
 <!-- ImagePipelineDelegate&#45;&gt;AnyObject -->
-<g id="edge1" class="edge conformsTo">
+<g id="edge2" class="edge conformsTo">
 <title>ImagePipelineDelegate&#45;&gt;AnyObject</title>
 <path fill="none" stroke="black" d="M720,-71.7C720,-63.98 720,-54.71 720,-46.11"/>
 <polygon fill="black" stroke="black" points="723.5,-46.1 720,-36.1 716.5,-46.1 723.5,-46.1"/>
@@ -92,7 +91,7 @@ per-request level.</p>
 <text text-anchor="middle" x="720" y="-158.3" font-family="Menlo" font-size="14.00">ImagePipelineDefaultDelegate</text>
 </g>
 <!-- ImagePipelineDefaultDelegate&#45;&gt;ImagePipelineDelegate -->
-<g id="edge2" class="edge conformsTo">
+<g id="edge1" class="edge conformsTo">
 <title>ImagePipelineDefaultDelegate&#45;&gt;ImagePipelineDelegate</title>
 <path fill="none" stroke="black" d="M720,-143.7C720,-135.98 720,-126.71 720,-118.11"/>
 <polygon fill="black" stroke="black" points="723.5,-118.1 720,-108.1 716.5,-118.1 723.5,-118.1"/>
@@ -148,7 +147,7 @@ per-request level.</p>
         <code>cache​Key(for:​pipeline:​)</code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><span class="keyword">func</span> <span class="function">cacheKey</span>(<span class="variable">for</span> <span class="variable">request</span>: <span class="type">ImageRequest</span>, <span class="variable">pipeline</span>: <span class="type">ImagePipeline</span>) -&gt; <span class="type">ImagePipeline</span>.<span class="type">CacheKey</span>&lt;<span class="type">String</span>&gt; </code></pre>
+<pre class="highlight"><code><span class="keyword">func</span> <span class="function">cacheKey</span>(<span class="variable">for</span> <span class="variable">request</span>: <span class="type">ImageRequest</span>, <span class="variable">pipeline</span>: <span class="type">ImagePipeline</span>) -&gt; <span class="type">String</span>? </code></pre>
 </div>
 </div>
 <div role="article" class="function" id="imagepipelinedelegate.willcache(data:image:for:pipeline:completion:)">
@@ -227,11 +226,15 @@ reads and writes.</p>
         <code>cache​Key(for:​pipeline:​)</code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><span class="keyword">func</span> <span class="function">cacheKey</span>(<span class="variable">for</span> <span class="variable">request</span>: <span class="type">ImageRequest</span>, <span class="variable">pipeline</span>: <span class="type">ImagePipeline</span>) -&gt; <span class="type">ImagePipeline</span>.<span class="type">CacheKey</span>&lt;<span class="type">String</span>&gt;</code></pre>
+<pre class="highlight"><code><span class="keyword">func</span> <span class="function">cacheKey</span>(<span class="variable">for</span> <span class="variable">request</span>: <span class="type">ImageRequest</span>, <span class="variable">pipeline</span>: <span class="type">ImagePipeline</span>) -&gt; <span class="type">String</span>?</code></pre>
 </div>
 <div class="summary" role="doc-abstract">
     <p>Returns a cache key identifying the image produced for the given request
 (including image processors).</p>
+
+</div>
+<div class="discussion">
+    <p>Return <code>nil</code> to use a default key.</p>
 
 </div>
 </div>
@@ -309,7 +312,7 @@ of the pipeline already allow caching.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2021-05-31T11:01:53-0400">31 May 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
+    Generated on <time datetime="2021-05-31T11:26:54-0400">31 May 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
 </p>
     </footer>
 </body>

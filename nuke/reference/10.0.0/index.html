@@ -41,7 +41,7 @@
     </a>
 </dt>
 <dd>
-    <p>Data cache backed by a local storage.</p>
+    <p>An LRU disk cache that stores data in separate files.</p>
 
 </dd>
 <dt class="class">
@@ -59,7 +59,7 @@
     </a>
 </dt>
 <dd>
-    <p>Memory cache with LRU cleanup policy (least recently used are removed first).</p>
+    <p>An LRU memory cache.</p>
 
 </dd>
 <dt class="class">
@@ -68,8 +68,7 @@
     </a>
 </dt>
 <dd>
-    <p>The default decoder which supports all of the formats natively supported
-by the system.</p>
+    <p>A decoder that supports all of the formats natively supported by the system.</p>
 
 </dd>
 <dt class="class">
@@ -78,7 +77,7 @@ by the system.</p>
     </a>
 </dt>
 <dd>
-    <p>A register of image codecs (only decoding).</p>
+    <p>A registry of image codecs.</p>
 
 </dd>
 <dt class="class">
@@ -115,7 +114,8 @@ images later.</p>
     </a>
 </dt>
 <dd>
-    
+    <p>An observable object that simplifies image loading in SwiftUI.</p>
+
 </dd>
         </dl>
     </section>
@@ -128,10 +128,7 @@ images later.</p>
     </a>
 </dt>
 <dd>
-    <p>A publisher that starts a new <code>ImageTask</code> when a subscriber is added and delivers
-the result of the task to the subscriber. If the requested image is available
-in the memory cache, the value is delivered immediately. When the subscription
-is cancelled, the task also gets cancelled.</p>
+    <p>A publisher that starts a new <code>ImageTask</code> when a subscriber is added.</p>
 
 </dd>
 <dt class="structure">
@@ -149,7 +146,7 @@ is cancelled, the task also gets cancelled.</p>
     </a>
 </dt>
 <dd>
-    <p>A decoder which returns an empty placeholder image and attaches image
+    <p>A decoder that returns an empty placeholder image and attaches image
 data to the image container.</p>
 
 </dd>
@@ -215,7 +212,8 @@ including <code>ImageCaching</code> (memory cache) and <code>DataCaching</code> 
     </a>
 </dt>
 <dd>
-    
+    <p>Describes a set of cache layers to use.</p>
+
 </dd>
 <dt class="structure">
     <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImagePipeline_Configuration" title="structure - ImagePipeline.Configuration">
@@ -309,15 +307,6 @@ crops it to a square first.</p>
 
 </dd>
 <dt class="structure">
-    <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImageProcessingOptions_Border" title="structure - ImageProcessingOptions.Border">
-        Image​Processing​Options.​Border
-    </a>
-</dt>
-<dd>
-    <p>Draws a border.</p>
-
-</dd>
-<dt class="structure">
     <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImageRequest" title="structure - ImageRequest">
         Image​Request
     </a>
@@ -377,7 +366,8 @@ crops it to a square first.</p>
     </a>
 </dt>
 <dd>
-    
+    <p>The download progress.</p>
+
 </dd>
 <dt class="structure">
     <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImageLoadingOptions" title="structure - ImageLoadingOptions">
@@ -417,15 +407,6 @@ failure).</p>
     <p>An animated image transition.</p>
 
 </dd>
-<dt class="structure">
-    <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImageLoadingOptions_Transition" title="structure - ImageLoadingOptions.Transition">
-        Image​Loading​Options.​Transition
-    </a>
-</dt>
-<dd>
-    <p>An animated image transition.</p>
-
-</dd>
         </dl>
     </section>
     <section id="enumerations">
@@ -446,7 +427,8 @@ failure).</p>
     </a>
 </dt>
 <dd>
-    
+    <p>An event send by the data loader.</p>
+
 </dd>
 <dt class="enumeration">
     <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImageDecoders" title="enumeration - ImageDecoders">
@@ -454,7 +436,8 @@ failure).</p>
     </a>
 </dt>
 <dd>
-    
+    <p>A namespace with all available decoders.</p>
+
 </dd>
 <dt class="enumeration">
     <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImageEncoders" title="enumeration - ImageEncoders">
@@ -462,7 +445,8 @@ failure).</p>
     </a>
 </dt>
 <dd>
-    
+    <p>A namespace with all available encoders.</p>
+
 </dd>
 <dt class="enumeration">
     <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImagePipeline_Error" title="enumeration - ImagePipeline.Error">
@@ -483,20 +467,13 @@ failure).</p>
 
 </dd>
 <dt class="enumeration">
-    <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImagePipeline_CacheKey" title="enumeration - ImagePipeline.CacheKey">
-        Image​Pipeline.​Cache​Key
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="enumeration">
     <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImageTaskEvent" title="enumeration - ImageTaskEvent">
         Image​Task​Event
     </a>
 </dt>
 <dd>
-    
+    <p>An image task event sent by the pipeline.</p>
+
 </dd>
 <dt class="enumeration">
     <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImagePrefetcher_Destination" title="enumeration - ImagePrefetcher.Destination">
@@ -531,7 +508,8 @@ failure).</p>
     </a>
 </dt>
 <dd>
-    
+    <p>A namespace with shared image processing options.</p>
+
 </dd>
 <dt class="enumeration">
     <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImageProcessingOptions_Unit" title="enumeration - ImageProcessingOptions.Unit">
@@ -547,8 +525,7 @@ failure).</p>
     </a>
 </dt>
 <dd>
-    <p>The priority of the request. The priority affects the order in which the
-requests are performed.</p>
+    <p>The priority affecting the order in which the requests are performed.</p>
 
 </dd>
 <dt class="enumeration">
@@ -580,7 +557,8 @@ requests are performed.</p>
     </a>
 </dt>
 <dd>
-    
+    <p>A unit of work that can be cancelled.</p>
+
 </dd>
 <dt class="protocol">
     <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/DataLoading" title="protocol - DataLoading">
@@ -588,7 +566,8 @@ requests are performed.</p>
     </a>
 </dt>
 <dd>
-    
+    <p>Fetches original image data.</p>
+
 </dd>
 <dt class="protocol">
     <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/DataLoaderObserving" title="protocol - DataLoaderObserving">
@@ -633,7 +612,8 @@ delivered on the internal serial operation queue.</p>
     </a>
 </dt>
 <dd>
-    
+    <p>An image encoder.</p>
+
 </dd>
 <dt class="protocol">
     <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImagePipelineDelegate" title="protocol - ImagePipelineDelegate">
@@ -641,8 +621,7 @@ delivered on the internal serial operation queue.</p>
     </a>
 </dt>
 <dd>
-    <p>The pipeline delegate that allows you to customize the pipleine on the
-per-request level.</p>
+    <p>A delegate that allows you to customize the pipleine on a per-request basis.</p>
 
 </dd>
 <dt class="protocol">
@@ -660,7 +639,8 @@ per-request level.</p>
     </a>
 </dt>
 <dd>
-    
+    <p>Represents a type that can be converted to an <code>ImageRequest</code>.</p>
+
 </dd>
 <dt class="protocol">
     <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/Nuke_ImageDisplaying" title="protocol - Nuke_ImageDisplaying">
@@ -683,15 +663,6 @@ them compatible with Nuke image loading extensions.</p>
     </a>
 </dt>
 <dd>
-    <p>Alias for <code>UIImage</code>.</p>
-
-</dd>
-<dt class="typealias">
-    <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/PlatformImage" title="typealias - PlatformImage">
-        Platform​Image
-    </a>
-</dt>
-<dd>
     <p>Alias for <code>NSImage</code>.</p>
 
 </dd>
@@ -702,25 +673,6 @@ them compatible with Nuke image loading extensions.</p>
 </dt>
 <dd>
     <p>A <code>UIView</code> that implements <code>ImageDisplaying</code> protocol.</p>
-
-</dd>
-<dt class="typealias">
-    <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImageDisplayingView" title="typealias - ImageDisplayingView">
-        Image​Displaying​View
-    </a>
-</dt>
-<dd>
-    <p>An <code>NSObject</code> that implements <code>ImageDisplaying</code>  and <code>Animating</code> protocols.
-Can support <code>NSView</code> and <code>NSCell</code>. The latter can return nil for layer.</p>
-
-</dd>
-<dt class="typealias">
-    <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/ImageDisplayingView" title="typealias - ImageDisplayingView">
-        Image​Displaying​View
-    </a>
-</dt>
-<dd>
-    <p>A <code>WKInterfaceObject</code> that implements <code>ImageDisplaying</code> protocol.</p>
 
 </dd>
         </dl>
@@ -769,6 +721,10 @@ Can support <code>NSView</code> and <code>NSCell</code>. The latter can return n
 </dt>
 <dd></dd>
 <dt class="extension">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/UIImageView">UIImageView</a>
+</dt>
+<dd></dd>
+<dt class="extension">
     <a href="https://kean-org.github.io/docs/nuke/reference/10.0.0/URL">URL</a>
 </dt>
 <dd></dd>
@@ -783,7 +739,7 @@ Can support <code>NSView</code> and <code>NSCell</code>. The latter can return n
 
     <footer>
         <p>
-    Generated on <time datetime="2021-05-31T11:01:53-0400">31 May 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
+    Generated on <time datetime="2021-05-31T11:26:54-0400">31 May 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
 </p>
     </footer>
 </body>

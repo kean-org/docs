@@ -42,14 +42,15 @@
 <span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">ImagePublisher</span>: <span class="type">Publisher</span> </code></pre>
 </div>
 <div class="summary" role="doc-abstract">
-    <p>A publisher that starts a new <code>ImageTask</code> when a subscriber is added and delivers
-the result of the task to the subscriber. If the requested image is available
-in the memory cache, the value is delivered immediately. When the subscription
-is cancelled, the task also gets cancelled.</p>
+    <p>A publisher that starts a new <code>ImageTask</code> when a subscriber is added.</p>
 
 </div>
 <div class="discussion">
-    <aside class="Note">
+    <p>If the requested image is available in the memory cache, the value is
+delivered immediately. When the subscription is cancelled, the task also
+gets cancelled.</p>
+
+<aside class="Note">
     <p>In case the pipeline has <code>isProgressiveDecodingEnabled</code> option enabled and the image being downloaded supports progressive decoding, the publisher might emit more than a single value.</p>
 
 </aside>
@@ -171,7 +172,7 @@ is cancelled, the task also gets cancelled.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2021-05-31T11:01:53-0400">31 May 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
+    Generated on <time datetime="2021-05-31T11:26:54-0400">31 May 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
 </p>
     </footer>
 </body>
