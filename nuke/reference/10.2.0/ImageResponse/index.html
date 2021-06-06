@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuke - ImageResponse</title>
+    <link rel="stylesheet" type="text/css" href="https://kean-org.github.io/docs/nuke/reference/10.2.0/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://kean-org.github.io/docs/nuke/reference/10.2.0">
+            <strong>
+                Nuke
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Nested Types</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#imageresponse.init(container:urlresponse:cachetype:)">init(container:​url​Response:​cache​Type:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#imageresponse.container">container</a></li><li class="variable"><a href="#imageresponse.image">image</a></li><li class="variable"><a href="#imageresponse.image">image</a></li><li class="variable"><a href="#imageresponse.urlresponse">url​Response</a></li><li class="variable"><a href="#imageresponse.cachetype">cache​Type</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">Image​Response</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">ImageResponse</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>An image response that contains a fetched image and some metadata.</p>
+
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Nested Types</h3>
+<dl>
+    <dt class="enumeration"><code><a href="https://kean-org.github.io/docs/nuke/reference/10.2.0/ImageResponse_CacheType">ImageResponse.CacheType</a></code></dt>
+<dd><p>A cache type.</p>
+</dd>
+</dl>
+</section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="imageresponse.init(container:urlresponse:cachetype:)">
+    <h3>
+        <code><a href="#imageresponse.init(container:urlresponse:cachetype:)">init(container:​url​Response:​cache​Type:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">container</span>: <a href="https://kean-org.github.io/docs/nuke/reference/10.2.0/ImageContainer"><span class="type">ImageContainer</span></a>, <span class="variable">urlResponse</span>: <span class="type">URLResponse</span>? = <span class="keyword">nil</span>, <span class="variable">cacheType</span>: <span class="type">CacheType</span>? = <span class="keyword">nil</span>)  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Initializes the response with the given image.</p>
+
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="imageresponse.container">
+    <h3>
+        <code><a href="#imageresponse.container">container</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">container</span>: <a href="https://kean-org.github.io/docs/nuke/reference/10.2.0/ImageContainer"><span class="type">ImageContainer</span></a></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>An image container with an image and associated metadata.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imageresponse.image">
+    <h3>
+        <code><a href="#imageresponse.image">image</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">image</span>: <span class="type">NSImage</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>A convenience computed property that returns an image from the container.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imageresponse.image">
+    <h3>
+        <code><a href="#imageresponse.image">image</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">image</span>: <span class="type">UIImage</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>A convenience computed property that returns an image from the container.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imageresponse.urlresponse">
+    <h3>
+        <code><a href="#imageresponse.urlresponse">url​Response</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">urlResponse</span>: <span class="type">URLResponse</span>? </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>A response. <code>nil</code> unless the resource was fetched from the network or an
+HTTP cache.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imageresponse.cachetype">
+    <h3>
+        <code><a href="#imageresponse.cachetype">cache​Type</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">cacheType</span>: <span class="type">CacheType</span>? </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Contains a cache type in case the image was returned from one of the
+pipeline caches (not including any of the HTTP caches if enabled).</p>
+
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-06-06T13:20:52-0400">June 6, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

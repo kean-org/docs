@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuke - ImagePipeline.Configuration</title>
+    <link rel="stylesheet" type="text/css" href="https://kean-org.github.io/docs/nuke/reference/10.2.0/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://kean-org.github.io/docs/nuke/reference/10.2.0">
+            <strong>
+                Nuke
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li><li><a href="#relationships">Nested Types</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#imagepipeline.configuration.init(dataloader:)">init(data​Loader:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#imagepipeline.configuration.imagecache">image​Cache</a></li><li class="variable"><a href="#imagepipeline.configuration.dataloader">data​Loader</a></li><li class="variable"><a href="#imagepipeline.configuration.datacache">data​Cache</a></li><li class="variable"><a href="#imagepipeline.configuration.makeimagedecoder">make​Image​Decoder</a></li><li class="variable"><a href="#imagepipeline.configuration.makeimageencoder">make​Image​Encoder</a></li><li class="variable"><a href="#imagepipeline.configuration.dataloadingqueue">data​Loading​Queue</a></li><li class="variable"><a href="#imagepipeline.configuration.datacachingqueue">data​Caching​Queue</a></li><li class="variable"><a href="#imagepipeline.configuration.imagedecodingqueue">image​Decoding​Queue</a></li><li class="variable"><a href="#imagepipeline.configuration.imageencodingqueue">image​Encoding​Queue</a></li><li class="variable"><a href="#imagepipeline.configuration.imageprocessingqueue">image​Processing​Queue</a></li><li class="variable"><a href="#imagepipeline.configuration.imagedecompressingqueue">image​Decompressing​Queue</a></li><li class="variable"><a href="#imagepipeline.configuration.callbackqueue">callback​Queue</a></li><li class="variable"><a href="#imagepipeline.configuration.isdecompressionenabled">is​Decompression​Enabled</a></li><li class="variable"><a href="#imagepipeline.configuration.datacachepolicy">data​Cache​Policy</a></li><li class="variable"><a href="#imagepipeline.configuration.istaskcoalescingenabled">is​Task​Coalescing​Enabled</a></li><li class="variable"><a href="#imagepipeline.configuration.isratelimiterenabled">is​Rate​Limiter​Enabled</a></li><li class="variable"><a href="#imagepipeline.configuration.isprogressivedecodingenabled">is​Progressive​Decoding​Enabled</a></li><li class="variable"><a href="#imagepipeline.configuration.isstoringpreviewsinmemorycache">is​Storing​Previews​InMemory​Cache</a></li><li class="variable"><a href="#imagepipeline.configuration.isresumabledataenabled">is​Resumable​Data​Enabled</a></li><li class="variable"><a href="#imagepipeline.configuration.issignpostloggingenabled">is​Signpost​Logging​Enabled</a></li><li class="variable"><a href="#imagepipeline.configuration.withurlcache">with​URLCache</a></li><li class="variable"><a href="#imagepipeline.configuration.withdatacache">with​Data​Cache</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">Image​Pipeline.​Configuration</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">Configuration</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>The pipeline configuration.</p>
+
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Member Of</h3>
+<dl>
+    <dt class="class"><code><a href="https://kean-org.github.io/docs/nuke/reference/10.2.0/ImagePipeline">ImagePipeline</a></code></dt>
+<dd><p><code>ImagePipeline</code> is the primary way to load images directly (without a UI).</p>
+</dd>
+</dl>
+<h3>Nested Types</h3>
+<dl>
+    <dt class="enumeration"><code><a href="https://kean-org.github.io/docs/nuke/reference/10.2.0/ImagePipeline_Configuration_DataCachePolicy">ImagePipeline.Configuration.DataCachePolicy</a></code></dt>
+<dd><p>Determines what images are stored in the disk cache.</p>
+</dd>
+</dl>
+</section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="imagepipeline.configuration.init(dataloader:)">
+    <h3>
+        <code><a href="#imagepipeline.configuration.init(dataloader:)">init(data​Loader:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">dataLoader</span>: <a href="https://kean-org.github.io/docs/nuke/reference/10.2.0/DataLoading"><span class="type">DataLoading</span></a> = <span class="variable">DataLoader</span>())  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Instantiates a default pipeline configuration.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>data​Loader</th>
+    <td><code class="type">Data​Loading</code></td>
+    <td><p><code>DataLoader()</code> by default.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="imagepipeline.configuration.imagecache">
+    <h3>
+        <code><a href="#imagepipeline.configuration.imagecache">image​Cache</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">imageCache</span>: <a href="https://kean-org.github.io/docs/nuke/reference/10.2.0/ImageCaching"><span class="type">ImageCaching</span></a>?  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Image cache used by the pipeline.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imagepipeline.configuration.dataloader">
+    <h3>
+        <code><a href="#imagepipeline.configuration.dataloader">data​Loader</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">dataLoader</span>: <a href="https://kean-org.github.io/docs/nuke/reference/10.2.0/DataLoading"><span class="type">DataLoading</span></a></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Data loader used by the pipeline.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imagepipeline.configuration.datacache">
+    <h3>
+        <code><a href="#imagepipeline.configuration.datacache">data​Cache</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">dataCache</span>: <a href="https://kean-org.github.io/docs/nuke/reference/10.2.0/DataCaching"><span class="type">DataCaching</span></a>? </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Data cache used by the pipeline.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imagepipeline.configuration.makeimagedecoder">
+    <h3>
+        <code><a href="#imagepipeline.configuration.makeimagedecoder">make​Image​Decoder</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">makeImageDecoder</span>: (<a href="https://kean-org.github.io/docs/nuke/reference/10.2.0/ImageDecodingContext"><span class="type">ImageDecodingContext</span></a>) -&gt; <a href="https://kean-org.github.io/docs/nuke/reference/10.2.0/ImageDecoding"><span class="type">ImageDecoding</span></a>? = <span class="variable">ImageDecoderRegistry</span>.<span class="variable">shared</span>.<span class="variable">decoder</span>(<span class="variable">for</span>:) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Default implementation uses shared <code>ImageDecoderRegistry</code> to create
+a decoder that matches the context.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imagepipeline.configuration.makeimageencoder">
+    <h3>
+        <code><a href="#imagepipeline.configuration.makeimageencoder">make​Image​Encoder</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">makeImageEncoder</span>: (<a href="https://kean-org.github.io/docs/nuke/reference/10.2.0/ImageEncodingContext"><span class="type">ImageEncodingContext</span></a>) -&gt; <a href="https://kean-org.github.io/docs/nuke/reference/10.2.0/ImageEncoding"><span class="type">ImageEncoding</span></a>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Returns <code>ImageEncoders.Default()</code> by default.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imagepipeline.configuration.dataloadingqueue">
+    <h3>
+        <code><a href="#imagepipeline.configuration.dataloadingqueue">data​Loading​Queue</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">dataLoadingQueue</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Data loading queue. Default maximum concurrent task count is 6.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imagepipeline.configuration.datacachingqueue">
+    <h3>
+        <code><a href="#imagepipeline.configuration.datacachingqueue">data​Caching​Queue</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">dataCachingQueue</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Data caching queue. Default maximum concurrent task count is 2.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imagepipeline.configuration.imagedecodingqueue">
+    <h3>
+        <code><a href="#imagepipeline.configuration.imagedecodingqueue">image​Decoding​Queue</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">imageDecodingQueue</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Image decoding queue. Default maximum concurrent task count is 1.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imagepipeline.configuration.imageencodingqueue">
+    <h3>
+        <code><a href="#imagepipeline.configuration.imageencodingqueue">image​Encoding​Queue</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">imageEncodingQueue</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Image encoding queue. Default maximum concurrent task count is 1.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imagepipeline.configuration.imageprocessingqueue">
+    <h3>
+        <code><a href="#imagepipeline.configuration.imageprocessingqueue">image​Processing​Queue</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">imageProcessingQueue</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Image processing queue. Default maximum concurrent task count is 2.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imagepipeline.configuration.imagedecompressingqueue">
+    <h3>
+        <code><a href="#imagepipeline.configuration.imagedecompressingqueue">image​Decompressing​Queue</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">imageDecompressingQueue</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Image decompressing queue. Default maximum concurrent task count is 2.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imagepipeline.configuration.callbackqueue">
+    <h3>
+        <code><a href="#imagepipeline.configuration.callbackqueue">callback​Queue</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">callbackQueue</span> = <span class="variable">DispatchQueue</span>.<span class="variable">main</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>A queue on which all callbacks, like <code>progress</code> and <code>completion</code>
+callbacks are called. <code>.main</code> by default.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imagepipeline.configuration.isdecompressionenabled">
+    <h3>
+        <code><a href="#imagepipeline.configuration.isdecompressionenabled">is​Decompression​Enabled</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">isDecompressionEnabled</span> = <span class="keyword">true</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Decompresses the loaded images. <code>true</code> by default.</p>
+
+</div>
+<div class="discussion">
+    <p>Decompressing compressed image formats (such as JPEG) can significantly
+improve drawing performance as it allows a bitmap representation to be
+created in a background rather than on the main thread.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imagepipeline.configuration.datacachepolicy">
+    <h3>
+        <code><a href="#imagepipeline.configuration.datacachepolicy">data​Cache​Policy</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">dataCachePolicy</span> = <span class="variable">DataCachePolicy</span>.<span class="variable">storeOriginalData</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p><code>.storeOriginalData</code> by default.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imagepipeline.configuration.istaskcoalescingenabled">
+    <h3>
+        <code><a href="#imagepipeline.configuration.istaskcoalescingenabled">is​Task​Coalescing​Enabled</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">isTaskCoalescingEnabled</span> = <span class="keyword">true</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p><code>true</code> by default. If <code>true</code> the pipeline avoids duplicated work when
+loading images. The work only gets cancelled when all the registered
+requests are. The pipeline also automatically manages the priority of the
+deduplicated work.</p>
+
+</div>
+<div class="discussion">
+    <p>Let's take these two requests for example:</p>
+
+<html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">url</span> = <span class="variable">URL</span>(<span class="variable">string</span>: <span class="string literal">"</span><span class="string literal">http://example.com/image</span><span class="string literal">"</span>)
+<span class="variable">pipeline</span>.<span class="variable">loadImage</span>(<span class="variable">with</span>: <a href="https://kean-org.github.io/docs/nuke/reference/10.2.0/ImageRequest"><span class="type">ImageRequest</span></a>(<span class="variable">url</span>: <span class="type">url</span>, <span class="variable">processors</span>: [
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.2.0/ImageProcessors"><span class="type">ImageProcessors</span></a>.<span class="type">Resize</span>(<span class="variable">size</span>: <span class="type">CGSize</span>(<span class="variable">width</span>: <span class="number literal">44</span>, <span class="variable">height</span>: <span class="number literal">44</span>)),
+    <span class="variable">ImageProcessors</span>.<span class="type">GaussianBlur</span>(<span class="variable">radius</span>: <span class="number literal">8</span>)
+]))
+<span class="variable">pipeline</span>.<span class="variable">loadImage</span>(<span class="variable">with</span>: <a href="https://kean-org.github.io/docs/nuke/reference/10.2.0/ImageRequest"><span class="type">ImageRequest</span></a>(<span class="variable">url</span>: <span class="type">url</span>, <span class="variable">processors</span>: [
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.2.0/ImageProcessors"><span class="type">ImageProcessors</span></a>.<span class="type">Resize</span>(<span class="variable">size</span>: <span class="type">CGSize</span>(<span class="variable">width</span>: <span class="number literal">44</span>, <span class="variable">height</span>: <span class="number literal">44</span>))
+]))
+</code></pre></body></html>
+<p>Nuke will load the image data only once, resize the image once and
+apply the blur also only once. There is no duplicated work done at
+any stage.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imagepipeline.configuration.isratelimiterenabled">
+    <h3>
+        <code><a href="#imagepipeline.configuration.isratelimiterenabled">is​Rate​Limiter​Enabled</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">isRateLimiterEnabled</span> = <span class="keyword">true</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p><code>true</code> by default. If <code>true</code> the pipeline will rate limit requests
+to prevent trashing of the underlying systems (e.g. <code>URLSession</code>).
+The rate limiter only comes into play when the requests are started
+and cancelled at a high rate (e.g. scrolling through a collection view).</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imagepipeline.configuration.isprogressivedecodingenabled">
+    <h3>
+        <code><a href="#imagepipeline.configuration.isprogressivedecodingenabled">is​Progressive​Decoding​Enabled</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">isProgressiveDecodingEnabled</span> = <span class="keyword">true</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p><code>false</code> by default. If <code>true</code> the pipeline will try to produce a new
+image each time it receives a new portion of data from data loader.
+The decoder used by the image loading session determines whether
+to produce a partial image or not. The default image decoder
+(<code>ImageDecoder</code>) supports progressive JPEG decoding.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imagepipeline.configuration.isstoringpreviewsinmemorycache">
+    <h3>
+        <code><a href="#imagepipeline.configuration.isstoringpreviewsinmemorycache">is​Storing​Previews​InMemory​Cache</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">isStoringPreviewsInMemoryCache</span> = <span class="keyword">true</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p><code>false</code> by default. If <code>true</code>, the pipeline will store all of the
+progressively generated previews in the memory cache. All of the
+previews have <code>isPreview</code> flag set to <code>true</code>.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imagepipeline.configuration.isresumabledataenabled">
+    <h3>
+        <code><a href="#imagepipeline.configuration.isresumabledataenabled">is​Resumable​Data​Enabled</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">isResumableDataEnabled</span> = <span class="keyword">true</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>If the data task is terminated (either because of a failure or a
+cancellation) and the image was partially loaded, the next load will
+resume where it left off. Supports both validators (<code>ETag</code>,
+<code>Last-Modified</code>). Resumable downloads are enabled by default.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imagepipeline.configuration.issignpostloggingenabled">
+    <h3>
+        <code><a href="#imagepipeline.configuration.issignpostloggingenabled">is​Signpost​Logging​Enabled</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">isSignpostLoggingEnabled</span> = <span class="keyword">false</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p><code>false</code> by default. If <code>true</code>, enables <code>os_signpost</code> logging for
+measuring performance. You can visually see all the performance
+metrics in <code>os_signpost</code> Instrument. For more information see
+https://developer.apple.com/documentation/os/logging and
+https://developer.apple.com/videos/play/wwdc2018/405/.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imagepipeline.configuration.withurlcache">
+    <h3>
+        <code><a href="#imagepipeline.configuration.withurlcache">with​URLCache</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">withURLCache</span>: <span class="type">Configuration</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>A configuration with a <code>DataLoader</code> with an HTTP disk cache (<code>URLCache</code>)
+with a size limit of 150 MB.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="imagepipeline.configuration.withdatacache">
+    <h3>
+        <code><a href="#imagepipeline.configuration.withdatacache">with​Data​Cache</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">withDataCache</span>: <span class="type">Configuration</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>A configuration with an aggressive disk cache (<code>DataCache</code>) with a
+size limit of 150 MB. An HTTP cache (<code>URLCache</code>) is disabled.</p>
+
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-06-06T13:20:51-0400">June 6, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>
