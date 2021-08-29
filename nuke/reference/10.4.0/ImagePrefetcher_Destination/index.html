@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuke - ImagePrefetcher.Destination</title>
+    <link rel="stylesheet" type="text/css" href="https://kean-org.github.io/docs/nuke/reference/10.4.0/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0">
+            <strong>
+                Nuke
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li></ul></li><li><a href="#enumeration cases">Enumeration Cases</a><ul><li class="case"><a href="#imageprefetcher.destination.memorycache">memory​Cache</a></li><li class="case"><a href="#imageprefetcher.destination.diskcache">disk​Cache</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Enumeration</small>
+    <code class="name">Image​Prefetcher.​Destination</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">enum</span> <span class="type">Destination</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Prefetching destination.</p>
+
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Member Of</h3>
+<dl>
+    <dt class="class"><code><a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImagePrefetcher">ImagePrefetcher</a></code></dt>
+<dd><p>Prefetches and caches images to eliminate delays when requesting the same
+images later.</p>
+</dd>
+</dl>
+</section>
+    <section id="enumeration cases">
+        <h2>Enumeration Cases</h2>
+
+        <div role="article" class="case" id="imageprefetcher.destination.memorycache">
+    <h3>
+        <code><a href="#imageprefetcher.destination.memorycache">memory​Cache</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">case</span> <span class="variable">memoryCache</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Prefetches the image and stores it in both the memory and the disk
+cache (make sure to enable it).</p>
+
+</div>
+</div>
+<div role="article" class="case" id="imageprefetcher.destination.diskcache">
+    <h3>
+        <code><a href="#imageprefetcher.destination.diskcache">disk​Cache</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">case</span> <span class="variable">diskCache</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Prefetches the image data and stores it in disk caches. It does not
+require decoding the image data and therefore requires less CPU.</p>
+
+</div>
+<div class="discussion">
+    <aside class="warning" title="Warning">
+    <p>This option is incompatible with <code>DataCachePolicy.automatic</code> (for requests with processors) and <code>DataCachePolicy.storeEncodedImages</code>.</p>
+
+</aside>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-08-28T20:16:52-0400">August 28, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

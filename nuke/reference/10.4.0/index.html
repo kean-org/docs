@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuke - Nuke</title>
+    <link rel="stylesheet" type="text/css" href="https://kean-org.github.io/docs/nuke/reference/10.4.0/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0">
+            <strong>
+                Nuke
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#classes">Classes</a></li><li><a href="#structures">Structures</a></li><li><a href="#enumerations">Enumerations</a></li><li><a href="#protocols">Protocols</a></li><li><a href="#typealiases">Typealiases</a></li><li><a href="#functions">Functions</a></li><li><a href="#extensions">Extensions</a></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+                <section id="classes">
+        <h2>Classes</h2>
+        <dl>
+            <dt class="class">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/DataCache" title="class - DataCache">
+        Data​Cache
+    </a>
+</dt>
+<dd>
+    <p>An LRU disk cache that stores data in separate files.</p>
+
+</dd>
+<dt class="class">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/DataLoader" title="class - DataLoader">
+        Data​Loader
+    </a>
+</dt>
+<dd>
+    <p>Provides basic networking using <code>URLSession</code>.</p>
+
+</dd>
+<dt class="class">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageCache" title="class - ImageCache">
+        Image​Cache
+    </a>
+</dt>
+<dd>
+    <p>An LRU memory cache.</p>
+
+</dd>
+<dt class="class">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageDecoders_Default" title="class - ImageDecoders.Default">
+        Image​Decoders.​Default
+    </a>
+</dt>
+<dd>
+    <p>A decoder that supports all of the formats natively supported by the system.</p>
+
+</dd>
+<dt class="class">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageDecoderRegistry" title="class - ImageDecoderRegistry">
+        Image​Decoder​Registry
+    </a>
+</dt>
+<dd>
+    <p>A registry of image codecs.</p>
+
+</dd>
+<dt class="class">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImagePipeline" title="class - ImagePipeline">
+        Image​Pipeline
+    </a>
+</dt>
+<dd>
+    <p><code>ImagePipeline</code> is the primary way to load images directly (without a UI).</p>
+
+</dd>
+<dt class="class">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImagePrefetcher" title="class - ImagePrefetcher">
+        Image​Prefetcher
+    </a>
+</dt>
+<dd>
+    <p>Prefetches and caches images to eliminate delays when requesting the same
+images later.</p>
+
+</dd>
+<dt class="class">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageTask" title="class - ImageTask">
+        Image​Task
+    </a>
+</dt>
+<dd>
+    <p>A task performed by the <code>ImagePipeline</code>.</p>
+
+</dd>
+<dt class="class">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/FetchImage" title="class - FetchImage">
+        Fetch​Image
+    </a>
+</dt>
+<dd>
+    <p>An observable object that simplifies image loading in SwiftUI.</p>
+
+</dd>
+        </dl>
+    </section>
+    <section id="structures">
+        <h2>Structures</h2>
+        <dl>
+            <dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImagePublisher" title="structure - ImagePublisher">
+        Image​Publisher
+    </a>
+</dt>
+<dd>
+    <p>A publisher that starts a new <code>ImageTask</code> when a subscriber is added.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageCacheKey" title="structure - ImageCacheKey">
+        Image​Cache​Key
+    </a>
+</dt>
+<dd>
+    <p>An opaque container that acts as a cache key.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageDecoders_Empty" title="structure - ImageDecoders.Empty">
+        Image​Decoders.​Empty
+    </a>
+</dt>
+<dd>
+    <p>A decoder that returns an empty placeholder image and attaches image
+data to the image container.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageDecodingContext" title="structure - ImageDecodingContext">
+        Image​Decoding​Context
+    </a>
+</dt>
+<dd>
+    <p>Image decoding context used when selecting which decoder to use.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageType" title="structure - ImageType">
+        Image​Type
+    </a>
+</dt>
+<dd>
+    <p>A uniform type identifier (UTI).</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageEncodingContext" title="structure - ImageEncodingContext">
+        Image​Encoding​Context
+    </a>
+</dt>
+<dd>
+    <p>Image encoding context used when selecting which encoder to use.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageEncoders_Default" title="structure - ImageEncoders.Default">
+        Image​Encoders.​Default
+    </a>
+</dt>
+<dd>
+    <p>A default adaptive encoder which uses best encoder available depending
+on the input image and its configuration.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageEncoders_ImageIO" title="structure - ImageEncoders.ImageIO">
+        Image​Encoders.​Image​IO
+    </a>
+</dt>
+<dd>
+    <p>An Image I/O based encoder.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImagePipeline_Cache" title="structure - ImagePipeline.Cache">
+        Image​Pipeline.​Cache
+    </a>
+</dt>
+<dd>
+    <p>Provides a set of convenience APIs for managing the pipeline cache layers,
+including <code>ImageCaching</code> (memory cache) and <code>DataCaching</code> (disk cache).</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImagePipeline_Cache_Caches" title="structure - ImagePipeline.Cache.Caches">
+        Image​Pipeline.​Cache.​Caches
+    </a>
+</dt>
+<dd>
+    <p>Describes a set of cache layers to use.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImagePipeline_Configuration" title="structure - ImagePipeline.Configuration">
+        Image​Pipeline.​Configuration
+    </a>
+</dt>
+<dd>
+    <p>The pipeline configuration.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImagePipeline_Configuration_DataCacheOptions" title="structure - ImagePipeline.Configuration.DataCacheOptions">
+        Image​Pipeline.​Configuration.​Data​Cache​Options
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageProcessingContext" title="structure - ImageProcessingContext">
+        Image​Processing​Context
+    </a>
+</dt>
+<dd>
+    <p>Image processing context used when selecting which processor to use.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageProcessors_Resize" title="structure - ImageProcessors.Resize">
+        Image​Processors.​Resize
+    </a>
+</dt>
+<dd>
+    <p>Scales an image to a specified size.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageProcessors_Circle" title="structure - ImageProcessors.Circle">
+        Image​Processors.​Circle
+    </a>
+</dt>
+<dd>
+    <p>Rounds the corners of an image into a circle. If the image is not a square,
+crops it to a square first.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageProcessors_RoundedCorners" title="structure - ImageProcessors.RoundedCorners">
+        Image​Processors.​Rounded​Corners
+    </a>
+</dt>
+<dd>
+    <p>Rounds the corners of an image to the specified radius.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageProcessors_CoreImageFilter" title="structure - ImageProcessors.CoreImageFilter">
+        Image​Processors.​Core​Image​Filter
+    </a>
+</dt>
+<dd>
+    <p>Applies Core Image filter (<code>CIFilter</code>) to the image.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageProcessors_GaussianBlur" title="structure - ImageProcessors.GaussianBlur">
+        Image​Processors.​Gaussian​Blur
+    </a>
+</dt>
+<dd>
+    <p>Blurs an image using <code>CIGaussianBlur</code> filter.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageProcessors_Composition" title="structure - ImageProcessors.Composition">
+        Image​Processors.​Composition
+    </a>
+</dt>
+<dd>
+    <p>Composes multiple processors.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageProcessors_Anonymous" title="structure - ImageProcessors.Anonymous">
+        Image​Processors.​Anonymous
+    </a>
+</dt>
+<dd>
+    <p>Processed an image using a specified closure.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageProcessingOptions_Border" title="structure - ImageProcessingOptions.Border">
+        Image​Processing​Options.​Border
+    </a>
+</dt>
+<dd>
+    <p>Draws a border.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageRequest" title="structure - ImageRequest">
+        Image​Request
+    </a>
+</dt>
+<dd>
+    <p>Represents an image request.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageRequest_UserInfoKey" title="structure - ImageRequest.UserInfoKey">
+        Image​Request.​User​Info​Key
+    </a>
+</dt>
+<dd>
+    <p>A key use in <code>userInfo</code>.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageRequest_Options" title="structure - ImageRequest.Options">
+        Image​Request.​Options
+    </a>
+</dt>
+<dd>
+    <p>Image request options.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageRequest_ThumbnailOptions" title="structure - ImageRequest.ThumbnailOptions">
+        Image​Request.​Thumbnail​Options
+    </a>
+</dt>
+<dd>
+    <p>Thumbnail options.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageResponse" title="structure - ImageResponse">
+        Image​Response
+    </a>
+</dt>
+<dd>
+    <p>An image response that contains a fetched image and some metadata.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageContainer" title="structure - ImageContainer">
+        Image​Container
+    </a>
+</dt>
+<dd>
+    <p>An image container with an image and associated metadata.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageContainer_UserInfoKey" title="structure - ImageContainer.UserInfoKey">
+        Image​Container.​User​Info​Key
+    </a>
+</dt>
+<dd>
+    <p>A key use in <code>userInfo</code>.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageRequestOptions" title="structure - ImageRequestOptions">
+        Image​Request​Options
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageRequestOptions_MemoryCacheOptions" title="structure - ImageRequestOptions.MemoryCacheOptions">
+        Image​Request​Options.​Memory​Cache​Options
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/FetchImage_Progress" title="structure - FetchImage.Progress">
+        Fetch​Image.​Progress
+    </a>
+</dt>
+<dd>
+    <p>The download progress.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageLoadingOptions" title="structure - ImageLoadingOptions">
+        Image​Loading​Options
+    </a>
+</dt>
+<dd>
+    <p>A set of options that control how the image is loaded and displayed.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageLoadingOptions_ContentModes" title="structure - ImageLoadingOptions.ContentModes">
+        Image​Loading​Options.​Content​Modes
+    </a>
+</dt>
+<dd>
+    <p>Custom content modes to be used for each image type (placeholder, success,
+failure).</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageLoadingOptions_TintColors" title="structure - ImageLoadingOptions.TintColors">
+        Image​Loading​Options.​Tint​Colors
+    </a>
+</dt>
+<dd>
+    <p>Custom tint color to be used for each image type (placeholder, success,
+failure).</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageLoadingOptions_Transition" title="structure - ImageLoadingOptions.Transition">
+        Image​Loading​Options.​Transition
+    </a>
+</dt>
+<dd>
+    <p>An animated image transition.</p>
+
+</dd>
+        </dl>
+    </section>
+    <section id="enumerations">
+        <h2>Enumerations</h2>
+        <dl>
+            <dt class="enumeration">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/DataLoader_Error" title="enumeration - DataLoader.Error">
+        Data​Loader.​Error
+    </a>
+</dt>
+<dd>
+    <p>Errors produced by <code>DataLoader</code>.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/DataTaskEvent" title="enumeration - DataTaskEvent">
+        Data​Task​Event
+    </a>
+</dt>
+<dd>
+    <p>An event send by the data loader.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageDecoders" title="enumeration - ImageDecoders">
+        Image​Decoders
+    </a>
+</dt>
+<dd>
+    <p>A namespace with all available decoders.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageEncoders" title="enumeration - ImageEncoders">
+        Image​Encoders
+    </a>
+</dt>
+<dd>
+    <p>A namespace with all available encoders.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImagePipeline_Error" title="enumeration - ImagePipeline.Error">
+        Image​Pipeline.​Error
+    </a>
+</dt>
+<dd>
+    <p>Represents all possible image pipeline errors.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImagePipeline_Configuration_DataCachePolicy" title="enumeration - ImagePipeline.Configuration.DataCachePolicy">
+        Image​Pipeline.​Configuration.​Data​Cache​Policy
+    </a>
+</dt>
+<dd>
+    <p>Determines what images are stored in the disk cache.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageTaskEvent" title="enumeration - ImageTaskEvent">
+        Image​Task​Event
+    </a>
+</dt>
+<dd>
+    <p>An image task event sent by the pipeline.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImagePrefetcher_Destination" title="enumeration - ImagePrefetcher.Destination">
+        Image​Prefetcher.​Destination
+    </a>
+</dt>
+<dd>
+    <p>Prefetching destination.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageProcessors" title="enumeration - ImageProcessors">
+        Image​Processors
+    </a>
+</dt>
+<dd>
+    <p>A namespace for all processors that implement <code>ImageProcessing</code> protocol.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageProcessors_Resize_ContentMode" title="enumeration - ImageProcessors.Resize.ContentMode">
+        Image​Processors.​Resize.​Content​Mode
+    </a>
+</dt>
+<dd>
+    <p>An option for how to resize the image.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageProcessingOptions" title="enumeration - ImageProcessingOptions">
+        Image​Processing​Options
+    </a>
+</dt>
+<dd>
+    <p>A namespace with shared image processing options.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageProcessingOptions_Unit" title="enumeration - ImageProcessingOptions.Unit">
+        Image​Processing​Options.​Unit
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="enumeration">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageRequest_Priority" title="enumeration - ImageRequest.Priority">
+        Image​Request.​Priority
+    </a>
+</dt>
+<dd>
+    <p>The priority affecting the order in which the requests are performed.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageResponse_CacheType" title="enumeration - ImageResponse.CacheType">
+        Image​Response.​Cache​Type
+    </a>
+</dt>
+<dd>
+    <p>A cache type.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImagePipeline_DataCacheItem" title="enumeration - ImagePipeline.DataCacheItem">
+        Image​Pipeline.​Data​Cache​Item
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="enumeration">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageRequest_CachePolicy" title="enumeration - ImageRequest.CachePolicy">
+        Image​Request.​Cache​Policy
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="enumeration">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/FetchImageError" title="enumeration - FetchImageError">
+        Fetch​Image​Error
+    </a>
+</dt>
+<dd>
+    
+</dd>
+        </dl>
+    </section>
+    <section id="protocols">
+        <h2>Protocols</h2>
+        <dl>
+            <dt class="protocol">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/DataCaching" title="protocol - DataCaching">
+        Data​Caching
+    </a>
+</dt>
+<dd>
+    <p>Data cache.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/Cancellable" title="protocol - Cancellable">
+        Cancellable
+    </a>
+</dt>
+<dd>
+    <p>A unit of work that can be cancelled.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/DataLoading" title="protocol - DataLoading">
+        Data​Loading
+    </a>
+</dt>
+<dd>
+    <p>Fetches original image data.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/DataLoaderObserving" title="protocol - DataLoaderObserving">
+        Data​Loader​Observing
+    </a>
+</dt>
+<dd>
+    <p>Allows you to tap into internal events of the data loader. Events are
+delivered on the internal serial operation queue.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageCaching" title="protocol - ImageCaching">
+        Image​Caching
+    </a>
+</dt>
+<dd>
+    <p>In-memory image cache.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageDecoding" title="protocol - ImageDecoding">
+        Image​Decoding
+    </a>
+</dt>
+<dd>
+    <p>An image decoder.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageDecoderRegistering" title="protocol - ImageDecoderRegistering">
+        Image​Decoder​Registering
+    </a>
+</dt>
+<dd>
+    <p>An image decoder which supports automatically registering in the decoder register.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageEncoding" title="protocol - ImageEncoding">
+        Image​Encoding
+    </a>
+</dt>
+<dd>
+    <p>An image encoder.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImagePipelineDelegate" title="protocol - ImagePipelineDelegate">
+        Image​Pipeline​Delegate
+    </a>
+</dt>
+<dd>
+    <p>A delegate that allows you to customize the pipleine on a per-request basis.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageProcessing" title="protocol - ImageProcessing">
+        Image​Processing
+    </a>
+</dt>
+<dd>
+    <p>Performs image processing.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageRequestConvertible" title="protocol - ImageRequestConvertible">
+        Image​Request​Convertible
+    </a>
+</dt>
+<dd>
+    <p>Represents a type that can be converted to an <code>ImageRequest</code>.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImagePipelineObserving" title="protocol - ImagePipelineObserving">
+        Image​Pipeline​Observing
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="protocol">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/Nuke_ImageDisplaying" title="protocol - Nuke_ImageDisplaying">
+        Nuke_Image​Displaying
+    </a>
+</dt>
+<dd>
+    <p>Displays images. Add the conformance to this protocol to your views to make
+them compatible with Nuke image loading extensions.</p>
+
+</dd>
+        </dl>
+    </section>
+    <section id="typealiases">
+        <h2>Typealiases</h2>
+        <dl>
+            <dt class="typealias">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImagePreheater" title="typealias - ImagePreheater">
+        Image​Preheater
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="typealias">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageDecoder" title="typealias - ImageDecoder">
+        Image​Decoder
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="typealias">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageEncoder" title="typealias - ImageEncoder">
+        Image​Encoder
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="typealias">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/PlatformImage" title="typealias - PlatformImage">
+        Platform​Image
+    </a>
+</dt>
+<dd>
+    <p>Alias for <code>UIImage</code>.</p>
+
+</dd>
+<dt class="typealias">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/PlatformImage" title="typealias - PlatformImage">
+        Platform​Image
+    </a>
+</dt>
+<dd>
+    <p>Alias for <code>NSImage</code>.</p>
+
+</dd>
+<dt class="typealias">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageDisplayingView" title="typealias - ImageDisplayingView">
+        Image​Displaying​View
+    </a>
+</dt>
+<dd>
+    <p>A <code>UIView</code> that implements <code>ImageDisplaying</code> protocol.</p>
+
+</dd>
+<dt class="typealias">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageDisplayingView" title="typealias - ImageDisplayingView">
+        Image​Displaying​View
+    </a>
+</dt>
+<dd>
+    <p>An <code>NSObject</code> that implements <code>ImageDisplaying</code>  and <code>Animating</code> protocols.
+Can support <code>NSView</code> and <code>NSCell</code>. The latter can return nil for layer.</p>
+
+</dd>
+<dt class="typealias">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/ImageDisplayingView" title="typealias - ImageDisplayingView">
+        Image​Displaying​View
+    </a>
+</dt>
+<dd>
+    <p>A <code>WKInterfaceObject</code> that implements <code>ImageDisplaying</code> protocol.</p>
+
+</dd>
+        </dl>
+    </section>
+    <section id="functions">
+        <h2>Functions</h2>
+        <dl>
+            <dt class="function">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/loadImage(with_options_into_completion_)" title="function - loadImage(with:options:into:completion:)">
+        load​Image(with:​options:​into:​completion:​)
+    </a>
+</dt>
+<dd>
+    <p>Loads an image with the given request and displays it in the view.</p>
+
+</dd>
+<dt class="function">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/loadImage(with_options_into_progress_completion_)" title="function - loadImage(with:options:into:progress:completion:)">
+        load​Image(with:​options:​into:​progress:​completion:​)
+    </a>
+</dt>
+<dd>
+    <p>Loads an image with the given request and displays it in the view.</p>
+
+</dd>
+<dt class="function">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/cancelRequest(for_)" title="function - cancelRequest(for:)">
+        cancel​Request(for:​)
+    </a>
+</dt>
+<dd>
+    <p>Cancels an outstanding request associated with the view.</p>
+
+</dd>
+        </dl>
+    </section>
+<section id="extensions">
+    <h2>Extensions</h2>
+    <dl>
+    <dt class="extension">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/Optional">Optional</a>
+</dt>
+<dd></dd>
+<dt class="extension">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/PlatformImage">PlatformImage</a>
+</dt>
+<dd></dd>
+<dt class="extension">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/String">String</a>
+</dt>
+<dd></dd>
+<dt class="extension">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/URL">URL</a>
+</dt>
+<dd></dd>
+<dt class="extension">
+    <a href="https://kean-org.github.io/docs/nuke/reference/10.4.0/URLRequest">URLRequest</a>
+</dt>
+<dd></dd>
+    </dl>
+<section>
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-08-28T20:16:52-0400">August 28, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>
