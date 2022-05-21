@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuke - DataCache</title>
+    <link rel="stylesheet" type="text/css" href="https://kean-org.github.io/docs/nuke/reference/10.10.0/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://kean-org.github.io/docs/nuke/reference/10.10.0">
+            <strong>
+                Nuke
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#nested type aliases">Nested Type Aliases</a><ul><li class="typealias"><a href="#datacache.key">Key</a></li><li class="typealias"><a href="#datacache.filenamegenerator">Filename​Generator</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#datacache.init(name:filenamegenerator:)">init(name:​filename​Generator:​)</a></li><li class="initializer"><a href="#datacache.init(path:filenamegenerator:)">init(path:​filename​Generator:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#datacache.sizelimit">size​Limit</a></li><li class="variable"><a href="#datacache.path">path</a></li><li class="variable"><a href="#datacache.sweepinterval">sweep​Interval</a></li><li class="variable"><a href="#datacache.queue">queue</a></li><li class="variable"><a href="#datacache.totalcount">total​Count</a></li><li class="variable"><a href="#datacache.totalsize">total​Size</a></li><li class="variable"><a href="#datacache.totalallocatedsize">total​Allocated​Size</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#datacache.filename(for:)">filename(for:​)</a></li><li class="function"><a href="#datacache.cacheddata(for:)">cached​Data(for:​)</a></li><li class="function"><a href="#datacache.containsdata(for:)">contains​Data(for:​)</a></li><li class="function"><a href="#datacache.storedata(_:for:)">store​Data(_:​for:​)</a></li><li class="function"><a href="#datacache.removedata(for:)">remove​Data(for:​)</a></li><li class="function"><a href="#datacache.removeall()">remove​All()</a></li><li class="function"><a href="#datacache.filename(for:)">filename(for:​)</a></li><li class="function"><a href="#datacache.url(for:)">url(for:​)</a></li><li class="function"><a href="#datacache.flush()">flush()</a></li><li class="function"><a href="#datacache.flush(for:)">flush(for:​)</a></li><li class="function"><a href="#datacache.sweep()">sweep()</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">Data​Cache</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="attribute">final</span> <span class="keyword">class</span> <span class="type">DataCache</span>: <a href="https://kean-org.github.io/docs/nuke/reference/10.10.0/DataCaching"><span class="type">DataCaching</span></a>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>An LRU disk cache that stores data in separate files.</p>
+
+</div>
+<div class="discussion">
+    <p>The DataCache uses LRU cleanup policy (least recently used items are removed
+first). The elements stored in the cache are automatically discarded if
+either <em>cost</em> or <em>count</em> limit is reached. The sweeps are performed periodically.</p>
+
+<p>DataCache always writes and removes data asynchronously. It also allows for
+reading and writing data in parallel. This is implemented using a &quot;staging&quot;
+area which stores changes until they are flushed to disk:</p>
+
+<html><body><pre class="highlight"><code><span class="comment">// Schedules data to be written asynchronously and returns immediately</span>
+<span class="variable">cache</span>[<span class="variable">key</span>] = <span class="variable">data</span>
+
+<span class="comment">// The data is returned from the staging area</span>
+<span class="keyword">let</span> <span class="variable">data</span> = <span class="variable">cache</span>[<span class="variable">key</span>]
+
+<span class="comment">// Schedules data to be removed asynchronously and returns immediately</span>
+<span class="variable">cache</span>[<span class="variable">key</span>] = <span class="keyword">nil</span>
+
+<span class="comment">// Data is nil</span>
+<span class="keyword">let</span> <span class="variable">data</span> = <span class="variable">cache</span>[<span class="variable">key</span>]
+</code></pre></body></html>
+<p>Thread-safe.</p>
+
+<aside class="warning" title="Warning">
+    <p>It's possible to have more than one instance of <code>DataCache</code> with the same <code>path</code> but it is not recommended.</p>
+
+</aside>
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        <figure>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 3.0.0 (20220226.1711)
+ -->
+<!-- Pages: 1 -->
+<svg width="872pt" height="116pt"
+ viewBox="0.00 0.00 872.00 116.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 112)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-112 868,-112 868,4 -4,4"/>
+<!-- DataCache -->
+<g id="node1" class="node class current">
+<title>DataCache</title>
+<g id="a_node1"><a xlink:href="https://kean-org.github.io/docs/nuke/reference/10.10.0/DataCache" xlink:title="DataCache">
+<path fill="none" stroke="black" stroke-width="3" d="M528,-108C528,-108 336,-108 336,-108 330,-108 324,-102 324,-96 324,-96 324,-84 324,-84 324,-78 330,-72 336,-72 336,-72 528,-72 528,-72 534,-72 540,-78 540,-84 540,-84 540,-96 540,-96 540,-102 534,-108 528,-108"/>
+<text text-anchor="middle" x="432" y="-86.3" font-family="Menlo" font-size="14.00">DataCache</text>
+</a>
+</g>
+</g>
+<!-- DataCaching -->
+<g id="node2" class="node protocol">
+<title>DataCaching</title>
+<g id="a_node2"><a xlink:href="https://kean-org.github.io/docs/nuke/reference/10.10.0/DataCaching" xlink:title="DataCaching">
+<path fill="none" stroke="black" d="M528,-36C528,-36 336,-36 336,-36 330,-36 324,-30 324,-24 324,-24 324,-12 324,-12 324,-6 330,0 336,0 336,0 528,0 528,0 534,0 540,-6 540,-12 540,-12 540,-24 540,-24 540,-30 534,-36 528,-36"/>
+<text text-anchor="middle" x="432" y="-14.3" font-family="Menlo" font-size="14.00">DataCaching</text>
+</a>
+</g>
+</g>
+<!-- DataCache&#45;&gt;DataCaching -->
+<g id="edge1" class="edge conformsTo">
+<title>DataCache&#45;&gt;DataCaching</title>
+<path fill="none" stroke="black" d="M432,-71.7C432,-63.98 432,-54.71 432,-46.11"/>
+<polygon fill="black" stroke="black" points="435.5,-46.1 432,-36.1 428.5,-46.1 435.5,-46.1"/>
+</g>
+</g>
+</svg>
+
+
+    <figcaption hidden>Inheritance graph for DataCache.</figcaption>
+</figure>
+        <h3>Conforms To</h3>
+<dl>
+    <dt class="protocol"><code><a href="https://kean-org.github.io/docs/nuke/reference/10.10.0/DataCaching">DataCaching</a></code></dt>
+<dd><p>Data cache.</p>
+</dd>
+</dl>
+</section>
+    <section id="nested type aliases">
+        <h2>Nested Type Aliases</h2>
+
+        <div role="article" class="typealias" id="datacache.key">
+    <h3>
+        <code><a href="#datacache.key">Key</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">typealias</span> <span class="variable">Key</span> = <span class="type">String</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>A cache key.</p>
+
+</div>
+</div>
+<div role="article" class="typealias" id="datacache.filenamegenerator">
+    <h3>
+        <code><a href="#datacache.filenamegenerator">Filename​Generator</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">typealias</span> <span class="variable">FilenameGenerator</span> = (<span class="keyword">_</span> <span class="variable">key</span>: <span class="type">String</span>) -&gt; <span class="type">String</span>? </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>A function which generates a filename for the given key. A good candidate
+for a filename generator is a <em>cryptographic</em> hash function like SHA1.</p>
+
+</div>
+<div class="discussion">
+    <p>The reason why filename needs to be generated in the first place is
+that filesystems have a size limit for filenames (e.g. 255 UTF-8 characters
+in AFPS) and do not allow certain characters to be used in filenames.</p>
+
+</div>
+</div>
+    </section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="datacache.init(name:filenamegenerator:)">
+    <h3>
+        <code><a href="#datacache.init(name:filenamegenerator:)">init(name:​filename​Generator:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="attribute">convenience</span> <span class="keyword">init</span>(<span class="variable">name</span>: <span class="type">String</span>, <span class="variable">filenameGenerator</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">String</span>) -&gt; <span class="type">String</span>? = <span class="variable">DataCache</span>.<span class="variable">filename</span>(<span class="variable">for</span>:)) <span class="keyword">throws</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Creates a cache instance with a given <code>name</code>. The cache creates a directory
+with the given <code>name</code> in a <code>.cachesDirectory</code> in <code>.userDomainMask</code>.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>filename​Generator</th>
+    <td><code class="type">@escaping (String) -&gt; String?</code></td>
+    <td><p>Generates a filename for the given URL. The default implementation generates a filename using SHA1 hash function.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="initializer" id="datacache.init(path:filenamegenerator:)">
+    <h3>
+        <code><a href="#datacache.init(path:filenamegenerator:)">init(path:​filename​Generator:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">path</span>: <span class="type">URL</span>, <span class="variable">filenameGenerator</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">String</span>) -&gt; <span class="type">String</span>? = <span class="variable">DataCache</span>.<span class="variable">filename</span>(<span class="variable">for</span>:)) <span class="keyword">throws</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Creates a cache instance with a given path.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>filename​Generator</th>
+    <td><code class="type">@escaping (String) -&gt; String?</code></td>
+    <td><p>Generates a filename for the given URL. The default implementation generates a filename using SHA1 hash function.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="datacache.sizelimit">
+    <h3>
+        <code><a href="#datacache.sizelimit">size​Limit</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">sizeLimit</span>: <span class="type">Int</span> = <span class="number literal">1024</span> * <span class="number literal">1024</span> * <span class="number literal">150</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Size limit in bytes. <code>150 Mb</code> by default.</p>
+
+</div>
+<div class="discussion">
+    <p>Changes to <code>sizeLimit</code> will take effect when the next LRU sweep is run.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="datacache.path">
+    <h3>
+        <code><a href="#datacache.path">path</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">path</span>: <span class="type">URL</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>The path for the directory managed by the cache.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="datacache.sweepinterval">
+    <h3>
+        <code><a href="#datacache.sweepinterval">sweep​Interval</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">sweepInterval</span>: <span class="type">TimeInterval</span> = <span class="number literal">30</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>The number of seconds between each LRU sweep. 30 by default.
+The first sweep is performed right after the cache is initialized.</p>
+
+</div>
+<div class="discussion">
+    <p>Sweeps are performed in a background and can be performed in parallel
+with reading.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="datacache.queue">
+    <h3>
+        <code><a href="#datacache.queue">queue</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">queue</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>A queue which is used for disk I/O.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="datacache.totalcount">
+    <h3>
+        <code><a href="#datacache.totalcount">total​Count</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">totalCount</span>: <span class="type">Int</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>The total number of items in the cache.</p>
+
+</div>
+<div class="discussion">
+    <aside class="warning" title="Warning">
+    <p>Requires disk IO, avoid using from the main thread.</p>
+
+</aside>
+</div>
+</div>
+<div role="article" class="variable" id="datacache.totalsize">
+    <h3>
+        <code><a href="#datacache.totalsize">total​Size</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">totalSize</span>: <span class="type">Int</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>The total file size of items written on disk.</p>
+
+</div>
+<div class="discussion">
+    <p>Uses <code>URLResourceKey.fileSizeKey</code> to calculate the size of each entry.
+The total allocated size (see <code>totalAllocatedSize</code>. on disk might
+actually be bigger.</p>
+
+<aside class="warning" title="Warning">
+    <p>Requires disk IO, avoid using from the main thread.</p>
+
+</aside>
+</div>
+</div>
+<div role="article" class="variable" id="datacache.totalallocatedsize">
+    <h3>
+        <code><a href="#datacache.totalallocatedsize">total​Allocated​Size</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">totalAllocatedSize</span>: <span class="type">Int</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>The total file allocated size of all the items written on disk.</p>
+
+</div>
+<div class="discussion">
+    <p>Uses <code>URLResourceKey.totalFileAllocatedSizeKey</code>.</p>
+
+<aside class="warning" title="Warning">
+    <p>Requires disk IO, avoid using from the main thread.</p>
+
+</aside>
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="datacache.filename(for:)">
+    <h3>
+        <code><a href="#datacache.filename(for:)">filename(for:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">filename</span>(<span class="variable">for</span> <span class="variable">key</span>: <span class="type">String</span>) -&gt; <span class="type">String</span>?  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>A <code>FilenameGenerator</code> implementation which uses SHA1 hash function to
+generate a filename from the given key.</p>
+
+</div>
+</div>
+<div role="article" class="function" id="datacache.cacheddata(for:)">
+    <h3>
+        <code><a href="#datacache.cacheddata(for:)">cached​Data(for:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">cachedData</span>(<span class="variable">for</span> <span class="variable">key</span>: <span class="type">Key</span>) -&gt; <span class="type">Data</span>?  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Retrieves data for the given key.</p>
+
+</div>
+</div>
+<div role="article" class="function" id="datacache.containsdata(for:)">
+    <h3>
+        <code><a href="#datacache.containsdata(for:)">contains​Data(for:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">containsData</span>(<span class="variable">for</span> <span class="variable">key</span>: <span class="type">String</span>) -&gt; <span class="type">Bool</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Returns <code>true</code> if the cache contains the data for the given key.</p>
+
+</div>
+</div>
+<div role="article" class="function" id="datacache.storedata(_:for:)">
+    <h3>
+        <code><a href="#datacache.storedata(_:for:)">store​Data(_:​for:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">storeData</span>(<span class="keyword">_</span> <span class="variable">data</span>: <span class="type">Data</span>, <span class="variable">for</span> <span class="variable">key</span>: <span class="type">Key</span>)  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Stores data for the given key. The method returns instantly and the data
+is written asynchronously.</p>
+
+</div>
+</div>
+<div role="article" class="function" id="datacache.removedata(for:)">
+    <h3>
+        <code><a href="#datacache.removedata(for:)">remove​Data(for:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">removeData</span>(<span class="variable">for</span> <span class="variable">key</span>: <span class="type">Key</span>)  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Removes data for the given key. The method returns instantly, the data
+is removed asynchronously.</p>
+
+</div>
+</div>
+<div role="article" class="function" id="datacache.removeall()">
+    <h3>
+        <code><a href="#datacache.removeall()">remove​All()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">removeAll</span>()  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Removes all items. The method returns instantly, the data is removed
+asynchronously.</p>
+
+</div>
+</div>
+<div role="article" class="function" id="datacache.filename(for:)">
+    <h3>
+        <code><a href="#datacache.filename(for:)">filename(for:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">filename</span>(<span class="variable">for</span> <span class="variable">key</span>: <span class="type">Key</span>) -&gt; <span class="type">String</span>?  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Uses the <code>FilenameGenerator</code> that the cache was initialized with to
+generate and return a filename for the given key.</p>
+
+</div>
+</div>
+<div role="article" class="function" id="datacache.url(for:)">
+    <h3>
+        <code><a href="#datacache.url(for:)">url(for:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">url</span>(<span class="variable">for</span> <span class="variable">key</span>: <span class="type">Key</span>) -&gt; <span class="type">URL</span>?  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Returns <code>url</code> for the given cache key.</p>
+
+</div>
+</div>
+<div role="article" class="function" id="datacache.flush()">
+    <h3>
+        <code><a href="#datacache.flush()">flush()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">flush</span>()  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Synchronously waits on the caller's thread until all outstanding disk I/O
+operations are finished.</p>
+
+</div>
+</div>
+<div role="article" class="function" id="datacache.flush(for:)">
+    <h3>
+        <code><a href="#datacache.flush(for:)">flush(for:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">flush</span>(<span class="variable">for</span> <span class="variable">key</span>: <span class="type">Key</span>)  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Synchronously waits on the caller's thread until all outstanding disk I/O
+operations for the given key are finished.</p>
+
+</div>
+</div>
+<div role="article" class="function" id="datacache.sweep()">
+    <h3>
+        <code><a href="#datacache.sweep()">sweep()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">sweep</span>()  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Synchronously performs a cache sweep and removes the least recently items
+which no longer fit in cache.</p>
+
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2022-05-21T12:18:21-0400">May 21, 2022</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>
